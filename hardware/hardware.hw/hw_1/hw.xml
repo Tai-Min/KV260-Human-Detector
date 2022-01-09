@@ -15,6 +15,8 @@
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="system_i/&lt;const0>" gui_info="dashboard_2/hw_vio_1=0,dashboard_3/hw_vio_1=0"/>
+    <Object name="system_i/Net" gui_info="dashboard_1/hw_vio_1=0"/>
+    <Object name="system_i/Net1" gui_info="dashboard_1/hw_vio_1=1"/>
     <Object name="system_i/divider_0_clk_out" gui_info="dashboard_2/hw_vio_1=1,dashboard_1/hw_vio_1=2"/>
     <Object name="system_i/proc_sys_reset_1_peripheral_aresetn" gui_info="dashboard_2/hw_vio_1=0,dashboard_3/hw_vio_1=0,dashboard_4/hw_vio_1=0"/>
     <Object name="system_i/pwm_0_cnt[31:0]" gui_info="dashboard_1/hw_vio_1=5"/>
@@ -25,6 +27,9 @@
     <Object name="system_i/system_management_wiz_0_eos_out" gui_info="dashboard_2/hw_vio_1=2,dashboard_3/hw_vio_1=2,dashboard_4/hw_vio_1=2_exp"/>
     <Object name="system_i/system_management_wiz_0_temp_out[9:0]" gui_info="dashboard_2/hw_vio_1=3,dashboard_3/hw_vio_1=3,dashboard_4/hw_vio_1=3,dashboard_1/hw_vio_1=0"/>
     <Object name="system_i/temp2pwm_0_pwm[7:0]" gui_info="dashboard_3/hw_vio_1=4,dashboard_4/hw_vio_1=4_exp,dashboard_2/hw_vio_1=5,dashboard_1/hw_vio_1=1"/>
+    <Object name="system_i/vio_0_probe_out0" gui_info="dashboard_1/hw_vio_1=2"/>
+    <Object name="system_i/vio_0_probe_out1[10:0]" gui_info="dashboard_1/hw_vio_1=3"/>
+    <Object name="system_i/vio_0_probe_out2" gui_info="dashboard_1/hw_vio_1=4"/>
   </ObjectList>
   <ObjectList object_type="hw_sysmon" gui_info="">
     <Object name="SysMon" gui_info="dashboard_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_2=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_3=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_4=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
@@ -43,6 +48,36 @@
       </probeOptions>
       <nets>
         <net name="system_i/&lt;const0>"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/Net"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/Net1"/>
       </nets>
     </probe>
     <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
@@ -240,6 +275,61 @@
         <net name="system_i/temp2pwm_0_pwm[2]"/>
         <net name="system_i/temp2pwm_0_pwm[1]"/>
         <net name="system_i/temp2pwm_0_pwm[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value="OutputDisplay:Active_High;"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/vio_0_probe_out0"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="01111001000"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/vio_0_probe_out1[10]"/>
+        <net name="system_i/vio_0_probe_out1[9]"/>
+        <net name="system_i/vio_0_probe_out1[8]"/>
+        <net name="system_i/vio_0_probe_out1[7]"/>
+        <net name="system_i/vio_0_probe_out1[6]"/>
+        <net name="system_i/vio_0_probe_out1[5]"/>
+        <net name="system_i/vio_0_probe_out1[4]"/>
+        <net name="system_i/vio_0_probe_out1[3]"/>
+        <net name="system_i/vio_0_probe_out1[2]"/>
+        <net name="system_i/vio_0_probe_out1[1]"/>
+        <net name="system_i/vio_0_probe_out1[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/vio_0_probe_out2"/>
       </nets>
     </probe>
   </probeset>

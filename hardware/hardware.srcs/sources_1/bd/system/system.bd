@@ -37,8 +37,7 @@
       "xlslice_0": "",
       "xlslice_1": "",
       "xlslice_2": "",
-      "xlconcat_0": "",
-      "vio_0": ""
+      "xlconcat_0": ""
     },
     "interface_ports": {
       "Vp_Vn_0": {
@@ -2534,23 +2533,6 @@
             "value": "3"
           }
         }
-      },
-      "vio_0": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "xci_name": "system_vio_0_0",
-        "xci_path": "ip\\system_vio_0_0\\system_vio_0_0.xci",
-        "inst_hier_path": "vio_0",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "2"
-          },
-          "C_NUM_PROBE_OUT": {
-            "value": "3"
-          },
-          "C_PROBE_OUT1_WIDTH": {
-            "value": "11"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -2602,16 +2584,14 @@
         "ports": [
           "stop1",
           "stepper_0/stop1",
-          "xlconcat_0/In1",
-          "vio_0/probe_in0"
+          "xlconcat_0/In1"
         ]
       },
       "Net1": {
         "ports": [
           "stop2",
           "stepper_0/stop2",
-          "xlconcat_0/In2",
-          "vio_0/probe_in1"
+          "xlconcat_0/In2"
         ]
       },
       "axi_gpio_0_gpio_io_o": {
@@ -2650,8 +2630,7 @@
           "axi_gpio_0/s_axi_aclk",
           "axi_iic_0/s_axi_aclk",
           "ps8_0_axi_periph/M02_ACLK",
-          "ps8_0_axi_periph/M03_ACLK",
-          "vio_0/clk"
+          "ps8_0_axi_periph/M03_ACLK"
         ]
       },
       "clk_wiz_0_locked": {
@@ -2738,28 +2717,28 @@
           "pwm_0/fill"
         ]
       },
-      "vio_0_probe_out0": {
-        "ports": [
-          "vio_0/probe_out0",
-          "stepper_0/latch"
-        ]
-      },
-      "vio_0_probe_out1": {
-        "ports": [
-          "vio_0/probe_out1",
-          "stepper_0/cmd"
-        ]
-      },
-      "vio_0_probe_out2": {
-        "ports": [
-          "vio_0/probe_out2",
-          "stepper_0/force_ena"
-        ]
-      },
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
           "axi_gpio_0/gpio2_io_i"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "stepper_0/latch"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "stepper_0/cmd"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "xlslice_2/Dout",
+          "stepper_0/force_ena"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {

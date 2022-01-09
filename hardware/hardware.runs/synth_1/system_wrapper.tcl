@@ -76,6 +76,7 @@ set_param chipscope.maxJobs 3
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -122,7 +123,6 @@ set_property used_in_implementation false [get_files -all e:/KV260/hardware/hard
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/system_ooc.xdc]
 

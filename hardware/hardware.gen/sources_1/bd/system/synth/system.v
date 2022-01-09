@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Sun Jan  9 19:21:14 2022
+//Date        : Sun Jan  9 20:03:46 2022
 //Host        : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -839,7 +839,7 @@ module s00_couplers_imp_RR89KG
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_sys_mgmt_wiz_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_zynq_ultra_ps_e_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_clkrst_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_sys_mgmt_wiz_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_zynq_ultra_ps_e_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (I2C_scl_i,
     I2C_scl_o,
@@ -958,10 +958,10 @@ module system
   wire system_management_wiz_0_eos_out;
   wire [9:0]system_management_wiz_0_temp_out;
   wire [7:0]temp2pwm_0_pwm;
-  wire [0:0]vio_0_probe_out0;
-  wire [10:0]vio_0_probe_out1;
-  wire [0:0]vio_0_probe_out2;
   wire [2:0]xlconcat_0_dout;
+  wire [0:0]xlslice_0_Dout;
+  wire [10:0]xlslice_1_Dout;
+  wire [0:0]xlslice_2_Dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARCACHE;
@@ -1231,11 +1231,11 @@ module system
   system_stepper_0_0 stepper_0
        (.busy(stepper_0_busy),
         .clk(divider_1_clk_out),
-        .cmd(vio_0_probe_out1),
+        .cmd(xlslice_1_Dout),
         .dir(stepper_0_dir),
         .ena(stepper_0_ena),
-        .force_ena(vio_0_probe_out2),
-        .latch(vio_0_probe_out0),
+        .force_ena(xlslice_2_Dout),
+        .latch(xlslice_0_Dout),
         .step(stepper_0_step),
         .stop1(Net),
         .stop2(Net1));
@@ -1265,24 +1265,20 @@ module system
        (.pwm(temp2pwm_0_pwm),
         .rdy(system_management_wiz_0_eos_out),
         .temp(system_management_wiz_0_temp_out));
-  system_vio_0_0 vio_0
-       (.clk(clk_wiz_0_clk_out1),
-        .probe_in0(Net),
-        .probe_in1(Net1),
-        .probe_out0(vio_0_probe_out0),
-        .probe_out1(vio_0_probe_out1),
-        .probe_out2(vio_0_probe_out2));
   system_xlconcat_0_0 xlconcat_0
        (.In0(stepper_0_busy),
         .In1(Net),
         .In2(Net1),
         .dout(xlconcat_0_dout));
   system_xlslice_0_0 xlslice_0
-       (.Din(axi_gpio_0_gpio_io_o));
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_0_Dout));
   system_xlslice_0_1 xlslice_1
-       (.Din(axi_gpio_0_gpio_io_o));
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_1_Dout));
   system_xlslice_0_2 xlslice_2
-       (.Din(axi_gpio_0_gpio_io_o));
+       (.Din(axi_gpio_0_gpio_io_o),
+        .Dout(xlslice_2_Dout));
   system_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.maxigp2_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARADDR),
         .maxigp2_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_ARBURST),

@@ -60,9 +60,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlsl
 # IP: bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconcat_0_0 || ORIG_REF_NAME==system_xlconcat_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_vio_0_0/system_vio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_vio_0_0 || ORIG_REF_NAME==system_vio_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 
@@ -113,9 +110,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_iic_0_0 || ORIG_REF_NAME==system_axi_iic_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc
-
-# XDC: e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_vio_0_0 || ORIG_REF_NAME==system_vio_0_0} -quiet] -quiet
 
 # XDC: e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
 

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Sun Jan  9 19:39:01 2022
+| Date             : Sun Jan  9 20:07:47 2022
 | Host             : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.014        |
+| Total On-Chip Power (W)  | 3.007        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.689        |
+| Dynamic (W)              | 2.682        |
 | Device Static (W)        | 0.325        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 78.0         |
@@ -49,29 +49,28 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+--------------------------+-----------+----------+-----------+-----------------+
-| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
-+--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.015 |        6 |       --- |             --- |
-| CLB Logic                |     0.011 |     6480 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     2494 |    117120 |            2.13 |
-|   CARRY8                 |    <0.001 |       69 |     14640 |            0.47 |
-|   LUT as Shift Register  |    <0.001 |       88 |     57600 |            0.15 |
-|   Register               |    <0.001 |     2838 |    234240 |            1.21 |
-|   LUT as Distributed RAM |    <0.001 |       20 |     57600 |            0.03 |
-|   Others                 |     0.000 |      238 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |       21 |    117120 |            0.02 |
-| Signals                  |     0.011 |     4789 |       --- |             --- |
-| MMCM                     |     0.098 |        0 |       --- |             --- |
-| DSPs                     |    <0.001 |        1 |      1248 |            0.08 |
-| I/O                      |     0.005 |        8 |       186 |            4.30 |
-| SYSMON                   |     0.003 |        1 |       --- |             --- |
-| PS8                      |     2.546 |        1 |       --- |             --- |
-| Static Power             |     0.325 |          |           |                 |
-|   PS Static              |     0.000 |          |           |                 |
-|   PL Static              |     0.325 |          |           |                 |
-| Total                    |     3.014 |          |           |                 |
-+--------------------------+-----------+----------+-----------+-----------------+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.012 |        5 |       --- |             --- |
+| CLB Logic               |     0.010 |     4631 |       --- |             --- |
+|   LUT as Logic          |     0.008 |     1971 |    117120 |            1.68 |
+|   CARRY8                |    <0.001 |       62 |     14640 |            0.42 |
+|   LUT as Shift Register |    <0.001 |       88 |     57600 |            0.15 |
+|   Register              |    <0.001 |     1808 |    234240 |            0.77 |
+|   Others                |     0.000 |      126 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |       21 |    117120 |            0.02 |
+| Signals                 |     0.010 |     3465 |       --- |             --- |
+| MMCM                    |     0.098 |        0 |       --- |             --- |
+| DSPs                    |    <0.001 |        1 |      1248 |            0.08 |
+| I/O                     |     0.004 |        8 |       186 |            4.30 |
+| SYSMON                  |     0.003 |        1 |       --- |             --- |
+| PS8                     |     2.546 |        1 |       --- |             --- |
+| Static Power            |     0.325 |          |           |                 |
+|   PS Static             |     0.000 |          |           |                 |
+|   PL Static             |     0.325 |          |           |                 |
+| Total                   |     3.007 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -80,11 +79,11 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.146 |       0.057 |      0.089 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     0.138 |       0.049 |      0.089 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.129 |       0.054 |      0.075 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.032 |       0.001 |      0.031 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.032 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,14 +150,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| Clock                                                                                               | Domain                                                            | Constraint (ns) |
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| clk_out1_system_clk_wiz_0_0                                                                         | system_i/clk_wiz_0/inst/clk_out1_system_clk_wiz_0_0               |             5.0 |
-| clk_pl_0                                                                                            | system_i/zynq_ultra_ps_e_0/inst/pl_clk0                           |            10.0 |
-| clk_pl_0                                                                                            | system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]              |            10.0 |
-| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0 |            50.0 |
-+-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
++-----------------------------+------------------------------------------------------+-----------------+
+| Clock                       | Domain                                               | Constraint (ns) |
++-----------------------------+------------------------------------------------------+-----------------+
+| clk_out1_system_clk_wiz_0_0 | system_i/clk_wiz_0/inst/clk_out1_system_clk_wiz_0_0  |             5.0 |
+| clk_pl_0                    | system_i/zynq_ultra_ps_e_0/inst/pl_clk0              |            10.0 |
+| clk_pl_0                    | system_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0] |            10.0 |
++-----------------------------+------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -170,28 +168,23 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| system_wrapper              |     2.689 |
-|   dbg_hub                   |     0.003 |
-|     inst                    |     0.003 |
-|       BSCANID.u_xsdbm_id    |     0.003 |
-|   system_i                  |     2.681 |
+| system_wrapper              |     2.682 |
+|   system_i                  |     2.679 |
 |     axi_iic_0               |     0.003 |
 |       U0                    |     0.003 |
 |     clk_wiz_0               |     0.098 |
 |       inst                  |     0.098 |
-|     divider_0               |     0.008 |
-|       inst                  |     0.008 |
+|     divider_0               |     0.007 |
+|       inst                  |     0.007 |
 |     divider_1               |     0.005 |
 |       inst                  |     0.005 |
 |     ps8_0_axi_periph        |     0.008 |
-|       s00_couplers          |     0.006 |
+|       s00_couplers          |     0.007 |
 |       xbar                  |     0.001 |
 |     system_management_wiz_0 |     0.007 |
 |       inst                  |     0.007 |
 |     temp2pwm_0              |     0.001 |
 |       inst                  |     0.001 |
-|     vio_0                   |     0.002 |
-|       inst                  |     0.002 |
 |     zynq_ultra_ps_e_0       |     2.547 |
 |       inst                  |     2.547 |
 +-----------------------------+-----------+

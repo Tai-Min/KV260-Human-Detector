@@ -1,0 +1,2417 @@
+TRACE::2022-01-09.21:34:26::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:26::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:26::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:26::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:27::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:27::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:27::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-01-09.21:34:33::SCWPlatform::Opened new HwDB with name system_wrapper_0
+TRACE::2022-01-09.21:34:33::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2022-01-09.21:34:33::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform"
+		}]
+}
+TRACE::2022-01-09.21:34:34::SCWPlatform::Boot application domains not present, creating them
+TRACE::2022-01-09.21:34:34::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:34:34::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:34:34::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:34:34::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:34::SCWPlatform::Boot application domain added for zynqmp_fsbl
+TRACE::2022-01-09.21:34:34::SCWPlatform::Generating the sources  .
+TRACE::2022-01-09.21:34:34::SCWBDomain::Generating boot domain sources.
+TRACE::2022-01-09.21:34:34::SCWBDomain:: Generating the zynqmp_fsbl Application.
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:34::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:34::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-01-09.21:34:34::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::mss does not exists at E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::Creating sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::Adding the swdes entry, created swdb E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::updating the scw layer changes to swdes at   E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::Writing mss at E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:34::SCWMssOS::Completed writing the mss file at E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+TRACE::2022-01-09.21:34:34::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:34::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:34::SCWBDomain::Completed writing the mss file at E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+TRACE::2022-01-09.21:34:52::SCWPlatform::Generating sources Done.
+TRACE::2022-01-09.21:34:52::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:34:52::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:34:52::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:34:52::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:34:52::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:52::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:52::SCWPlatform::Boot application domain added for zynqmp_pmufw
+TRACE::2022-01-09.21:34:52::SCWPlatform::Generating the sources  .
+TRACE::2022-01-09.21:34:52::SCWBDomain::Generating boot domain sources.
+TRACE::2022-01-09.21:34:52::SCWBDomain:: Generating the zynqmp_pmufw Application.
+TRACE::2022-01-09.21:34:52::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:52::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:52::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:52::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-01-09.21:34:52::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::mss does not exists at E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::Creating sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::Adding the swdes entry, created swdb E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::updating the scw layer changes to swdes at   E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::Writing mss at E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:52::SCWMssOS::Completed writing the mss file at E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp
+TRACE::2022-01-09.21:34:52::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:52::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:52::SCWBDomain::Completed writing the mss file at E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp
+TRACE::2022-01-09.21:34:58::SCWPlatform::Generating sources Done.
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-01-09.21:34:58::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::mss exists loading the mss file  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Opened the sw design from mss  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Adding the swdes entry E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2022-01-09.21:34:58::SCWMssOS::updating the scw layer about changes
+TRACE::2022-01-09.21:34:58::SCWMssOS::Opened the sw design.  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::mss exists loading the mss file  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Opened the sw design from mss  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Adding the swdes entry E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2022-01-09.21:34:58::SCWMssOS::updating the scw layer about changes
+TRACE::2022-01-09.21:34:58::SCWMssOS::Opened the sw design.  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:34:58::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:34:58::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:34:58::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:34:58::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:34:58::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"zynqmp_pmufw",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:34:58::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:34:58::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:34:58::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:34:58::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:34:58::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:34:58::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:34:58::SCWMssOS::No sw design opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::mss does not exists at E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:58::SCWMssOS::Creating sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:59::SCWMssOS::Adding the swdes entry, created swdb E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:59::SCWMssOS::updating the scw layer changes to swdes at   E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:59::SCWMssOS::Writing mss at E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:34:59::SCWMssOS::Completed writing the mss file at E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2022-01-09.21:34:59::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:59::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2022-01-09.21:34:59::SCWMssOS::Completed writing the mss file at E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2022-01-09.21:34:59::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Adding the swdes entry, mss present, able to open swdb E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2022-01-09.21:35:02::SCWMssOS::Writing the mss file completed E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"1d2793f28cd25311a7f207a528743551",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2022-01-09.21:35:02::SCWPlatform::Started generating the artifacts platform platform
+TRACE::2022-01-09.21:35:02::SCWPlatform::Sanity checking of platform is completed
+LOG::2022-01-09.21:35:02::SCWPlatform::Started generating the artifacts for system configuration platform
+LOG::2022-01-09.21:35:02::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2022-01-09.21:35:02::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2022-01-09.21:35:02::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-01-09.21:35:02::SCWDomain::Skipping the build for domain :  zynqmp_fsbl
+LOG::2022-01-09.21:35:02::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2022-01-09.21:35:02::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2022-01-09.21:35:02::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-01-09.21:35:02::SCWDomain::Skipping the build for domain :  zynqmp_pmufw
+LOG::2022-01-09.21:35:02::SCWSystem::Checking the domain standalone_domain
+LOG::2022-01-09.21:35:02::SCWSystem::Not a boot domain 
+LOG::2022-01-09.21:35:02::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2022-01-09.21:35:02::SCWDomain::Generating domain artifcats
+TRACE::2022-01-09.21:35:02::SCWMssOS::Generating standalone artifcats
+TRACE::2022-01-09.21:35:02::SCWMssOS::Copying the qemu file from  F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To E:/KV260/package/platform/export/platform/sw/platform/qemu/
+TRACE::2022-01-09.21:35:02::SCWMssOS::Copying the qemu file from  F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To E:/KV260/package/platform/export/platform/sw/platform/qemu/
+TRACE::2022-01-09.21:35:02::SCWMssOS::Copying the qemu file from  F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To E:/KV260/package/platform/export/platform/sw/platform/standalone_domain/qemu/
+TRACE::2022-01-09.21:35:02::SCWMssOS::Copying the qemu file from  F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To E:/KV260/package/platform/export/platform/sw/platform/standalone_domain/qemu/
+TRACE::2022-01-09.21:35:02::SCWMssOS:: Copying the user libraries. 
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writing the mss file at E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2022-01-09.21:35:02::SCWMssOS::Mss edits present, copying mssfile into export location E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-01-09.21:35:02::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2022-01-09.21:35:02::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2022-01-09.21:35:02::SCWMssOS::skipping the bsp build ... 
+TRACE::2022-01-09.21:35:02::SCWMssOS::Copying to export directory.
+TRACE::2022-01-09.21:35:02::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2022-01-09.21:35:02::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2022-01-09.21:35:02::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2022-01-09.21:35:02::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2022-01-09.21:35:02::SCWSystem::Completed Processing the sysconfig platform
+LOG::2022-01-09.21:35:02::SCWPlatform::Completed generating the artifacts for system configuration platform
+TRACE::2022-01-09.21:35:02::SCWPlatform::Started preparing the platform 
+TRACE::2022-01-09.21:35:02::SCWSystem::Writing the bif file for system config platform
+TRACE::2022-01-09.21:35:02::SCWSystem::dir created 
+TRACE::2022-01-09.21:35:02::SCWSystem::Writing the bif 
+TRACE::2022-01-09.21:35:02::SCWPlatform::Started writing the spfm file 
+TRACE::2022-01-09.21:35:02::SCWPlatform::Started writing the xpfm file 
+TRACE::2022-01-09.21:35:02::SCWPlatform::Completed generating the platform
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"1d2793f28cd25311a7f207a528743551",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2022-01-09.21:35:02::SCWPlatform::updated the xpfm file.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"1d2793f28cd25311a7f207a528743551",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"1d2793f28cd25311a7f207a528743551",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:02::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:02::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:02::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:02::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:02::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Opened existing hwdb system_wrapper_0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:03::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:03::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWWriter::formatted JSON is {
+	"platformName":	"platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Expandable",
+	"platformDesc":	"platform",
+	"platHandOff":	"E:/KV260/hardware/hardware.xsa",
+	"platIntHandOff":	"<platformDir>/hw/hardware.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"platform",
+	"systems":	[{
+			"systemName":	"platform",
+			"systemDesc":	"platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"platform",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"2515f3d7c94d07ad1e7ad575bb0c3155",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.5", "xilsecure:4.5", "xilpm:3.4"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"4a6884213ebbc7eb0aba215dbdd718d3",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.0", "xilsecure:4.5", "xilskey:7.1"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.5",
+					"mssFile":	"",
+					"md5Digest":	"1d2793f28cd25311a7f207a528743551",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2022-01-09.21:35:03::SCWPlatform::Clearing the existing platform
+TRACE::2022-01-09.21:35:03::SCWSystem::Clearing the existing sysconfig
+TRACE::2022-01-09.21:35:03::SCWBDomain::clearing the fsbl build
+TRACE::2022-01-09.21:35:03::SCWMssOS::Removing the swdes entry for  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWBDomain::clearing the pmufw build
+TRACE::2022-01-09.21:35:03::SCWMssOS::Removing the swdes entry for  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWMssOS::Removing the swdes entry for  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:03::SCWSystem::Clearing the domains completed.
+TRACE::2022-01-09.21:35:03::SCWPlatform::Clearing the opened hw db.
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform location is E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Removing the HwDB with name E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:03::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:03::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened new HwDB with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWReader::Active system found as  platform
+TRACE::2022-01-09.21:35:09::SCWReader::Handling sysconfig platform
+TRACE::2022-01-09.21:35:09::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWReader::Boot application domain added for zynqmp_fsbl
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-01-09.21:35:09::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::mss exists loading the mss file  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design from mss  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Adding the swdes entry E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2022-01-09.21:35:09::SCWMssOS::updating the scw layer about changes
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design.  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilffs:4.5
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilsecure:4.5
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilpm:3.4
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWReader::No isolation master present  
+TRACE::2022-01-09.21:35:09::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWReader::Boot application domain added for zynqmp_pmufw
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::No sw design opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::mss exists loading the mss file  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design from mss  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Adding the swdes entry E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2022-01-09.21:35:09::SCWMssOS::updating the scw layer about changes
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design.  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilfpga:6.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilsecure:4.5
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS:: library already available in sw design:  xilskey:7.1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Saving the mss changes E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWReader::No isolation master present  
+TRACE::2022-01-09.21:35:09::SCWDomain::checking for install qemu data   : 
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU Data from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the QEMU args  from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2022-01-09.21:35:09::SCWDomain:: Using the PMUQEMU args from install at  : F:/Vitis/Vitis/2021.1/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::No sw design opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::mss exists loading the mss file  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design from mss  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Adding the swdes entry E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2022-01-09.21:35:09::SCWMssOS::updating the scw layer about changes
+TRACE::2022-01-09.21:35:09::SCWMssOS::Opened the sw design.  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Saving the mss changes E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-01-09.21:35:09::SCWMssOS::Commit changes completed.
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-01-09.21:35:09::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to open the hw design at E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA given E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA absoulate path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform::DSA directory E:/KV260/package/platform/hw
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Platform Path E:/KV260/package/platform/hw/hardware.xsa
+TRACE::2022-01-09.21:35:09::SCWPlatform:: Unique name vendor:lib:system:1.0
+TRACE::2022-01-09.21:35:09::SCWPlatform::Trying to set the existing hwdb with name system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Opened existing hwdb system_wrapper_1
+TRACE::2022-01-09.21:35:09::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-01-09.21:35:09::SCWMssOS::Checking the sw design at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWMssOS::DEBUG:  swdes dump  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+E:/KV260/package/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+E:/KV260/package/platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-01-09.21:35:09::SCWMssOS::Sw design exists and opened at  E:/KV260/package/platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2022-01-09.21:35:09::SCWReader::No isolation master present  
