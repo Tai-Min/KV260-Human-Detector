@@ -1,0 +1,63 @@
+/include/ "system-conf.dtsi"
+/ {
+	chosen {
+                bootargs = "earlycon console=ttyPS1,115200 clk_ignore_unused ext4=/dev/mmcblk1p2:/rootfs init_fatal_sh=1 cma=1000M ";
+                stdout-path = "serial1:115200n8";
+        };
+};
+
+&sdhci1 { /* FIXME - on CC - MIO 39 - 51 */
+	status = "okay";
+	no-1-8-v;
+	disable-wp;
+	broken-cd;
+	xlnx,mio-bank = <1>;
+	/* Do not run SD in HS mode from bootloader */
+	sdhci-caps-mask = <0 0x200000>;
+	sdhci-caps = <0 0>;
+	max-frequency = <19000000>;
+};
+
+&zynqmp_dpsub {
+        status = "disabled";
+};
+
+&zynqmp_dpdma {
+        status = "disabled";
+};
+
+&gem3 {
+        status = "disabled";
+};
+
+&sata {
+        status = "disabled";
+};
+
+&usb0 {
+        status = "disabled";
+};
+
+&dwc3_0 {
+        status = "disabled";
+};
+
+&psgtr {
+        status = "disabled";
+};
+
+&zynqmp_dp_snd_pcm0 {
+        status = "disabled";
+};
+
+&zynqmp_dp_snd_pcm1 {
+        status = "disabled";
+};
+
+&zynqmp_dp_snd_card0 {
+        status = "disabled";
+};
+
+&zynqmp_dp_snd_codec0 {
+        status = "disabled";
+};

@@ -1,0 +1,276 @@
+#################################################################################
+# I.   Main Contents of Prebuilt						#
+# II.  BSP generation steps 							#
+# 	II.a Create and Configure a project					#
+#	II.b Get openamp,qemu and xen device tree				#
+#	II.c Enable openamp and its examples in rootfs				#
+#	II.d Configuring BSP							#
+#	II.e Project Build							#
+#	II.f Clean up of configurations						#
+#	II.g Packageing a BSP							#
+# III. Software Images								#
+# IV.  How to use wic image							#
+# V.   Hardware Images								#
+# VI.  Software Projects                                                        #
+# VII. Booting Prebuilt Images							#
+#################################################################################
+
+I. Main Contents of Prebuilt
+================================================================================
+|-- pre-built/ 	# Pre-built images directory
+| |-- linux/ 	# Pre-built Linux system images
+| | |-- images/
+| | | |-- imgsel.elf			# Image Selector elf is a application running out of OCM after a POR/SRST to select the right boot image
+| | | |-- imgsel.bin			# Image Selector bin is a application running out of OCM after a POR/SRST to select the right boot image
+| | | |-- zynqmp_fsbl.elf		# First stage bootloader ELF
+| | | |-- pmufw.elf			# pmu firmware ELF
+| | | |-- system.dtb			# Device-tree Blob(DTB) used for Linux kernel
+| | | |-- image.ub			# FIT image including the kernel, DTB and rootfs
+| | | |-- Image				# FIT image including the kernel
+| | | |-- u-boot.elf			# U-boot ELF
+| | | |-- u-boot.bin			# U-boot bin
+| | | |-- petalinux-sdimage.wic.xz 	# Compressed wic image for SD card with BOOT and ROOT partitions with required files
+| | | |-- BOOT.BIN			# ZynqMP boot BIN file
+| | | |-- boot.scr			# boot.scr to provide the required default boot
+| | | |-- config			# Configuration file used for prebuilt images generation
+| | | |-- pxelinux.cfg			# pxelinux.cfg directory with default configuration file for pxe boot
+| | | |-- bl31.elf			# Arm trusted firmware ELF file
+| | | |-- bl31.bin			# Arm trusted firmware BIN file
+| | | |-- rootfs.cpio.gz		# Rootfs CPIO image used for FIT image(image.ub)
+| | | |-- rootfs.cpio.gz.u-boot		# Rootfs CPIO image with u-boot header for loading from u-boot
+| | | |-- rootfs.tar.gz			# Rootfs tar file which can be used for SD ext4 partition
+| | | |-- rootfs.jffs2			# Rootfs jffs2 file which can be used for mounting rootfs on jffs2 file system
+| | | |-- rootfs.manifest		# Rootfs manifest file will have list of packages and version details
+| | | |-- ramdisk.cpio			# Ramdisk rootfs CPIO image
+| | | |-- ramdisk.cpio.gz		# Ramdisk rootfs CPIO image with gz compression
+| | | |-- ramdisk.cpio.gz.u-boot	# Ramdisk CPIO image with u-boot header for loading from u-boot
+| | | |-- ramdisk.tar.gz		# Ramdisk tar file which can be used for SD ext4 partition
+| | | |-- ramdisk.manifest		# Ramdisk manifest file will have list of packages and version details
+| | | |-- pmu_rom_qemu_sha3.elf		# Pre-built pmu-rom ELF need for qemu boot(mandatory for both template and bsp projects
+| | | |                                     # Note: pmu_rom_qemu_sha3.elf is never generated from petalinux build,
+| | | |                                     # this needs to be copied from BSP project
+| | | |-- system.bit			# FPGA bitstream used in BSP HW design(same as below download.bit)
+| | | |-- vmlinux			# Statically linked kernel executable file used for kernel debugging
+| | | |-- openamp.dtb                   # Openamp device-tree blob file
+| | | |-- zynqmp-qemu-arm.dtb           # qemu device-tree blob file for single arch
+| | | |-- zynqmp-qemu-multiarch-arm.dtb # qemu device-tree blob file for multi arch and it has information of a53 and other devices
+| | | |-- zynqmp-qemu-multiarch-pmu.dtb # qemu device-tree blob file for multi arch and it has information of microblaze nodes
+| | | |-- pl.dtbo			# PL device-tree overlay blob file
+| | |-- xen
+| | | |-- xen.dtb			# Xen device-tree blob file
+| | | |-- xen-Image			# Xen kernel image
+| | | |-- xen-openamp.dtb		# Xen openamp device-tree blob file
+| | | |-- xen-qemu.dtb			# Xen qemu device-tree blob file
+| | | |-- xen-rootfs.cpio.gz		# Xen rootfs CPIO image
+| | | |-- xen				# Xen binary
+| | | |-- xen.cfg			# Xen config file for image builder
+| | | |-- xen_boot_sd.scr		# Xen boot file for booting from SD card
+| | | |-- xen_boot_sd.source		# Xen boot source file of SD card booting
+| | | |-- xen_boot_tftp.scr		# Xen boot file for booting through tftp
+| | | |-- xen_boot_tftp.source		# Xen boot source file of tftp booting
+| | |-- implementation/
+| | | |-- download.bit			# FPGA bitstream
+
+II. BSP generation steps
+================================================================================
+This section explain about BSP generation steps.
+
+Note:	While building bsp, we use some openAMP, Xen and carrier dts files from internal repos
+	If you want to use openAMP, Xen, Please copy the files from published bsp
+	While copying files please maintain same directory structure.
+
+	II.a Creation and configuration of project
+
+		$ petalinux-create -t project --template zynqMP --force -n <name of project>
+		$ petalinux-config --get-hw-description=<path to xsa directory> --silentconfig
+
+	II.b Get openamp,carrier card, xen device trees.
+
+		$ cp -r <som BSP>/project-spec/meta-user/recipes-bsp/device-tree/files/{openamp.dtsi,xen.dtsi} <project root>/project-spec/meta-user/recipes-bsp/device-tree/files
+		$ cp -r <som BSP>/project-spec/dts_dir/* <project root>/project-spec/dts_dir/.
+
+		$ echo '/include/ "openamp.dtsi"' >>  <project root>/project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+
+		$ echo 'SRC_URI += "file://openamp.dtsi"' >> project-spec/meta-user/recipes-bsp/device-tree/device-tree.bbappend
+
+	II.c Enable openamp and its examples in rootfs
+
+		$ petalinux-config -c rootfs
+			Select following packages and save it
+				openamp-fw-echo-testd
+				openamp-fw-mat-muld
+				openamp-fw-rpc-demo
+				packagegroup-petalinux-openamp
+	II.d Configuring BSP
+
+		1.k26-starter and k26-prod boards Multi CC configuration
+
+			$ petalinux-config
+				Enter zynqmp-smk-k26-reva01 for MACHINE_NAME option ( k26-starter  DTG parameter for revA)
+				Enter zynqmp-sm-k26-reva01 for MACHINE_NAME option ( k26-prod  DTG parameter for revA )
+				Enter k26 YOCTO_BOARD_NAME option
+				Enter zynqmp-generic for YOCTO_MACHINE_NAME option
+				Enable CONFIG_SUBSYSTEM_COMPONENT_IMG_SEL
+				Set the CONFIG_SUBSYSTEM_INITRAMFS_IMAGE_NAME as "petalinux-initramfs-image"
+				Add CONFIG_SUBSYSTEM_EXTRA_DT_FILES with pointing all carrier dts files copied above
+				# Enabling som-carrier-autoload and misc-config recipe for ramdisk rfs
+				echo "INITRAMFS_PACKAGES_append = \" som-carrier-autoload misc-config\"" > <project>/project-spec/meta-user/conf/petalinuxbsp.conf
+
+			$ petalinux-config -c rootfs
+				Select following packages and save it
+					dnf
+					packagegroup-petalinux-som
+					packagegroup-core-tools-debug
+					packagegroup-core-full-cmdline
+					packagegroup-petalinux-utils
+					packagegroup-petalinux-networking-stack
+					packagegroup-petalinux-python-modules
+					packagegroup-petalinux-jupyter
+
+			$ petalinux-config -c u-boot
+				Select following configs and save it
+					CONFIG_OF_BOARD
+
+	II.e. Project Build
+
+		1. Build regular images
+			$ petalinux-build
+			$ mkdir -p pre-built/linux/images
+			$ cp <project root>/images/linux/* <project root>/pre-built/linux/images/
+			$ petalinux-package --boot --fsbl <project root>/images/linux/zynqmp_fsbl.elf --fpga <project root>/images/linux/system.bit --u-boot <project root>/images/linux/u-boot.elf --atf <project root>/images/linux/bl31.elf --dtb <project root>/images/linux/u-boot.dtb --pmufw <project root>/images/linux/pmufw.elf -o <project root>/pre-built/linux/images/BOOT.BIN  --force
+			$ petalinux-package --boot --u-boot --force
+			$ mkdir -p pre-built/linux/images
+			$ cp <project root>/images/linux/* <project root>/pre-built/linux/images/
+			$ petalinux-package --boot --fsbl <project root>/images/linux/zynqmp_fsbl.elf --fpga <project root>/images/linux/system.bit --u-boot <project root>/images/linux/u-boot.elf --atf <project root>/images/linux/bl31.elf --dtb <project root>/images/linux/u-boot.dtb --pmufw <project root>/images/linux/pmufw.elf -o <project root>/pre-built/linux/images/BOOT.BIN  --force
+			$ petalinux-package --wic --bootfiles "ramdisk.cpio.gz.u-boot boot.scr Image system.dtb" --images-dir <project root>/pre-built/linux/images --outdir <project root>/pre-built/linux/images
+
+		2. Build xen images
+			$ echo '/include/ "xen.dtsi"' >> <project root>/project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+			$ echo 'SRC_URI += "file://xen.dtsi \"' >> project-spec/meta-user/recipes-bsp/device-tree/device-tree.bbappend
+			$ petalinux-config
+				Select following config and save it.
+					Image Packaging Configuration
+						Root filesystem type (INITRD)
+						Enter CONFIG_SUBSYSTEM_INITRAMFS_IMAGE_NAME as "petalinux-image-minimal"
+			$ petalinux-config -c rootfs
+				Select following package and save it
+					packagegroup-petalinux-xen
+			$ petalinux-build
+			$ cp -L <project root>/images/linux/Image <project root>/pre-built/linux/images/xen-Image
+			$ cp -L <project root>/images/linux/system.dtb <project root>/pre-built/linux/images/xen.dtb
+			$ cp -L <project root>/images/linux/xen <project root>/pre-built/linux/images/xen
+			$ cp -L <project root>/images/linux/rootfs.cpio.gz <project root>/pre-built/linux/images/xen-rootfs.cpio.gz
+			$ cat > <project root>/pre-built/linux/xen/xen.cfg << EOL
+MEMORY_START="0x0"
+MEMORY_END="0x80000000"
+XEN="xen"
+DOM0_KERNEL="xen-Image"
+DEVICE_TREE="xen.dtb"
+DOM0_RAMDISK="xen-rootfs.cpio.gz"
+NUM_DOMUS="0"
+UBOOT_SOURCE="xen_boot.source"
+UBOOT_SCRIPT="xen_boot.scr"
+EOL
+			$ export XEN_CONFIG="<full path/project root>/pre-built/linux/xen/xen.cfg"
+			$ export XEN_CONFIG_SKIP="1"
+			$ export BB_ENV_EXTRAWHITE="$BB_ENV_EXTRAWHITE XEN_CONFIG XEN_CONFIG_SKIP"
+			$ petalinux-build -c kernel -x do_deploy
+			$ rsync -arz --progress --delete <project root>/images/linux/xen_boot_* <project root>/pre-built/linux/xen
+
+	II.f. Clean up of configurations
+
+		Bydefault few configurations are enabled to generate prebuilt images. These configurations are cleaned up while packaging a bsp. However you can keep them if you need them in project.
+
+		$ petalinux-config -c rootfs
+			disable following packages and save it
+				openamp-fw-echo-testd
+				openamp-fw-mat-muld
+				openamp-fw-rpc-demo
+				packagegroup-petalinux-openamp
+				packagegroup-petalinux-xen
+				libmali-xlnx
+
+		$ petalinux-config
+			Select following config and save it.
+				Image Packaging Configuration
+					Root filesystem type (INITRD)
+					Enter CONFIG_SUBSYSTEM_INITRAMFS_IMAGE_NAME"  as "petalinux-initramfs-image"
+
+
+	II.g. Packageing a BSP
+		Package the BSP with files generated with following command
+		$  petalinux-package --bsp -p <plnx-proj-root> --hwsource <hw-project-root> --output <name of the BSP>
+
+                NOTE: --hwsource is optional and can be removed
+
+III. Software Images
+================================================================================
+You can run the following command to rebuild the software images:
+ * zynqmp_fsbl.elf
+ * image.ub
+ * Image
+ * u-boot.elf
+ * system.dtb
+ * pmufw.elf
+ * bl31.elf
+ * imgsel.elf
+
+   $ petalinux-build
+
+You can also rebuild some of the images alone as follows:
+ * zynqmp_fsbl.elf
+   $ petalinux-build -c bootloader
+
+ * u-boot.elf
+   $ petalinux-build -c u-boot
+
+ * system.dtb
+   $ petalinux-build -c device-tree
+
+ * kernel only:
+   $ petalinux-build -c kernel
+
+For more info regarding how to build images run "petalinux-build --help" command
+
+You can generate BOOT.BIN file with "petalinux-package --boot" command:
+ $ petalinux-package --boot --fpga pre-built/linux/images/system.bit \
+   --fsbl pre-built/linux/images/zynqmp_fsbl.elf \
+   --u-boot pre-built/linux/images/u-boot.elf	\
+   --pmufw prebuilt/linux/images/pmufw.elf	\
+   --atf pre-built/linux/images/bl31.elf
+
+You can generate the WIC image with following command
+ $ petalinux-package --wic --bootfiles "ramdisk.cpio.gz.u-boot boot.scr Image system.dtb" --images-dir <project root>/pre-built/linux/images --outdir <project root>/pre-built/linux/images
+
+IV.How to use wic image
+===============================================================================
+From linux Host use DD command to flash wic to sd card, connect SD card to host system then
+
+dd if=petalinux-sdimage.wic of=/dev/sd<X> conv=fsync
+
+Note:You need sudo access to do this
+
+From Windows Host to flash wic image to SD card we can use any of following
+
+BalenaEtcher tool
+
+Win32DiskImager tool
+
+Then insert the SD card in to board/carrier card and boot the system.
+
+
+V. Hardware Images
+================================================================================
+ * design_1_wrapper.bit
+   The hardware project source files are in "hardware/" directory. You can
+   open the hardware project with vivado, and rebuild it.
+
+VI. Software Projects
+================================================================================
+ * device-tree
+   DTG xsct software components can be found at "components/plnx_workspace/" directory
+
+VII.Booting Prebuilt Images
+=====================================================================================
+   We can boot petalinux images using  petalinux-boot.
+   For more information on booting prebuilt images please refer the "Booting and Packaging" section of ug1144.

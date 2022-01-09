@@ -15,7 +15,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d36e4b74</spirit:value>
+            <spirit:value>09ca4ef1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28,7 +28,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d36e4b74</spirit:value>
+            <spirit:value>09ca4ef1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -87,29 +87,32 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="8">0x00</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>FAN_0_TEMP</spirit:name>
-        <spirit:displayName>Fan 0 Temp</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_0_TEMP">0</spirit:value>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="reg signed(7 0)">
+        <spirit:name>FAN_0_DEG_TEMP</spirit:name>
+        <spirit:displayName>Fan 0 Deg Temp</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_0_DEG_TEMP" spirit:bitStringLength="8">&quot;00011001&quot;</spirit:value>
       </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>FAN_100_TEMP</spirit:name>
-        <spirit:displayName>Fan 100 Temp</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_100_TEMP">6500</spirit:value>
+      <spirit:modelParameter spirit:dataType="reg signed(7 0)">
+        <spirit:name>FAN_100_DEG_TEMP</spirit:name>
+        <spirit:displayName>Fan 100 Deg Temp</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_100_DEG_TEMP" spirit:bitStringLength="8">&quot;01000001&quot;</spirit:value>
       </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>a</spirit:name>
-        <spirit:displayName>A</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.a" spirit:dependency="(255 / ((spirit:decode(id(&apos;MODELPARAM_VALUE.FAN_100_TEMP&apos;)) - spirit:decode(id(&apos;MODELPARAM_VALUE.FAN_0_TEMP&apos;))) / 100))">3</spirit:value>
+      <spirit:modelParameter spirit:dataType="reg signed(7 0)">
+        <spirit:name>FAN_PWM_OFF_VAL</spirit:name>
+        <spirit:displayName>Fan Pwm Off Val</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_PWM_OFF_VAL" spirit:bitStringLength="8">&quot;00100000&quot;</spirit:value>
       </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>b</spirit:name>
-        <spirit:displayName>B</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.b" spirit:dependency="((-spirit:decode(id(&apos;MODELPARAM_VALUE.a&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.FAN_0_TEMP&apos;))) / 100)">0</spirit:value>
+      <spirit:modelParameter spirit:dataType="reg signed(7 0)">
+        <spirit:name>FAN_PWM_ON_VAL</spirit:name>
+        <spirit:displayName>Fan Pwm On Val</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FAN_PWM_ON_VAL" spirit:bitStringLength="8">&quot;01000000&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -119,7 +122,7 @@
       <spirit:file>
         <spirit:name>xgui/temp2pwm_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_cb9e8f7b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_e9f13951</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -127,24 +130,24 @@
   <spirit:description>xilinx.com:module_ref:temp2pwm:1.0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
-      <spirit:name>FAN_0_TEMP</spirit:name>
-      <spirit:displayName>Fan 0 Temp</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_0_TEMP">0</spirit:value>
+      <spirit:name>FAN_0_DEG_TEMP</spirit:name>
+      <spirit:displayName>Fan 0 Deg Temp</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_0_DEG_TEMP" spirit:bitStringLength="8">&quot;00011001&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>FAN_100_TEMP</spirit:name>
-      <spirit:displayName>Fan 100 Temp</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_100_TEMP">6500</spirit:value>
+      <spirit:name>FAN_100_DEG_TEMP</spirit:name>
+      <spirit:displayName>Fan 100 Deg Temp</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_100_DEG_TEMP" spirit:bitStringLength="8">&quot;01000001&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>a</spirit:name>
-      <spirit:displayName>A</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.a">3</spirit:value>
+      <spirit:name>FAN_PWM_OFF_VAL</spirit:name>
+      <spirit:displayName>Fan Pwm Off Val</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_PWM_OFF_VAL" spirit:bitStringLength="8">&quot;00100000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>b</spirit:name>
-      <spirit:displayName>B</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.b">0</spirit:value>
+      <spirit:name>FAN_PWM_ON_VAL</spirit:name>
+      <spirit:displayName>Fan Pwm On Val</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.FAN_PWM_ON_VAL" spirit:bitStringLength="8">&quot;01000000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -166,7 +169,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-12-19T11:38:01Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-01-09T02:32:04Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>

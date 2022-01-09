@@ -1,7 +1,7 @@
 #ifndef IP_SYSTEM_ZYNQ_ULTRA_PS_E_0_0_H_
 #define IP_SYSTEM_ZYNQ_ULTRA_PS_E_0_0_H_
 
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -123,7 +123,6 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -196,7 +195,6 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -269,7 +267,6 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -344,7 +341,6 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -425,7 +421,6 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 

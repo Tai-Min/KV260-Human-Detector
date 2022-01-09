@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jun 11 05:04:27 2021
+# Process ID: 33405
+# Current directory: /tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1
+# Command line: vivado -log project_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_1_wrapper.tcl
+# Log file: /tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/project_1_wrapper.vds
+# Journal file: /tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+INFO: [Common 17-1239] XILINX_LOCAL_USER_DATA is set to 'NO'.
+Sourcing tcl script '/home/xbrbbot/.Xilinx/Vivado/Vivado_init.tcl'
+290 Beta devices matching pattern found, 290 enabled.
+enable_beta_device: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2582.297 ; gain = 8.148 ; free physical = 11013 ; free virtual = 485760
+source project_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/proj/xbuilds/2021.1_0611_1/installs/lin64/Vivado/2021.1/data/ip'.
+Command: synth_design -top project_1_wrapper -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34266
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2872.438 ; gain = 45.750 ; free physical = 21525 ; free virtual = 496271
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'project_1_wrapper' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.srcs/sources_1/imports/hdl/project_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'project_1' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'project_1_zynq_ultra_ps_e_0_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/.Xil/Vivado-33405-xcosswbld06/realtime/project_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'project_1_zynq_ultra_ps_e_0_0' (1#1) [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/.Xil/Vivado-33405-xcosswbld06/realtime/project_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp0_awid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awaddr' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awlen' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awsize' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awburst' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awlock' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awcache' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awprot' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_wdata' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_wstrb' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_wlast' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_wvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_bready' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_araddr' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arlen' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arsize' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arburst' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arlock' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arcache' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arprot' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_rready' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_awqos' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp0_arqos' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awaddr' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awlen' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awsize' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awburst' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awlock' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awcache' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awprot' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awuser' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_wdata' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_wstrb' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_wlast' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_wvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_bready' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_araddr' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arlen' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arsize' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arburst' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arlock' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arcache' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arprot' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arvalid' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_aruser' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_rready' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_awqos' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'maxigp1_arqos' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7071] port 'pl_resetn0' of module 'project_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'project_1_zynq_ultra_ps_e_0_0' has 84 connections declared, but only 27 given [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'project_1' (2#1) [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/synth/project_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'project_1_wrapper' (3#1) [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.srcs/sources_1/imports/hdl/project_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2910.375 ; gain = 83.688 ; free physical = 21118 ; free virtual = 495865
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2929.188 ; gain = 102.500 ; free physical = 21616 ; free virtual = 496363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2929.188 ; gain = 102.500 ; free physical = 21635 ; free virtual = 496382
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2929.188 ; gain = 0.000 ; free physical = 21946 ; free virtual = 496693
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/ip/project_1_zynq_ultra_ps_e_0_0/project_1_zynq_ultra_ps_e_0_0/project_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'project_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.gen/sources_1/bd/project_1/ip/project_1_zynq_ultra_ps_e_0_0/project_1_zynq_ultra_ps_e_0_0/project_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'project_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.srcs/constrs_1/imports/xdc/default.xdc]
+Finished Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.srcs/constrs_1/imports/xdc/default.xdc]
+Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2971.938 ; gain = 0.000 ; free physical = 23637 ; free virtual = 498383
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2971.938 ; gain = 0.000 ; free physical = 23635 ; free virtual = 498382
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2971.938 ; gain = 145.250 ; free physical = 23463 ; free virtual = 498210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2971.938 ; gain = 145.250 ; free physical = 23460 ; free virtual = 498207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for project_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for project_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2971.938 ; gain = 145.250 ; free physical = 23454 ; free virtual = 498201
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2971.938 ; gain = 145.250 ; free physical = 23436 ; free virtual = 498184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2971.938 ; gain = 145.250 ; free physical = 23436 ; free virtual = 498187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3458.812 ; gain = 632.125 ; free physical = 22806 ; free virtual = 497557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3458.812 ; gain = 632.125 ; free physical = 22806 ; free virtual = 497557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 3477.844 ; gain = 651.156 ; free physical = 22801 ; free virtual = 497552
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |project_1_zynq_ultra_ps_e_0_0 |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |project_1_zynq_ultra_ps_e_0 |     1|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.781 ; gain = 657.094 ; free physical = 22721 ; free virtual = 497481
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 3483.781 ; gain = 614.344 ; free physical = 22750 ; free virtual = 497510
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 3483.789 ; gain = 657.094 ; free physical = 22749 ; free virtual = 497510
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3483.789 ; gain = 0.000 ; free physical = 22742 ; free virtual = 497502
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3521.438 ; gain = 0.000 ; free physical = 22713 ; free virtual = 497474
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: c6a68b7
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 3533.406 ; gain = 951.109 ; free physical = 22840 ; free virtual = 497592
+INFO: [Common 17-1381] The checkpoint '/tmp/tmp.XUYe4REsrK/temp/hwflow/hwflow_project_1/project_1.runs/synth_1/project_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file project_1_wrapper_utilization_synth.rpt -pb project_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 11 05:05:43 2021...

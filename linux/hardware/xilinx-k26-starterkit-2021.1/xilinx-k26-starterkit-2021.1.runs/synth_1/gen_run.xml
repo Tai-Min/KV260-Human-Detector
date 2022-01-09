@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1623409376">
+  <File Type="VDS-TIMINGSUMMARY" Name="project_1_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="project_1_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="project_1_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="project_1_wrapper_utilization_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="project_1_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="project_1_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="project_1_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="project_1_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="project_1_wrapper_drc_synth.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/project_1/project_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/project_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/project_1/hdl/project_1_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1623409349"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="project_1_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/xdc/default.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/xdc/default.xdc"/>
+        <Attr Name="ImportTime" Val="1623409308"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="project_1_zynq_ultra_ps_e_0_0"/>
+</GenRun>

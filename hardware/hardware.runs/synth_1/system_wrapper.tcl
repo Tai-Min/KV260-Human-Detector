@@ -90,9 +90,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  E:/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v
   E:/KV260/hardware/hardware.srcs/sources_1/new/pwm.v
   E:/KV260/hardware/hardware.srcs/sources_1/new/divider.v
+  E:/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v
+  E:/KV260/hardware/hardware.srcs/sources_1/new/stepper.v
   E:/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v
 }
 add_files E:/KV260/hardware/hardware.srcs/sources_1/bd/system/system.bd
@@ -109,6 +110,11 @@ set_property used_in_implementation false [get_files -all e:/KV260/hardware/hard
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/system_ooc.xdc]
 
