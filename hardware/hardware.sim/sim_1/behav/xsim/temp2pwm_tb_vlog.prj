@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hardware.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../hardware.gen/sources_1/bd/system/ipshared/bb17/hdl" --include "../../../../hardware.gen/sources_1/bd/system/ipshared/6dcf" --include "F:/Vitis/Vivado/2021.1/data/xilinx_vip/include" \
+"../../../../hardware.srcs/sources_1/new/temp2pwm.v" \
+"../../../../hardware.srcs/sim_1/new/temp2pwm_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

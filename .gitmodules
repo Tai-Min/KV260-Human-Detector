@@ -1,0 +1,4 @@
+[submodule "device-tree-xlnx"]
+	path = device-tree-xlnx
+	url = https://github.com/Xilinx/device-tree-xlnx
+	branch = xlnx_rel_v2021.1

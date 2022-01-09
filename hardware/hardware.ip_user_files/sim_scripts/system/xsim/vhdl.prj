@@ -1,0 +1,21 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/ip/system_proc_sys_reset_0_0/sim/system_proc_sys_reset_0_0.vhd" \
+"../../../bd/system/ip/system_axi_intc_0_0/sim/system_axi_intc_0_0.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_conv_funs_pkg.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/common_types_pkg.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_proc_common_pkg.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_ipif_pkg.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_family_support.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_family.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_soft_reset.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/proc_common_v3_00_a/hdl/src/vhdl/system_system_management_wiz_0_0_pselect_f.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/axi_lite_ipif_v1_31_a/hdl/src/vhdl/system_system_management_wiz_0_0_address_decoder.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/axi_lite_ipif_v1_31_a/hdl/src/vhdl/system_system_management_wiz_0_0_slave_attachment.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/system_system_management_wiz_0_0_interrupt_control.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/axi_lite_ipif_v1_31_a/hdl/src/vhdl/system_system_management_wiz_0_0_axi_lite_ipif.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_drp_arbiter.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_temperature_update.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_xadc_core_drp.vhd" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_axi_xadc.vhd" \
+
+nosort

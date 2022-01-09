@@ -1,0 +1,13 @@
+Breakpoint File Version 1.0
+57,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+71,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+93,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+118,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+138,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+155,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+180,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+202,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+234,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+260,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+278,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"
+293,true,"E:/KV260/hardware/hardware.srcs/sim_1/new/stepper_tb.v"

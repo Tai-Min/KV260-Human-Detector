@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2021.1 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xck26_0" gui_info=""/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xck26_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/system_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="system_i/&lt;const0>" gui_info="dashboard_2/hw_vio_1=0,dashboard_3/hw_vio_1=0"/>
+    <Object name="system_i/divider_0_clk_out" gui_info="dashboard_2/hw_vio_1=1,dashboard_1/hw_vio_1=2"/>
+    <Object name="system_i/proc_sys_reset_1_peripheral_aresetn" gui_info="dashboard_2/hw_vio_1=0,dashboard_3/hw_vio_1=0,dashboard_4/hw_vio_1=0"/>
+    <Object name="system_i/pwm_0_cnt[31:0]" gui_info="dashboard_1/hw_vio_1=5"/>
+    <Object name="system_i/pwm_0_reeee" gui_info="dashboard_4/hw_vio_1=4,dashboard_2/hw_vio_1=4"/>
+    <Object name="system_i/pwm_0_state" gui_info="dashboard_2/hw_vio_1=2_exp,dashboard_3/hw_vio_1=1,dashboard_4/hw_vio_1=1_exp,dashboard_1/hw_vio_1=3"/>
+    <Object name="system_i/system_management_wiz_0_busy_out" gui_info="dashboard_2/hw_vio_1=3,dashboard_1/hw_vio_1=4"/>
+    <Object name="system_i/system_management_wiz_0_busy_out_1" gui_info="dashboard_2/hw_vio_1=4,dashboard_1/hw_vio_1=5"/>
+    <Object name="system_i/system_management_wiz_0_eos_out" gui_info="dashboard_2/hw_vio_1=2,dashboard_3/hw_vio_1=2,dashboard_4/hw_vio_1=2_exp"/>
+    <Object name="system_i/system_management_wiz_0_temp_out[9:0]" gui_info="dashboard_2/hw_vio_1=3,dashboard_3/hw_vio_1=3,dashboard_4/hw_vio_1=3,dashboard_1/hw_vio_1=0"/>
+    <Object name="system_i/temp2pwm_0_pwm[7:0]" gui_info="dashboard_3/hw_vio_1=4,dashboard_4/hw_vio_1=4_exp,dashboard_2/hw_vio_1=5,dashboard_1/hw_vio_1=1"/>
+  </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="SysMon" gui_info="dashboard_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_2=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_3=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;],dashboard_4=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/&lt;const0>"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/divider_0_clk_out"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/proc_sys_reset_1_peripheral_aresetn"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/pwm_0_cnt[31]"/>
+        <net name="system_i/pwm_0_cnt[30]"/>
+        <net name="system_i/pwm_0_cnt[29]"/>
+        <net name="system_i/pwm_0_cnt[28]"/>
+        <net name="system_i/pwm_0_cnt[27]"/>
+        <net name="system_i/pwm_0_cnt[26]"/>
+        <net name="system_i/pwm_0_cnt[25]"/>
+        <net name="system_i/pwm_0_cnt[24]"/>
+        <net name="system_i/pwm_0_cnt[23]"/>
+        <net name="system_i/pwm_0_cnt[22]"/>
+        <net name="system_i/pwm_0_cnt[21]"/>
+        <net name="system_i/pwm_0_cnt[20]"/>
+        <net name="system_i/pwm_0_cnt[19]"/>
+        <net name="system_i/pwm_0_cnt[18]"/>
+        <net name="system_i/pwm_0_cnt[17]"/>
+        <net name="system_i/pwm_0_cnt[16]"/>
+        <net name="system_i/pwm_0_cnt[15]"/>
+        <net name="system_i/pwm_0_cnt[14]"/>
+        <net name="system_i/pwm_0_cnt[13]"/>
+        <net name="system_i/pwm_0_cnt[12]"/>
+        <net name="system_i/pwm_0_cnt[11]"/>
+        <net name="system_i/pwm_0_cnt[10]"/>
+        <net name="system_i/pwm_0_cnt[9]"/>
+        <net name="system_i/pwm_0_cnt[8]"/>
+        <net name="system_i/pwm_0_cnt[7]"/>
+        <net name="system_i/pwm_0_cnt[6]"/>
+        <net name="system_i/pwm_0_cnt[5]"/>
+        <net name="system_i/pwm_0_cnt[4]"/>
+        <net name="system_i/pwm_0_cnt[3]"/>
+        <net name="system_i/pwm_0_cnt[2]"/>
+        <net name="system_i/pwm_0_cnt[1]"/>
+        <net name="system_i/pwm_0_cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/pwm_0_reeee"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value="InputDisplay:InputText;LED_Low:128,128,128,;LED_High:0,255,0,;"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/pwm_0_state"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/system_management_wiz_0_busy_out"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/system_management_wiz_0_busy_out_1"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value="InputDisplay:LED;LED_Low:128,128,128,;LED_High:0,255,0,;"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/system_management_wiz_0_eos_out"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/system_management_wiz_0_temp_out[9]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[8]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[7]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[6]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[5]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[4]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[3]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[2]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[1]"/>
+        <net name="system_i/system_management_wiz_0_temp_out[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/temp2pwm_0_pwm[7]"/>
+        <net name="system_i/temp2pwm_0_pwm[6]"/>
+        <net name="system_i/temp2pwm_0_pwm[5]"/>
+        <net name="system_i/temp2pwm_0_pwm[4]"/>
+        <net name="system_i/temp2pwm_0_pwm[3]"/>
+        <net name="system_i/temp2pwm_0_pwm[2]"/>
+        <net name="system_i/temp2pwm_0_pwm[1]"/>
+        <net name="system_i/temp2pwm_0_pwm[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

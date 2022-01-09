@@ -1,0 +1,15 @@
+verilog xil_defaultlib --include "F:/Vitis/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../hardware.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../hardware.gen/sources_1/bd/system/ipshared/bb17/hdl" --include "../../../../hardware.gen/sources_1/bd/system/ipshared/6dcf" \
+"../../../bd/system/ip/system_zynq_ultra_ps_e_0_0/sim/system_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.v" \
+"../../../bd/system/ip/system_xbar_0/sim/system_xbar_0.v" \
+"../../../bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.v" \
+"../../../bd/system/ip/system_temp2pwm_0_0/sim/system_temp2pwm_0_0.v" \
+"../../../bd/system/ip/system_pwm_0_0/sim/system_pwm_0_0.v" \
+"../../../bd/system/ip/system_divider_0_0/sim/system_divider_0_0.v" \
+"../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
+"../../../bd/system/sim/system.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

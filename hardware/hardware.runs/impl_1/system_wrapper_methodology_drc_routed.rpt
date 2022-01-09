@@ -1,0 +1,252 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Dec 19 12:41:42 2021
+| Host         : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
+| Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+| Design       : system_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 39
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                   | 1          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 17         |
+| DPIR-2    | Warning          | Asynchronous driver check                          | 10         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
+| TIMING-16 | Warning          | Large setup violation                              | 7          |
+| CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                  | 1          |
+| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC         | 1          |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock system_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate pin system_i/clk_wiz_0/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock system_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_pl_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/counter_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/pwm_0/inst/state_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin system_i/temp2pwm_0/inst/pwm_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+DPIR-2#1 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#2 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#3 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#4 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#5 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#6 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#7 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#8 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#9 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-2#10 Warning
+Asynchronous driver check  
+DSP system_i/temp2pwm_0/inst/pwm6 input pin system_i/temp2pwm_0/inst/pwm6/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell system_i/system_management_wiz_0/inst/SOFT_RESET_I/inst_sysmon_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/FSM_sequential_state_reg[0]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/FSM_sequential_state_reg[1]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[0]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[1]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[2]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[3]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[4]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[5]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[6]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_C_reg_reg[7]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_reg_reg[0]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_reg_reg[1]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_reg_reg[2]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_reg_reg[3]/CLR,
+system_i/system_management_wiz_0/inst/AXI_SYSMON_CORE_I/Inst_drp_arbiter/daddr_reg_reg[4]/CLR
+ (the first 15 of 116 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.006 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[5]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.012 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[14]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.035 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[9]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.044 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[11]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.045 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[7]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.064 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[6]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.074 ns between system_i/divider_0/inst/counter_reg[6]/C (clocked by clk_out1_system_clk_wiz_0_0) and system_i/divider_0/inst/counter_reg[8]/D (clocked by clk_out1_system_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+CLKC-40#1 Advisory
+Substitute PLLE4 for MMCME4 check  
+The MMCME4 cell system_i/clk_wiz_0/inst/mmcme4_adv_inst has a single input clock whose source driver, UNKNOWN, is not optimally located and the MMCM has a configuration which could be accommodated by a PLL.  Consider changing the MMCM to a PLL which could align better with the input clock driver.
+Related violations: <none>
+
+CLKC-56#1 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell system_i/clk_wiz_0/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="temp2pwm_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="temp2pwm_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="74.272 ns"></ZoomStartTime>
+      <ZoomEndTime time="230.073 ns"></ZoomEndTime>
+      <Cursor1Time time="100.238 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/temp2pwm_tb/rdy" type="logic">
+      <obj_property name="ElementShortName">rdy</obj_property>
+      <obj_property name="ObjectShortName">rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp2pwm_tb/temp" type="array">
+      <obj_property name="ElementShortName">temp[9:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp2pwm_tb/pwm" type="array">
+      <obj_property name="ElementShortName">pwm[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/temp2pwm_tb/temp_deg" type="array">
+      <obj_property name="ElementShortName">temp_deg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_deg[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
