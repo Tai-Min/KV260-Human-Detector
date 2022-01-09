@@ -70,7 +70,14 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param power.BramSDPPropagationFix 1
+set_param chipscope.maxJobs 3
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -115,6 +122,7 @@ set_property used_in_implementation false [get_files -all e:/KV260/hardware/hard
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/system_ooc.xdc]
 

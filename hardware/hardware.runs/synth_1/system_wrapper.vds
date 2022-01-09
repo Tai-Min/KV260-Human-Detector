@@ -2,14 +2,15 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Jan  9 03:31:35 2022
-# Process ID: 32556
+# Start of session at: Sun Jan  9 19:23:03 2022
+# Process ID: 2936
 # Current directory: E:/KV260/hardware/hardware.runs/synth_1
 # Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file: E:/KV260/hardware/hardware.runs/synth_1/system_wrapper.vds
 # Journal file: E:/KV260/hardware/hardware.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1037.043 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vitis/Vivado/2021.1/data/ip'.
@@ -28,7 +29,7 @@ INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIAT
 WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.961 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 1037.043 ; gain = 0.000
 Command: synth_design -top system_wrapper -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
@@ -36,7 +37,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14356
+INFO: [Synth 8-7075] Helper process launched with PID 7644
 WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [E:/KV260/hardware/hardware.srcs/sources_1/new/pwm.v:10]
 WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [E:/KV260/hardware/hardware.srcs/sources_1/new/divider.v:9]
 WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [E:/KV260/hardware/hardware.srcs/sources_1/new/divider.v:10]
@@ -55,7 +56,7 @@ WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of v
 WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [E:/KV260/hardware/hardware.srcs/sources_1/new/stepper.v:46]
 WARNING: [Synth 8-2277] keyword 'unsigned' is not allowed here in this mode of verilog [E:/KV260/hardware/hardware.srcs/sources_1/new/stepper.v:47]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1614.812 ; gain = 125.305
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1619.375 ; gain = 125.688
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/68d2/hdl/axi_iic_v2_1_vh_rfs.vhd:1147]
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [E:/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v:12]
@@ -606,7 +607,7 @@ WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_proc_sys_reset
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1101]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1101]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'system_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1101]
-INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1326]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1330]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_N6CHY9' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_N6CHY9' (46#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1YGIC8G' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:144]
@@ -719,10 +720,10 @@ INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_crossbar_sasd' (75#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar' (76#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (77#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xbar_0/synth/system_xbar_0.v:59]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2081]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2081]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'system_xbar_0' has 40 connections declared, but only 38 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2081]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_0' (78#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1326]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2085]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2085]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'system_xbar_0' has 40 connections declared, but only 38 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:2085]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_0' (78#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1330]
 INFO: [Synth 8-6157] synthesizing module 'system_pwm_0_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_pwm_0_0/synth/system_pwm_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'pwm' [E:/KV260/hardware/hardware.srcs/sources_1/new/pwm.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'pwm' (79#1) [E:/KV260/hardware/hardware.srcs/sources_1/new/pwm.v:3]
@@ -1025,28 +1026,39 @@ INFO: [Synth 8-6157] synthesizing module 'system_temp2pwm_0_0' [e:/KV260/hardwar
 INFO: [Synth 8-6157] synthesizing module 'temp2pwm' [E:/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'temp2pwm' (94#1) [E:/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'system_temp2pwm_0_0' (95#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_temp2pwm_0_0/synth/system_temp2pwm_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'system_vio_0_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/synth/system_vio_0_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'system_vio_0_0' (103#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/synth/system_vio_0_0.v:59]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (96#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (97#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (104#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (105#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:60]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1280]
 INFO: [Synth 8-6157] synthesizing module 'system_xlslice_0_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_0/synth/system_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (98#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_0' (99#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_0/synth/system_xlslice_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (106#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_0' (107#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_0/synth/system_xlslice_0_0.v:57]
+WARNING: [Synth 8-7071] port 'Dout' of module 'system_xlslice_0_0' is unconnected for instance 'xlslice_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7023] instance 'xlslice_0' of module 'system_xlslice_0_0' has 2 connections declared, but only 1 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
 INFO: [Synth 8-6157] synthesizing module 'system_xlslice_0_1' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_1/synth/system_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (99#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_1' (100#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_1/synth/system_xlslice_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (107#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_1' (108#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_1/synth/system_xlslice_0_1.v:57]
+WARNING: [Synth 8-7071] port 'Dout' of module 'system_xlslice_0_1' is unconnected for instance 'xlslice_1' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
+WARNING: [Synth 8-7023] instance 'xlslice_1' of module 'system_xlslice_0_1' has 2 connections declared, but only 1 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1284]
 INFO: [Synth 8-6157] synthesizing module 'system_xlslice_0_2' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_2/synth/system_xlslice_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (100#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_2' (101#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_2/synth/system_xlslice_0_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (108#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_0_2' (109#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_xlslice_0_2/synth/system_xlslice_0_2.v:57]
+WARNING: [Synth 8-7071] port 'Dout' of module 'system_xlslice_0_2' is unconnected for instance 'xlslice_2' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1284]
+WARNING: [Synth 8-7023] instance 'xlslice_2' of module 'system_xlslice_0_2' has 2 connections declared, but only 1 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1284]
 INFO: [Synth 8-6157] synthesizing module 'system_zynq_ultra_ps_e_0_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:59]
 INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:332]
 INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1307]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (102#1) [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1307]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (110#1) [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1307]
 INFO: [Synth 8-6157] synthesizing module 'PS8' [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:86207]
-INFO: [Synth 8-6155] done synthesizing module 'PS8' (103#1) [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:86207]
+INFO: [Synth 8-6155] done synthesizing module 'PS8' (111#1) [F:/Vitis/Vivado/2021.1/scripts/rt/data/unisim_comp.v:86207]
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
@@ -1106,31 +1118,34 @@ WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unco
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
 WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
 WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3886]
-INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' (104#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:332]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' (112#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:332]
 WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:236]
 WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:236]
 WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:236]
 WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:236]
 WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:236]
-INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (105#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:59]
-WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
-WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 43 connections declared, but only 41 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1282]
-INFO: [Synth 8-6155] done synthesizing module 'system' (106#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:843]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (107#1) [E:/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (113#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/synth/system_zynq_ultra_ps_e_0_0.v:59]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1286]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1286]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 43 connections declared, but only 41 given [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1286]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1268]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'stepper_0'. This will prevent further optimization [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1231]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:1275]
+INFO: [Synth 8-6155] done synthesizing module 'system' (114#1) [e:/KV260/hardware/hardware.gen/sources_1/bd/system/synth/system.v:843]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (115#1) [E:/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1867.016 ; gain = 377.508
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 1882.750 ; gain = 389.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1867.016 ; gain = 377.508
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:42 . Memory (MB): peak = 1882.750 ; gain = 389.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1867.016 ; gain = 377.508
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:42 . Memory (MB): peak = 1882.750 ; gain = 389.062
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1867.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.288 . Memory (MB): peak = 1887.133 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1163,6 +1178,8 @@ Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_a
 Finished Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_0/U0'
 Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc] for cell 'system_i/axi_iic_0/U0'
 Finished Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc] for cell 'system_i/axi_iic_0/U0'
+Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc] for cell 'system_i/vio_0'
+Finished Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_vio_0_0/system_vio_0_0.xdc] for cell 'system_i/vio_0'
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [E:/KV260/hardware/hardware.srcs/constrs_1/new/system.xdc]
 Finished Parsing XDC File [E:/KV260/hardware/hardware.srcs/constrs_1/new/system.xdc]
@@ -1176,7 +1193,7 @@ Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_a
 Finished Parsing XDC File [e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0_clocks.xdc] for cell 'system_i/axi_intc_0/U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1973.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2000.223 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 162 instances were transformed.
   BUFG => BUFGCE: 1 instance 
@@ -1187,9 +1204,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 12 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1973.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.665 . Memory (MB): peak = 2000.223 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1973.426 ; gain = 483.918
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:01:17 . Memory (MB): peak = 2000.223 ; gain = 506.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -1197,19 +1214,19 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1973.426 ; gain = 483.918
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:01:17 . Memory (MB): peak = 2000.223 ; gain = 506.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for system_i/zynq_ultra_ps_e_0/inst/PS8_i. (constraint file  e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc, line 25).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ultra_ps_e_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 69).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 72).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/proc_sys_reset_1/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 80).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_intc_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 86).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/system_management_wiz_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 94).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_gpio_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 102).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_iic_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 110).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ultra_ps_e_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 72).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 75).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/proc_sys_reset_1/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 83).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_intc_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 89).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/system_management_wiz_0/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 97).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_gpio_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 105).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_iic_0/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 113).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz_0. (constraint file  auto generated constraint).
@@ -1230,8 +1247,9 @@ Applied set_property KEEP_HIERARCHY = SOFT for system_i/xlslice_0. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/xlslice_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/xlslice_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/vio_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1973.426 ; gain = 483.918
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:01:18 . Memory (MB): peak = 2000.223 ; gain = 506.535
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment__parameterized0'
@@ -1342,7 +1360,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'drp_arbiter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 1973.426 ; gain = 483.918
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:01:25 . Memory (MB): peak = 2000.223 ; gain = 506.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1360,29 +1378,31 @@ Detailed RTL Component Info :
 	   2 Input    5 Bit       Adders := 4     
 	   2 Input    4 Bit       Adders := 8     
 	   2 Input    2 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 40    
 +---Registers : 
+	              128 Bit    Registers := 1     
 	               85 Bit    Registers := 4     
 	               72 Bit    Registers := 1     
 	               51 Bit    Registers := 2     
 	               36 Bit    Registers := 2     
 	               32 Bit    Registers := 9     
 	               18 Bit    Registers := 3     
-	               16 Bit    Registers := 11    
+	               16 Bit    Registers := 21    
 	               13 Bit    Registers := 3     
 	               12 Bit    Registers := 7     
-	               11 Bit    Registers := 10    
+	               11 Bit    Registers := 11    
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 6     
 	                8 Bit    Registers := 17    
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 5     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 6     
 	                4 Bit    Registers := 11    
-	                3 Bit    Registers := 8     
-	                2 Bit    Registers := 22    
-	                1 Bit    Registers := 410   
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 28    
+	                1 Bit    Registers := 430   
 +---Muxes : 
 	   2 Input   85 Bit        Muxes := 4     
 	   2 Input   72 Bit        Muxes := 1     
@@ -1394,8 +1414,8 @@ Detailed RTL Component Info :
 	   7 Input   32 Bit        Muxes := 1     
 	   2 Input   18 Bit        Muxes := 2     
 	   4 Input   18 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 13    
-	   3 Input   16 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 15    
+	   3 Input   16 Bit        Muxes := 5     
 	   2 Input   13 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 6     
 	   2 Input   11 Bit        Muxes := 2     
@@ -1416,7 +1436,7 @@ Detailed RTL Component Info :
 	   2 Input    2 Bit        Muxes := 27    
 	   4 Input    2 Bit        Muxes := 6     
 	  16 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 360   
+	   2 Input    1 Bit        Muxes := 370   
 	   4 Input    1 Bit        Muxes := 15    
 	   7 Input    1 Bit        Muxes := 3     
 	   3 Input    1 Bit        Muxes := 28    
@@ -1440,7 +1460,7 @@ DSP Report: Generating DSP inst/pwm_on5, operation Mode is: (C:0xffffffff9289)+A
 DSP Report: operator inst/pwm_on5 is absorbed into DSP inst/pwm_on5.
 DSP Report: operator inst/pwm_on6 is absorbed into DSP inst/pwm_on5.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1973.426 ; gain = 483.918
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:38 . Memory (MB): peak = 2000.223 ; gain = 506.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1463,19 +1483,19 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/clk_wiz_0/inst/clk_in1' to pin 'system_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 3371.309 ; gain = 1881.801
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:54 . Memory (MB): peak = 3383.797 ; gain = 1890.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:09 . Memory (MB): peak = 3420.449 ; gain = 1930.941
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:56 . Memory (MB): peak = 3432.953 ; gain = 1939.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:11 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:58 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1593,38 +1613,39 @@ WARNING: [Synth 8-3295] tying undriven pin AXI_SYSMON_CORE_I/di_C_master_reg2_in
 WARNING: [Synth 8-3295] tying undriven pin AXI_SYSMON_CORE_I/di_C_master_reg2_inferred:in0[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin AXI_SYSMON_CORE_I/dwe_C_master_reg2_inferred:in0 to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [E:/KV260/hardware/hardware.srcs/sources_1/new/stepper.v:63]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:14 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:14 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1668,12 +1689,12 @@ Report Cell Usage:
 |9     |DSP_OUTPUT      |     1|
 |10    |DSP_PREADD      |     1|
 |11    |DSP_PREADD_DATA |     1|
-|12    |LUT1            |   501|
-|13    |LUT2            |   323|
-|14    |LUT3            |   548|
-|15    |LUT4            |   353|
-|16    |LUT5            |   435|
-|17    |LUT6            |   664|
+|12    |LUT1            |   503|
+|13    |LUT2            |   330|
+|14    |LUT3            |   583|
+|15    |LUT4            |   367|
+|16    |LUT5            |   451|
+|17    |LUT6            |   732|
 |18    |MMCME4_ADV      |     1|
 |19    |MUXCY_L         |     9|
 |20    |MUXF7           |    17|
@@ -1687,28 +1708,29 @@ Report Cell Usage:
 |28    |FDCE            |   160|
 |29    |FDPE            |     2|
 |30    |FDR             |    27|
-|31    |FDRE            |  1499|
+|31    |FDRE            |  1788|
 |32    |FDSE            |   120|
 |33    |IBUF            |     3|
 |34    |IOBUF           |     2|
 |35    |OBUF            |     4|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 414 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:04 . Memory (MB): peak = 3433.949 ; gain = 1838.031
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 3433.949 ; gain = 1944.441
+Synthesis finished with 0 errors, 0 critical warnings and 452 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:34 . Memory (MB): peak = 3445.992 ; gain = 1834.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:02:02 . Memory (MB): peak = 3445.992 ; gain = 1952.305
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.191 . Memory (MB): peak = 3433.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.174 . Memory (MB): peak = 3445.992 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 137 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. system_i/clk_wiz_0/inst/clkin1_ibuf 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Chipscope 16-324] Core: system_i/vio_0 UUID: d3cf4c90-4ae7-59d4-98f9-c553b9260afe 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance system_i/clk_wiz_0/inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3474.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3488.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 37 instances were transformed.
   (CARRY4) => CARRY8: 3 instances
@@ -1719,11 +1741,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete, checksum: 66d553bf
+Synth Design complete, checksum: b2e71f9c
 INFO: [Common 17-83] Releasing license: Synthesis
-640 Infos, 210 Warnings, 0 Critical Warnings and 0 Errors encountered.
+646 Infos, 220 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:32 . Memory (MB): peak = 3474.707 ; gain = 2282.746
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:02:46 . Memory (MB): peak = 3488.809 ; gain = 2451.766
 INFO: [Common 17-1381] The checkpoint 'E:/KV260/hardware/hardware.runs/synth_1/system_wrapper.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 3488.809 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan  9 03:33:42 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  9 19:28:27 2022...

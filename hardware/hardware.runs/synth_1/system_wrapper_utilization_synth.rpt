@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Jan  9 03:33:41 2022
+| Date         : Sun Jan  9 19:28:15 2022
 | Host         : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 2474 |     0 |          0 |    117120 |  2.11 |
-|   LUT as Logic             | 2378 |     0 |          0 |    117120 |  2.03 |
+| CLB LUTs*                  | 2597 |     0 |          0 |    117120 |  2.22 |
+|   LUT as Logic             | 2501 |     0 |          0 |    117120 |  2.14 |
 |   LUT as Memory            |   96 |     0 |          0 |     57600 |  0.17 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   96 |     0 |            |           |       |
-| CLB Registers              | 1808 |     0 |          0 |    234240 |  0.77 |
-|   Register as Flip Flop    | 1808 |     0 |          0 |    234240 |  0.77 |
+| CLB Registers              | 2097 |     0 |          0 |    234240 |  0.90 |
+|   Register as Flip Flop    | 2097 |     0 |          0 |    234240 |  0.90 |
 |   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                     |   62 |     0 |          0 |     14640 |  0.42 |
 | F7 Muxes                   |   17 |     0 |          0 |     58560 |  0.03 |
@@ -62,7 +62,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 160   |          Yes |           - |        Reset |
 | 120   |          Yes |         Set |            - |
-| 1526  |          Yes |       Reset |            - |
+| 1815  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -158,13 +158,13 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 1526 |            Register |
-| LUT6       |  664 |                 CLB |
-| LUT3       |  548 |                 CLB |
-| LUT1       |  501 |                 CLB |
-| LUT5       |  435 |                 CLB |
-| LUT4       |  353 |                 CLB |
-| LUT2       |  323 |                 CLB |
+| FDRE       | 1815 |            Register |
+| LUT6       |  732 |                 CLB |
+| LUT3       |  583 |                 CLB |
+| LUT1       |  503 |                 CLB |
+| LUT5       |  451 |                 CLB |
+| LUT4       |  367 |                 CLB |
+| LUT2       |  330 |                 CLB |
 | FDCE       |  160 |            Register |
 | FDSE       |  120 |            Register |
 | CARRY8     |   62 |                 CLB |
@@ -189,9 +189,11 @@ Table of Contents
 9. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++------------+------+
+|  Ref Name  | Used |
++------------+------+
+| dbg_hub_CV |    1 |
++------------+------+
 
 
 10. Instantiated Netlists
