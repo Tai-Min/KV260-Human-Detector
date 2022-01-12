@@ -1,6 +1,3 @@
-set_property PACKAGE_PIN A12 [get_ports fan_pin]
-set_property IOSTANDARD LVCMOS33 [get_ports fan_pin]
-
 set_property PACKAGE_PIN B11 [get_ports stop1]
 set_property IOSTANDARD LVCMOS33 [get_ports stop1]
 
@@ -21,3 +18,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports I2C_sda_io]
 
 set_property PACKAGE_PIN D10 [get_ports I2C_scl_io]
 set_property IOSTANDARD LVCMOS33 [get_ports I2C_scl_io]
+
+#set_property PACKAGE_PIN A12 [get_ports fan]
+#set_property IOSTANDARD LVCMOS33 [get_ports fan]
+
+

@@ -70,15 +70,15 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 3
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config  -severity {STATUS}  -suppress 
+set_msg_config  -severity {INFO}  -suppress 
+set_msg_config  -severity {WARNING}  -suppress 
+set_msg_config  -severity {CRITICAL WARNING}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -98,9 +98,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  E:/KV260/hardware/hardware.srcs/sources_1/new/pwm.v
   E:/KV260/hardware/hardware.srcs/sources_1/new/divider.v
-  E:/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v
   E:/KV260/hardware/hardware.srcs/sources_1/new/stepper.v
   E:/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v
 }
@@ -115,9 +113,6 @@ set_property used_in_implementation false [get_files -all e:/KV260/hardware/hard
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_intc_0_0/system_axi_intc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]

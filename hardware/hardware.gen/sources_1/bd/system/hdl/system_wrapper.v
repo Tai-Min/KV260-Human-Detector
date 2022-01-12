@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Sun Jan  9 20:03:46 2022
+//Date        : Wed Jan 12 05:02:40 2022
 //Host        : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -14,7 +14,6 @@ module system_wrapper
     I2C_sda_io,
     dir,
     ena,
-    fan_pin,
     step,
     stop1,
     stop2);
@@ -22,7 +21,6 @@ module system_wrapper
   inout I2C_sda_io;
   output dir;
   output ena;
-  output fan_pin;
   output step;
   input stop1;
   input stop2;
@@ -37,7 +35,6 @@ module system_wrapper
   wire I2C_sda_t;
   wire dir;
   wire ena;
-  wire fan_pin;
   wire step;
   wire stop1;
   wire stop2;
@@ -61,7 +58,6 @@ module system_wrapper
         .I2C_sda_t(I2C_sda_t),
         .dir(dir),
         .ena(ena),
-        .fan_pin(fan_pin),
         .step(step),
         .stop1(stop1),
         .stop2(stop2));
