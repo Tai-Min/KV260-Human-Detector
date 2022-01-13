@@ -39,7 +39,7 @@ petalinux_path=<path to petalinux directory>
 virtual_drive=<drive assigned to WSL instance>
 ``
 
-
+The last thing to do before the main part of the build pipeline is to flash SD card with [starter kit image](https://www.xilinx.com/products/som/kria/kv260-vision-starter-kit/kv260-getting-started/setting-up-the-sd-card-image.html) to create valid boot and rootfs partitions (PetaLinux can't generate flashable image on WSL2 for me).
 
 #### Regenerate project
 Considering that build files for PetaLinux and it's SDK take roughly 60Gb of space, I don't think than anyone would want to download and extract such blob of files (also GitHub would be mad at me I guess). So to create this project locally I have provided simple script that builds everything from scratch up to the platform building in Vitis.
