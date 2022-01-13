@@ -39,6 +39,8 @@ petalinux_path=<path to petalinux directory>
 virtual_drive=<drive assigned to WSL instance>
 ``
 
+Install [Ext2 File System Driver for Windows](https://sourceforge.net/projects/ext2fsd/) for SD card generation.
+
 The last thing to do before the main part of the build pipeline is to flash SD card with [starter kit image](https://www.xilinx.com/products/som/kria/kv260-vision-starter-kit/kv260-getting-started/setting-up-the-sd-card-image.html) to create valid boot and rootfs partitions (PetaLinux can't generate flashable image on WSL2 for me).
 
 #### Regenerate project
