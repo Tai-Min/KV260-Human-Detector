@@ -1,0 +1,125 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "build_metadata": {
+        "dsa": {
+            "vendor": "vendor",
+            "board_id": "lib",
+            "name": "system",
+            "version_major": "1",
+            "version_minor": "0",
+            "description": "",
+            "generated_by": {
+                "name": "Vivado",
+                "version": "2021.1",
+                "cl": "3247384",
+                "time_stamp": "Wed Jan 12 05:55:37 2022"
+            },
+            "board": {
+                "name": "xilinx.com:kv260:1.1",
+                "vendor": "xilinx.com",
+                "part": "XCK26-SFVC784-2LV-C",
+                "board_part": "xilinx.com:kv260:part0:1.1"
+            },
+            "feature_roms": [
+                {
+                    "time_epoch": "0"
+                }
+            ]
+        },
+        "xclbin": {
+            "generated_by": {
+                "name": "v++",
+                "version": "2021.1",
+                "cl": "1933",
+                "time_stamp": "2021-06-09-14:19:58",
+                "options": "F:\/Vitis\/Vitis\/2021.1\/bin\/unwrapped\/win64.o\/v++.exe --advanced.misc solution_name=link --advanced.param compiler.addOutputTypes=sd_card --advanced.param compiler.skipTimingCheckAndFrequencyScaling=1 --config .\/app_system_hw_link\/Hardware\/vadd_container.cfg --connectivity.nk krnl_vadd:1:krnl_vadd_1 --input_files .\/app_kernels\/Hardware\/build\/krnl_vadd.xo --link --log_dir binary_container_1.build\/logs --messageDb binary_container_1.mdb --optimize 0 --output .\/app_system_hw_link\/Hardware\/vadd_container.xclbin --platform E:\\KV260\\package\\embed_platform\\export\\embed_platform\\embed_platform.xpfm --report_dir binary_container_1.build\/reports --report_level 0 --save-temps --target hw --temp_dir binary_container_1.build "
+            },
+            "user_regions": [
+                {
+                    "name": "OCL_REGION_0",
+                    "type": "clc_region",
+                    "instance_path": "",
+                    "base_address": "",
+                    "kernels": [
+                        {
+                            "name": "krnl_vadd",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x1000",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "in1",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "in2",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "out_r",
+                                    "address_qualifier": "1",
+                                    "id": "2",
+                                    "port": "M_AXI_GMEM",
+                                    "size": "0x8",
+                                    "offset": "0x28",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "size",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x34",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "krnl_vadd_1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="ip" xd:name="axis_data_fifo" xd:version="2.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axis_data_fifo" xd:version="2.0">
+        <xd:busInterface xd:name="S_AXIS" xd:busTypeRef="axis" xd:mode="slave" xd:direction="in" xd:hasTlast="true" xd:clockRef="S_CLKIF" xd:resetRef="S_RSTIF" xd:dataWidth="0"/>
+        <xd:busInterface xd:name="M_AXIS" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="S_CLKIF" xd:resetRef="S_RSTIF" xd:dataWidth="0"/>
+        <xd:busInterface xd:name="S_RSTIF" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="s_axis_aresetn" xd:activeLevel="low" xd:clockRef="S_CLKIF"/>
+        <xd:busInterface xd:name="S_CLKIF" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="s_axis_aclk"/>
+    </xd:component>
+</xd:repository>

@@ -1,0 +1,101 @@
+{
+    "schema_version": {
+        "major": "2",
+        "minor": "0",
+        "patch": "0"
+    },
+    "mem_topology": {
+        "m_count": "6",
+        "m_mem_data": {
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x0",
+                "m_base_address": "0x0",
+                "m_tag": "HPC0",
+                "m_spTag": "HPC0"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x0",
+                "m_base_address": "0x0",
+                "m_tag": "HPC1",
+                "m_spTag": "HPC1"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "1",
+                "m_sizeKB": "0x200000",
+                "m_base_address": "0x0",
+                "m_tag": "HP0",
+                "m_spTag": "HP0"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x0",
+                "m_base_address": "0x0",
+                "m_tag": "HP1",
+                "m_spTag": "HP1"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x0",
+                "m_base_address": "0x0",
+                "m_tag": "HP2",
+                "m_spTag": "HP2"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x0",
+                "m_base_address": "0x0",
+                "m_tag": "HP3",
+                "m_spTag": "HP3"
+            }
+        }
+    },
+    "ip_layout": {
+        "m_count": "1",
+        "m_ip_data": {
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x80030000",
+                "m_address_range": "0x10000",
+                "m_name": "krnl_vadd:krnl_vadd_1"
+            }
+        }
+    },
+    "connectivity": {
+        "m_count": "3",
+        "m_connection": {
+            "connection": {
+                "arg_index": "0",
+                "arg_name": "in1",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "2"
+            },
+            "connection": {
+                "arg_index": "1",
+                "arg_name": "in2",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "2"
+            },
+            "connection": {
+                "arg_index": "2",
+                "arg_name": "out_r",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "2"
+            }
+        }
+    }
+}

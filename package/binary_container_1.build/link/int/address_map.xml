@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:addressMap xmlns:xd="http://www.xilinx.com/xd">
+  <xd:addressRange xd:componentRef="zynq_ps" xd:addressSpace="Data" xd:segment="SEG_axi_i2c_Reg" xd:slaveRef="axi_i2c" xd:slaveInterface="S_AXI" xd:slaveSegment="Reg" xd:baseAddr="0x0080010000" xd:range="0x10000"/>
+  <xd:addressRange xd:componentRef="zynq_ps" xd:addressSpace="Data" xd:segment="SEG_axi_intc_0_Reg" xd:slaveRef="axi_intc" xd:slaveInterface="s_axi" xd:slaveSegment="Reg" xd:baseAddr="0x0080000000" xd:range="0x10000"/>
+  <xd:addressRange xd:componentRef="zynq_ps" xd:addressSpace="Data" xd:segment="SEG_axi_io_Reg" xd:slaveRef="axi_io" xd:slaveInterface="S_AXI" xd:slaveSegment="Reg" xd:baseAddr="0x0080020000" xd:range="0x10000"/>
+  <xd:addressRange xd:componentRef="krnl_vadd_1" xd:addressSpace="Data_m_axi_gmem" xd:segment="SEG_zynq_ps_HP0_DDR_HIGH" xd:slaveRef="zynq_ps" xd:slaveInterface="S_AXI_HP0_FPD" xd:slaveSegment="HP0_DDR_HIGH" xd:baseAddr="0x0000000800000000" xd:range="0x0"/>
+  <xd:addressRange xd:componentRef="krnl_vadd_1" xd:addressSpace="Data_m_axi_gmem" xd:segment="SEG_zynq_ps_HP0_DDR_LOW" xd:slaveRef="zynq_ps" xd:slaveInterface="S_AXI_HP0_FPD" xd:slaveSegment="HP0_DDR_LOW" xd:baseAddr="0x0000000000000000" xd:range="0x80000000"/>
+  <xd:addressRange xd:componentRef="krnl_vadd_1" xd:addressSpace="Data_m_axi_gmem" xd:segment="SEG_zynq_ps_HP0_QSPI" xd:slaveRef="zynq_ps" xd:slaveInterface="S_AXI_HP0_FPD" xd:slaveSegment="HP0_QSPI" xd:baseAddr="0x00000000C0000000" xd:range="0x20000000"/>
+  <xd:addressRange xd:componentRef="zynq_ps" xd:addressSpace="Data" xd:segment="SEG_krnl_vadd_1_Reg" xd:slaveRef="krnl_vadd_1" xd:slaveInterface="s_axi_control" xd:slaveSegment="Reg" xd:baseAddr="0x0080030000" xd:range="0x10000"/>
+</xd:addressMap>

@@ -1,0 +1,1033 @@
+{
+    "versionMajor": "1",
+    "versionMinor": "0",
+    "usesPR": "false",
+    "platformState": "pre_synth",
+    "topModuleName": "system_wrapper",
+    "acceleratorBinaryFormat": "xclbin2",
+    "acceleratorBinaryContent": "bitstream",
+    "validAcceleratorBinaryContentValues": "dcp,bitstream",
+    "dcpFunctionStripped": "false",
+    "dcpEncrypted": "false",
+    "defaultOutputType": "sd_card",
+    "designIntent": {
+        "dataCenter": {
+            "value": "false",
+            "explicit": "true"
+        },
+        "embedded": {
+            "value": "true",
+            "explicit": "true"
+        },
+        "externalHost": {
+            "value": "false",
+            "explicit": "true"
+        },
+        "serverManaged": {
+            "value": "false",
+            "explicit": "true"
+        }
+    },
+    "board": {
+        "name": "xilinx.com:kv260:1.1",
+        "vendor": "xilinx.com",
+        "part": "XCK26-SFVC784-2LV-C",
+        "boardPart": "xilinx.com:kv260:part0:1.1",
+        "imageFileHdpi": "vsom_kit.jpg"
+    },
+    "devices": [
+        {
+            "name": "fpga0",
+            "type": "8",
+            "fpgaPart": "zynquplus:xck26:sfvc784:-2LV:c",
+            "part": {
+                "name": "xck26-sfvc784-2LV-c",
+                "architecture": "zynquplus",
+                "device": "xck26",
+                "package": "sfvc784",
+                "speedGrade": "-2LV",
+                "tempGrade": "c"
+            },
+            "core": {
+                "name": "OCL_REGION_0",
+                "type": "clc_region",
+                "drBDName": "system.bd",
+                "numComputeUnits": "60"
+            }
+        }
+    ],
+    "files": [
+        {
+            "name": "hardware.bit",
+            "type": "FULL_BIT"
+        },
+        {
+            "name": "hardware.hpfm",
+            "type": "HPFM"
+        },
+        {
+            "name": "prj\/rebuild.tcl",
+            "type": "REBUILD_TCL"
+        },
+        {
+            "name": "prj\/hardware.srcs\/sources_1\/bd\/system\/system.bd",
+            "type": "TOP_BD"
+        },
+        {
+            "name": "ipcache",
+            "type": "IP_CACHE_DIR"
+        }
+    ],
+    "vendor": "vendor",
+    "boardId": "lib",
+    "name": "system",
+    "uniqueName": "vendor:lib:system:1.0",
+    "fpgaPart": "zynquplus",
+    "fpgaDevice": "xck26",
+    "unifiedPlatform": "true",
+    "expandablePlatform": "true",
+    "hardware": "true",
+    "softwareEmulation": "true",
+    "hardwareEmulation": "true",
+    "hardwareEmuPlatform": "false",
+    "usesNIFD": "false",
+    "generatedName": "Vivado",
+    "generatedVersion": "2021.1",
+    "generatedChangeList": "3247384",
+    "generatedIpChangeList": "3246043",
+    "generatedTimestamp": "Wed Jan 12 05:55:37 2022",
+    "idCode": "04a49093",
+    "resources": [
+        {
+            "type": "BRAM",
+            "count": "144"
+        },
+        {
+            "type": "DSP",
+            "count": "1248"
+        },
+        {
+            "type": "LUT",
+            "count": "117120"
+        },
+        {
+            "type": "FF",
+            "count": "234240"
+        }
+    ],
+    "systemClocks": [
+        {
+            "default": "false",
+            "name": "CPU",
+            "origName": "CPU",
+            "id": "-1",
+            "frequency": "1333.333008",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "period": ".750000",
+            "status": "reserved"
+        },
+        {
+            "default": "true",
+            "name": "PL 2",
+            "origName": "clk_wiz_clk_out1",
+            "id": "2",
+            "frequency": "199.998000",
+            "instRef": "clk_wiz",
+            "compRef": "clk_wiz",
+            "period": "5.000050",
+            "normalizedPeriod": "6.666732",
+            "status": "fixed"
+        }
+    ],
+    "ipParameters": [
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_inter_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_inter_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "M01_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M01_AXI'])>0"
+        },
+        {
+            "name": "M02_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M02_AXI'])>0"
+        },
+        {
+            "name": "M03_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M03_AXI'])>0"
+        },
+        {
+            "name": "M04_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M04_AXI'])>0"
+        },
+        {
+            "name": "M05_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M05_AXI'])>0"
+        },
+        {
+            "name": "M06_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M06_AXI'])>0"
+        },
+        {
+            "name": "M07_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter_M07_AXI'])>0"
+        },
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_inter1_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_inter1_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+4)",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "M01_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M01_AXI'])>0"
+        },
+        {
+            "name": "M02_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M02_AXI'])>0"
+        },
+        {
+            "name": "M03_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M03_AXI'])>0"
+        },
+        {
+            "name": "M04_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M04_AXI'])>0"
+        },
+        {
+            "name": "M05_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M05_AXI'])>0"
+        },
+        {
+            "name": "M06_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M06_AXI'])>0"
+        },
+        {
+            "name": "M07_HAS_REGSLICE",
+            "value": "1",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='axi_inter1_M07_AXI'])>0"
+        },
+        {
+            "name": "PSU__USE__M_AXI_GP0",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_M_AXI_HPM0_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__M_AXI_GP1",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_M_AXI_HPM1_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP0",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HPC0_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP1",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HPC1_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP2",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HP0_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP3",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HP1_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP4",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HP2_FPD'])>0"
+        },
+        {
+            "name": "PSU__USE__S_AXI_GP5",
+            "value": "1",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "valid": "count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and @xd:name='zynq_ps_S_AXI_HP3_FPD'])>0"
+        }
+    ],
+    "busInterfaces": [
+        {
+            "name": "axi_inter_M01_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M01_AXI",
+            "clockRef": "axi_inter_M01_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M02_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M02_AXI",
+            "clockRef": "axi_inter_M02_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M03_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M03_AXI",
+            "clockRef": "axi_inter_M03_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M04_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M04_AXI",
+            "clockRef": "axi_inter_M04_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M05_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M05_AXI",
+            "clockRef": "axi_inter_M05_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M06_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M06_AXI",
+            "clockRef": "axi_inter_M06_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M07_AXI",
+            "mode": "master",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M07_AXI",
+            "clockRef": "axi_inter_M07_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M01_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M01_AXI",
+            "clockRef": "axi_inter1_M01_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M02_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M02_AXI",
+            "clockRef": "axi_inter1_M02_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M03_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M03_AXI",
+            "clockRef": "axi_inter1_M03_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M04_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M04_AXI",
+            "clockRef": "axi_inter1_M04_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M05_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M05_AXI",
+            "clockRef": "axi_inter1_M05_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M06_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M06_AXI",
+            "clockRef": "axi_inter1_M06_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M07_AXI",
+            "mode": "master",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M07_AXI",
+            "clockRef": "axi_inter1_M07_ACLK",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_M_AXI_HPM0_FPD",
+            "mode": "master",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "M_AXI_HPM0_FPD",
+            "clockRef": "zynq_ps_maxihpm0_fpd_aclk",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_M_AXI_HPM1_FPD",
+            "mode": "master",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "M_AXI_HPM1_FPD",
+            "clockRef": "zynq_ps_maxihpm1_fpd_aclk",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HPC0_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HPC0_FPD",
+            "clockRef": "zynq_ps_saxihpc0_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HPC0",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HPC1_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HPC1_FPD",
+            "clockRef": "zynq_ps_saxihpc1_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HPC1",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HP0_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HP0_FPD",
+            "clockRef": "zynq_ps_saxihp0_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HP0",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HP1_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HP1_FPD",
+            "clockRef": "zynq_ps_saxihp1_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HP1",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HP2_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HP2_FPD",
+            "clockRef": "zynq_ps_saxihp2_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HP2",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_S_AXI_HP3_FPD",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "aximm",
+            "interfaceRef": "S_AXI_HP3_FPD",
+            "clockRef": "zynq_ps_saxihp3_fpd_aclk",
+            "memPort": "S_AXI_HP",
+            "spTag": "HP3",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "clk_wiz_clk_out1",
+            "mode": "master",
+            "instRef": "clk_wiz",
+            "compRef": "clk_wiz",
+            "typeRef": "clock",
+            "interfaceRef": "clk_out1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M01_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M01_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M02_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M02_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M03_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M03_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M04_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M04_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M05_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M05_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M06_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M06_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M07_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M07_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M01_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M01_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M02_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M02_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M03_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M03_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M04_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M04_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M05_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M05_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M06_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M06_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M07_ACLK",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "clock",
+            "interfaceRef": "M07_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_maxihpm0_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "maxihpm0_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_maxihpm1_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "maxihpm1_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihpc0_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihpc0_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihpc1_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihpc1_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihp0_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihp0_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihp1_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihp1_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihp2_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihp2_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "zynq_ps_saxihp3_fpd_aclk",
+            "mode": "slave",
+            "instRef": "zynq_ps",
+            "compRef": "zynq_ultra_ps_e",
+            "typeRef": "clock",
+            "interfaceRef": "saxihp3_fpd_aclk",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "sys_ret200_peripheral_reset",
+            "mode": "master",
+            "instRef": "sys_ret200",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_reset",
+            "clockRef": "clk_wiz_clk_out1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "sys_ret200_interconnect_aresetn",
+            "mode": "master",
+            "instRef": "sys_ret200",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "interconnect_aresetn",
+            "clockRef": "clk_wiz_clk_out1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "sys_ret200_peripheral_aresetn",
+            "mode": "master",
+            "instRef": "sys_ret200",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_aresetn",
+            "clockRef": "clk_wiz_clk_out1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M01_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M01_ARESETN",
+            "clockRef": "axi_inter_M01_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M02_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M02_ARESETN",
+            "clockRef": "axi_inter_M02_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M03_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M03_ARESETN",
+            "clockRef": "axi_inter_M03_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M04_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M04_ARESETN",
+            "clockRef": "axi_inter_M04_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M05_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M05_ARESETN",
+            "clockRef": "axi_inter_M05_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M06_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M06_ARESETN",
+            "clockRef": "axi_inter_M06_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter_M07_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M07_ARESETN",
+            "clockRef": "axi_inter_M07_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M01_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M01_ARESETN",
+            "clockRef": "axi_inter1_M01_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M02_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M02_ARESETN",
+            "clockRef": "axi_inter1_M02_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M03_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M03_ARESETN",
+            "clockRef": "axi_inter1_M03_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M04_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M04_ARESETN",
+            "clockRef": "axi_inter1_M04_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M05_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M05_ARESETN",
+            "clockRef": "axi_inter1_M05_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M06_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M06_ARESETN",
+            "clockRef": "axi_inter1_M06_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_inter1_M07_ARESETN",
+            "mode": "slave",
+            "instRef": "axi_inter1",
+            "compRef": "axi_interconnect",
+            "typeRef": "reset",
+            "interfaceRef": "M07_ARESETN",
+            "clockRef": "axi_inter1_M07_ACLK",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        }
+    ]
+}
+

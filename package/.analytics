@@ -140,3 +140,12 @@ timestamp=[2022-01-12 06:54:11], mode=BUILD, duration=0:00:00.291, duration_ms=2
 timestamp=[2022-01-12 06:58:11], mode=BUILD, duration=0:00:00.288, duration_ms=288, data={name=app, configuration=Hardware, clean_build=false}
 timestamp=[2022-01-12 06:58:32], mode=BUILD, duration=0:00:08.615, duration_ms=8615, data={name=app_kernels, configuration=Hardware, clean_build=false}
 timestamp=[2022-01-12 07:01:12], mode=BUILD, duration=0:00:03.506, duration_ms=3506, data={name=app, configuration=Hardware, clean_build=false}
+timestamp=[2022-01-12 20:45:50], mode=WORKBENCH_START, duration=0:00:22.373, duration_ms=22373, data={}
+timestamp=[2022-01-12 20:45:52], mode=WORKBENCH_UI_INIT, duration=0:00:01.673, duration_ms=1673, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2022-01-12 20:45:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.537, duration_ms=1537, data={}
+timestamp=[2022-01-12 20:46:11], mode=WORKBENCH_START, duration=0:00:03.480, duration_ms=3480, data={}
+timestamp=[2022-01-12 20:46:11], mode=WORKBENCH_UI_INIT, duration=0:00:00.416, duration_ms=416, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2022-01-12 20:46:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.016, duration_ms=16, data={}
+timestamp=[2022-01-13 04:53:52], mode=WORKBENCH_START, duration=0:00:21.148, duration_ms=21148, data={}
+timestamp=[2022-01-13 04:53:55], mode=WORKBENCH_UI_INIT, duration=0:00:03.079, duration_ms=3079, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2022-01-13 04:53:58], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.738, duration_ms=2738, data={}

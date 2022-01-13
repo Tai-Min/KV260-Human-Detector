@@ -1,0 +1,23 @@
+{
+    "completedTask": "generate_sc_driver",
+    "runComplete": "true",
+    "taskList": [
+        "system_link",
+        "vpl",
+        "vpl.create_project",
+        "vpl.create_bd",
+        "vpl.update_bd",
+        "vpl.generate_target",
+        "vpl.config_hw_runs",
+        "vpl.synth",
+        "vpl.impl",
+        "vpl.impl.opt_design",
+        "vpl.impl.place_design",
+        "vpl.impl.route_design",
+        "vpl.impl.write_bitstream",
+        "rtdgen",
+        "xclbinutil",
+        "xclbinutilinfo",
+        "generate_sc_driver"
+    ]
+}

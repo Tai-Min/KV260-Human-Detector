@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="vpl" LaunchTime="1610499572">
+  <File Type="1c3c99a0-8697-4160-8dea-2b886551ec3f" Name="output/address_map.xml"/>
+  <File Type="2664c645-1649-4cca-8025-de69e1fb474d" Name="prj"/>
+  <File Type="2f3deaf3-78a8-4811-885b-c5b12fc4b929" Name="output/.*_ooc_copy.xdc"/>
+  <File Type="8524c7c5-c66f-4295-8bd5-ca1ee37df287" Name="output/partial.bit"/>
+  <File Type="8b7dd687-04de-46da-8724-b7c22d3201a2" Name="prj/prj.sim/sim_1"/>
+  <File Type="b2f36261-dbc2-4491-a3b4-9e00d1c592ea" Name="prj/prj.ip_user_files"/>
+  <File Type="d294e8d3-8333-4352-b69a-bca2ef6377eb" Name="../../int/behav_waveform"/>
+  <FileSet Name="sources" Type="DesignSrcs">
+    <Config/>
+  </FileSet>
+  <Strategy>
+    <StratHandle Name="" Flow="VPL HW 2018"/>
+    <Step Id="create_project"/>
+    <Step Id="create_bd"/>
+    <Step Id="update_bd"/>
+    <Step Id="generate_target"/>
+    <Step Id="config_hw_runs"/>
+    <Step Id="synth"/>
+    <Step Id="impl"/>
+  </Strategy>
+</GenRun>

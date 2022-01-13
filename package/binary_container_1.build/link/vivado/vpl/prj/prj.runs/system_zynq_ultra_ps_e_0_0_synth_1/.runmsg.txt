@@ -1,0 +1,2 @@
+Compiling (synthesis checkpoint) kernel/IP: system_zynq_ultra_ps_e_0_0
+Log file: E:/KV260/package/binary_container_1.build/link/vivado/vpl/prj/prj.runs/system_zynq_ultra_ps_e_0_0_synth_1/runme.log

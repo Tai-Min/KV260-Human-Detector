@@ -5,6 +5,5 @@ platform config -updatehw [lindex $argv 0]/hardware/hardware.xsa
 domain config -generate-bif
 domain config -boot [lindex $argv 0]/package/pfm/boot
 domain config -image [lindex $argv 0]/package/pfm/sd_dir
-
-# TODO: update path to WSL linux files
 platform write
+platform generate

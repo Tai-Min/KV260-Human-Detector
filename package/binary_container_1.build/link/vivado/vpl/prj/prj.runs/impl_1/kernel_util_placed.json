@@ -1,0 +1,45 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "design_state": "Fully Placed",
+    "user_budget": {
+        "actual_resources": {
+            "LUT": "2428",
+            "LUTAsMem": "627",
+            "REG": "3055",
+            "BRAM": "1",
+            "URAM": "0",
+            "DSP": "0"
+        },
+        "supply_resources": {
+            "LUT": "113030",
+            "LUTAsMem": "57289",
+            "REG": "229118",
+            "BRAM": "144",
+            "URAM": "64",
+            "DSP": "1248"
+        }
+    },
+    "kernels": [
+        {
+            "name": "krnl_vadd",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "krnl_vadd_1",
+                    "actual_resources": {
+                        "LUT": "2428",
+                        "LUTAsMem": "627",
+                        "REG": "3055",
+                        "BRAM": "1",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        }
+    ]
+}

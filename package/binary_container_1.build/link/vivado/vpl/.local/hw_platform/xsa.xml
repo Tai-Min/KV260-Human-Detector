@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="1" VersionMinor="15">
+  <GenAppInfo Name="Vivado" Version="2021.1" CL="3247384" TimeStamp="Wed Jan 12 05:55:37 2022"/>
+  <DSA Vendor="vendor" BoardId="lib" Name="system" VersionMajor="1" VersionMinor="0" Description="" FeatureRomTimestamp="0" DcpLogicFunctionStripped="false" DcpEncrypt="false" Unified="true" Fixed="false" DefaultOutputType="sd_card">
+    <Build UsesPR="false" PlatformState="pre_synth" AcceleratorBinaryContent="bitstream" ValidBinaryContentValues="dcp,bitstream" TopModuleName="system_wrapper"/>
+    <Board Name="xilinx.com:kv260:1.1" Vendor="xilinx.com" Part="XCK26-SFVC784-2LV-C" BoardPart="xilinx.com:kv260:part0:1.1">
+      <Images>
+        <Img Type="HDPI" File="vsom_kit.jpg"/>
+        <Img Type="MDPI" File=""/>
+        <Img Type="LDPI" File=""/>
+      </Images>
+    </Board>
+    <Devices>
+      <Device Name="fpga0" Type="8" FpgaDevice="zynquplus:xck26:sfvc784:-2LV:c">
+        <Core Name="OCL_REGION_0" Type="clc_region" ComputeUnits="60" DRBDName="system.bd"/>
+      </Device>
+    </Devices>
+    <Files>
+      <File Type="FULL_BIT" Name="hardware.bit"/>
+      <File Type="HPFM" Name="hardware.hpfm"/>
+      <File Type="REBUILD_TCL" Name="prj/rebuild.tcl"/>
+      <File Type="TOP_BD" Name="prj/hardware.srcs/sources_1/bd/system/system.bd"/>
+      <File Type="IP_CACHE_DIR" Name="ipcache"/>
+    </Files>
+  </DSA>
+</Root>

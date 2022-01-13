@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="hls" xd:name="krnl_vadd" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="hls" xd:name="krnl_vadd" xd:version="1.0" xd:type="accelerator">
+        <xd:busInterface xd:name="s_axi_control" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="ap_clk" xd:resetRef="ap_rst_n"/>
+        <xd:busInterface xd:name="ap_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_clk" xd:resetRef="ap_rst_n"/>
+        <xd:busInterface xd:name="ap_rst_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_rst_n" xd:clockRef="ap_clk" xd:activeLevel="low"/>
+        <xd:busInterface xd:name="interrupt" xd:busTypeRef="interrupt" xd:mode="master" xd:direction="out" xd:library="signal" xd:port="interrupt"/>
+        <xd:busInterface xd:name="m_axi_gmem" xd:busTypeRef="aximm" xd:mode="master" xd:clockRef="ap_clk" xd:resetRef="ap_rst_n"/>
+    </xd:component>
+</xd:repository>

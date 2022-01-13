@@ -1,0 +1,2 @@
+Compiling (top level synthesis checkpoint) dynamic region
+Log file: E:/KV260/package/binary_container_1.build/link/vivado/vpl/prj/prj.runs/synth_1/runme.log

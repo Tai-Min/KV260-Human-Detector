@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="system_xbar_1_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1610499696">
+  <File Type="PA-TCL" Name="system_xbar_1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="system_xbar_1_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="system_xbar_1_reports.tcl"/>
+  <File Type="RDS-RDS" Name="system_xbar_1.vds"/>
+  <File Type="RDS-UTIL" Name="system_xbar_1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="system_xbar_1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="system_xbar_1.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="system_xbar_1_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="system_xbar_1_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_xbar_1">
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../.local/hw_platform/prj/hardware.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="system_xbar_1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_xbar_1">
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../.local/hw_platform/prj/hardware.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="system_xbar_1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PPRDIR/../scripts/_full_init_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;INIT_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_init_pre.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;INIT_DESIGN;TCL.PRE"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_opt_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;OPT_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_opt_pre.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;OPT_DESIGN;TCL.PRE"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_place_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;PLACE_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_place_pre.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;PLACE_DESIGN;TCL.PRE"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_post_route_phys_opt_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;POST_ROUTE_PHYS_OPT_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_route_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;ROUTE_DESIGN;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_write_bitstream_post.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../scripts/_full_write_bitstream_pre.tcl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.PRE"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

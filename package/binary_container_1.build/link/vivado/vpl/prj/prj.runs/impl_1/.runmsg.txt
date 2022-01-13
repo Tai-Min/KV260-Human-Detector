@@ -1,0 +1,2 @@
+Compiling (bitstream) accelerator binary: vadd_container
+Log file: E:/KV260/package/binary_container_1.build/link/vivado/vpl/prj/prj.runs/impl_1/runme.log

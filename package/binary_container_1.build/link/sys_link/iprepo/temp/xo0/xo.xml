@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="7" VersionMinor="1" SoftwareVersionMajor="2021" SoftwareVersionMinor="1" IpCache="no">
+  <IpCaches/>
+  <Kernels>
+    <Kernel Name="krnl_vadd" Dir="krnl_vadd" IP="ip_repo/xilinx_com_hls_krnl_vadd_1_0" TopIpDir="." ProjectID="" Debug="yes" Hls="no" Pdi="no" ShimSoln="no" SwEmu="no" Domain="">
+      <SupportedFlows>
+        <SupportedFlow>CPU_EMU</SupportedFlow>
+        <SupportedFlow>HW_EMU</SupportedFlow>
+        <SupportedFlow>SYSTEM</SupportedFlow>
+      </SupportedFlows>
+    </Kernel>
+  </Kernels>
+</Root>

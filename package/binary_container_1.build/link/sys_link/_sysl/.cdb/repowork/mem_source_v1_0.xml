@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="user" xd:name="mem_source" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="user" xd:name="mem_source" xd:version="1.0" xd:type="datamover">
+        <xd:busInterface xd:name="stream" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="async_clk" xd:resetRef="async_reset_n"/>
+        <xd:busInterface xd:name="memory" xd:busTypeRef="aximm" xd:mode="master" xd:clockRef="memory_clk" xd:resetRef="memory_reset_n"/>
+        <xd:busInterface xd:name="reg_bus" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
+        <xd:busInterface xd:name="async_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_clk" xd:resetRef="async_reset_n"/>
+        <xd:busInterface xd:name="memory_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="memory_clk" xd:resetRef="memory_reset_n"/>
+        <xd:busInterface xd:name="reg_bus_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
+        <xd:busInterface xd:name="reg_bus_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="reg_bus_reset_n" xd:activeLevel="low"/>
+        <xd:busInterface xd:name="memory_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="memory_reset_n" xd:activeLevel="low"/>
+        <xd:busInterface xd:name="async_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_reset_n" xd:activeLevel="low"/>
+        <xd:port xd:name="irq_ap_ready" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+        <xd:port xd:name="irq_ap_done" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+    </xd:component>
+</xd:repository>

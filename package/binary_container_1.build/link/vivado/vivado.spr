@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="vivado" dir="" srcset="sources_1">
+  <FileSets>
+    <FileSet Name="kernel_krnl_vadd" Type="DesignSrcs">
+      <Config/>
+    </FileSet>
+    <FileSet Name="sources_1" Type="DesignSrcs">
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs>
+    <Run Id="vpl" Type="Ft202:VplHwTarget" SrcSet="sources_1" Description="" Dir="vpl">
+      <Strategy>
+        <StratHandle Name="" Flow="VPL HW 2018"/>
+        <Step Id="create_project"/>
+        <Step Id="create_bd"/>
+        <Step Id="update_bd"/>
+        <Step Id="generate_target"/>
+        <Step Id="config_hw_runs"/>
+        <Step Id="synth"/>
+        <Step Id="impl"/>
+      </Strategy>
+      <GeneratedRun Dir="vpl" File="gen_run.xml"/>
+    </Run>
+  </Runs>
+</project>
