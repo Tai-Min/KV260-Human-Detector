@@ -1,2 +1,0 @@
-Compiling (synthesis checkpoint) kernel/IP: system_auto_pc_3
-Log file: E:/KV260/package/binary_container_1.build/link/vivado/vpl/prj/prj.runs/system_auto_pc_3_synth_1/runme.log

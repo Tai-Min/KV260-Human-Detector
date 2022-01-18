@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Tue Jan 12 05:24:32 2021
-| Host         : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Sun Jan 16 14:07:25 2022
+| Host         : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
 | Device       : xck26sfvc784-2LV
@@ -31,16 +31,16 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 1643 |     0 |          0 |    117120 |  1.40 |
-|   LUT as Logic             | 1547 |     0 |          0 |    117120 |  1.32 |
+| CLB LUTs*                  | 2296 |     0 |          0 |    117120 |  1.96 |
+|   LUT as Logic             | 2200 |     0 |          0 |    117120 |  1.88 |
 |   LUT as Memory            |   96 |     0 |          0 |     57600 |  0.17 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   96 |     0 |            |           |       |
-| CLB Registers              | 1355 |     0 |          0 |    234240 |  0.58 |
-|   Register as Flip Flop    | 1355 |     0 |          0 |    234240 |  0.58 |
+| CLB Registers              | 1554 |     0 |          0 |    234240 |  0.66 |
+|   Register as Flip Flop    | 1554 |     0 |          0 |    234240 |  0.66 |
 |   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
-| CARRY8                     |   23 |     0 |          0 |     14640 |  0.16 |
-| F7 Muxes                   |   15 |     0 |          0 |     58560 |  0.03 |
+| CARRY8                     |   62 |     0 |          0 |     14640 |  0.42 |
+| F7 Muxes                   |   11 |     0 |          0 |     58560 |  0.02 |
 | F8 Muxes                   |    4 |     0 |          0 |     29280 |  0.01 |
 | F9 Muxes                   |    0 |     0 |          0 |     14640 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
@@ -59,10 +59,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 20    |          Yes |           - |        Reset |
-| 77    |          Yes |         Set |            - |
-| 1258  |          Yes |       Reset |            - |
+| 2     |          Yes |           - |          Set |
+| 106   |          Yes |           - |        Reset |
+| 79    |          Yes |         Set |            - |
+| 1367  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -83,11 +83,12 @@ Table of Contents
 3. ARITHMETIC
 -------------
 
-+-----------+------+-------+------------+-----------+-------+
-| Site Type | Used | Fixed | Prohibited | Available | Util% |
-+-----------+------+-------+------------+-----------+-------+
-| DSPs      |    0 |     0 |          0 |      1248 |  0.00 |
-+-----------+------+-------+------------+-----------+-------+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| DSPs           |    1 |     0 |          0 |      1248 |  0.08 |
+|   DSP48E2 only |    1 |       |            |           |       |
++----------------+------+-------+------------+-----------+-------+
 
 
 4. I/O
@@ -96,7 +97,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    7 |     0 |          0 |       186 |  3.76 |
+| Bonded IOB |    8 |     0 |          0 |       186 |  4.30 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -130,7 +131,7 @@ Table of Contents
 | OBUFDS_GTE4_ADV |    0 |     0 |          0 |         2 |   0.00 |
 | PCIE40E4        |    0 |     0 |          0 |         2 |   0.00 |
 | PS8             |    1 |     0 |          0 |         1 | 100.00 |
-| SYSMONE4        |    0 |     0 |          0 |         1 |   0.00 |
+| SYSMONE4        |    1 |     0 |          0 |         1 | 100.00 |
 | VCU             |    0 |     0 |          0 |         1 |   0.00 |
 +-----------------+------+-------+------------+-----------+--------+
 
@@ -157,26 +158,29 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 1258 |            Register |
-| LUT6       |  456 |                 CLB |
-| LUT3       |  415 |                 CLB |
-| LUT1       |  320 |                 CLB |
-| LUT4       |  272 |                 CLB |
-| LUT5       |  243 |                 CLB |
-| LUT2       |  150 |                 CLB |
-| FDSE       |   77 |            Register |
+| FDRE       | 1367 |            Register |
+| LUT6       |  599 |                 CLB |
+| LUT3       |  586 |                 CLB |
+| LUT1       |  506 |                 CLB |
+| LUT4       |  354 |                 CLB |
+| LUT5       |  307 |                 CLB |
+| LUT2       |  276 |                 CLB |
+| FDCE       |  106 |            Register |
+| FDSE       |   79 |            Register |
+| CARRY8     |   62 |                 CLB |
 | SRLC32E    |   51 |                 CLB |
 | SRL16E     |   45 |                 CLB |
-| CARRY8     |   23 |                 CLB |
-| FDCE       |   20 |            Register |
-| MUXF7      |   15 |                 CLB |
+| MUXF7      |   11 |                 CLB |
+| OBUF       |    4 |                 I/O |
 | MUXF8      |    4 |                 CLB |
 | INBUF      |    4 |                 I/O |
 | IBUFCTRL   |    4 |              Others |
-| OBUF       |    3 |                 I/O |
 | OBUFT      |    2 |                 I/O |
+| FDPE       |    2 |            Register |
+| SYSMONE4   |    1 |            Advanced |
 | PS8        |    1 |            Advanced |
 | MMCME4_ADV |    1 |               Clock |
+| DSP48E2    |    1 |          Arithmetic |
 | BUFG_PS    |    1 |               Clock |
 | BUFGCE     |    1 |               Clock |
 +------------+------+---------------------+

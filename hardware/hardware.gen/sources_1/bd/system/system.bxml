@@ -2,18 +2,18 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1641960162"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1641960162"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1641960162"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1641960162"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1642338229"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1642338229"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1642338229"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1642338229"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\system.v" Type="Verilog">
+      <File Name="synth/system.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
-      <File Name="sim\system.v" Type="Verilog">
+      <File Name="sim/system.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -25,7 +25,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
       </File>
-      <File Name="hw_handoff\system.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/system.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -35,17 +35,17 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="hw_handoff\system_bd.tcl">
+      <File Name="hw_handoff/system_bd.tcl">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="synth\system.hwdef">
+      <File Name="synth/system.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="sim\system.protoinst">
+      <File Name="sim/system.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

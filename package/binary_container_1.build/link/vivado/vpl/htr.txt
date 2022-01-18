@@ -1,9 +1,0 @@
-REM
-REM vpl(TM)
-REM htr.txt: a vpl-generated description of how-to-repeat the
-REM          the basic steps of a run.  Note that runme.bat/sh needs
-REM          to be invoked for vpl to track run status.
-REM Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-REM
-
-vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace

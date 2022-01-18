@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# stepper, divider
+# pwm, divider, stepper, divider, temp2pwm
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -165,12 +165,13 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set I2C [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 I2C ]
 
-  set Vp_Vn_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn_0 ]
+  set Vp_Vn_1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn_1 ]
 
 
   # Create ports
   set dir [ create_bd_port -dir O dir ]
   set ena [ create_bd_port -dir O ena ]
+  set fan [ create_bd_port -dir O fan ]
   set step [ create_bd_port -dir O step ]
   set stop1 [ create_bd_port -dir I stop1 ]
   set stop2 [ create_bd_port -dir I stop2 ]
@@ -219,11 +220,11 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} \
    CONFIG.CLKOUT2_JITTER {232.902} \
    CONFIG.CLKOUT2_PHASE_ERROR {106.804} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {7} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
    CONFIG.CLKOUT2_USED {false} \
    CONFIG.CLKOUT3_JITTER {90.075} \
    CONFIG.CLKOUT3_PHASE_ERROR {87.181} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {400} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
    CONFIG.CLKOUT3_USED {false} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {12.000} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} \
@@ -261,6 +262,28 @@ proc create_root_design { parentCell } {
    CONFIG.DOUT_WIDTH {1} \
  ] $latch_bit
 
+  # Create instance: pwm, and set properties
+  set block_name pwm
+  set block_cell_name pwm
+  if { [catch {set pwm [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $pwm eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: pwm_div, and set properties
+  set block_name divider
+  set block_cell_name pwm_div
+  if { [catch {set pwm_div [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $pwm_div eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: stepper, and set properties
   set block_name stepper
   set block_cell_name stepper
@@ -296,6 +319,35 @@ proc create_root_design { parentCell } {
   # Create instance: sys_ret200, and set properties
   set sys_ret200 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 sys_ret200 ]
 
+  # Create instance: system_management_wiz_0, and set properties
+  set system_management_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_management_wiz:1.3 system_management_wiz_0 ]
+  set_property -dict [ list \
+   CONFIG.CHANNEL_ENABLE_CALIBRATION {false} \
+   CONFIG.CHANNEL_ENABLE_VBRAM {false} \
+   CONFIG.CHANNEL_ENABLE_VCCAUX {false} \
+   CONFIG.CHANNEL_ENABLE_VCCINT {false} \
+   CONFIG.CHANNEL_ENABLE_VP_VN {false} \
+   CONFIG.ENABLE_TEMP_BUS {true} \
+   CONFIG.ENABLE_VCCPSAUX_ALARM {false} \
+   CONFIG.ENABLE_VCCPSINTFP_ALARM {false} \
+   CONFIG.ENABLE_VCCPSINTLP_ALARM {false} \
+   CONFIG.OT_ALARM {false} \
+   CONFIG.USER_TEMP_ALARM {false} \
+   CONFIG.VCCAUX_ALARM {false} \
+   CONFIG.VCCINT_ALARM {false} \
+ ] $system_management_wiz_0
+
+  # Create instance: temp2pwm, and set properties
+  set block_name temp2pwm
+  set block_cell_name temp2pwm
+  if { [catch {set temp2pwm [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $temp2pwm eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: zynq_ps, and set properties
   set zynq_ps [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 zynq_ps ]
   set_property -dict [ list \
@@ -322,7 +374,6 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_DDR_RAM_HIGHADDR_OFFSET {0x800000000} \
    CONFIG.PSU_DDR_RAM_LOWADDR_OFFSET {0x80000000} \
    CONFIG.PSU_DYNAMIC_DDR_CONFIG_EN {0} \
-   CONFIG.PSU_IMPORT_BOARD_PRESET {} \
    CONFIG.PSU_MIO_0_DIRECTION {out} \
    CONFIG.PSU_MIO_0_DRIVE_STRENGTH {4} \
    CONFIG.PSU_MIO_0_INPUT_TYPE {cmos} \
@@ -800,7 +851,6 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#Gem 3#Gem 3#Gem 3#Gem 3#Gem 3#Gem\
 3#Gem 3#Gem 3#Gem 3#Gem 3#Gem 3#Gem 3#MDIO 3#MDIO 3}\
    CONFIG.PSU_MIO_TREE_SIGNALS {sclk_out#miso_mo1#mo2#mo3#mosi_mi0#n_ss_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#gpio0[13]#gpio0[14]#gpio0[15]#gpio0[16]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#gpio0[21]#gpio0[22]#gpio0[23]#scl_out#sda_out#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpi[5]#gpo[0]#gpo[1]#gpo[2]#gpo[3]#txd#rxd#gpio1[38]#sdio1_data_out[4]#sdio1_data_out[5]#sdio1_data_out[6]#sdio1_data_out[7]#sdio1_bus_pow#gpio1[44]#sdio1_cd_n#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#rgmii_tx_clk#rgmii_txd[0]#rgmii_txd[1]#rgmii_txd[2]#rgmii_txd[3]#rgmii_tx_ctl#rgmii_rx_clk#rgmii_rxd[0]#rgmii_rxd[1]#rgmii_rxd[2]#rgmii_rxd[3]#rgmii_rx_ctl#gem3_mdc#gem3_mdio_out}\
-   CONFIG.PSU_PERIPHERAL_BOARD_PRESET {} \
    CONFIG.PSU_SD0_INTERNAL_BUS_WIDTH {8} \
    CONFIG.PSU_SD1_INTERNAL_BUS_WIDTH {8} \
    CONFIG.PSU_SMC_CYCLE_T0 {NA} \
@@ -1262,14 +1312,6 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__DDR_QOS_FIX_HP2_WRQOS {} \
    CONFIG.PSU__DDR_QOS_FIX_HP3_RDQOS {} \
    CONFIG.PSU__DDR_QOS_FIX_HP3_WRQOS {} \
-   CONFIG.PSU__DDR_QOS_HP0_RDQOS {} \
-   CONFIG.PSU__DDR_QOS_HP0_WRQOS {} \
-   CONFIG.PSU__DDR_QOS_HP1_RDQOS {} \
-   CONFIG.PSU__DDR_QOS_HP1_WRQOS {} \
-   CONFIG.PSU__DDR_QOS_HP2_RDQOS {} \
-   CONFIG.PSU__DDR_QOS_HP2_WRQOS {} \
-   CONFIG.PSU__DDR_QOS_HP3_RDQOS {} \
-   CONFIG.PSU__DDR_QOS_HP3_WRQOS {} \
    CONFIG.PSU__DDR_QOS_RD_HPR_THRSHLD {} \
    CONFIG.PSU__DDR_QOS_RD_LPR_THRSHLD {} \
    CONFIG.PSU__DDR_QOS_WR_THRSHLD {} \
@@ -1318,7 +1360,6 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__EXPAND__GIC {0} \
    CONFIG.PSU__EXPAND__LOWER_LPS_SLAVES {0} \
    CONFIG.PSU__EXPAND__UPPER_LPS_SLAVES {0} \
-   CONFIG.PSU__FPDMASTERS_COHERENCY {0} \
    CONFIG.PSU__FPD_SLCR__WDT1__ACT_FREQMHZ {99.999001} \
    CONFIG.PSU__FPD_SLCR__WDT1__FREQMHZ {99.999001} \
    CONFIG.PSU__FPD_SLCR__WDT_CLK_SEL__SELECT {APB} \
@@ -1412,22 +1453,12 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__IRQ_P2F_APU_PMU__INT {0} \
    CONFIG.PSU__IRQ_P2F_APU_REGS__INT {0} \
    CONFIG.PSU__IRQ_P2F_ATB_LPD__INT {0} \
-   CONFIG.PSU__IRQ_P2F_CAN0__INT {0} \
-   CONFIG.PSU__IRQ_P2F_CAN1__INT {0} \
    CONFIG.PSU__IRQ_P2F_CLKMON__INT {0} \
    CONFIG.PSU__IRQ_P2F_CSUPMU_WDT__INT {0} \
-   CONFIG.PSU__IRQ_P2F_CSU_DMA__INT {0} \
-   CONFIG.PSU__IRQ_P2F_CSU__INT {0} \
    CONFIG.PSU__IRQ_P2F_DDR_SS__INT {0} \
    CONFIG.PSU__IRQ_P2F_DPDMA__INT {0} \
    CONFIG.PSU__IRQ_P2F_DPORT__INT {0} \
    CONFIG.PSU__IRQ_P2F_EFUSE__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT0_WAKEUP__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT0__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT1_WAKEUP__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT1__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT2_WAKEUP__INT {0} \
-   CONFIG.PSU__IRQ_P2F_ENT2__INT {0} \
    CONFIG.PSU__IRQ_P2F_ENT3_WAKEUP__INT {0} \
    CONFIG.PSU__IRQ_P2F_ENT3__INT {0} \
    CONFIG.PSU__IRQ_P2F_FPD_APB__INT {0} \
@@ -1436,12 +1467,10 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__IRQ_P2F_GDMA_CHAN__INT {0} \
    CONFIG.PSU__IRQ_P2F_GPIO__INT {0} \
    CONFIG.PSU__IRQ_P2F_GPU__INT {0} \
-   CONFIG.PSU__IRQ_P2F_I2C0__INT {0} \
    CONFIG.PSU__IRQ_P2F_I2C1__INT {0} \
    CONFIG.PSU__IRQ_P2F_LPD_APB__INT {0} \
    CONFIG.PSU__IRQ_P2F_LPD_APM__INT {0} \
    CONFIG.PSU__IRQ_P2F_LP_WDT__INT {0} \
-   CONFIG.PSU__IRQ_P2F_NAND__INT {0} \
    CONFIG.PSU__IRQ_P2F_OCM_ERR__INT {0} \
    CONFIG.PSU__IRQ_P2F_PCIE_DMA__INT {0} \
    CONFIG.PSU__IRQ_P2F_PCIE_LEGACY__INT {0} \
@@ -1456,11 +1485,8 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__IRQ_P2F_RTC_ALARM__INT {0} \
    CONFIG.PSU__IRQ_P2F_RTC_SECONDS__INT {0} \
    CONFIG.PSU__IRQ_P2F_SATA__INT {0} \
-   CONFIG.PSU__IRQ_P2F_SDIO0_WAKE__INT {0} \
-   CONFIG.PSU__IRQ_P2F_SDIO0__INT {0} \
    CONFIG.PSU__IRQ_P2F_SDIO1_WAKE__INT {0} \
    CONFIG.PSU__IRQ_P2F_SDIO1__INT {0} \
-   CONFIG.PSU__IRQ_P2F_SPI0__INT {0} \
    CONFIG.PSU__IRQ_P2F_SPI1__INT {0} \
    CONFIG.PSU__IRQ_P2F_TTC0__INT0 {0} \
    CONFIG.PSU__IRQ_P2F_TTC0__INT1 {0} \
@@ -1474,7 +1500,6 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__IRQ_P2F_TTC3__INT0 {0} \
    CONFIG.PSU__IRQ_P2F_TTC3__INT1 {0} \
    CONFIG.PSU__IRQ_P2F_TTC3__INT2 {0} \
-   CONFIG.PSU__IRQ_P2F_UART0__INT {0} \
    CONFIG.PSU__IRQ_P2F_UART1__INT {0} \
    CONFIG.PSU__IRQ_P2F_USB3_ENDPOINT__INT0 {0} \
    CONFIG.PSU__IRQ_P2F_USB3_ENDPOINT__INT1 {0} \
@@ -1497,8 +1522,6 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__LPD_SLCR__CSUPMU_WDT_CLK_SEL__SELECT {APB} \
    CONFIG.PSU__LPD_SLCR__CSUPMU__ACT_FREQMHZ {100.000000} \
    CONFIG.PSU__LPD_SLCR__CSUPMU__FREQMHZ {100.000000} \
-   CONFIG.PSU__MAXIGP0__DATA_WIDTH {128} \
-   CONFIG.PSU__MAXIGP1__DATA_WIDTH {128} \
    CONFIG.PSU__MAXIGP2__DATA_WIDTH {32} \
    CONFIG.PSU__M_AXI_GP0_SUPPORTS_NARROW_BURST {1} \
    CONFIG.PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST {1} \
@@ -1546,15 +1569,11 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__PCIE__BAR5_ENABLE {0} \
    CONFIG.PSU__PCIE__BAR5_PREFETCHABLE {0} \
    CONFIG.PSU__PCIE__BAR5_VAL {} \
-   CONFIG.PSU__PCIE__CLASS_CODE_BASE {} \
-   CONFIG.PSU__PCIE__CLASS_CODE_INTERFACE {} \
-   CONFIG.PSU__PCIE__CLASS_CODE_SUB {} \
    CONFIG.PSU__PCIE__CLASS_CODE_VALUE {} \
    CONFIG.PSU__PCIE__COMPLETER_ABORT {0} \
    CONFIG.PSU__PCIE__COMPLTION_TIMEOUT {0} \
    CONFIG.PSU__PCIE__CORRECTABLE_INT_ERR {0} \
    CONFIG.PSU__PCIE__CRS_SW_VISIBILITY {0} \
-   CONFIG.PSU__PCIE__DEVICE_ID {} \
    CONFIG.PSU__PCIE__ECRC_CHECK {0} \
    CONFIG.PSU__PCIE__ECRC_ERR {0} \
    CONFIG.PSU__PCIE__ECRC_GEN {0} \
@@ -1585,13 +1604,9 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__PCIE__RECEIVER_ERR {0} \
    CONFIG.PSU__PCIE__RECEIVER_OVERFLOW {0} \
    CONFIG.PSU__PCIE__RESET__POLARITY {Active Low} \
-   CONFIG.PSU__PCIE__REVISION_ID {} \
-   CONFIG.PSU__PCIE__SUBSYSTEM_ID {} \
-   CONFIG.PSU__PCIE__SUBSYSTEM_VENDOR_ID {} \
    CONFIG.PSU__PCIE__SURPRISE_DOWN {0} \
    CONFIG.PSU__PCIE__TLP_PREFIX_BLOCKED {0} \
    CONFIG.PSU__PCIE__UNCORRECTABL_INT_ERR {0} \
-   CONFIG.PSU__PCIE__VENDOR_ID {} \
    CONFIG.PSU__PJTAG__PERIPHERAL__ENABLE {0} \
    CONFIG.PSU__PL_CLK0_BUF {TRUE} \
    CONFIG.PSU__PL_CLK1_BUF {FALSE} \
@@ -1681,15 +1696,6 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__SATA__LANE0__ENABLE {0} \
    CONFIG.PSU__SATA__LANE1__ENABLE {0} \
    CONFIG.PSU__SATA__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__SATA__REF_CLK_FREQ {<Select>} \
-   CONFIG.PSU__SATA__REF_CLK_SEL {<Select>} \
-   CONFIG.PSU__SAXIGP0__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP1__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP2__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP3__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP4__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP5__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP6__DATA_WIDTH {128} \
    CONFIG.PSU__SD0_COHERENCY {0} \
    CONFIG.PSU__SD0_ROUTE_THROUGH_FPD {0} \
    CONFIG.PSU__SD0__GRP_CD__ENABLE {0} \
@@ -1733,7 +1739,6 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__TCM1A__POWER__ON {1} \
    CONFIG.PSU__TCM1B__POWER__ON {1} \
    CONFIG.PSU__TESTSCAN__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__TRACE_PIPELINE_WIDTH {8} \
    CONFIG.PSU__TRACE__INTERNAL_WIDTH {32} \
    CONFIG.PSU__TRACE__PERIPHERAL__ENABLE {0} \
    CONFIG.PSU__TRISTATE__INVERTED {1} \
@@ -1779,13 +1784,6 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__USB3_1__PERIPHERAL__ENABLE {0} \
    CONFIG.PSU__USB__RESET__MODE {Boot Pin} \
    CONFIG.PSU__USB__RESET__POLARITY {Active Low} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP0 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP1 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP2 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP3 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP4 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP5 {0} \
-   CONFIG.PSU__USE_DIFF_RW_CLK_GP6 {0} \
    CONFIG.PSU__USE__ADMA {0} \
    CONFIG.PSU__USE__APU_LEGACY_INTERRUPT {0} \
    CONFIG.PSU__USE__AUDIO {0} \
@@ -1852,10 +1850,12 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
  ] $zynq_ps
 
   # Create interface connections
+  connect_bd_intf_net -intf_net Vp_Vn [get_bd_intf_ports Vp_Vn_1] [get_bd_intf_pins system_management_wiz_0/Vp_Vn]
   connect_bd_intf_net -intf_net axi_i2c_IIC [get_bd_intf_ports I2C] [get_bd_intf_pins axi_i2c/IIC]
   connect_bd_intf_net -intf_net axi_inter1_M00_AXI [get_bd_intf_pins axi_intc/s_axi] [get_bd_intf_pins axi_inter1/M00_AXI]
   connect_bd_intf_net -intf_net axi_inter1_M01_AXI [get_bd_intf_pins axi_i2c/S_AXI] [get_bd_intf_pins axi_inter1/M01_AXI]
   connect_bd_intf_net -intf_net axi_inter1_M02_AXI [get_bd_intf_pins axi_inter1/M02_AXI] [get_bd_intf_pins axi_io/S_AXI]
+  connect_bd_intf_net -intf_net axi_inter1_M03_AXI [get_bd_intf_pins axi_inter1/M03_AXI] [get_bd_intf_pins system_management_wiz_0/S_AXI_LITE]
   connect_bd_intf_net -intf_net axi_inter_M00_AXI [get_bd_intf_pins axi_inter/M00_AXI] [get_bd_intf_pins axi_inter1/S00_AXI]
   connect_bd_intf_net -intf_net zynq_ps_M_AXI_con [get_bd_intf_pins axi_inter/S00_AXI] [get_bd_intf_pins zynq_ps/M_AXI_HPM0_LPD]
 
@@ -1863,11 +1863,13 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins axi_i2c/iic2intc_irpt] [get_bd_pins axi_intc/intr]
   connect_bd_net -net axi_intc_irq [get_bd_pins axi_intc/irq] [get_bd_pins zynq_ps/pl_ps_irq0]
   connect_bd_net -net axi_io_gpio_io_o [get_bd_pins axi_io/gpio_io_o] [get_bd_pins cmd_bit/Din] [get_bd_pins fce_ena_bit/Din] [get_bd_pins latch_bit/Din]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_i2c/s_axi_aclk] [get_bd_pins axi_intc/s_axi_aclk] [get_bd_pins axi_inter/ACLK] [get_bd_pins axi_inter/M00_ACLK] [get_bd_pins axi_inter/S00_ACLK] [get_bd_pins axi_inter1/ACLK] [get_bd_pins axi_inter1/M00_ACLK] [get_bd_pins axi_inter1/M01_ACLK] [get_bd_pins axi_inter1/M02_ACLK] [get_bd_pins axi_inter1/M03_ACLK] [get_bd_pins axi_inter1/S00_ACLK] [get_bd_pins axi_io/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins stepper_div/clk_in] [get_bd_pins sys_ret200/slowest_sync_clk] [get_bd_pins zynq_ps/maxihpm0_lpd_aclk]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_i2c/s_axi_aclk] [get_bd_pins axi_intc/s_axi_aclk] [get_bd_pins axi_inter/ACLK] [get_bd_pins axi_inter/M00_ACLK] [get_bd_pins axi_inter/S00_ACLK] [get_bd_pins axi_inter1/ACLK] [get_bd_pins axi_inter1/M00_ACLK] [get_bd_pins axi_inter1/M01_ACLK] [get_bd_pins axi_inter1/M02_ACLK] [get_bd_pins axi_inter1/M03_ACLK] [get_bd_pins axi_inter1/S00_ACLK] [get_bd_pins axi_io/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins pwm_div/clk_in] [get_bd_pins stepper_div/clk_in] [get_bd_pins sys_ret200/slowest_sync_clk] [get_bd_pins system_management_wiz_0/s_axi_aclk] [get_bd_pins zynq_ps/maxihpm0_lpd_aclk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins sys_ret200/dcm_locked]
   connect_bd_net -net cmd_bit_Dout [get_bd_pins cmd_bit/Dout] [get_bd_pins stepper/cmd]
+  connect_bd_net -net divider_0_clk_out [get_bd_pins pwm/clk] [get_bd_pins pwm_div/clk_out]
   connect_bd_net -net fce_ena_bit_Dout [get_bd_pins fce_ena_bit/Dout] [get_bd_pins stepper/force_ena]
   connect_bd_net -net latch_bit_Dout [get_bd_pins latch_bit/Dout] [get_bd_pins stepper/latch]
+  connect_bd_net -net pwm_0_state [get_bd_ports fan] [get_bd_pins pwm/state]
   connect_bd_net -net stepper_busy [get_bd_pins stepper/busy] [get_bd_pins stepper_state/In0]
   connect_bd_net -net stepper_dir [get_bd_ports dir] [get_bd_pins stepper/dir]
   connect_bd_net -net stepper_div_clk_out [get_bd_pins stepper/clk] [get_bd_pins stepper_div/clk_out]
@@ -1876,7 +1878,10 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_net -net stepper_step [get_bd_ports step] [get_bd_pins stepper/step]
   connect_bd_net -net stop1_1 [get_bd_ports stop1] [get_bd_pins stepper/stop1] [get_bd_pins stepper_state/In1]
   connect_bd_net -net stop2_1 [get_bd_ports stop2] [get_bd_pins stepper/stop2] [get_bd_pins stepper_state/In2]
-  connect_bd_net -net sys_ret_peripheral_aresetn [get_bd_pins axi_i2c/s_axi_aresetn] [get_bd_pins axi_intc/s_axi_aresetn] [get_bd_pins axi_inter/ARESETN] [get_bd_pins axi_inter/M00_ARESETN] [get_bd_pins axi_inter/S00_ARESETN] [get_bd_pins axi_inter1/ARESETN] [get_bd_pins axi_inter1/M00_ARESETN] [get_bd_pins axi_inter1/M01_ARESETN] [get_bd_pins axi_inter1/M02_ARESETN] [get_bd_pins axi_inter1/M03_ARESETN] [get_bd_pins axi_inter1/S00_ARESETN] [get_bd_pins axi_io/s_axi_aresetn] [get_bd_pins stepper_div/rst] [get_bd_pins sys_ret200/peripheral_aresetn]
+  connect_bd_net -net sys_ret_peripheral_aresetn [get_bd_pins axi_i2c/s_axi_aresetn] [get_bd_pins axi_intc/s_axi_aresetn] [get_bd_pins axi_inter/ARESETN] [get_bd_pins axi_inter/M00_ARESETN] [get_bd_pins axi_inter/S00_ARESETN] [get_bd_pins axi_inter1/ARESETN] [get_bd_pins axi_inter1/M00_ARESETN] [get_bd_pins axi_inter1/M01_ARESETN] [get_bd_pins axi_inter1/M02_ARESETN] [get_bd_pins axi_inter1/M03_ARESETN] [get_bd_pins axi_inter1/S00_ARESETN] [get_bd_pins axi_io/s_axi_aresetn] [get_bd_pins pwm/rst] [get_bd_pins pwm_div/rst] [get_bd_pins stepper_div/rst] [get_bd_pins sys_ret200/peripheral_aresetn] [get_bd_pins system_management_wiz_0/s_axi_aresetn]
+  connect_bd_net -net system_management_wiz_0_eos_out [get_bd_pins system_management_wiz_0/eos_out] [get_bd_pins temp2pwm/rdy]
+  connect_bd_net -net system_management_wiz_0_temp_out [get_bd_pins system_management_wiz_0/temp_out] [get_bd_pins temp2pwm/temp]
+  connect_bd_net -net temp2pwm_0_pwm [get_bd_pins pwm/fill] [get_bd_pins temp2pwm/pwm]
   connect_bd_net -net zynq_ps_pl_clk0 [get_bd_pins clk_wiz/clk_in1] [get_bd_pins zynq_ps/pl_clk0]
   connect_bd_net -net zynq_ps_pl_resetn0 [get_bd_pins clk_wiz/resetn] [get_bd_pins sys_ret200/ext_reset_in] [get_bd_pins zynq_ps/pl_resetn0]
 

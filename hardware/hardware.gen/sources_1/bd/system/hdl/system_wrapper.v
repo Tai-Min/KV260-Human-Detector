@@ -1,8 +1,8 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Wed Jan 12 05:02:40 2022
-//Host        : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+//Date        : Sun Jan 16 14:03:34 2022
+//Host        : PC running 64-bit Ubuntu 20.04.3 LTS
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
 //Purpose     : IP block netlist
@@ -14,6 +14,7 @@ module system_wrapper
     I2C_sda_io,
     dir,
     ena,
+    fan,
     step,
     stop1,
     stop2);
@@ -21,6 +22,7 @@ module system_wrapper
   inout I2C_sda_io;
   output dir;
   output ena;
+  output fan;
   output step;
   input stop1;
   input stop2;
@@ -35,6 +37,7 @@ module system_wrapper
   wire I2C_sda_t;
   wire dir;
   wire ena;
+  wire fan;
   wire step;
   wire stop1;
   wire stop2;
@@ -58,6 +61,7 @@ module system_wrapper
         .I2C_sda_t(I2C_sda_t),
         .dir(dir),
         .ena(ena),
+        .fan(fan),
         .step(step),
         .stop1(stop1),
         .stop2(stop2));

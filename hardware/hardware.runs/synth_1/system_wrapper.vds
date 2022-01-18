@@ -1,38 +1,38 @@
 #-----------------------------------------------------------
 # Vivado v2021.1 (64-bit)
-# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Jan 12 05:23:26 2021
-# Process ID: 4068
-# Current directory: E:/KV260/hardware/hardware.runs/synth_1
-# Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
-# Log file: E:/KV260/hardware/hardware.runs/synth_1/system_wrapper.vds
-# Journal file: E:/KV260/hardware/hardware.runs/synth_1\vivado.jou
+# Start of session at: Sun Jan 16 14:06:40 2022
+# Process ID: 105415
+# Current directory: /home/mateusz/KV260/hardware/hardware.runs/synth_1
+# Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: /home/mateusz/KV260/hardware/hardware.runs/synth_1/system_wrapper.vds
+# Journal file: /home/mateusz/KV260/hardware/hardware.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
 CRITICAL WARNING: [Common 17-1355] You are suppressing all messages of type 'WARNING'. You may potentially disregard important DRC, CDC, and implementation messages that can negatively impact your design.  If this is not desired, please run 'reset_msg_config -suppress -severity {WARNING}' to undo this change.
 CRITICAL WARNING: [Common 17-1355] You are suppressing all messages of type 'CRITICAL WARNING'. You may potentially disregard important DRC, CDC, and implementation messages that can negatively impact your design.  If this is not desired, please run 'reset_msg_config -suppress -severity {CRITICAL WARNING}' to undo this change.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1226.527 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1611.039 ; gain = 125.359
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2780.102 ; gain = 24.664 ; free physical = 1040 ; free virtual = 7462
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1837.949 ; gain = 352.270
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2993.977 ; gain = 238.539 ; free physical = 1863 ; free virtual = 8287
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1837.949 ; gain = 352.270
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1837.949 ; gain = 352.270
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1839.988 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1948.578 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1948.578 ; gain = 0.000
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1948.578 ; gain = 462.898
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1948.578 ; gain = 462.898
-Applied set_property DONT_TOUCH = true for system_i/zynq_ps/inst/PS8_i. (constraint file  e:/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc, line 25).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ps/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 60).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz/inst. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 63).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/sys_ret200/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 71).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_intc/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 77).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_io/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 85).
-Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_i2c/U0. (constraint file  E:/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 93).
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3008.820 ; gain = 253.383 ; free physical = 1886 ; free virtual = 8310
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3008.820 ; gain = 253.383 ; free physical = 1886 ; free virtual = 8310
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3022.758 ; gain = 0.000 ; free physical = 1875 ; free virtual = 8299
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3112.586 ; gain = 0.000 ; free physical = 1762 ; free virtual = 8186
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3112.586 ; gain = 0.000 ; free physical = 1762 ; free virtual = 8186
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3112.586 ; gain = 357.148 ; free physical = 1872 ; free virtual = 8296
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3112.586 ; gain = 357.148 ; free physical = 1872 ; free virtual = 8296
+Applied set_property DONT_TOUCH = true for system_i/zynq_ps/inst/PS8_i. (constraint file  /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ps_0_1/system_zynq_ps_0.xdc, line 25).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ps/inst. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 75).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz/inst. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 78).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/sys_ret200/U0. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 86).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_intc/U0. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 92).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_io/U0. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 100).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_i2c/U0. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 108).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/system_management_wiz_0/inst. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc, line 113).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/zynq_ps. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/clk_wiz. (constraint file  auto generated constraint).
@@ -49,51 +49,81 @@ Applied set_property KEEP_HIERARCHY = SOFT for system_i/cmd_bit. (constraint fil
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/fce_ena_bit. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/stepper_state. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_inter1/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_inter1/s00_mmu. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_inter1. (constraint file  auto generated constraint).
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1948.578 ; gain = 462.898
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1948.578 ; gain = 462.898
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1948.578 ; gain = 462.898
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 3350.184 ; gain = 1864.504
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 3395.504 ; gain = 1909.824
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 3408.988 ; gain = 1923.309
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/pwm_div. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/pwm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/temp2pwm. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/system_management_wiz_0. (constraint file  auto generated constraint).
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3112.586 ; gain = 357.148 ; free physical = 1872 ; free virtual = 8296
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3112.586 ; gain = 357.148 ; free physical = 1857 ; free virtual = 8284
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3112.586 ; gain = 357.148 ; free physical = 1824 ; free virtual = 8261
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|temp2pwm    | (C:0xffffffff9289)+A*(B:0x32) | 10     | 6      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 4514.023 ; gain = 1758.586 ; free physical = 217 ; free virtual = 6654
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 4558.047 ; gain = 1802.609 ; free physical = 190 ; free virtual = 6628
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 183 ; free virtual = 6621
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
 
 Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |BUFG       |     1|
-|2     |BUFG_PS    |     1|
-|3     |CARRY8     |    20|
-|4     |LUT1       |   320|
-|5     |LUT2       |   150|
-|6     |LUT3       |   415|
-|7     |LUT4       |   272|
-|8     |LUT5       |   243|
-|9     |LUT6       |   456|
-|10    |MMCME4_ADV |     1|
-|11    |MUXCY_L    |     9|
-|12    |MUXF7      |    15|
-|13    |MUXF8      |     4|
-|14    |PS8        |     1|
-|15    |SRL16      |     1|
-|16    |SRL16E     |    44|
-|17    |SRLC32E    |    51|
-|18    |XORCY      |    12|
-|19    |FDCE       |    20|
-|20    |FDR        |    27|
-|21    |FDRE       |  1231|
-|22    |FDSE       |    77|
-|23    |IBUF       |     3|
-|24    |IOBUF      |     2|
-|25    |OBUF       |     3|
-+------+-----------+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3408.988 ; gain = 1923.309
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 3408.988 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3456.293 ; gain = 0.000
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 3456.293 ; gain = 2229.766
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |BUFG            |     1|
+|2     |BUFG_PS         |     1|
+|3     |CARRY8          |    59|
+|4     |DSP_ALU         |     1|
+|5     |DSP_A_B_DATA    |     1|
+|6     |DSP_C_DATA      |     1|
+|7     |DSP_MULTIPLIER  |     1|
+|8     |DSP_M_DATA      |     1|
+|9     |DSP_OUTPUT      |     1|
+|10    |DSP_PREADD      |     1|
+|11    |DSP_PREADD_DATA |     1|
+|12    |LUT1            |   506|
+|13    |LUT2            |   276|
+|14    |LUT3            |   586|
+|15    |LUT4            |   354|
+|16    |LUT5            |   307|
+|17    |LUT6            |   599|
+|18    |MMCME4_ADV      |     1|
+|19    |MUXCY_L         |     9|
+|20    |MUXF7           |    11|
+|21    |MUXF8           |     4|
+|22    |PS8             |     1|
+|23    |SRL16           |     1|
+|24    |SRL16E          |    44|
+|25    |SRLC32E         |    51|
+|26    |SYSMONE4        |     1|
+|27    |XORCY           |    12|
+|28    |FDCE            |   106|
+|29    |FDPE            |     2|
+|30    |FDR             |    27|
+|31    |FDRE            |  1340|
+|32    |FDSE            |    79|
+|33    |IBUF            |     3|
+|34    |IOBUF           |     2|
+|35    |OBUF            |     4|
++------+----------------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4574.062 ; gain = 1818.625 ; free physical = 182 ; free virtual = 6619
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4574.070 ; gain = 0.000 ; free physical = 310 ; free virtual = 6747
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4638.797 ; gain = 0.000 ; free physical = 242 ; free virtual = 6679
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 4638.797 ; gain = 1883.359 ; free physical = 1457 ; free virtual = 7894

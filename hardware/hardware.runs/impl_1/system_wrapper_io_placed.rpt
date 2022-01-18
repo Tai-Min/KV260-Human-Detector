@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date                      : Wed Jan 12 05:51:38 2022
-| Host                      : DESKTOP-OELG8MS running 64-bit major release  (build 9200)
+| Tool Version              : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date                      : Sun Jan 16 14:08:27 2022
+| Host                      : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command                   : report_io -file system_wrapper_io_placed.rpt
 | Design                    : system_wrapper
 | Device                    : xck26
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             7 |
+|             8 |
 +---------------+
 
 
@@ -41,7 +41,7 @@ Table of Contents
 | A4         |                          | High Performance | IO_L10N_T1U_N7_QBC_AD4N_66         | User IO       |             |      66 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A10        |                          | High Density     | IO_L10N_AD10N_45                   | User IO       |             |      45 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A11        |                          | High Density     | IO_L11N_AD9N_45                    | User IO       |             |      45 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| A12        |                          | High Density     | IO_L11P_AD9P_45                    | User IO       |             |      45 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| A12        | fan                      | High Density     | IO_L11P_AD9P_45                    | OUTPUT        | LVCMOS33    |      45 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | A16        | USB0_ULPI_TX_DATA[1]     |                  | PS_MIO57_502                       | PSS IO        | LVCMOS18    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | A17        | USB0_ULPI_TX_DATA[6]     |                  | PS_MIO62_502                       | PSS IO        | LVCMOS18    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | A18        | GEM3_RGMII_TXD[0]        |                  | PS_MIO65_502                       | PSS IO        | LVCMOS18    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |

@@ -1,2 +1,8 @@
-sysroots/
+sdk/
+build/
+./embed_platform/logs
+.analytics
+./.ipcache
+.Xil/
 *.log
+*.jou

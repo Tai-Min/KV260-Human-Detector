@@ -1,8 +1,4 @@
 .Xil/
 *.jou
 *.log
-.log/
-logs/
-.ipcache/
-build/
 device_tree/

@@ -1,0 +1,175 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 2952605
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Jan 18 07:01:22 CET 2022
+Time zone: 	Central European Standard Time (Europe/Warsaw)
+
+OS: Ubuntu
+OS Version: 5.11.0-46-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 3
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/home/mateusz/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/home/mateusz/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	mateusz
+User home directory: /home/mateusz
+User working directory: /home/mateusz/KV260
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/mateusz/Xilinx/Vivado
+HDI_APPROOT: /home/mateusz/Xilinx/Vivado/2021.1
+RDI_DATADIR: /home/mateusz/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /home/mateusz/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/mateusz/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/mateusz/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/mateusz/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/home/mateusz/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/mateusz/KV260/vivado.log
+Vivado journal file: 	/home/mateusz/KV260/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2952605-PC
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/mateusz/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: /home/mateusz/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: /home/mateusz/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /home/mateusz/Xilinx/Vivado/2021.1
+XILINX_SDK: /home/mateusz/Xilinx/Vitis/2021.1
+XILINX_VITIS: /home/mateusz/Xilinx/Vitis/2021.1
+XILINX_VIVADO: /home/mateusz/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /home/mateusz/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,748 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,748 MB. GUI used memory: 71 MB. Current time: 1/18/22, 7:01:23 AM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/mateusz/KV260/hardware/hardware.xpr");
+// Opening Vivado Project: /home/mateusz/KV260/hardware/hardware.xpr. Version: Vivado v2021.1 
+// bz (cs):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/mateusz/KV260/hardware/hardware.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 137 MB (+141082kb) [00:01:07]
+// [Engine Memory]: 1,802 MB (+1738246kb) [00:01:07]
+// [GUI Memory]: 178 MB (+36236kb) [00:01:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  7230 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,845 MB. GUI used memory: 129 MB. Current time: 1/18/22, 7:02:19 AM CET
+// Project name: hardware; location: /home/mateusz/KV260/hardware; part: xck26-sfvc784-2LV-c
+// 'j' command handler elapsed time: 13 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Open Project"); // bz
+// [Engine Memory]: 2,033 MB (+147262kb) [00:01:14]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // o
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// JavaFX intialization before: 1642485750269
+// [GUI Memory]: 187 MB (+63kb) [00:01:21]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// JavaFX initialization after: 1642485751313
+// HMemoryUtils.trashcanNow. Engine heap size: 2,061 MB. GUI used memory: 141 MB. Current time: 1/18/22, 7:02:38 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,964 MB. GUI used memory: 159 MB. Current time: 1/18/22, 7:02:54 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,964 MB. GUI used memory: 173 MB. Current time: 1/18/22, 7:03:24 AM CET
+// Elapsed time: 54 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
