@@ -24,7 +24,7 @@ This instruction assumes that Vitis software (Vivado, Vitis, PetaLinux) run on v
 
 For SD flashing [balenaEtcher](https://www.balena.io/etcher/) will be used.
 
-Also, there are additional packages that should be installed:
+Also, there are additional packages that should be installed via apt:
 - putty
 - sshpass (OPTIONAL used in build_app.sh with -p option provided to ignore multiple petalinux password inputs, considered bad practice so use at your own risk)
 
