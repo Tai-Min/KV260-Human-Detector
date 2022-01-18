@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Sun Jan 16 14:03:34 2022
+//Date        : Tue Jan 18 16:20:51 2022
 //Host        : PC running 64-bit Ubuntu 20.04.3 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -1018,7 +1018,6 @@ module system
   wire axi_i2c_IIC_SDA_I;
   wire axi_i2c_IIC_SDA_O;
   wire axi_i2c_IIC_SDA_T;
-  wire axi_iic_0_iic2intc_irpt;
   wire axi_intc_irq;
   wire [39:0]axi_inter1_M00_AXI_ARADDR;
   wire axi_inter1_M00_AXI_ARREADY;
@@ -1180,8 +1179,7 @@ module system
   assign stop1_1 = stop1;
   assign stop2_1 = stop2;
   system_axi_i2c_0 axi_i2c
-       (.iic2intc_irpt(axi_iic_0_iic2intc_irpt),
-        .s_axi_aclk(clk_wiz_clk_out1),
+       (.s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_araddr(axi_inter1_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(sys_ret_peripheral_aresetn),
         .s_axi_arready(axi_inter1_M01_AXI_ARREADY),
@@ -1207,7 +1205,7 @@ module system
         .sda_o(axi_i2c_IIC_SDA_O),
         .sda_t(axi_i2c_IIC_SDA_T));
   system_axi_intc_0 axi_intc
-       (.intr(axi_iic_0_iic2intc_irpt),
+       (.intr(1'b0),
         .irq(axi_intc_irq),
         .s_axi_aclk(clk_wiz_clk_out1),
         .s_axi_araddr(axi_inter1_M00_AXI_ARADDR[8:0]),

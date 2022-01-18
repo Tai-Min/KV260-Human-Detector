@@ -21,7 +21,12 @@ help() {
     echo "    ./build_app.sh -t all"
     echo "- Build one or more items:"
     echo "    ./build_app.sh -t type1 -t type2 ... -t typen"
-    echo "    Allowed types: krnl, link, app"
+    echo "    Allowed types: krnl, link, app, pkg"
+    echo "  Build and upload built application:"
+    echo "    ./build_app.sh -u petalinux@<kv260 ip>"
+    echo "    ./build_app.sh -t type1 -t type2 ... -t typen -t pkg -u petalinux@<kv260 ip> [-p <petalinux password>]"
+    echo "  Only upload built application:"
+    echo "    ./build_app.sh -t pkg -u petalinux@<kv260 ip> [-p <petalinux password>]"
     exit $1
 }
 
@@ -42,7 +47,7 @@ getInvalidBuildType() {
    local e
    for e
    do
-      if [[ $e != "all" ]] && [[ $e != "krnl" ]] && [[ $e != "link" ]] && [[ $e != "app" ]]
+      if [[ $e != "all" ]] && [[ $e != "krnl" ]] && [[ $e != "link" ]] && [[ $e != "app" ]] && [[ $e != "pkg" ]]
       then
          echo $e
          return 1
@@ -53,10 +58,12 @@ getInvalidBuildType() {
 }
 
 # h: help
-# t: build type (all, krnl, link, app)
+# t: build type (all, krnl, link, app, pkg)
+# u: upload destination user@ip
+# p: destination's password (optional)
 buildType=("all")
 clearBuildType=1
-while getopts "t:h" opt
+while getopts "t:u:p:h" opt
 do
    case "$opt" in
       t) if [[ $clearBuildType = 1 ]]
@@ -66,6 +73,8 @@ do
          else
             buildType+=("$OPTARG")
          fi ;;
+      u) uploadTarget=$OPTARG ;;
+      p) petalinuxPass=$OPTARG ;;
       h) help 0 ;;
       ?) help 0 ;;
    esac
@@ -109,20 +118,51 @@ fi
 # Build the application.
 if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "app" ${buildType[@]}) = 1 ]]
 then
-    info "Building application..."
+   info "Building application..."
    
-    flags="-std=c++1y -v -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8 -O2 -Wall -Werror"
+   flags="-std=c++1y -v -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8 -O2 -Wall -Werror"
 
-    include=""
+   include=""
 
-    libPaths="/usr/lib/:/lib/"
-    libs="-lxilinxopencl -lpthread -lrt -ldl -lcrypt -lstdc++"
+   libPaths="/usr/lib/:/lib/"
+   libs="-lxilinxopencl -lpthread -lrt -ldl -lcrypt -lstdc++"
 
-    files="$projDir/package/app/app/src/*.cpp"
+   files="$projDir/package/app/app/src/*.cpp"
 
-    aarch64-linux-gnu-g++ $flags -I$include -L$libPaths $libs --sysroot="$projDir/package/sdk/sysroots/cortexa72-cortexa53-xilinx-linux" -o "$projDir/package/app/build/vadd" $files
+   aarch64-linux-gnu-g++ $flags -I$include -L$libPaths $libs --sysroot="$projDir/package/sdk/sysroots/cortexa72-cortexa53-xilinx-linux" -o "$projDir/package/app/build/vadd" $files
 
    failHandler
+fi
+
+# Build the application.
+if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "pkg" ${buildType[@]}) = 1 ]]
+then
+   info "Creating vadd.bit.bin..."
+   
+   (cd "$projDir/package/app/build" && rm bootgen.bif 2> /dev/null && echo "all:{../../../linux/images/linux/system.bit}" > bootgen.bif && bootgen -w -arch zynqmp -process_bitstream bin -image bootgen.bif && mkdir -p "$projDir/package/app/final" && mv "$projDir/linux/images/linux/system.bit.bin" "$projDir/package/app/final/vadd.bit.bin" && cp vadd vadd_container.xclbin "$projDir/package/app/final")
+
+   failHandler
+
+   info "Creating vadd.dtbo..."
+   (cd "$projDir/device_tree" && cp pl.dtsi pl_mod.dtsi && sed -i 's/hardware.bit.bin/vadd.bit.bin/g' pl_mod.dtsi && dtc -@ -O dtb -o "$projDir/package/app/final/vadd.dtbo" pl_mod.dtsi)
+
+   failHandler
+
+   info "Creating shell.json..."
+   (cd "$projDir/package/app/final" && echo -e "{\n    \"shell_type\": \"XRT_FLAT\",\n    \"num_slots\": \"1\"\n}" > shell.json)
+
+   failHandler
+
+   if [[ $uploadTarget != "" ]]
+   then
+      if [[ $uploadTarget != "" ]]
+      then
+         (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp vadd.dtbo vadd.bit.bin vadd shell.json vadd_container.xclbin $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/vadd && sudo mv vadd.dtbo vadd.bit.bin shell.json /lib/firmware/xilinx/vadd && chmod +x vadd")
+      else
+         (cd "$projDir/package/app/final" && scp vadd.dtbo vadd.bit.bin vadd shell.json vadd_container.xclbin $uploadTarget:/home/petalinux && ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/vadd && sudo mv vadd.dtbo vadd.bit.bin shell.json /lib/firmware/xilinx/vadd && chmod +x vadd")
+      fi
+      
+   fi
 fi
 
 cleanup 0

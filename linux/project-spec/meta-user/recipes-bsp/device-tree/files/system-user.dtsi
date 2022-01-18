@@ -19,7 +19,7 @@
 };
 
 &gem3 {
-	status = "disabled";
+	status = "okay";
 };
 
 &sata {
@@ -27,7 +27,7 @@
 };
 
 &usb0 {
-        status = "disabled";
+        status = "okay";
 };
 
 &dwc3_0 {

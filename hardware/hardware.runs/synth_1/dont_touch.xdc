@@ -45,11 +45,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_fce_
 # IP: bd/system/ip/system_stepper_state_0_1/system_stepper_state_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_stepper_state_0 || ORIG_REF_NAME==system_stepper_state_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_axi_inter1_0_1/system_axi_inter1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_inter1_0 || ORIG_REF_NAME==system_axi_inter1_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_xbar_0_1/system_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_axi_inter1_0_1/system_axi_inter1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_inter1_0 || ORIG_REF_NAME==system_axi_inter1_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_divider_0_0/system_divider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_divider_0_0 || ORIG_REF_NAME==system_divider_0_0} -quiet] -quiet

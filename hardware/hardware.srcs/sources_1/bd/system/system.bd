@@ -3137,10 +3137,10 @@
             "value": "200.000"
           },
           "CLKOUT2_JITTER": {
-            "value": "232.902"
+            "value": "115.833"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "106.804"
+            "value": "87.181"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "100.000"
@@ -3155,7 +3155,7 @@
             "value": "87.181"
           },
           "CLKOUT3_REQUESTED_OUT_FREQ": {
-            "value": "100.000"
+            "value": "400"
           },
           "CLKOUT3_USED": {
             "value": "false"
@@ -4406,12 +4406,6 @@
       }
     },
     "nets": {
-      "axi_iic_0_iic2intc_irpt": {
-        "ports": [
-          "axi_i2c/iic2intc_irpt",
-          "axi_intc/intr"
-        ]
-      },
       "axi_intc_irq": {
         "ports": [
           "axi_intc/irq",

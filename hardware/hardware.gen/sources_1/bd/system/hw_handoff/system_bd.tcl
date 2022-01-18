@@ -218,13 +218,13 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT1_JITTER {102.087} \
    CONFIG.CLKOUT1_PHASE_ERROR {87.181} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} \
-   CONFIG.CLKOUT2_JITTER {232.902} \
-   CONFIG.CLKOUT2_PHASE_ERROR {106.804} \
+   CONFIG.CLKOUT2_JITTER {115.833} \
+   CONFIG.CLKOUT2_PHASE_ERROR {87.181} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
    CONFIG.CLKOUT2_USED {false} \
    CONFIG.CLKOUT3_JITTER {90.075} \
    CONFIG.CLKOUT3_PHASE_ERROR {87.181} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {400} \
    CONFIG.CLKOUT3_USED {false} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {12.000} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} \
@@ -1860,7 +1860,6 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_intf_net -intf_net zynq_ps_M_AXI_con [get_bd_intf_pins axi_inter/S00_AXI] [get_bd_intf_pins zynq_ps/M_AXI_HPM0_LPD]
 
   # Create port connections
-  connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins axi_i2c/iic2intc_irpt] [get_bd_pins axi_intc/intr]
   connect_bd_net -net axi_intc_irq [get_bd_pins axi_intc/irq] [get_bd_pins zynq_ps/pl_ps_irq0]
   connect_bd_net -net axi_io_gpio_io_o [get_bd_pins axi_io/gpio_io_o] [get_bd_pins cmd_bit/Din] [get_bd_pins fce_ena_bit/Din] [get_bd_pins latch_bit/Din]
   connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_i2c/s_axi_aclk] [get_bd_pins axi_intc/s_axi_aclk] [get_bd_pins axi_inter/ACLK] [get_bd_pins axi_inter/M00_ACLK] [get_bd_pins axi_inter/S00_ACLK] [get_bd_pins axi_inter1/ACLK] [get_bd_pins axi_inter1/M00_ACLK] [get_bd_pins axi_inter1/M01_ACLK] [get_bd_pins axi_inter1/M02_ACLK] [get_bd_pins axi_inter1/M03_ACLK] [get_bd_pins axi_inter1/S00_ACLK] [get_bd_pins axi_io/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins pwm_div/clk_in] [get_bd_pins stepper_div/clk_in] [get_bd_pins sys_ret200/slowest_sync_clk] [get_bd_pins system_management_wiz_0/s_axi_aclk] [get_bd_pins zynq_ps/maxihpm0_lpd_aclk]

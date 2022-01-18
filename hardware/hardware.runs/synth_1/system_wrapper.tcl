@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -severity {STATUS}  -suppress 
 set_msg_config  -severity {INFO}  -suppress 
 set_msg_config  -severity {WARNING}  -suppress 

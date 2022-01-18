@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Jan 16 14:07:29 2022
-# Process ID: 105664
+# Start of session at: Tue Jan 18 19:54:13 2022
+# Process ID: 3580254
 # Current directory: /home/mateusz/KV260/hardware/hardware.runs/impl_1
 # Command line: vivado -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
 # Log file: /home/mateusz/KV260/hardware/hardware.runs/impl_1/system_wrapper.vdi
@@ -12,131 +12,9 @@
 source system_wrapper.tcl -notrace
 CRITICAL WARNING: [Common 17-1355] You are suppressing all messages of type 'WARNING'. You may potentially disregard important DRC, CDC, and implementation messages that can negatively impact your design.  If this is not desired, please run 'reset_msg_config -suppress -severity {WARNING}' to undo this change.
 CRITICAL WARNING: [Common 17-1355] You are suppressing all messages of type 'CRITICAL WARNING'. You may potentially disregard important DRC, CDC, and implementation messages that can negatively impact your design.  If this is not desired, please run 'reset_msg_config -suppress -severity {CRITICAL WARNING}' to undo this change.
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2746.438 ; gain = 0.000 ; free physical = 2036 ; free virtual = 8485
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3240.770 ; gain = 0.000 ; free physical = 1767 ; free virtual = 8207
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 3240.770 ; gain = 494.332 ; free physical = 1767 ; free virtual = 8207
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3240.770 ; gain = 0.000 ; free physical = 1561 ; free virtual = 8013
-Write XDEF Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3247.465 ; gain = 0.000 ; free physical = 1547 ; free virtual = 8002
-report_drc: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 4543.109 ; gain = 1295.645 ; free physical = 639 ; free virtual = 7185
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 607 ; free virtual = 7156
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 607 ; free virtual = 7156
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 318 ; free virtual = 6905
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 316 ; free virtual = 6903
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 240 ; free virtual = 6727
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 242 ; free virtual = 6730
-place_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:22 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 282 ; free virtual = 6770
-Write XDEF Complete: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 268 ; free virtual = 6764
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 253 ; free virtual = 6745
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 255 ; free virtual = 6740
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 250 ; free virtual = 6739
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 250 ; free virtual = 6739
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 250 ; free virtual = 6739
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 249 ; free virtual = 6739
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 288 ; free virtual = 6785
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 295 ; free virtual = 6792
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 295 ; free virtual = 6792
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 295 ; free virtual = 6792
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 296 ; free virtual = 6793
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 307 ; free virtual = 6808
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 308 ; free virtual = 6808
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 308 ; free virtual = 6808
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 289 ; free virtual = 6790
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 283 ; free virtual = 6784
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 284 ; free virtual = 6785
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 223 ; free virtual = 6807
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 221 ; free virtual = 6805
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 219 ; free virtual = 6805
-phys_opt_design: Time (s): cpu = 00:02:01 ; elapsed = 00:00:36 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 241 ; free virtual = 6829
-Write XDEF Complete: Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 214 ; free virtual = 6818
-
-Checksum: PlaceDB: faaeebcd ConstDB: 0 ShapeSum: aee199b5 RouteDB: cff6c4d4
-Nodegraph reading from file.  Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.73 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 153 ; free virtual = 6686
-Post Restoration Checksum: NetGraph: 22a38ab5 NumContArr: e0b4209a Constraints: 88094899 Timing: 0
- Number of Nodes with overlaps = 0
-
-Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0010518 %
-  Global Horizontal Routing Utilization  = 0.00113276 %
-  Routable Net Status*
-  *Does not include unroutable nets such as driverless and loadless.
-  Run report_route_status for detailed report.
-  Number of Failed Nets               = 3107
-    (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 2469
-  Number of Partially Routed Nets     = 638
-  Number of Node Overlaps             = 2
-
- Number of Nodes with overlaps = 731
- Number of Nodes with overlaps = 103
- Number of Nodes with overlaps = 30
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
- Number of Nodes with overlaps = 161
- Number of Nodes with overlaps = 25
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 0
- Number of Nodes with overlaps = 137
- Number of Nodes with overlaps = 37
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
- Number of Nodes with overlaps = 132
- Number of Nodes with overlaps = 22
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 0
- Number of Nodes with overlaps = 0
-
-Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.236106 %
-  Global Horizontal Routing Utilization  = 0.27021 %
-  Routable Net Status*
-  *Does not include unroutable nets such as driverless and loadless.
-  Run report_route_status for detailed report.
-  Number of Failed Nets               = 0
-    (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 0
-  Number of Partially Routed Nets     = 0
-  Number of Node Overlaps             = 0
-
-Congestion Report
-North Dir 1x1 Area, Max Cong = 35.6808%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 32.7014%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 22.1154%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 27.8846%, No Congested Regions.
-
-------------------------------
-Reporting congestion hotspots
-------------------------------
-Direction: North
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: South
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: East
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: West
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-
-
- Verification completed successfully
-Time taken to check if laguna hold fix is required (in secs): 0
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 270 ; free virtual = 6564
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 270 ; free virtual = 6564
-route_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 486 ; free virtual = 6781
-Write XDEF Complete: Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4543.109 ; gain = 0.000 ; free physical = 471 ; free virtual = 6778
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 4544.129 ; gain = 0.000 ; free physical = 336 ; free virtual = 6715
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2668.367 ; gain = 0.000 ; free physical = 5714 ; free virtual = 9219
+Read XDEF File: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.65 . Memory (MB): peak = 2939.445 ; gain = 9.906 ; free physical = 5376 ; free virtual = 8866
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.65 . Memory (MB): peak = 2939.445 ; gain = 9.906 ; free physical = 5376 ; free virtual = 8866
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3328.695 ; gain = 0.000 ; free physical = 4999 ; free virtual = 8490
+open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3328.695 ; gain = 814.352 ; free physical = 4998 ; free virtual = 8489
+write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 3691.848 ; gain = 363.152 ; free physical = 4874 ; free virtual = 8373

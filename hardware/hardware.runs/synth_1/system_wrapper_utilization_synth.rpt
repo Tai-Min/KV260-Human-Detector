@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Sun Jan 16 14:07:25 2022
+| Date         : Tue Jan 18 16:21:42 2022
 | Host         : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -31,17 +31,17 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 2296 |     0 |          0 |    117120 |  1.96 |
-|   LUT as Logic             | 2200 |     0 |          0 |    117120 |  1.88 |
+| CLB LUTs*                  | 2293 |     0 |          0 |    117120 |  1.96 |
+|   LUT as Logic             | 2197 |     0 |          0 |    117120 |  1.88 |
 |   LUT as Memory            |   96 |     0 |          0 |     57600 |  0.17 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   96 |     0 |            |           |       |
-| CLB Registers              | 1554 |     0 |          0 |    234240 |  0.66 |
-|   Register as Flip Flop    | 1554 |     0 |          0 |    234240 |  0.66 |
+| CLB Registers              | 1556 |     0 |          0 |    234240 |  0.66 |
+|   Register as Flip Flop    | 1556 |     0 |          0 |    234240 |  0.66 |
 |   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                     |   62 |     0 |          0 |     14640 |  0.42 |
-| F7 Muxes                   |   11 |     0 |          0 |     58560 |  0.02 |
-| F8 Muxes                   |    4 |     0 |          0 |     29280 |  0.01 |
+| F7 Muxes                   |    3 |     0 |          0 |     58560 | <0.01 |
+| F8 Muxes                   |    0 |     0 |          0 |     29280 |  0.00 |
 | F9 Muxes                   |    0 |     0 |          0 |     14640 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -62,7 +62,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 106   |          Yes |           - |        Reset |
 | 79    |          Yes |         Set |            - |
-| 1367  |          Yes |       Reset |            - |
+| 1369  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -158,23 +158,22 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       | 1367 |            Register |
-| LUT6       |  599 |                 CLB |
-| LUT3       |  586 |                 CLB |
-| LUT1       |  506 |                 CLB |
-| LUT4       |  354 |                 CLB |
-| LUT5       |  307 |                 CLB |
-| LUT2       |  276 |                 CLB |
+| FDRE       | 1369 |            Register |
+| LUT6       |  604 |                 CLB |
+| LUT3       |  593 |                 CLB |
+| LUT1       |  507 |                 CLB |
+| LUT4       |  346 |                 CLB |
+| LUT5       |  305 |                 CLB |
+| LUT2       |  283 |                 CLB |
 | FDCE       |  106 |            Register |
 | FDSE       |   79 |            Register |
 | CARRY8     |   62 |                 CLB |
 | SRLC32E    |   51 |                 CLB |
 | SRL16E     |   45 |                 CLB |
-| MUXF7      |   11 |                 CLB |
 | OBUF       |    4 |                 I/O |
-| MUXF8      |    4 |                 CLB |
 | INBUF      |    4 |                 I/O |
 | IBUFCTRL   |    4 |              Others |
+| MUXF7      |    3 |                 CLB |
 | OBUFT      |    2 |                 I/O |
 | FDPE       |    2 |            Register |
 | SYSMONE4   |    1 |            Advanced |

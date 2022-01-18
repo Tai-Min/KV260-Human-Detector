@@ -8,62 +8,83 @@ For more information about the project itself see [Human position estimator for 
 
 This repository contains all files and instructions required to recreate the project from scratch, including code, hardware design files, PCB design and 3D printable parts. 
 
-## Recreating the project
-### 3D printing
+# Recreating the project
+## 3D printing
 
-### PCB shield
+## PCB shield
 
-### Building the software
+## Building the software
+Project created and tested using Ubuntu-20.04.
 
-#### Prerequisites
-This instruction assumes that Vitis software (Vivado, XSCT, Vitis, etc.) version 2021.1 is installed on Windows 10 machine.
-PetaLinux (along with all required packages) and Vitis AI should be installed on [WSL's](https://docs.microsoft.com/en-us/windows/wsl/about) version of [Ubuntu 20.04](https://www.microsoft.com/store/productId/9N6SVWS3RX71).
+This repo's root directory is from now onwards called \<REPO>
 
-Map WSL instance to some drive (required to access PetaLinux build files from Vitis on Windows):
-Run WSL and then in File Explorer go to:
+### Prerequisites
+
+This instruction assumes that Vitis software (Vivado, Vitis, PetaLinux) run on version 2021.1 and is correctly sourced in ".bashrc". It also assumes that PetaLinux has installed all [required packages](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug1144-petalinux-tools-reference-guide.pdf).
+
+For SD flashing [balenaEtcher](https://www.balena.io/etcher/) will be used.
+
+Also, there are additional packages that should be installed:
+- putty
+- sshpass (OPTIONAL used in build_app.sh with -p option provided to ignore multiple petalinux password inputs, considered bad practice so use at your own risk)
+
+### Regenerate project
+
+
+1. In Vivado open hardware project \<REPO>/hardware/hardware.xpr and Generate Bitstream
+
+Considering that build files for PetaLinux and it's SDK take roughly 60Gb of space, I don't think than anyone would want to download and extract such blob of files (also GitHub would be mad at me I guess). So to create this project locally I have provided simple script that builds everything from scratch up to the Vitis platform.
+
+2. In terminal, in \<REPO>/ run:
 ```
-\\wsl$
-```
-Then right click on your project's WSL instance and map it to drive letter so it'll become visible from "This PC" as additional drive.
-
-Now, go to this repo's directory and edit "settings.ini" such that:
-``
-[windows]
-vivado_path=<Path to Vivado application's main folder>
-vitis_path=F<Path to Vitis application's main folder>
-
-[wsl]
-distro=<WSL name>
-user=<WSL user>
-petalinux_path=<path to petalinux directory>
-virtual_drive=<drive assigned to WSL instance>
-``
-
-Install [Ext2 File System Driver for Windows](https://sourceforge.net/projects/ext2fsd/) for SD card generation.
-
-The last thing to do before the main part of the build pipeline is to flash SD card with [starter kit image](https://www.xilinx.com/products/som/kria/kv260-vision-starter-kit/kv260-getting-started/setting-up-the-sd-card-image.html) to create valid boot and rootfs partitions (PetaLinux can't generate flashable image on WSL2 for me).
-
-#### Regenerate project
-Considering that build files for PetaLinux and it's SDK take roughly 60Gb of space, I don't think than anyone would want to download and extract such blob of files (also GitHub would be mad at me I guess). So to create this project locally I have provided simple script that builds everything from scratch up to the platform building in Vitis.
-
-In Windows PowerShell, inside this repo's directory run: 
-```
-./regenerate_hw.ps1
+chmod +x ./regenerate_hw.sh && ./regenerate_hw.sh
 ```
 This script will:
 - export hardware design (XSA file)
-- generate device tree overlay (DTO) and compile it
+- generate and compile device tree overlay (DTO)
 - compile pre-configured PetaLinux image, it's SDK and unpack it to Vitis workspace directory
-- update Vitis platform with new hardware description
+- create .wic image for SD card
+- update Vitis platform with new hardware description and linux image
 
-#### Build project
-In Windows PowerShell, inside this repo's directory run: 
+3. Flash \<REPO>/linux/images/linux/petalinux-sdimage.wic into SD card (i.e using balenaEtcher)
+
+4. Verify whether everything is working and set new petalinux password (called \<DEVPWD> onwards):
 ```
-./build_app.ps1
+sudo putty /dev/ttyUSBn -serial -sercfg 115200,8,n,1,N
+```
+replace n in "/dev/ttyUSBn" with correct USB number that responds with PetaLinux booting process.
+
+Before leaving PetaLinux's shell, check device's ip with 
+```
+ifconfig
+```
+Write down address near "inet" under "eth0". This address will be called \<DEVIP> from now onwards.
+
+### Build project
+1. a) Only to build the application, in terminal, in \<REPO>/ run:
+```
+chmod +x ./build_app.sh && ./build_app.sh
+```
+This will generate all necessary files in \<REPO>/package/app/final
+
+1. b) To build and upload to the device:
+```
+chmod +x ./build_app.sh && ./build_app.sh -u petalinux@<DEVIP>
+```
+This method will ask for petalinux's password multiple times.
+1. c) (sshpass required!) To build and upload to the device:
+```
+chmod +x ./build_app.sh && ./build_app.sh -u petalinux@<DEVIP> -p <DEVPWD>
+```
+This method will ask for petalinux's password once.
+
+### Run the application
+1. SSH into KV260:
+```
+ssh petalinux@<DEVIP>
 ```
 
-#### Create bootable SD card
-
-#### Upload application to the board
-
-#### Run the application
+2. Run:
+```
+./vadd vadd_container.xclbin
+```

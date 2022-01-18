@@ -1,9 +1,10 @@
 sdk/
 build/
-./embed_platform/logs
+embed_platform/logs
+final/
 .analytics
 .metadata/
-./.ipcache/
+.ipcache/
 .Xil/
 *.log
 *.jou
