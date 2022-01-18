@@ -31,7 +31,7 @@ Also, there are additional packages that should be installed via apt:
 ### Regenerate project
 
 
-1. In Vivado open hardware project \<REPO>/hardware/hardware.xpr and Generate Bitstream
+1. In Vivado open hardware project \<REPO>/hardware/hardware.xpr and press Generate Bitstream
 
 Considering that build files for PetaLinux and it's SDK take roughly 60Gb of space, I don't think than anyone would want to download and extract such blob of files (also GitHub would be mad at me I guess). So to create this project locally I have provided simple script that builds everything from scratch up to the Vitis platform.
 
@@ -52,7 +52,7 @@ This script will:
 ```
 sudo putty /dev/ttyUSBn -serial -sercfg 115200,8,n,1,N
 ```
-replace n in "/dev/ttyUSBn" with correct USB number that responds with PetaLinux booting process.
+replace "n" in "/dev/ttyUSBn" with correct USB number that responds with PetaLinux booting process.
 
 Before leaving PetaLinux's shell, check device's ip with 
 ```
