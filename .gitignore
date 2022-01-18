@@ -1,4 +1,6 @@
 .Xil/
 *.jou
 *.log
-device_tree/
+./device_tree/
+./*.str
+./.ipcache/
