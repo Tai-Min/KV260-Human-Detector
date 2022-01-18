@@ -3,7 +3,7 @@ build/
 ./embed_platform/logs
 .analytics
 .metadata/
-./.ipcache
+./.ipcache/
 .Xil/
 *.log
 *.jou
