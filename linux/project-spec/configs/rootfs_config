@@ -80,7 +80,7 @@ CONFIG_system-zynqmp=y
 #
 # dbus 
 #
-CONFIG_dbus=y
+# CONFIG_dbus is not set
 # CONFIG_dbus-dbg is not set
 # CONFIG_dbus-lib is not set
 # CONFIG_dbus-dev is not set
@@ -167,9 +167,9 @@ CONFIG_haveged=y
 #
 # i2c-tools 
 #
-CONFIG_i2c-tools=y
+# CONFIG_i2c-tools is not set
 # CONFIG_i2c-tools-dev is not set
-CONFIG_i2c-tools-misc=y
+# CONFIG_i2c-tools-misc is not set
 # CONFIG_i2c-tools-dbg is not set
 
 #
@@ -1004,7 +1004,7 @@ CONFIG_pciutils=y
 #
 # make 
 #
-CONFIG_make=y
+# CONFIG_make is not set
 # CONFIG_make-dev is not set
 # CONFIG_make-dbg is not set
 
@@ -1034,107 +1034,107 @@ CONFIG_make=y
 #
 # python 
 #
-CONFIG_python=y
-CONFIG_python-terminal=y
-CONFIG_python-mailbox=y
-CONFIG_python-logging=y
-CONFIG_python-xml=y
-CONFIG_python-hotshot=y
-CONFIG_python-multiprocessing=y
-CONFIG_python-threading=y
-CONFIG_python-curses=y
-CONFIG_python-mime=y
-CONFIG_python-netclient=y
-CONFIG_python-netserver=y
-CONFIG_python-image=y
-CONFIG_python-unixadmin=y
-CONFIG_python-sqlite3=y
-CONFIG_python-pprint=y
-CONFIG_python-contextlib=y
-CONFIG_python-idle=y
-CONFIG_python-pkgutil=y
-CONFIG_python-crypt=y
-CONFIG_python-zlib=y
-CONFIG_python-fcntl=y
-CONFIG_python-stringold=y
-CONFIG_python-dev=y
-CONFIG_libpython2=y
-CONFIG_python-smtpd=y
-CONFIG_python-core=y
-CONFIG_python-tkinter=y
-CONFIG_python-codecs=y
-CONFIG_python-compression=y
-CONFIG_python-bsddb=y
-CONFIG_python-subprocess=y
-CONFIG_python-io=y
-CONFIG_python-numbers=y
-CONFIG_python-unittest=y
-CONFIG_python-json=y
-CONFIG_python-html=y
-CONFIG_python-lang=y
-CONFIG_python-compiler=y
-CONFIG_python-shell=y
-CONFIG_python-datetime=y
-CONFIG_python-email=y
-CONFIG_python-misc=y
-CONFIG_python-resource=y
-CONFIG_python-distutils=y
-CONFIG_python-syslog=y
-CONFIG_python-2to3=y
-CONFIG_python-pydoc=y
-CONFIG_python-tests=y
-CONFIG_python-modules=y
-CONFIG_python-db=y
-CONFIG_python-ctypes=y
-CONFIG_python-re=y
-CONFIG_python-audio=y
-CONFIG_python-profile=y
-CONFIG_python-dbg=y
-CONFIG_python-mmap=y
-CONFIG_python-compile=y
-CONFIG_python-difflib=y
-CONFIG_python-xmlrpc=y
-CONFIG_python-argparse=y
-CONFIG_python-math=y
-CONFIG_python-robotparser=y
-CONFIG_python-pickle=y
-CONFIG_python-debugger=y
-CONFIG_python-plistlib=y
-CONFIG_python-gdbm=y
-CONFIG_python-textutils=y
+# CONFIG_python is not set
+# CONFIG_python-terminal is not set
+# CONFIG_python-mailbox is not set
+# CONFIG_python-logging is not set
+# CONFIG_python-xml is not set
+# CONFIG_python-hotshot is not set
+# CONFIG_python-multiprocessing is not set
+# CONFIG_python-threading is not set
+# CONFIG_python-curses is not set
+# CONFIG_python-mime is not set
+# CONFIG_python-netclient is not set
+# CONFIG_python-netserver is not set
+# CONFIG_python-image is not set
+# CONFIG_python-unixadmin is not set
+# CONFIG_python-sqlite3 is not set
+# CONFIG_python-pprint is not set
+# CONFIG_python-contextlib is not set
+# CONFIG_python-idle is not set
+# CONFIG_python-pkgutil is not set
+# CONFIG_python-crypt is not set
+# CONFIG_python-zlib is not set
+# CONFIG_python-fcntl is not set
+# CONFIG_python-stringold is not set
+# CONFIG_python-dev is not set
+# CONFIG_libpython2 is not set
+# CONFIG_python-smtpd is not set
+# CONFIG_python-core is not set
+# CONFIG_python-tkinter is not set
+# CONFIG_python-codecs is not set
+# CONFIG_python-compression is not set
+# CONFIG_python-bsddb is not set
+# CONFIG_python-subprocess is not set
+# CONFIG_python-io is not set
+# CONFIG_python-numbers is not set
+# CONFIG_python-unittest is not set
+# CONFIG_python-json is not set
+# CONFIG_python-html is not set
+# CONFIG_python-lang is not set
+# CONFIG_python-compiler is not set
+# CONFIG_python-shell is not set
+# CONFIG_python-datetime is not set
+# CONFIG_python-email is not set
+# CONFIG_python-misc is not set
+# CONFIG_python-resource is not set
+# CONFIG_python-distutils is not set
+# CONFIG_python-syslog is not set
+# CONFIG_python-2to3 is not set
+# CONFIG_python-pydoc is not set
+# CONFIG_python-tests is not set
+# CONFIG_python-modules is not set
+# CONFIG_python-db is not set
+# CONFIG_python-ctypes is not set
+# CONFIG_python-re is not set
+# CONFIG_python-audio is not set
+# CONFIG_python-profile is not set
+# CONFIG_python-dbg is not set
+# CONFIG_python-mmap is not set
+# CONFIG_python-compile is not set
+# CONFIG_python-difflib is not set
+# CONFIG_python-xmlrpc is not set
+# CONFIG_python-argparse is not set
+# CONFIG_python-math is not set
+# CONFIG_python-robotparser is not set
+# CONFIG_python-pickle is not set
+# CONFIG_python-debugger is not set
+# CONFIG_python-plistlib is not set
+# CONFIG_python-gdbm is not set
+# CONFIG_python-textutils is not set
 
 #
 # python3-nose 
 #
-CONFIG_python3-nose=y
+# CONFIG_python3-nose is not set
 # CONFIG_python3-nose-dbg is not set
 # CONFIG_python3-nose-dev is not set
 
 #
 # python3-numpy 
 #
-CONFIG_python3-numpy=y
+# CONFIG_python3-numpy is not set
 # CONFIG_python3-numpy-dbg is not set
 # CONFIG_python3-numpy-dev is not set
 
 #
 # python3-scons 
 #
-CONFIG_python3-scons=y
+# CONFIG_python3-scons is not set
 # CONFIG_python3-scons-dev is not set
 # CONFIG_python3-scons-dbg is not set
 
 #
 # python3-dbus 
 #
-CONFIG_python3-dbus=y
+# CONFIG_python3-dbus is not set
 # CONFIG_python3-dbus-dev is not set
 # CONFIG_python3-dbus-dbg is not set
 
 #
 # python3-pygobject 
 #
-CONFIG_python3-pygobject=y
+# CONFIG_python3-pygobject is not set
 # CONFIG_python3-pygobject-dbg is not set
 # CONFIG_python3-pygobject-dev is not set
 
@@ -1257,7 +1257,7 @@ CONFIG_run-postinsts=y
 #
 # bluez5 
 #
-CONFIG_bluez5=y
+# CONFIG_bluez5 is not set
 # CONFIG_bluez5-obex is not set
 # CONFIG_bluez5-dev is not set
 # CONFIG_bluez5-dbg is not set
@@ -1271,7 +1271,6 @@ CONFIG_bluez5=y
 # CONFIG_cairo-dbg is not set
 # CONFIG_cairo-dev is not set
 # CONFIG_cairo-script-interpreter is not set
-# CONFIG_cairo-perf-utils is not set
 # CONFIG_cairo-gobject is not set
 
 #
@@ -1312,7 +1311,7 @@ CONFIG_bluez5=y
 #
 # ffmpeg 
 #
-CONFIG_ffmpeg=y
+# CONFIG_ffmpeg is not set
 # CONFIG_ffmpeg-dbg is not set
 # CONFIG_ffmpeg-dev is not set
 
@@ -2085,7 +2084,7 @@ CONFIG_ffmpeg=y
 #
 # opencv 
 #
-CONFIG_opencv=y
+# CONFIG_opencv is not set
 # CONFIG_opencv-dbg is not set
 # CONFIG_opencv-apps is not set
 # CONFIG_opencv-dev is not set
@@ -2196,12 +2195,12 @@ CONFIG_xrt=y
 #
 # protobuf
 #
-CONFIG_protobuf=y
+# CONFIG_protobuf is not set
 
 #
 # zlib 
 #
-CONFIG_zlib=y
+# CONFIG_zlib is not set
 # CONFIG_zlib-dev is not set
 # CONFIG_zlib-dbg is not set
 
@@ -2379,8 +2378,8 @@ CONFIG_udev-extraconf=y
 #
 # gcc-runtime 
 #
-CONFIG_libstdcPLUSPLUS-dev=y
-CONFIG_libstdcPLUSPLUS=y
+# CONFIG_libstdcPLUSPLUS-dev is not set
+# CONFIG_libstdcPLUSPLUS is not set
 
 #
 # gcr 
@@ -2392,7 +2391,7 @@ CONFIG_libstdcPLUSPLUS=y
 #
 # gdb 
 #
-CONFIG_gdb=y
+# CONFIG_gdb is not set
 # CONFIG_gdb-dev is not set
 # CONFIG_gdbserver is not set
 # CONFIG_gdb-dbg is not set
@@ -2400,7 +2399,7 @@ CONFIG_gdb=y
 #
 # glib-2.0 
 #
-CONFIG_glib-2.0=y
+# CONFIG_glib-2.0 is not set
 # CONFIG_glib-2.0-dbg is not set
 # CONFIG_glib-2.0-dev is not set
 # CONFIG_glib-2.0-codegen is not set
@@ -2410,7 +2409,7 @@ CONFIG_glib-2.0=y
 #
 # glibc 
 #
-CONFIG_glibc=y
+# CONFIG_glibc is not set
 # CONFIG_glibc-dev is not set
 # CONFIG_glibc-dbg is not set
 # CONFIG_ldd is not set
@@ -2447,13 +2446,13 @@ CONFIG_glibc=y
 #
 # gstreamer1.0-meta-base 
 #
-CONFIG_gstreamer1.0-meta-base=y
-CONFIG_gstreamer1.0-meta-video=y
+# CONFIG_gstreamer1.0-meta-base is not set
+# CONFIG_gstreamer1.0-meta-video is not set
 # CONFIG_gstreamer1.0-meta-video-dbg is not set
 # CONFIG_gstreamer1.0-meta-debug-dev is not set
 # CONFIG_gstreamer1.0-meta-x11-base-dev is not set
 # CONFIG_gstreamer1.0-meta-audio-dbg is not set
-CONFIG_gstreamer1.0-meta-audio=y
+# CONFIG_gstreamer1.0-meta-audio is not set
 # CONFIG_gstreamer1.0-meta-x11-base is not set
 # CONFIG_gstreamer1.0-meta-video-dev is not set
 # CONFIG_gstreamer1.0-meta-x11-base-dbg is not set
@@ -2466,27 +2465,27 @@ CONFIG_gstreamer1.0-meta-audio=y
 #
 # gstreamer1.0-plugins-bad 
 #
-CONFIG_gstreamer1.0-plugins-bad=y
-CONFIG_gstreamer1.0-plugins-bad-meta=y
+# CONFIG_gstreamer1.0-plugins-bad is not set
+# CONFIG_gstreamer1.0-plugins-bad-meta is not set
 # CONFIG_gstreamer1.0-plugins-bad-dev is not set
 # CONFIG_gstreamer1.0-plugins-bad-dbg is not set
 
 #
 # gstreamer1.0-plugins-base 
 #
-CONFIG_gstreamer1.0-plugins-base=y
+# CONFIG_gstreamer1.0-plugins-base is not set
 # CONFIG_gstreamer1.0-plugins-base-apps is not set
 # CONFIG_gstreamer1.0-plugins-base-dev is not set
 # CONFIG_gstreamer1.0-plugins-base-dbg is not set
-CONFIG_gstreamer1.0-plugins-base-meta=y
+# CONFIG_gstreamer1.0-plugins-base-meta is not set
 
 #
 # gstreamer1.0-plugins-good 
 #
-CONFIG_gstreamer1.0-plugins-good=y
+# CONFIG_gstreamer1.0-plugins-good is not set
 # CONFIG_gstreamer1.0-plugins-good-dev is not set
 # CONFIG_gstreamer1.0-plugins-good-dbg is not set
-CONFIG_gstreamer1.0-plugins-good-meta=y
+# CONFIG_gstreamer1.0-plugins-good-meta is not set
 
 #
 # hicolor-icon-theme 
@@ -2810,97 +2809,97 @@ CONFIG_packagegroup-core-tools-debug=y
 #
 # python3 
 #
-CONFIG_python3=y
-CONFIG_python3-crypt=y
-CONFIG_python3-unixadmin=y
-CONFIG_python3-io=y
-CONFIG_python3-pydoc=y
-CONFIG_python3-codecs=y
-CONFIG_python3-pprint=y
-CONFIG_python3-datetime=y
-CONFIG_python3-2to3=y
-CONFIG_python3-modules=y
-CONFIG_python3-xml=y
-CONFIG_python3-numbers=y
-CONFIG_python3-pyvenv=y
-CONFIG_python3-tests=y
-CONFIG_python3-netclient=y
-CONFIG_python3-netserver=y
-CONFIG_python3-math=y
-CONFIG_python3-asyncio=y
-CONFIG_python3-tkinter=y
-CONFIG_python3-compression=y
-CONFIG_python3-gdbm=y
-CONFIG_python3-idle=y
-CONFIG_python3-core=y
-CONFIG_python3-smtpd=y
-CONFIG_python3-resource=y
-CONFIG_python3-terminal=y
-CONFIG_python3-shell=y
-CONFIG_python3-db=y
-CONFIG_python3-threading=y
-CONFIG_python3-email=y
-CONFIG_python3-stringold=y
-CONFIG_python3-unittest=y
-CONFIG_python3-misc=y
-CONFIG_python3-mailbox=y
-CONFIG_python3-pkgutil=y
-CONFIG_python3-mmap=y
-CONFIG_python3-json=y
-CONFIG_python3-audio=y
-CONFIG_python3-distutils=y
-CONFIG_python3-mime=y
-CONFIG_python3-multiprocessing=y
-CONFIG_python3-html=y
-CONFIG_python3-image=y
-CONFIG_python3-difflib=y
-CONFIG_python3-dev=y
-CONFIG_python3-syslog=y
-CONFIG_python3-curses=y
-CONFIG_libpython3=y
-CONFIG_python3-logging=y
-CONFIG_python3-profile=y
-CONFIG_python3-xmlrpc=y
-CONFIG_python3-ctypes=y
-CONFIG_python3-sqlite3=y
-CONFIG_python3-fcntl=y
-CONFIG_python3-compile=y
-CONFIG_python3-pickle=y
-CONFIG_python3-dbg=y
-CONFIG_python3-debugger=y
+# CONFIG_python3 is not set
+# CONFIG_python3-crypt is not set
+# CONFIG_python3-unixadmin is not set
+# CONFIG_python3-io is not set
+# CONFIG_python3-pydoc is not set
+# CONFIG_python3-codecs is not set
+# CONFIG_python3-pprint is not set
+# CONFIG_python3-datetime is not set
+# CONFIG_python3-2to3 is not set
+# CONFIG_python3-modules is not set
+# CONFIG_python3-xml is not set
+# CONFIG_python3-numbers is not set
+# CONFIG_python3-pyvenv is not set
+# CONFIG_python3-tests is not set
+# CONFIG_python3-netclient is not set
+# CONFIG_python3-netserver is not set
+# CONFIG_python3-math is not set
+# CONFIG_python3-asyncio is not set
+# CONFIG_python3-tkinter is not set
+# CONFIG_python3-compression is not set
+# CONFIG_python3-gdbm is not set
+# CONFIG_python3-idle is not set
+# CONFIG_python3-core is not set
+# CONFIG_python3-smtpd is not set
+# CONFIG_python3-resource is not set
+# CONFIG_python3-terminal is not set
+# CONFIG_python3-shell is not set
+# CONFIG_python3-db is not set
+# CONFIG_python3-threading is not set
+# CONFIG_python3-email is not set
+# CONFIG_python3-stringold is not set
+# CONFIG_python3-unittest is not set
+# CONFIG_python3-misc is not set
+# CONFIG_python3-mailbox is not set
+# CONFIG_python3-pkgutil is not set
+# CONFIG_python3-mmap is not set
+# CONFIG_python3-json is not set
+# CONFIG_python3-audio is not set
+# CONFIG_python3-distutils is not set
+# CONFIG_python3-mime is not set
+# CONFIG_python3-multiprocessing is not set
+# CONFIG_python3-html is not set
+# CONFIG_python3-image is not set
+# CONFIG_python3-difflib is not set
+# CONFIG_python3-dev is not set
+# CONFIG_python3-syslog is not set
+# CONFIG_python3-curses is not set
+# CONFIG_libpython3 is not set
+# CONFIG_python3-logging is not set
+# CONFIG_python3-profile is not set
+# CONFIG_python3-xmlrpc is not set
+# CONFIG_python3-ctypes is not set
+# CONFIG_python3-sqlite3 is not set
+# CONFIG_python3-fcntl is not set
+# CONFIG_python3-compile is not set
+# CONFIG_python3-pickle is not set
+# CONFIG_python3-dbg is not set
+# CONFIG_python3-debugger is not set
 
 #
 # python3-async 
 #
-CONFIG_python3-async=y
+# CONFIG_python3-async is not set
 # CONFIG_python3-async-dbg is not set
 # CONFIG_python3-async-dev is not set
 
 #
 # python3-git 
 #
-CONFIG_python3-git=y
+# CONFIG_python3-git is not set
 # CONFIG_python3-git-dev is not set
 # CONFIG_python3-git-dbg is not set
 
 #
 # python3-gitdb 
 #
-CONFIG_python3-gitdb=y
+# CONFIG_python3-gitdb is not set
 # CONFIG_python3-gitdb-dev is not set
 # CONFIG_python3-gitdb-dbg is not set
 
 #
 # python3-setuptools 
 #
-CONFIG_python3-setuptools=y
+# CONFIG_python3-setuptools is not set
 # CONFIG_python3-setuptools-dbg is not set
 # CONFIG_python3-setuptools-dev is not set
 
 #
 # python3-smmap 
 #
-CONFIG_python3-smmap=y
+# CONFIG_python3-smmap is not set
 # CONFIG_python3-smmap-dev is not set
 # CONFIG_python3-smmap-dbg is not set
 
@@ -3100,7 +3099,6 @@ CONFIG_python3-smmap=y
 # CONFIG_qtxmlpatterns is not set
 # CONFIG_qtxmlpatterns-dev is not set
 # CONFIG_qtxmlpatterns-mkspecs is not set
-# CONFIG_qtxmlpatterns-examples is not set
 # CONFIG_qtxmlpatterns-dbg is not set
 # CONFIG_qtxmlpatterns-tools is not set
 
@@ -3504,7 +3502,6 @@ CONFIG_watchdog-init=y
 #
 # CONFIG_gstreamer1.0 is not set
 # CONFIG_gstreamer1.0-dev is not set
-# CONFIG_gstreamer1.0-bash-completion is not set
 # CONFIG_gstreamer1.0-dbg is not set
 
 #
@@ -3766,10 +3763,10 @@ CONFIG_u-boot-tools=y
 # CONFIG_libgnome-desktop3 is not set
 
 #
-# gnome-themes-standard 
+# gnome-themes-extra 
 #
-# CONFIG_gnome-themes-standard-dev is not set
-# CONFIG_gnome-themes-standard-dbg is not set
+# CONFIG_gnome-themes-extra-dev is not set
+# CONFIG_gnome-themes-extra-dbg is not set
 # CONFIG_gnome-theme-adwaita is not set
 
 #
@@ -3998,14 +3995,14 @@ CONFIG_u-boot-tools=y
 #
 # packagegroup-petalinux 
 #
-CONFIG_packagegroup-petalinux=y
+# CONFIG_packagegroup-petalinux is not set
 # CONFIG_packagegroup-petalinux-dbg is not set
 # CONFIG_packagegroup-petalinux-dev is not set
 
 #
 # packagegroup-petalinux-audio 
 #
-CONFIG_packagegroup-petalinux-audio=y
+# CONFIG_packagegroup-petalinux-audio is not set
 # CONFIG_packagegroup-petalinux-audio-dbg is not set
 # CONFIG_packagegroup-petalinux-audio-dev is not set
 
@@ -4026,7 +4023,7 @@ CONFIG_packagegroup-petalinux-audio=y
 #
 # packagegroup-petalinux-gstreamer 
 #
-CONFIG_packagegroup-petalinux-gstreamer=y
+# CONFIG_packagegroup-petalinux-gstreamer is not set
 # CONFIG_packagegroup-petalinux-gstreamer-dev is not set
 # CONFIG_packagegroup-petalinux-gstreamer-dbg is not set
 
@@ -4082,14 +4079,14 @@ CONFIG_packagegroup-petalinux-networking-stack=y
 #
 # packagegroup-petalinux-openamp 
 #
-CONFIG_packagegroup-petalinux-openamp=y
+# CONFIG_packagegroup-petalinux-openamp is not set
 # CONFIG_packagegroup-petalinux-openamp-dev is not set
 # CONFIG_packagegroup-petalinux-openamp-dbg is not set
 
 #
 # packagegroup-petalinux-opencv 
 #
-CONFIG_packagegroup-petalinux-opencv=y
+# CONFIG_packagegroup-petalinux-opencv is not set
 # CONFIG_packagegroup-petalinux-opencv-dev is not set
 # CONFIG_packagegroup-petalinux-opencv-dbg is not set
 
@@ -4166,8 +4163,8 @@ CONFIG_imagefeature-hwcodecs=y
 CONFIG_imagefeature-package-management=y
 CONFIG_package-feed-uris="http://petalinux.xilinx.com/sswreleases/rel-v2021.1/generic/rpm"
 CONFIG_package-feed-archs=""
-# CONFIG_imagefeature-debug-tweaks is not set
-# CONFIG_auto-login is not set
+CONFIG_imagefeature-debug-tweaks=y
+CONFIG_auto-login=y
 
 #
 # apps 
@@ -4179,6 +4176,10 @@ CONFIG_package-feed-archs=""
 # user packages 
 #
 CONFIG_packagegroup-core-full-cmdline=y
+CONFIG_packagegroup-kv260-aibox-reid=y
+CONFIG_packagegroup-kv260-defect-detect=y
+CONFIG_packagegroup-kv260-nlp-smartvision=y
+CONFIG_packagegroup-kv260-smartcam=y
 CONFIG_packagegroup-petalinux-jupyter=y
 CONFIG_packagegroup-petalinux-som=y
 

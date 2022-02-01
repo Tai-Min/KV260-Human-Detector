@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:temp2pwm:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "temp2pwm,Vivado 2021.1" *)
+(* X_CORE_INFO = "temp2pwm,Vivado 2020.2.2" *)
 (* CHECK_LICENSE_TYPE = "system_temp2pwm_0_0,temp2pwm,{}" *)
-(* CORE_GENERATION_INFO = "system_temp2pwm_0_0,temp2pwm,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=temp2pwm,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,FAN_0_DEG_TEMP=00011001,FAN_100_DEG_TEMP=01000001,FAN_PWM_OFF_VAL=00100000,FAN_PWM_ON_VAL=01000000}" *)
+(* CORE_GENERATION_INFO = "system_temp2pwm_0_0,temp2pwm,{x_ipProduct=Vivado 2020.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=temp2pwm,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,FAN_0_DEG_TEMP=00011001,FAN_100_DEG_TEMP=01000001,FAN_PWM_OFF_VAL=00100000,FAN_PWM_ON_VAL=01000000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_temp2pwm_0_0 (

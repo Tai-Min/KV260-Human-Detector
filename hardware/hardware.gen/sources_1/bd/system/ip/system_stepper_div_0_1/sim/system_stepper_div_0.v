@@ -68,7 +68,7 @@ output wire clk_out;
 
   divider #(
     .IN_FREQ(200000000),
-    .OUT_FREQ(200)
+    .OUT_FREQ(2000)
   ) inst (
     .clk_in(clk_in),
     .rst(rst),

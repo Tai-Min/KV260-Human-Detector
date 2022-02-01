@@ -1,10 +1,10 @@
 {
-   """ActiveEmotionalView""":"Default View",
-   """Default View_ScaleFactor""":"0.46532",
-   """Default View_TopLeft""":"-107,-157",
-   """ExpandedHierarchyInLayout""":"",
-   """commentid""":"",
-   """guistr""":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   """"ActiveEmotionalView"""":"Default View",
+   """"Default View_ScaleFactor"""":"0.46532",
+   """"Default View_TopLeft"""":"-107,-157",
+   """"ExpandedHierarchyInLayout"""":"",
+   """"commentid"""":"",
+   """"guistr"""":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port I2C -pg 1 -lvl 9 -x 2440 -y 260 -defaultsOSRD
 preplace port Vp_Vn_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
@@ -55,11 +55,11 @@ preplace netloc axi_inter1_M02_AXI 1 4 1 N 440
 levelinfo -pg 1 0 120 530 1010 1320 1650 1900 2130 2330 2440
 pagesize -pg 1 -db -bbox -sgen -110 0 2520 770
 ",
-   ""ActiveEmotionalView"":"Default View",
-   ""Default View_ScaleFactor"":"0.38488",
-   ""Default View_TopLeft"":"483,-21",
-   ""ExpandedHierarchyInLayout"":"",
-   ""guistr"":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+   """ActiveEmotionalView""":"Default View",
+   """Default View_ScaleFactor""":"0.38488",
+   """Default View_TopLeft""":"483,-21",
+   """ExpandedHierarchyInLayout""":"",
+   """guistr""":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port I2C -pg 1 -lvl 9 -x 2720 -y 160 -defaultsOSRD
 preplace port Vp_Vn_1 -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
@@ -122,11 +122,11 @@ preplace netloc Vp_Vn 1 0 5 NJ 430 NJ 430 NJ 430 NJ 430 NJ
 levelinfo -pg 1 0 130 560 1060 1370 1710 2000 2280 2570 2720
 pagesize -pg 1 -db -bbox -sgen -110 0 2800 850
 ",
-   "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.63617",
-   "Default View_TopLeft":"-31,47",
-   "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+   ""ActiveEmotionalView"":"Default View",
+   ""Default View_ScaleFactor"":"0.63617",
+   ""Default View_TopLeft"":"-31,47",
+   ""ExpandedHierarchyInLayout"":"",
+   ""guistr"":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port I2C -pg 1 -lvl 9 -x 2670 -y 370 -defaultsOSRD
 preplace port Vp_Vn_1 -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
@@ -187,6 +187,74 @@ preplace netloc axi_inter_M00_AXI 1 3 1 1200 260n
 preplace netloc zynq_ps_M_AXI_con 1 2 1 890 80n
 levelinfo -pg 1 0 130 560 1050 1370 1700 1980 2250 2520 2670
 pagesize -pg 1 -db -bbox -sgen -110 0 2750 1110
+",
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.383562",
+   "Default View_TopLeft":"83,-99",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port I2C -pg 1 -lvl 9 -x 2730 -y 160 -defaultsOSRD
+preplace port Vp_Vn_1 -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace port step -pg 1 -lvl 9 -x 2730 -y 750 -defaultsOSRD
+preplace port dir -pg 1 -lvl 9 -x 2730 -y 770 -defaultsOSRD
+preplace port ena -pg 1 -lvl 9 -x 2730 -y 960 -defaultsOSRD
+preplace port stop1 -pg 1 -lvl 0 -x 0 -y 880 -defaultsOSRD
+preplace port stop2 -pg 1 -lvl 0 -x 0 -y 900 -defaultsOSRD
+preplace port fan -pg 1 -lvl 9 -x 2730 -y 320 -defaultsOSRD
+preplace inst sys_ret200 -pg 1 -lvl 2 -x 560 -y 310 -defaultsOSRD
+preplace inst axi_intc -pg 1 -lvl 5 -x 1710 -y 250 -defaultsOSRD
+preplace inst stepper_div -pg 1 -lvl 5 -x 1710 -y 650 -defaultsOSRD
+preplace inst stepper -pg 1 -lvl 7 -x 2290 -y 780 -defaultsOSRD
+preplace inst latch_bit -pg 1 -lvl 6 -x 2010 -y 690 -defaultsOSRD
+preplace inst cmd_bit -pg 1 -lvl 6 -x 2010 -y 590 -defaultsOSRD
+preplace inst fce_ena_bit -pg 1 -lvl 6 -x 2010 -y 790 -defaultsOSRD
+preplace inst stepper_state -pg 1 -lvl 8 -x 2580 -y 880 -defaultsOSRD
+preplace inst pwm_div -pg 1 -lvl 7 -x 2290 -y 240 -defaultsOSRD
+preplace inst pwm -pg 1 -lvl 8 -x 2580 -y 320 -defaultsOSRD
+preplace inst temp2pwm -pg 1 -lvl 7 -x 2290 -y 390 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 8 -x 2580 -y 180 -defaultsOSRD
+preplace inst axi_inter1 -pg 1 -lvl 4 -x 1370 -y 250 -defaultsOSRD
+preplace inst axi_inter -pg 1 -lvl 3 -x 1060 -y 130 -defaultsOSRD
+preplace inst axi_io -pg 1 -lvl 5 -x 1710 -y 790 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 130 -y 290 -defaultsOSRD
+preplace inst system_management_wiz_0 -pg 1 -lvl 5 -x 1710 -y 460 -defaultsOSRD
+preplace inst zynq_ps -pg 1 -lvl 2 -x 560 -y 90 -defaultsOSRD
+preplace inst stepper_div1 -pg 1 -lvl 6 -x 2010 -y 480 -defaultsOSRD
+preplace netloc axi_intc_irq 1 1 5 250 190 890J 10 NJ 10 NJ 10 1860
+preplace netloc axi_io_gpio_io_o 1 5 1 1900 590n
+preplace netloc clk_wiz_clk_out1 1 1 7 230 200 900 250 1210 430 1530 340 NJ 340 2120 310 2420J
+preplace netloc clk_wiz_locked 1 1 1 240 300n
+preplace netloc divider_0_clk_out 1 7 1 2430 240n
+preplace netloc pwm_0_state 1 8 1 NJ 320
+preplace netloc stepper_busy 1 7 1 2420 810n
+preplace netloc stepper_dir 1 7 2 NJ 770 NJ
+preplace netloc stepper_ena 1 7 2 2430J 960 NJ
+preplace netloc stepper_state_dout 1 5 4 1880J 850 2140J 670 NJ 670 2710
+preplace netloc stepper_step 1 7 2 NJ 750 NJ
+preplace netloc stop1_1 1 0 8 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 2150 890 2450J
+preplace netloc stop2_1 1 0 8 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 NJ 900 2160 900 NJ
+preplace netloc sys_ret_peripheral_aresetn 1 2 6 910 290 1220 460 1560 580 1880 410 2130 320 2440
+preplace netloc system_management_wiz_0_eos_out 1 5 2 1860 380 NJ
+preplace netloc system_management_wiz_0_temp_out 1 5 2 1870 400 NJ
+preplace netloc temp2pwm_0_pwm 1 7 1 2450 320n
+preplace netloc zynq_ps_pl_clk0 1 0 3 20 210 NJ 210 870
+preplace netloc zynq_ps_pl_resetn0 1 0 3 30 220 240 180 880
+preplace netloc stepper_div_clk_out 1 5 1 1890 470n
+preplace netloc stepper_div1_clk_out 1 6 1 2160 480n
+preplace netloc cmd_bit_Dout 1 6 1 2130 590n
+preplace netloc fce_ena_bit_Dout 1 6 1 N 790
+preplace netloc latch_bit_Dout 1 6 1 2120 690n
+preplace netloc Vp_Vn 1 0 5 NJ 450 NJ 450 NJ 450 NJ 450 NJ
+preplace netloc axi_inter1_M00_AXI 1 4 1 N 220
+preplace netloc axi_inter1_M02_AXI 1 4 1 1550 260n
+preplace netloc axi_inter1_M03_AXI 1 4 1 1540 280n
+preplace netloc axi_inter_M00_AXI 1 3 1 N 130
+preplace netloc zynq_ps_M_AXI_con 1 2 1 N 70
+preplace netloc axi_inter1_M01_AXI 1 4 4 1520J 160 NJ 160 NJ 160 N
+preplace netloc axi_iic_0_IIC 1 8 1 NJ 160
+levelinfo -pg 1 0 130 560 1060 1370 1710 2010 2290 2580 2730
+pagesize -pg 1 -db -bbox -sgen -110 0 2810 980
 "
 }
 {

@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:stepper:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "stepper,Vivado 2021.1" *)
+(* X_CORE_INFO = "stepper,Vivado 2020.2.2" *)
 (* CHECK_LICENSE_TYPE = "system_stepper_0,stepper,{}" *)
-(* CORE_GENERATION_INFO = "system_stepper_0,stepper,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stepper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "system_stepper_0,stepper,{x_ipProduct=Vivado 2020.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=stepper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_stepper_0 (

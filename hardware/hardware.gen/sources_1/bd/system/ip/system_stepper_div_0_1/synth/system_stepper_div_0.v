@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:divider:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "divider,Vivado 2021.1" *)
+(* X_CORE_INFO = "divider,Vivado 2020.2.2" *)
 (* CHECK_LICENSE_TYPE = "system_stepper_div_0,divider,{}" *)
-(* CORE_GENERATION_INFO = "system_stepper_div_0,divider,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN_FREQ=200000000,OUT_FREQ=200}" *)
+(* CORE_GENERATION_INFO = "system_stepper_div_0,divider,{x_ipProduct=Vivado 2020.2.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN_FREQ=200000000,OUT_FREQ=2000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_stepper_div_0 (
@@ -69,7 +69,7 @@ output wire clk_out;
 
   divider #(
     .IN_FREQ(200000000),
-    .OUT_FREQ(200)
+    .OUT_FREQ(2000)
   ) inst (
     .clk_in(clk_in),
     .rst(rst),

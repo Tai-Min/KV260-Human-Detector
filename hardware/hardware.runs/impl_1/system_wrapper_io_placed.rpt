@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date                      : Tue Jan 18 16:22:45 2022
+---------------------------------------------------------------------------------------------------
+| Tool Version              : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
+| Date                      : Tue Feb  1 08:41:14 2022
 | Host                      : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command                   : report_io -file system_wrapper_io_placed.rpt
 | Design                    : system_wrapper
@@ -10,7 +10,7 @@ Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 | Package                   : sfvc784
 | Package Version           : PRODUCTION 1.2 10/30/2017
 | Package Pin Delay Version : PRODUCTION 1.0 4/14/2017
--------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 IO Information
 
@@ -275,7 +275,7 @@ Table of Contents
 | B4         |                          | High Performance | IO_L10P_T1U_N6_QBC_AD4P_66         | User IO       |             |      66 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | B7         |                          | High Performance | VCCO_66                            | VCCO          |             |      66 |            |                         |      |                   |                      | 0.00-1.80 |            |           |          |      |                  |              |                   |              |
 | B10        | dir                      | High Density     | IO_L9N_AD11N_45                    | OUTPUT        | LVCMOS33    |      45 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
-| B11        | stop1                    | High Density     | IO_L10P_AD10P_45                   | INPUT         | LVCMOS33    |      45 |            |                         |      |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| B11        | stop1                    | High Density     | IO_L10P_AD10P_45                   | INPUT         | LVCMOS33    |      45 |            |                         |      |                   |                 NONE |           | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | B12        |                          | High Density     | VCCO_45                            | VCCO          |             |      45 |            |                         |      |                   |                      |      3.30 |            |           |          |      |                  |              |                   |              |
 | B16        | USB0_ULPI_NXT            |                  | PS_MIO55_502                       | PSS IO        | LVCMOS18    |         |         12 |                         | FAST |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | B17        |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
@@ -319,7 +319,7 @@ Table of Contents
 | D7         |                          | High Performance | IO_L13P_T2L_N0_GC_QBC_66           | GCLK          |             |      66 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | D8         |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | D10        | I2C_scl_io               | High Density     | IO_L7N_HDGC_45                     | BIDIR         | LVCMOS33    |      45 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
-| D11        | stop2                    | High Density     | IO_L8N_HDGC_45                     | INPUT         | LVCMOS33    |      45 |            |                         |      |                   |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| D11        | stop2                    | High Density     | IO_L8N_HDGC_45                     | INPUT         | LVCMOS33    |      45 |            |                         |      |                   |                 NONE |           | FIXED      | PULLUP    |          |      | NONE             |              |                   |              |
 | D13        |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | D16        | USB0_ULPI_DIR            |                  | PS_MIO53_502                       | PSS IO        | LVCMOS18    |         |         12 |                         | FAST |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | D17        | USB0_ULPI_TX_DATA[5]     |                  | PS_MIO61_502                       | PSS IO        | LVCMOS18    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |

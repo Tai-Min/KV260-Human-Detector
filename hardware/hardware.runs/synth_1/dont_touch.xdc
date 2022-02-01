@@ -30,9 +30,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_step
 # IP: bd/system/ip/system_axi_io_0_1/system_axi_io_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_io_0 || ORIG_REF_NAME==system_axi_io_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_axi_i2c_0_1/system_axi_i2c_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_i2c_0 || ORIG_REF_NAME==system_axi_i2c_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_latch_bit_0_1/system_latch_bit_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_latch_bit_0 || ORIG_REF_NAME==system_latch_bit_0} -quiet] -quiet
 
@@ -44,9 +41,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_fce_
 
 # IP: bd/system/ip/system_stepper_state_0_1/system_stepper_state_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_stepper_state_0 || ORIG_REF_NAME==system_stepper_state_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_xbar_0_1/system_xbar_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_axi_inter1_0_1/system_axi_inter1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_inter1_0 || ORIG_REF_NAME==system_axi_inter1_0} -quiet] -quiet
@@ -63,11 +57,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_temp
 # IP: bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_system_management_wiz_0_0 || ORIG_REF_NAME==system_system_management_wiz_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_auto_pc_0_2/system_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
+# IP: bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_iic_0_0 || ORIG_REF_NAME==system_axi_iic_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_s00_mmu_0/system_s00_mmu_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_s00_mmu_0 || ORIG_REF_NAME==system_s00_mmu_0} -quiet] -quiet
+# IP: bd/system/ip/system_xbar_0/system_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_stepper_div_1/system_stepper_div_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_stepper_div_1 || ORIG_REF_NAME==system_stepper_div_1} -quiet] -quiet
+
+# IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ps_0_1/system_zynq_ps_0_ooc.xdc
 
@@ -104,11 +104,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_io_0_1/system_axi_io_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_io_0 || ORIG_REF_NAME==system_axi_io_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
-# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_i2c_0_1/system_axi_i2c_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_i2c_0 || ORIG_REF_NAME==system_axi_i2c_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_i2c_0_1/system_axi_i2c_0_ooc.xdc
-
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_system_management_wiz_0_0 || ORIG_REF_NAME==system_system_management_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -117,6 +112,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_system_management_wiz_0_0 || ORIG_REF_NAME==system_system_management_wiz_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0_2/system_auto_pc_0_ooc.xdc
+# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==system_axi_iic_0_0 || ORIG_REF_NAME==system_axi_iic_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc
+
+# XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc
 
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/system_ooc.xdc

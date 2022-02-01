@@ -3,7 +3,7 @@ set_property SRC_FILE_INFO {cfile:/home/mateusz/KV260/hardware/hardware.gen/sour
 set_property SRC_FILE_INFO {cfile:/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/new/system.xdc rfile:../../../hardware.srcs/constrs_1/new/system.xdc id:3} [current_design]
 current_instance system_i/clk_wiz/inst
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
 current_instance
 current_instance system_i/system_management_wiz_0/inst
 set_property src_info {type:SCOPED_XDC file:2 line:54 export:INPUT save:INPUT read:READ} [current_design]
@@ -11,17 +11,17 @@ set_property LOC SYSMONE4_X0Y0 [get_cells -hier {*inst_sysmon} -filter {NAME =~ 
 current_instance
 set_property src_info {type:XDC file:3 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B11 [get_ports stop1]
-set_property src_info {type:XDC file:3 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN D11 [get_ports stop2]
-set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:9 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN H12 [get_ports step]
-set_property src_info {type:XDC file:3 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B10 [get_ports dir]
-set_property src_info {type:XDC file:3 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:15 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E10 [get_ports ena]
-set_property src_info {type:XDC file:3 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:18 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN C11 [get_ports I2C_sda_io]
-set_property src_info {type:XDC file:3 line:19 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN D10 [get_ports I2C_scl_io]
-set_property src_info {type:XDC file:3 line:22 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:3 line:24 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN A12 [get_ports fan]

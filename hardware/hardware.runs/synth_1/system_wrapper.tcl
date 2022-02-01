@@ -71,6 +71,15 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
+set_param power.BramSDPPropagationFix 1
+set_param ced.repoPaths /home/mateusz/.Xilinx/Vivado/2020.2/xhub/ced_store/Vivado_example_project
+set_param xicom.use_bs_reader 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableLutRouteBelPower 1
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -severity {STATUS}  -suppress 
 set_msg_config  -severity {INFO}  -suppress 
 set_msg_config  -severity {WARNING}  -suppress 
@@ -87,6 +96,7 @@ set_property parent.project_path /home/mateusz/KV260/hardware/hardware.xpr [curr
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part_repo_paths {/home/mateusz/.Xilinx/Vivado/2020.2.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part xilinx.com:kv260:part0:1.1 [current_project]
 set_property board_connections {som240_1_connector xilinx.com:som240:som240_1_connector:1.0} [current_project]
 set_property ip_output_repo /home/mateusz/KV260/hardware/hardware.cache/ip [current_project]
@@ -98,7 +108,7 @@ read_verilog -library xil_defaultlib {
   /home/mateusz/KV260/hardware/hardware.srcs/sources_1/new/stepper.v
   /home/mateusz/KV260/hardware/hardware.srcs/sources_1/new/pwm.v
   /home/mateusz/KV260/hardware/hardware.srcs/sources_1/new/temp2pwm.v
-  /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/hdl/system_wrapper.v
+  /home/mateusz/KV260/hardware/hardware.srcs/sources_1/imports/system_wrapper.v
 }
 add_files /home/mateusz/KV260/hardware/hardware.srcs/sources_1/bd/system/system.bd
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_zynq_ps_0_1/system_zynq_ps_0_ooc.xdc]
@@ -114,12 +124,12 @@ set_property used_in_implementation false [get_files -all /home/mateusz/KV260/ha
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_io_0_1/system_axi_io_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_io_0_1/system_axi_io_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_io_0_1/system_axi_io_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_i2c_0_1/system_axi_i2c_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_i2c_0_1/system_axi_i2c_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_system_management_wiz_0_0/system_system_management_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0_2/system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_axi_iic_0_0/system_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

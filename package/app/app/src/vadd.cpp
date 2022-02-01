@@ -88,9 +88,11 @@ int main(int argc, char* argv[]) {
     //traversing all Platforms To find Xilinx Platform and targeted
     //Device in Xilinx Platform
     cl::Platform::get(&platforms);
+    std::cout << "NUM PLATFORMS: " << platforms.size() << std::endl;
     for(size_t i = 0; (i < platforms.size() ) & (found_device == false) ;i++){
         cl::Platform platform = platforms[i];
         std::string platformName = platform.getInfo<CL_PLATFORM_NAME>();
+        std::cout << "NAME: " << platformName << std::endl;
         if ( platformName == "Xilinx"){
             devices.clear();
             platform.getDevices(CL_DEVICE_TYPE_ACCELERATOR, &devices);
@@ -102,8 +104,8 @@ int main(int argc, char* argv[]) {
         }
     }
     if (found_device == false){
-       std::cout << "Error: Unable to find Target Device " 
-           << device.getInfo<CL_DEVICE_NAME>() << std::endl;
+       std::cout << "Error: Unable to find Target Device "; 
+           //<< device.getInfo<CL_DEVICE_NAME>() << std::endl;
        return EXIT_FAILURE; 
     }
 
@@ -127,6 +129,7 @@ int main(int argc, char* argv[]) {
     bin_file.read(buf, nb);
     
     // Creating Program from Binary File
+    std::cout << "Creating program" << std::endl; 
     cl::Program::Binaries bins;
     bins.push_back({buf,nb});
     devices.resize(1);
@@ -134,15 +137,18 @@ int main(int argc, char* argv[]) {
     
     // This call will get the kernel object from program. A kernel is an 
     // OpenCL function that is executed on the FPGA. 
+    std::cout << "Creating krnl_vadd" << std::endl; 
     OCL_CHECK(err, krnl_vector_add = cl::Kernel(program,"krnl_vadd", &err));
 
     // These commands will allocate memory on the Device. The cl::Buffer objects can
     // be used to reference the memory locations on the device. 
+    std::cout << "Allocating memory" << std::endl; 
     OCL_CHECK(err, cl::Buffer buffer_a(context, CL_MEM_READ_ONLY, size_in_bytes, NULL, &err));
     OCL_CHECK(err, cl::Buffer buffer_b(context, CL_MEM_READ_ONLY, size_in_bytes, NULL, &err));
     OCL_CHECK(err, cl::Buffer buffer_result(context, CL_MEM_WRITE_ONLY, size_in_bytes, NULL, &err));
     
     //set the kernel Arguments
+    std::cout << "Setting arguments" << std::endl; 
     int narg=0;
     OCL_CHECK(err, err = krnl_vector_add.setArg(narg++,buffer_a));
     OCL_CHECK(err, err = krnl_vector_add.setArg(narg++,buffer_b));

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date             : Tue Jan 18 16:23:51 2022
+| Tool Version     : Vivado v.2020.2.2 (lin64) Build 3118627 Tue Feb  9 05:13:49 MST 2021
+| Date             : Tue Feb  1 08:41:43 2022
 | Host             : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.010 |        5 |       --- |             --- |
-| CLB Logic               |     0.011 |     4189 |       --- |             --- |
-|   LUT as Logic          |     0.009 |     1796 |    117120 |            1.53 |
-|   CARRY8                |    <0.001 |       62 |     14640 |            0.42 |
+| Clocks                  |     0.011 |        5 |       --- |             --- |
+| CLB Logic               |     0.011 |     4918 |       --- |             --- |
+|   LUT as Logic          |     0.009 |     2161 |    117120 |            1.85 |
+|   CARRY8                |    <0.001 |       85 |     14640 |            0.58 |
 |   LUT as Shift Register |    <0.001 |       88 |     57600 |            0.15 |
-|   Register              |    <0.001 |     1559 |    234240 |            0.67 |
-|   Others                |     0.000 |      128 |       --- |             --- |
-|   F7/F8 Muxes           |     0.000 |        3 |    117120 |           <0.01 |
-| Signals                 |     0.010 |     3138 |       --- |             --- |
+|   Register              |    <0.001 |     1813 |    234240 |            0.77 |
+|   Others                |     0.000 |      129 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |        9 |    117120 |           <0.01 |
+| Signals                 |     0.010 |     3680 |       --- |             --- |
 | MMCM                    |     0.098 |        0 |       --- |             --- |
 | DSPs                    |    <0.001 |        1 |      1248 |            0.08 |
-| I/O                     |     0.005 |        8 |       186 |            4.30 |
+| I/O                     |     0.004 |        8 |       186 |            4.30 |
 | SYSMON                  |     0.003 |        1 |       --- |             --- |
 | PS8                     |     2.546 |        1 |       --- |             --- |
 | Static Power            |     0.325 |          |           |                 |
@@ -79,11 +79,11 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.138 |       0.049 |      0.089 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     0.139 |       0.050 |      0.089 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.129 |       0.054 |      0.075 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.032 |       0.001 |      0.031 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.032 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -170,23 +170,21 @@ Table of Contents
 +-----------------------------+-----------+
 | system_wrapper              |     2.684 |
 |   system_i                  |     2.679 |
-|     axi_i2c                 |     0.003 |
+|     axi_iic_0               |     0.003 |
 |       U0                    |     0.003 |
-|     axi_inter               |     0.007 |
+|     axi_inter1              |     0.008 |
 |       s00_couplers          |     0.007 |
-|     axi_inter1              |     0.002 |
-|       s00_mmu               |     0.001 |
-|       xbar                  |     0.001 |
+|       xbar                  |     0.002 |
 |     clk_wiz                 |     0.098 |
 |       inst                  |     0.098 |
-|     pwm_div                 |     0.008 |
-|       inst                  |     0.008 |
-|     stepper_div             |     0.005 |
-|       inst                  |     0.005 |
-|     system_management_wiz_0 |     0.004 |
-|       inst                  |     0.004 |
-|     temp2pwm                |     0.003 |
-|       inst                  |     0.003 |
+|     pwm_div                 |     0.007 |
+|       inst                  |     0.007 |
+|     stepper_div             |     0.007 |
+|       inst                  |     0.007 |
+|     system_management_wiz_0 |     0.007 |
+|       inst                  |     0.007 |
+|     temp2pwm                |     0.001 |
+|       inst                  |     0.001 |
 |     zynq_ps                 |     2.547 |
 |       inst                  |     2.547 |
 +-----------------------------+-----------+

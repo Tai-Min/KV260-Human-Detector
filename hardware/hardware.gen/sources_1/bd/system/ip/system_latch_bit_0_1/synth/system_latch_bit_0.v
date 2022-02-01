@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:ip:xlslice:1.0
 // IP Revision: 2
 
-(* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2021.1" *)
+(* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2020.2.2" *)
 (* CHECK_LICENSE_TYPE = "system_latch_bit_0,xlslice_v1_0_2_xlslice,{}" *)
-(* CORE_GENERATION_INFO = "system_latch_bit_0,xlslice_v1_0_2_xlslice,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=13,DIN_FROM=11,DIN_TO=11}" *)
+(* CORE_GENERATION_INFO = "system_latch_bit_0,xlslice_v1_0_2_xlslice,{x_ipProduct=Vivado 2020.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=13,DIN_FROM=11,DIN_TO=11}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_latch_bit_0 (
   Din,
