@@ -7,6 +7,9 @@ appName="vadd"
 projDir=$(dirname "$0")
 projDir=$(realpath $projDir)
 
+vitisDir=$(which vitis)
+vitisDir=$(dirname $vitisDir)/..
+
 . $projDir/helpers.sh --source-only
 
 # Display help and exit script.
@@ -103,6 +106,8 @@ then
    exit 1
 fi
 
+mkdir -p "$projDir/package/app/final"
+
 # Build kernels.
 if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "krnl" ${buildType[@]}) = 1 ]]
 then
@@ -126,20 +131,21 @@ fi
 # Build the application.
 if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "app" ${buildType[@]}) = 1 ]]
 then
+   echo $vitisDir
    info "Building application..."
    
    sysroot="$projDir/package/sdk/sysroots/cortexa72-cortexa53-xilinx-linux"
 
    flags="-std=c++14 -O2 -Wall -Wextra -Werror -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
 
-   include=""
+   includeVitis="-I$vitisDir/data/embeddedsw/XilinxProcessorIPLib/drivers/common_v1_2/src -I$vitisDir/data/embeddedsw/lib/bsp/standalone_v7_5/src/common -I$vitisDir/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_8/src"
 
    libPaths="-L$sysroot/usr/lib/ -L$sysroot/lib/"
    libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt" 
 
    files="$projDir/package/app/src/*.cpp"
 
-   aarch64-linux-gnu-g++ $flags $include $libPaths $libs --sysroot=$sysroot -o "$projDir/package/app/build/$appName" $files
+   aarch64-linux-gnu-g++ $flags $includeVitis $include $libPaths $libs --sysroot=$sysroot -o "$projDir/package/app/final/$appName" $files
 
    failHandler
 fi
@@ -147,8 +153,6 @@ fi
 # Pack all the stuff and optionally send it to target.
 if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "pkg" ${buildType[@]}) = 1 ]]
 then
-   mkdir -p "$projDir/package/app/final"
-
    info "Creating package..."
 
    v++ --package --config "$projDir/package/app/package.cfg" -o "$projDir/package/app/final/${appName}_container.xclbin" "$projDir/package/app/build/${appName}_container.xclbin"
@@ -158,12 +162,6 @@ then
    info "Removing build artifacts..."
 
    (cd "$projDir/package/app/final" && rm -r *.package_summary)
-
-   failHandler
-
-   info "Copying $appName to final package..."
-
-   cp "$projDir/package/app/build/$appName" "$projDir/package/app/final"
 
    failHandler
 
