@@ -6,3 +6,6 @@
 	path = linux/project-spec/meta-ros
 	url = https://github.com/ros/meta-ros
 	branch = gatesgarth
+[submodule "package/app/thirdparty/ydlidar"]
+	path = package/app/thirdparty/ydlidar
+	url = https://github.com/YDLIDAR/sdk
