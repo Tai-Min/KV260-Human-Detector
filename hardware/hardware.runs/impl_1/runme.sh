@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/Vitis/2020.2/bin:/tools/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2020.2/bin
+  PATH=/tools/Xilinx/Vitis/2021.1/bin:/tools/Xilinx/Vivado/2021.1/bin
 else
-  PATH=/tools/Xilinx/Vitis/2020.2/bin:/tools/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2020.2/bin:$PATH
+  PATH=/tools/Xilinx/Vitis/2021.1/bin:/tools/Xilinx/Vivado/2021.1/bin:$PATH
 fi
 export PATH
 
@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log hardware_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hardware_wrapper.tcl -notrace
 
 

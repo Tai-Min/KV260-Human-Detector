@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Feb  6 23:54:08 2022
+# Process ID: 8800
+# Current directory: /home/mateusz/KV260/hardware/hardware.runs/impl_1
+# Command line: vivado -log hardware_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hardware_wrapper.tcl -notrace
+# Log file: /home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper.vdi
+# Journal file: /home/mateusz/KV260/hardware/hardware.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source hardware_wrapper.tcl -notrace
+Command: open_checkpoint hardware_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2483.438 ; gain = 6.938 ; free physical = 2431 ; free virtual = 9338
+WARNING: [Project 1-153] The current project device 'xcvm1802-vfvc1760-1lhp-i-l' does not match with the device on the 'XILINX.COM:KV260_SOM240_1_CONNECTOR_SOM240_SOM240_1_CONNECTOR:1.1' board part. A device change to match the device on 'XILINX.COM:KV260_SOM240_1_CONNECTOR_SOM240_SOM240_1_CONNECTOR:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+WARNING: [Runs 36-551] Changing part from xcvm1802 to xck26 will replace the write_device_image step with write_bitstream and write_device_image step configuration will be lost
+INFO: [Project 1-152] Project part set to zynquplus (xck26-sfvc784-2lv-c)
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2628.695 ; gain = 0.000 ; free physical = 2127 ; free virtual = 9213
+INFO: [Netlist 29-17] Analyzing 85 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'hardware_i/clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2897.703 ; gain = 6.938 ; free physical = 1806 ; free virtual = 8910
+Restored from archive | CPU: 0.670000 secs | Memory: 5.854759 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2897.703 ; gain = 6.938 ; free physical = 1806 ; free virtual = 8910
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3289.961 ; gain = 0.000 ; free physical = 1424 ; free virtual = 8543
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2021.1 (64-bit) build 3247384
+open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 3289.961 ; gain = 816.430 ; free physical = 1423 ; free virtual = 8542
+Command: write_bitstream -force hardware_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC DPIP-2] Input pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 input hardware_i/temp2pwm/inst/pwm_on5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 output hardware_i/temp2pwm/inst/pwm_on5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 multiplier stage hardware_i/temp2pwm/inst/pwm_on5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC RTSTAT-10] No routable loads: 150 net(s) have no routable loads. The problem bus(es) and/or net(s) are hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_master_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_master_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave0_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave0_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave1_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave1_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_master_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_master_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave0_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave0_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave1_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave1_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_master_reg, hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_master_reg2, hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_slave0_reg... and (the first 15 of 18 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 4 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./hardware_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [#UNDEF] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/mateusz/KV260/hardware/hardware.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sun Feb  6 23:54:47 2022. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 3651.176 ; gain = 361.215 ; free physical = 1301 ; free virtual = 8487
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  6 23:54:47 2022...

@@ -2,3 +2,7 @@
 	path = device-tree-xlnx
 	url = https://github.com/Xilinx/device-tree-xlnx
 	branch = xlnx_rel_v2021.1
+[submodule "linux/project-spec/meta-ros"]
+	path = linux/project-spec/meta-ros
+	url = https://github.com/ros/meta-ros
+	branch = gatesgarth

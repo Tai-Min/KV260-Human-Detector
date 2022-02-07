@@ -6,7 +6,3 @@ CONFIG_peekpoke
 CONFIG_packagegroup-petalinux-som
 CONFIG_packagegroup-core-full-cmdline
 CONFIG_packagegroup-petalinux-jupyter
-CONFIG_packagegroup-kv260-smartcam
-CONFIG_packagegroup-kv260-aibox-reid
-CONFIG_packagegroup-kv260-defect-detect
-CONFIG_packagegroup-kv260-nlp-smartvision

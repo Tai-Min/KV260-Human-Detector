@@ -1,4 +1,5 @@
 #! /bin/bash
+(
 
 projDir=$(dirname "$0")
 projDir=$(realpath $projDir)
@@ -61,6 +62,9 @@ getInvalidBuildType() {
    echo ""
    return 0
 }
+
+unset LD_LIBRARY_PATH
+cd $projDir
 
 # h: help
 # t: build type (all, xsa, dt, plnx, plat)
@@ -142,16 +146,29 @@ fi
 # Export XSA.
 if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "plnx" ${buildType[@]}) = 1 ]]
 then
-   info "Building PetaLinux image..."
+   info "Processing hardware description file..."
 
-   (cd "$projDir/linux" && petalinux-config --get-hw-description="$projDir/hardware/" --silent && petalinux-build && petalinux-build --sdk && petalinux-package --wic --bootfiles "rootfs.cpio.gz.u-boot boot.scr Image system.dtb")
+   (cd "$projDir/linux" && petalinux-config --get-hw-description="$projDir/hardware/" --silent)
+
+   failHandler
+   
+   info "Building PetaLinux image and sdk..."
+
+   # These can fail due to task mismatch, which is not really an error for us.
+   (cd "$projDir/linux" && petalinux-build | grep "all succeeded" && petalinux-build --sdk | grep "all succeeded")
+
+   failHandler
+
+   info "Generating SD image..."
+
+   (cd "$projDir/linux" && petalinux-package --wic --bootfiles "rootfs.cpio.gz.u-boot boot.scr Image system.dtb")
 
    failHandler
 
    info "Copying system files..."
 
    (cd "$projDir/linux/images/linux" && cp zynqmp_fsbl.elf pmufw.elf bl31.elf u-boot-dtb.elf system.dtb "$projDir/package/pfm/boot" && mv "$projDir/package/pfm/boot/u-boot-dtb.elf" "$projDir/package/pfm/boot/u-boot.elf" && cp boot.scr system.dtb "$projDir/package/pfm/sd_dir")
-
+   
    failHandler
 
    info "Populating SDK..."
@@ -172,3 +189,5 @@ then
 fi
 
 cleanup 0
+
+)

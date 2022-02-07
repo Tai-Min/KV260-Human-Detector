@@ -1,0 +1,382 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Feb  6 11:21:58 2022
+# Process ID: 6229
+# Current directory: /home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1
+# Command line: vivado -log hardware_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hardware_zynq_ultra_ps_e_0_0.tcl
+# Log file: /home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/hardware_zynq_ultra_ps_e_0_0.vds
+# Journal file: /home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source hardware_zynq_ultra_ps_e_0_0.tcl -notrace
+Command: synth_design -top hardware_zynq_ultra_ps_e_0_0 -part xck26-sfvc784-2LV-c -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6435
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:02:02 . Memory (MB): peak = 2687.277 ; gain = 44.750 ; free physical = 6029 ; free virtual = 6536
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hardware_zynq_ultra_ps_e_0_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:333]
+INFO: [Synth 8-6157] synthesizing module 'BUFG_PS' [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1307]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG_PS' (1#1) [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1307]
+INFO: [Synth 8-6157] synthesizing module 'PS8' [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:86207]
+INFO: [Synth 8-6155] done synthesizing module 'PS8' (2#1) [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:86207]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXN3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP0OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP1OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP2OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTTXP3OUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_BOOTMODE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_CLK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DONEB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMACTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMALERTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBA' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMBG' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKE' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCKN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMCSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDM' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMDQSN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMODT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMPARITY' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_DRAMRAMRSTN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERROROUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ERRORSTATUS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_INITB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTCK' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTDO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_JTAGTMS' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MIO' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PORB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PROGB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_RCALIBINOUT' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_SRSTB' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_ZQ' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_MGTRXP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_PADI' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFN3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP0IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP1IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP2IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7071] port 'PSS_ALTO_CORE_PAD_REFP3IN' of module 'PS8' is unconnected for instance 'PS8_i' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+WARNING: [Synth 8-7023] instance 'PS8_i' of module 'PS8' has 1015 connections declared, but only 957 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:3887]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' (3#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_3_5.v:333]
+WARNING: [Synth 8-7071] port 'emio_enet0_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:240]
+WARNING: [Synth 8-7071] port 'emio_enet1_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:240]
+WARNING: [Synth 8-7071] port 'emio_enet2_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:240]
+WARNING: [Synth 8-7071] port 'emio_enet3_signal_detect' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' is unconnected for instance 'inst' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:240]
+WARNING: [Synth 8-7023] instance 'inst' of module 'zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e' has 1491 connections declared, but only 1487 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:240]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_zynq_ultra_ps_e_0_0' (4#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/synth/hardware_zynq_ultra_ps_e_0_0.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:02:27 . Memory (MB): peak = 2738.215 ; gain = 95.688 ; free physical = 6131 ; free virtual = 6750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:02:30 . Memory (MB): peak = 2756.027 ; gain = 113.500 ; free physical = 6104 ; free virtual = 6728
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:02:30 . Memory (MB): peak = 2756.027 ; gain = 113.500 ; free physical = 6104 ; free virtual = 6728
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2764.934 ; gain = 0.000 ; free physical = 5979 ; free virtual = 6677
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.715 ; gain = 0.000 ; free physical = 5454 ; free virtual = 6267
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0.xdc] for cell 'inst'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2855.715 ; gain = 0.000 ; free physical = 5541 ; free virtual = 6357
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2855.715 ; gain = 0.000 ; free physical = 5537 ; free virtual = 6353
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:03:24 . Memory (MB): peak = 2855.715 ; gain = 213.188 ; free physical = 5707 ; free virtual = 6532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:03:24 . Memory (MB): peak = 2855.715 ; gain = 213.188 ; free physical = 5707 ; free virtual = 6532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/PS8_i. (constraint file  /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0.xdc, line 26).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:03:24 . Memory (MB): peak = 2855.715 ; gain = 213.188 ; free physical = 5707 ; free virtual = 6532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:03:24 . Memory (MB): peak = 2855.715 ; gain = 213.188 ; free physical = 5674 ; free virtual = 6511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:03:25 . Memory (MB): peak = 2855.715 ; gain = 213.188 ; free physical = 5667 ; free virtual = 6509
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:04:03 . Memory (MB): peak = 4400.277 ; gain = 1757.750 ; free physical = 867 ; free virtual = 1919
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:04:03 . Memory (MB): peak = 4424.285 ; gain = 1781.758 ; free physical = 848 ; free virtual = 1900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:04:03 . Memory (MB): peak = 4440.301 ; gain = 1797.773 ; free physical = 845 ; free virtual = 1897
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[0]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[0]_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[7]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[6]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[5]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[4]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[3]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[2]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_ctl_pipe[1]_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[4] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[3] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[2] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[1] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[7]_inferred:in0[0] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[31] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[30] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[29] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[28] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[27] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[26] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[25] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[24] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[23] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[22] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[21] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[20] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[19] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[18] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[17] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[16] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[15] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[14] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[13] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[12] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[11] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[10] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[9] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[8] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[7] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[6] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[5] to constant 0
+INFO: [Synth 8-3295] tying undriven pin trace_data_pipe[6]_inferred:in0[4] to constant 0
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 865 ; free virtual = 1924
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 865 ; free virtual = 1924
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 864 ; free virtual = 1923
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 864 ; free virtual = 1922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 863 ; free virtual = 1922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 862 ; free virtual = 1921
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG_PS |     2|
+|2     |LUT1    |   264|
+|3     |PS8     |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.270 ; gain = 1800.742 ; free physical = 861 ; free virtual = 1919
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:03:13 . Memory (MB): peak = 4443.270 ; gain = 1701.055 ; free physical = 861 ; free virtual = 1919
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:04:05 . Memory (MB): peak = 4443.277 ; gain = 1800.742 ; free physical = 859 ; free virtual = 1917
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4443.277 ; gain = 0.000 ; free physical = 783 ; free virtual = 1842
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4482.926 ; gain = 0.000 ; free physical = 1052 ; free virtual = 2126
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: fcceab26
+INFO: [Common 17-83] Releasing license: Synthesis
+122 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:04:16 . Memory (MB): peak = 4482.926 ; gain = 1977.398 ; free physical = 2536 ; free virtual = 3614
+INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/hardware_zynq_ultra_ps_e_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:07 . Memory (MB): peak = 4514.941 ; gain = 32.016 ; free physical = 2469 ; free virtual = 3592
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hardware_zynq_ultra_ps_e_0_0, cache-ID = 2a7571066d148eed
+INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/hardware_zynq_ultra_ps_e_0_0_synth_1/hardware_zynq_ultra_ps_e_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hardware_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb hardware_zynq_ultra_ps_e_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  6 11:26:34 2022...

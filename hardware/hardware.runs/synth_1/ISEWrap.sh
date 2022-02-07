@@ -32,12 +32,18 @@ $ISE_STEP "$@" >> $HD_LOG 2>&1 &
 
 # BEGIN file creation
 ISE_PID=$!
-if [ X != X$HOSTNAME ]
+
+HostNameFile=/proc/sys/kernel/hostname
+if [ -f "$HostNameFile" ] && [ -r $HostNameFile ] && [ -s $HostNameFile ] 
+then
+ISE_HOST=$(cat $HostNameFile)
+elif [ X != X$HOSTNAME ]
 then
 ISE_HOST=$HOSTNAME #bash
 else
 ISE_HOST=$HOST     #csh
 fi
+
 ISE_USER=$USER
 
 ISE_HOSTCORE=$(awk '/^processor/{print $3}' /proc/cpuinfo | wc -l)

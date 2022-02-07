@@ -124,7 +124,6 @@ function ISEExec( ISEProg, ISEArgs ) {
     var NOC = 0;
     var NOLP = 0;
     var TPM = 0;
-
     var cpuInfos = new Enumerator(processor);
     for(;!cpuInfos.atEnd(); cpuInfos.moveNext()) {
         var cpuInfo = cpuInfos.item();
