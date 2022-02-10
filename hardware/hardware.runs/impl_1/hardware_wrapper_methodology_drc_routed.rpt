@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Sun Feb  6 11:31:03 2022
+| Date         : Wed Feb  9 21:51:19 2022
 | Host         : PC running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_methodology -file hardware_wrapper_methodology_drc_routed.rpt -pb hardware_wrapper_methodology_drc_routed.pb -rpx hardware_wrapper_methodology_drc_routed.rpx
 | Design       : hardware_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 71
+             Violations found: 83
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -32,7 +32,7 @@ Table of Contents
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 43         |
 | DPIR-2    | Warning          | Asynchronous driver check                          | 10         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
-| TIMING-16 | Warning          | Large setup violation                              | 13         |
+| TIMING-16 | Warning          | Large setup violation                              | 25         |
 | CLKC-40   | Advisory         | Substitute PLLE4 for MMCME4 check                  | 1          |
 | CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC         | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -336,67 +336,127 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.026 ns between hardware_i/div_stepper/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[19]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.018 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[7]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.515 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[11]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.024 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[16]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.517 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[5]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.025 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[11]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.524 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[15]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.026 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[9]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.525 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[7]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.028 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[13]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.530 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[13]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.056 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[8]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.531 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[9]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.064 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[6]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -1.552 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[12]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.070 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[19]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -1.552 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[14]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.071 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[10]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -1.552 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[4]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.073 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[12]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -1.553 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[6]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.073 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[18]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.553 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[8]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.117 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[15]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.559 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[10]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.172 ns between hardware_i/div_stepper/inst/counter_reg[2]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[14]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.367 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[7]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.373 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[11]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.375 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[13]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.382 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[5]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.405 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[6]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.410 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[12]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.411 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[4]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.417 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[10]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.422 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[15]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.445 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[9]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.460 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[14]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.474 ns between hardware_i/divider_pwm/inst/counter_reg[5]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[8]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 CLKC-40#1 Advisory

@@ -107,7 +107,6 @@ set_property used_in_implementation false [get_files -all /home/mateusz/KV260/ha
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xbar_0/hardware_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0_ooc.xdc]
@@ -117,6 +116,7 @@ set_property used_in_implementation false [get_files -all /home/mateusz/KV260/ha
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_gpio_0_0/hardware_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_gpio_0_0/hardware_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_gpio_0_0/hardware_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/hardware_ooc.xdc]
 
 OPTRACE "Adding files" END { }

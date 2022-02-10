@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Sun Feb  6 11:26:30 2022
+-- Date        : Sun Feb  6 11:26:28 2022
 -- Host        : PC running 64-bit Ubuntu 20.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hardware_zynq_ultra_ps_e_0_0 -prefix
+--               hardware_zynq_ultra_ps_e_0_0_ hardware_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
 -- Design      : hardware_zynq_ultra_ps_e_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1584,8 +1584,6 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
   attribute C_USE_DIFF_RW_CLK_GP6 of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "hardware_zynq_ultra_ps_e_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e";
   attribute PSS_IO : string;
   attribute PSS_IO of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "Signal Name, DiffPair Type, DiffPair Signal,Direction, Site Type, IO Standard, Drive (mA), Slew Rate, Pull Type, IBIS Model, ODT, OUTPUT_IMPEDANCE " & LF &
  "QSPI_X4_SCLK_OUT, , , OUT, PS_MIO0_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  " & LF &

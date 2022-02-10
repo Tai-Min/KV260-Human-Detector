@@ -172,7 +172,7 @@ then
    failHandler
 
    info "Creating $appName.dtbo..."
-   (cd "$projDir/device_tree" && cp pl.dtsi pl_mod.dtsi && sed -i 's/hardware.bit.bin/$appName.bit.bin/g' pl_mod.dtsi && dtc -@ -O dtb -o "$projDir/package/app/final/$appName.dtbo" pl_mod.dtsi)
+   (cd "$projDir/device_tree" && cp pl.dtsi pl_mod.dtsi && sed -i "s/hardware.bit.bin/$appName.bit.bin/g" pl_mod.dtsi && dtc -@ -O dtb -o "$projDir/package/app/final/$appName.dtbo" pl_mod.dtsi)
 
    failHandler
 

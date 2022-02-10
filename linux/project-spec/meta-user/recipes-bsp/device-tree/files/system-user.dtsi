@@ -4,66 +4,111 @@
                 bootargs = "earlycon console=ttyPS1,115200 clk_ignore_unused ext4=/dev/mmcblk1p2:/rootfs init_fatal_sh=1 cma=1000M ";
                 stdout-path = "serial1:115200n8";
         };
+        
+        firmware {
+
+		zynqmp-firmware {
+			method = "smc";
+			u-boot,dm-pre-reloc;
+			#power-domain-cells = <0x01>;
+			compatible = "xlnx,zynqmp-firmware";
+			phandle = <0x0c>;
+
+			pinctrl {
+				compatible = "xlnx,zynqmp-pinctrl";
+				status = "okay";
+				phandle = <0x32>;
+
+				usb0-default {
+					phandle = <0x82>;
+
+					mux {
+						function = "usb0";
+						groups = "usb0_0_grp";
+					};
+
+					conf {
+						slew-rate = <0x01>;
+						groups = "usb0_0_grp";
+						power-source = <0x01>;
+					};
+
+					conf-tx {
+						pins = "MIO54\0MIO56\0MIO57\0MIO58\0MIO59\0MIO60\0MIO61\0MIO62\0MIO63";
+						bias-disable;
+					};
+
+					conf-rx {
+						pins = "MIO52\0MIO53\0MIO55";
+						bias-high-impedance;
+					};
+				};
+				
+				i2c1-default {
+					phandle = <0x7c>;
+
+					mux {
+						function = "i2c1";
+						groups = "i2c1_6_grp";
+					};
+
+					conf {
+						slew-rate = <0x01>;
+						bias-pull-up;
+						groups = "i2c1_6_grp";
+						power-source = <0x01>;
+					};
+				};
+				
+				i2c1-gpio {
+					phandle = <0x7d>;
+
+					mux {
+						function = "gpio0";
+						groups = "gpio0_24_grp\0gpio0_25_grp";
+					};
+
+					conf {
+						slew-rate = <0x01>;
+						groups = "gpio0_24_grp\0gpio0_25_grp";
+						power-source = <0x01>;
+					};
+				};
+				
+				
+			};
+		};
+	};
+	
+
+	
 };
 
-&sdhci1 {
-        status = "disabled";
-};
-
-&zynqmp_dpsub {
-	status = "disabled";
-};
-
-&zynqmp_dpdma {
-	status = "disabled";
-};
-
-&gem3 {
-	status = "okay";
-};
-
-&sata {
-	status = "disabled";
+&i2c1 {
+	pinctrl-names = "default\0gpio";
+	pinctrl-0 = <0x7c>;
+	pinctrl-1 = <0x7d>;
+		
+	usb5744@2d {
+		reset-gpios = <0x0e 0x2c 0x00>;
+			compatible = "microchip,usb5744";
+		reg = <0x2d>;
+		phandle = <0x87>;
+	};
 };
 
 &usb0 {
-        status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <0x82>;
+	phy-names = "usb3-phy";
+	phys = <0x16 0x02 0x04 0x00 0x01>;
+	reset-names = "usb_crst\0usb_hibrst\0usb_apbrst";
 };
 
 &dwc3_0 {
-        status = "disabled";
-};
-
-&psgtr {
-        status = "disabled";
-};
-
-&zynqmp_dp_snd_pcm0 {
-        status = "disabled";
-};
-
-&zynqmp_dp_snd_pcm1 {
-        status = "disabled";
-};
-
-&zynqmp_dp_snd_card0 {
-        status = "disabled";
-};
-
-&zynqmp_dp_snd_codec0 {
-        status = "disabled";
-};
-
-&cpu_opp_table {
-                compatible = "operating-points-v2";
-                opp-shared;
-                opp04 {
-                        opp-hz = /bits/ 64 <1299999988>;
-                        opp-microvolt = <1000000>;
-                        clock-latency-ns = <500000>;
-                        };
-};
-
-&fpga_full {
-	power-domains = <&zynqmp_firmware 69>;
+	snps,usb3_lpm_capable;
+	dr_mode = "host";
+	maximum-speed = "super-speed";
+	/* dma-coherent; */
+        /* snps,enable-hibernation; */
 };

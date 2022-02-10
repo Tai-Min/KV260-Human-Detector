@@ -518,6 +518,9 @@
           "PSU_MIO_7_DRIVE_STRENGTH": {
             "value": "4"
           },
+          "PSU_MIO_7_INPUT_TYPE": {
+            "value": "cmos"
+          },
           "PSU_MIO_7_POLARITY": {
             "value": "Default"
           },
@@ -2593,7 +2596,7 @@
         "inst_hier_path": "div_stepper",
         "parameters": {
           "OUT_FREQ": {
-            "value": "50"
+            "value": "100"
           }
         },
         "reference_info": {

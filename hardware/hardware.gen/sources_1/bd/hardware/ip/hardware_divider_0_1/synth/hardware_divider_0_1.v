@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "divider,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "hardware_divider_0_1,divider,{}" *)
-(* CORE_GENERATION_INFO = "hardware_divider_0_1,divider,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN_FREQ=200000000,OUT_FREQ=50}" *)
+(* CORE_GENERATION_INFO = "hardware_divider_0_1,divider,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,IN_FREQ=200000000,OUT_FREQ=100}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module hardware_divider_0_1 (
@@ -69,7 +69,7 @@ output wire clk_out;
 
   divider #(
     .IN_FREQ(200000000),
-    .OUT_FREQ(50)
+    .OUT_FREQ(100)
   ) inst (
     .clk_in(clk_in),
     .rst(rst),

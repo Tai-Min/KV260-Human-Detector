@@ -244,7 +244,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.OUT_FREQ {50} \
+   CONFIG.OUT_FREQ {100} \
  ] $div_stepper
 
   # Create instance: divider_pwm, and set properties
@@ -677,6 +677,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_77_SLEW {slow} \
    CONFIG.PSU_MIO_7_DIRECTION {inout} \
    CONFIG.PSU_MIO_7_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_7_INPUT_TYPE {cmos} \
    CONFIG.PSU_MIO_7_POLARITY {Default} \
    CONFIG.PSU_MIO_7_SLEW {slow} \
    CONFIG.PSU_MIO_8_DIRECTION {inout} \
@@ -1132,6 +1133,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__USB0__REF_CLK_FREQ {26} \
    CONFIG.PSU__USB0__REF_CLK_SEL {Ref Clk1} \
    CONFIG.PSU__USB0__RESET__ENABLE {0} \
+   CONFIG.PSU__USB0__RESET__IO {<Select>} \
    CONFIG.PSU__USB1__RESET__ENABLE {0} \
    CONFIG.PSU__USB2_0__EMIO__ENABLE {0} \
    CONFIG.PSU__USB3_0__EMIO__ENABLE {0} \

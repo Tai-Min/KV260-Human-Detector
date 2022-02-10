@@ -24,9 +24,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_pr
 # IP: bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_axi_intc_0_0 || ORIG_REF_NAME==hardware_axi_intc_0_0} -quiet] -quiet
 
-# IP: bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_auto_pc_0 || ORIG_REF_NAME==hardware_auto_pc_0} -quiet] -quiet
-
 # IP: bd/hardware/ip/hardware_axi_interconnect_0_0/hardware_axi_interconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_axi_interconnect_0_0 || ORIG_REF_NAME==hardware_axi_interconnect_0_0} -quiet] -quiet
 
@@ -71,5 +68,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_st
 
 # IP: bd/hardware/ip/hardware_xlconcat_0_0/hardware_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_xlconcat_0_0 || ORIG_REF_NAME==hardware_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==hardware_auto_pc_0 || ORIG_REF_NAME==hardware_auto_pc_0} -quiet] -quiet
 
 # XDC: /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/hardware_ooc.xdc
