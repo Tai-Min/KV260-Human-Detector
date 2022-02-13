@@ -1,91 +1,74 @@
 #include "../inc/gpio.hpp"
+
 #include <iostream>
 
-GPIO::~GPIO()
-{
-    if (gpioNum > -1)
-        close();
+GPIO::GPIO(unsigned int pin, Direction dir) {
+    open(pin, dir);
 }
 
-bool GPIO::open(unsigned int pin, Direction dir)
-{
+GPIO::~GPIO() {
+    close();
+}
+
+void GPIO::open(unsigned int pin, Direction dir) {
+    if (gpioNum >= 0)
+        close();
+
     gpioNum = pin;
 
+    std::string exportPath = "/sys/class/gpio/export";
+    std::string dirPath = "/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/direction";
+    valPath = "/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/value";
+
     // Export GPIO.
-    std::ofstream exportStream("/sys/class/gpio/export");
+    std::ofstream exportStream(exportPath);
     if (!exportStream)
-    {
-        std::cout << "There was a problem with accessing /sys/class/gpio/export for gpio" << gpioNum << "." << std::endl;
-        gpioNum = -1;
-        return false;
-    }
+        throw GPIOUnaccessibleException(exportPath, gpioNum);
     exportStream << gpioNum;
     exportStream.close();
 
-    std::string dirStr = "out";
-    if (dir == IN)
-        dirStr = "in";
-
     // Set direction.
-    std::ofstream dirStream("/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/direction");
+    std::ofstream dirStream(dirPath);
     if (!dirStream)
-    {
-        std::cout << "There was a problem with accessing /direction for gpio" << gpioNum << "." << std::endl;
-        gpioNum = -1;
-        return false;
-    }
-    dirStream << dirStr;
+        throw GPIOUnaccessibleException(dirPath, gpioNum);
+    dirStream << (dir == IN ? "in" : "out");
     dirStream.close();
 
-    // Get stream to read / write value.
-    if (dir == IN)
-        gpio.open("/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/value", std::ios::in);
-    else
-        gpio.open("/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/value", std::ios::out);
-
+    // Open value stream for use.
+    gpio.open(valPath, dir == IN ? std::ios::in : std::ios::out);
     if (!gpio)
-    {
-        std::cout << "There was a problem with accessing /value for gpio" << gpioNum << "." << std::endl;
-        gpioNum = -1;
-        return false;
-    }
-    return true;
+        throw GPIOUnaccessibleException(valPath, gpioNum);
 }
 
-void GPIO::close()
-{
+void GPIO::close() {
+    if (gpioNum < 0) return;
+
     std::ofstream unexportStream("/sys/class/gpio/unexport");
-    if (!unexportStream)
-    {
-        std::cout << "There was a problem with accessing /sys/class/gpio/unexport for gpio" << gpioNum << "." << std::endl;
+    if (!unexportStream) {
+        std::cout << "[GPIO] There was a problem with accessing /sys/class/gpio/unexport (gpio" << gpioNum << "). Ignoring unexport." << std::endl;
+        return;
     }
+
     unexportStream << gpioNum;
+    gpio.close();
     gpioNum = -1;
 }
 
-void GPIO::write(bool val)
-{
+void GPIO::write(bool val) {
     if (!gpio)
-    {
-        std::cout << "Failed to write gpio" << gpioNum << "!" << std::endl;
-        throw;
-    }
+        throw GPIOUnaccessibleException(valPath, gpioNum);
 
     gpio << val;
-    gpio.close();
-    gpio.open("/sys/class/gpio/gpio" + std::to_string(gpioNum) + "/value");
+    gpio.flush();
 }
 
-bool GPIO::read()
-{
+bool GPIO::read() {
     if (!gpio)
-    {
-        std::cout << "Failed to read gpio" << gpioNum << "!" << std::endl;
-        throw;
-    }
+        throw GPIOUnaccessibleException(valPath, gpioNum);
 
     gpio.seekg(std::ios_base::beg);
     bool res;
     gpio >> res;
+
     return res;
 }

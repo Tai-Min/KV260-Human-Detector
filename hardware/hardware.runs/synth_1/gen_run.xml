@@ -87,18 +87,18 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_temp2pwm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_stepper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_pwm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_system_management_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_pwm_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_stepper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_temp2pwm_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_axi_intc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_axi_gpio_0_0"/>
 </GenRun>

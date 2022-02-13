@@ -1,26 +1,15 @@
-#include "../inc/lidar.hpp"
-#include <iostream>
+#include "../inc/publisher.hpp"
 
-int main(int argc, char *argv[])
-{
-    if (argc != 3)
-    {
-        std::cout << "Usage: ./app <gpio chip number> <lidar usb port>" << std::endl;
-        return -1;
-    }
-
-    unsigned int chipNum = std::stoi(argv[1]);
-
-    std::cout << "Using gpiochip" << chipNum << " for stepper control!" << std::endl;
-
+int main(int argc, char *argv[]) {
     Lidar::Config conf;
-    conf.stepperChipNum = chipNum;
-    Lidar lidar(conf);
+    conf.stepper.chipNum = 492;
+    conf.lidar2d.port = "/dev/ttyUSB0";
+    conf.stepper.stepsBetween2DScans = 1;
+    conf.stepper.endstop1Angle = -45;
+    conf.stepper.endstop2Angle = 45;
 
-    for(int i = 0; i < 40; i++){
-        lidar.scan();
-        std::cout << "Scan done!" << std::endl;
-    }
-
+    rclcpp::init(argc, argv);
+    rclcpp::spin(std::make_shared<MinimalPublisher>(conf));
+    rclcpp::shutdown();
     return 0;
 }

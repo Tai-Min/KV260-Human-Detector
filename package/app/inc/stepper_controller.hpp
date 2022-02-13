@@ -2,38 +2,47 @@
 
 #include <cstdint>
 #include <string>
+
 #include "../inc/gpio.hpp"
 
-class StepperController
-{
-private:
+class StepperController {
+   public:
+    /**
+     * @brief Specifies direction of cradle's movement. ENDSTOP1 - moves towards endstop 1 etc.
+     */
+    enum Endstop : bool {
+        ENDSTOP1 = 0,
+        ENDSTOP2 = 1
+    };
+
+   private:
     ///@{
     /**
-     * @brief Offsets to specific GPIOs starting from first used GPIO.
+     * @brief Offsets to specific GPIOs starting from gpiochip.
      */
-    static const unsigned int paramLength = 8;                                   // Simple uint8 param.
-    static const unsigned int LSBParamOffset = 0;                                // Offset 0.
-    static const unsigned int MSBParamOffset = LSBParamOffset + paramLength - 1; // Offset 7.
-    static const unsigned int dirOffset = MSBParamOffset + 1;                    // Offset 8.
-    static const unsigned int cmdLength = 2;                                     // Command has two bits.
-    static const unsigned int cmdOffset = dirOffset + cmdLength;                 // Offset 10.
-    static const unsigned int latchOffset = cmdOffset + 1;                       // Offset 11.
-    static const unsigned int forceEnaOffset = latchOffset + 1;                  // Offset 12
-    static const unsigned int outputLength = forceEnaOffset + 1;                 // 13 outputs.
+    static const unsigned int paramLength = 8;                                    // Simple uint8 param.
+    static const unsigned int LSBParamOffset = 0;                                 // Offset 0.
+    static const unsigned int MSBParamOffset = LSBParamOffset + paramLength - 1;  // Offset 7.
+    static const unsigned int dirOffset = MSBParamOffset + 1;                     // Offset 8.
+    static const unsigned int cmdLength = 2;                                      // Command has two bits.
+    static const unsigned int cmdOffset = dirOffset + cmdLength;                  // Offset 10.
+    static const unsigned int latchOffset = cmdOffset + 1;                        // Offset 11.
+    static const unsigned int forceEnaOffset = latchOffset + 1;                   // Offset 12
+    static const unsigned int outputLength = forceEnaOffset + 1;                  // 13 outputs.
 
-    static const unsigned int busyOffset = forceEnaOffset + 1;         // Offset 13.
-    static const unsigned int stop1Offset = busyOffset + 1;            // Offset 14.
-    static const unsigned int stop2Offset = stop1Offset + 1;           // Offset 15.
-    static const unsigned int gpioLength = stop2Offset + 1;            // 16 GPIO.
-    static const unsigned int inputLength = gpioLength - outputLength; // 3 inputs.
+    static const unsigned int busyOffset = forceEnaOffset + 1;          // Offset 13.
+    static const unsigned int stop1Offset = busyOffset + 1;             // Offset 14.
+    static const unsigned int stop2Offset = stop1Offset + 1;            // Offset 15.
+    static const unsigned int gpioLength = stop2Offset + 1;             // 16 GPIO.
+    static const unsigned int inputLength = gpioLength - outputLength;  // 3 inputs.
     ///@}
 
-    const unsigned int chipNum; //!< /sys/class/gpio/gpiochip<chipNum> connected to AXI stepper controller. Also indicates first usable GPIO.
+    int chipNum = -1;  //!< Number of gpiochip connected to AXI stepper controller.
 
-    GPIO gpio[gpioLength]; //!< GPIOs to control AXI stepper controller.
+    GPIO gpio[gpioLength];  //!< GPIOs to control AXI stepper controller.
 
     /**
-     * @brief Initialize every required GPIO.
+     * @brief Initialize GPIOs connected to AXI stepper controller.
      */
     void initGPIO();
 
@@ -47,26 +56,33 @@ private:
      */
     void latchCmd();
 
-public:
-    /**
-     * @brief Specifies direction of cradle's movement. ENDSTOP1 - moves towards endstop 1 etc.
-     */
-    enum Endstop : bool
-    {
-        ENDSTOP1 = 0,
-        ENDSTOP2 = 1
-    };
+    StepperController(const StepperController&);
+    StepperController& operator=(const StepperController&);
+
+   public:
+    StepperController() = default;
 
     /**
-     * @brief Construct a new Stepper Controller object and connect to AXI stepper controller.
-     * @param chipNum /sys/class/gpio/gpiochip<chipNum> connected to AXI stepper controller.
+     * @brief Construct a new Stepper Controller object and initialize it's GPIOs.
+     * @param chipNum Number of gpiochip connected to AXI stepper controller.
      */
-    StepperController(unsigned int chipNum);
+    StepperController(int chipNum);
 
     /**
      * @brief Destroy the Stepper Controller object and unexport used GPIOs.
      */
     ~StepperController();
+
+    /**
+     * @brief Initialize GPIOs connected to AXI stepper controller.
+     * @param chipNum Number of gpiochip connected to AXI stepper controller.
+     */
+    void init(int chipNum);
+
+    /**
+     * @brief Disconnect from AXI GPIOs.
+     */
+    void deinit();
 
     /**
      * @brief Send BASE command to PL controller. Does not wait for BASE command to complete.
@@ -93,8 +109,8 @@ public:
     void stop();
 
     /**
-     * @brief Check whether PL controller has .
-     * @return True if PL controller is idle.
+     * @brief Check whether AXI stepper controller is performing BASE or MOV.
+     * @return True if AXI controller is performing BASE or MOV.
      */
     bool busy();
 

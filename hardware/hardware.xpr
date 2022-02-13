@@ -144,9 +144,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_clk_wiz_0_0/hardware_clk_wiz_0_0.xci">
-          <Proxy FileSetName="hardware_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_proc_sys_reset_0_0/hardware_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="hardware_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
@@ -185,6 +182,9 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_stepper_0_0/hardware_stepper_0_0.xci">
           <Proxy FileSetName="hardware_stepper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_clk_wiz_0_0/hardware_clk_wiz_0_0.xci">
+          <Proxy FileSetName="hardware_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/hardware/hdl/hardware_wrapper.v">

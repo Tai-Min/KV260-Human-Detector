@@ -1,6 +1,6 @@
 #! /bin/bash
 
-appName="vadd"
+appName="smart_lidar"
 
 (
 
@@ -136,16 +136,18 @@ then
    
    sysroot="$projDir/package/sdk/sysroots/cortexa72-cortexa53-xilinx-linux"
 
-   flags="-std=c++14 -O2 -Wall -Wextra -Werror -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
+   flags="-std=c++14 -O2 -Wall -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
 
-   includeVitis="-I$vitisDir/data/embeddedsw/XilinxProcessorIPLib/drivers/common_v1_2/src -I$vitisDir/data/embeddedsw/lib/bsp/standalone_v7_5/src/common -I$vitisDir/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_8/src"
+   include="-I$projDir/package/app/thirdparty/ydlidar/include "
 
    libPaths="-L$sysroot/usr/lib/ -L$sysroot/lib/"
-   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt" 
+   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt -ltracetools -lrcl -lrclcpp  -lrcutils -lrcpputils -lrcl_yaml_param_parser -lyaml -lrosidl_typesupport_c -lrosidl_typesupport_cpp -lrosidl_runtime_c -lrcl_logging_spdlog -lspdlog -lrmw_implementation -lrmw -lstd_msgs__rosidl_typesupport_cpp -lsensor_msgs__rosidl_typesupport_cpp" 
 
-   files="$projDir/package/app/src/*.cpp"
+   files="$projDir/package/app/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.c $projDir/package/app/thirdparty/ydlidar/src/impl/unix/*.cpp"
 
-   aarch64-linux-gnu-g++ $flags $includeVitis $include $libPaths $libs --sysroot=$sysroot -o "$projDir/package/app/final/$appName" $files
+   aarch64-linux-gnu-g++ $flags $include $libPaths $libs --sysroot=$sysroot -o "$projDir/package/app/final/$appName" $files
+
+
 
    failHandler
 fi
