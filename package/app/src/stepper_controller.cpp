@@ -1,18 +1,21 @@
 #include "../inc/stepper_controller.hpp"
 
 StepperController::StepperController(int chipNum) {
-    init(chipNum);
+    if (!init(chipNum))
+        deinit();
 }
 
 StepperController::~StepperController() {
     deinit();
 }
 
-void StepperController::initGPIO() {
+bool StepperController::initGPIO() {
     for (unsigned int i = 0, gpioNum = chipNum; i < gpioLength; i++, gpioNum++) {
         GPIO::Direction dir = i >= outputLength ? GPIO::IN : GPIO::OUT;
-        gpio[i].open(gpioNum, dir);
+        if (!gpio[i].open(gpioNum, dir))
+            return false;
     }
+    return true;
 }
 
 void StepperController::deinitGPIO() {
@@ -28,12 +31,17 @@ void StepperController::latchCmd() {
     gpio[latchOffset].write(0);
 }
 
-void StepperController::init(int chipNum) {
-    if(chipNum > 0)
+bool StepperController::init(int chipNum) {
+    if (chipNum > 0)
         deinit();
 
     this->chipNum = chipNum;
-    initGPIO();
+    if (!initGPIO()) {
+        deinitGPIO();
+        return false;
+    }
+    isInit = true;
+    return true;
 }
 
 void StepperController::deinit() {
@@ -42,6 +50,11 @@ void StepperController::deinit() {
 
     forceEnable(false);
     deinitGPIO();
+    isInit = false;
+}
+
+bool StepperController::good() {
+    return isInit;
 }
 
 void StepperController::home(Endstop dir) {
@@ -56,9 +69,8 @@ void StepperController::move(Endstop dir, uint8_t steps) {
     gpio[cmdOffset - 1].write(0);
     gpio[dirOffset].write(dir);
 
-    for (unsigned int i = 0; i < paramLength; i++) {
+    for (unsigned int i = 0; i < paramLength; i++)
         gpio[LSBParamOffset + i].write(steps & (1 << i));
-    }
 
     latchCmd();
 }

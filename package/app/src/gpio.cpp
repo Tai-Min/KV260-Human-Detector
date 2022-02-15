@@ -3,14 +3,15 @@
 #include <iostream>
 
 GPIO::GPIO(unsigned int pin, Direction dir) {
-    open(pin, dir);
+    if (!open(pin, dir))
+        close();
 }
 
 GPIO::~GPIO() {
     close();
 }
 
-void GPIO::open(unsigned int pin, Direction dir) {
+bool GPIO::open(unsigned int pin, Direction dir) {
     if (gpioNum >= 0)
         close();
 
@@ -23,35 +24,44 @@ void GPIO::open(unsigned int pin, Direction dir) {
     // Export GPIO.
     std::ofstream exportStream(exportPath);
     if (!exportStream)
-        throw GPIOUnaccessibleException(exportPath, gpioNum);
+        return false;
     exportStream << gpioNum;
     exportStream.close();
 
     // Set direction.
     std::ofstream dirStream(dirPath);
     if (!dirStream)
-        throw GPIOUnaccessibleException(dirPath, gpioNum);
+        return false;
     dirStream << (dir == IN ? "in" : "out");
     dirStream.close();
 
     // Open value stream for use.
     gpio.open(valPath, dir == IN ? std::ios::in : std::ios::out);
     if (!gpio)
-        throw GPIOUnaccessibleException(valPath, gpioNum);
+        return false;
+
+    isOpen = true;
+    return true;
 }
 
 void GPIO::close() {
-    if (gpioNum < 0) return;
+    if (gpioNum < 0)
+        return;
+
+    isOpen = false;
+
+    gpio.close();
 
     std::ofstream unexportStream("/sys/class/gpio/unexport");
-    if (!unexportStream) {
-        std::cout << "[GPIO] There was a problem with accessing /sys/class/gpio/unexport (gpio" << gpioNum << "). Ignoring unexport." << std::endl;
+    if (!unexportStream)
         return;
-    }
-
     unexportStream << gpioNum;
-    gpio.close();
+
     gpioNum = -1;
+}
+
+bool GPIO::good() {
+    return isOpen;
 }
 
 void GPIO::write(bool val) {

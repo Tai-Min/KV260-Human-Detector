@@ -113,7 +113,9 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "krnl" ${buildTy
 then
    info "Building kernels..."
 
-   v++ --compile --config $projDir/package/app/kernels/vadd/kernel.cfg -o $projDir/package/app/build/krnl_vadd.xo $projDir/package/app/kernels/vadd/krnl_vadd.cpp
+   #v++ --compile --config $projDir/package/app/kernels/vadd/kernel.cfg -o $projDir/package/app/build/krnl_vadd.xo $projDir/package/app/kernels/vadd/krnl_vadd.cpp
+   v++ --compile --config $projDir/package/app/kernels/lidar_proc/kernel.cfg -o $projDir/package/app/build/krnl_lidar_proc.xo $projDir/package/app/kernels/lidar_proc/krnl_lidar_proc.cpp
+
 
    failHandler
 fi
@@ -123,7 +125,7 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "link" ${buildTy
 then
    info "Building hardware container..."
 
-   v++ --link  --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_vadd.xo
+   v++ --link  --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_lidar_proc.xo
 
    failHandler
 fi
@@ -189,9 +191,9 @@ if [[ $uploadTarget != "" ]]
 then
    if [[ $petalinuxPass != "" ]]
    then
-      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    else
-      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $uploadTarget:/home/petalinux && ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh $uploadTarget:/home/petalinux && ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    fi   
 fi
 

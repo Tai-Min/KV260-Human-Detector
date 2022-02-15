@@ -1,10 +1,9 @@
 #pragma once
 
-#include <string>
-
 #include "CYdLidar.h"
-#include "stepper_controller.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
+#include "stepper_controller.hpp"
+#include "krnl_lidar_proc.hpp"
 
 class Lidar {
    private:
@@ -21,59 +20,63 @@ class Lidar {
         unsigned int baudrate = 128000;
         float minAngle = -180;
         float maxAngle = 180;
-        float minRange = 0.15;
-        float maxRange = 12;
-        bool fixedResolution = false;
-        bool autoReconnect = true;
+        float minRange = 0.1;
+        float maxRange = 10;
         float heightFromCenter = 0.055;
     };
 
-    union FloatData {
-        float f;
-        char buf[sizeof(float)];
+    struct KernelConf {
+        bool useKernel = true;
+        std::string xclbin;
     };
 
+   public:
+    struct Config {
+        bool retreatAfterScan = false;
+        std::string frame = "map";
+        StepperConf stepper;
+        Lidar2DConf lidar2d;
+        KernelConf kernel;
+    };
+
+   private:
+    Config conf;
     unsigned int numStepperMoves;
     unsigned int num2DScans;
     float angIncPer3DScan;
     float angIncBet2DScans;
 
-    StepperController::Endstop currDirection = StepperController::ENDSTOP2;
-
-   public:
-    struct Config {
-        std::string frame = "map";
-        StepperConf stepper;
-        Lidar2DConf lidar2d;
-    };
-
-   private:
-    Config conf;
+    bool fstScan = true;
 
     StepperController stepper;
+    CYdLidar lidar2d;
+    KernelLidarProc kernel;
 
     bool isLidar2DOpen = false;
     bool isLidar2DRunning = false;
-    CYdLidar lidar2d;
 
     std::vector<LaserScan> scans;
-    std::vector<float> stepper_angles;
     sensor_msgs::msg::PointCloud2 scanMsg;
+    StepperController::Endstop currDirection = StepperController::ENDSTOP2;
 
+    LaserScan scan2D(bool &err);
     void homeAndChangeDir();
-    LaserScan scan2D();
     void moveNextPos();
 
+    void initVariables();
     void initScanMsg();
-    void generatePointCloud();
+    bool initLidar2D();
+    bool allocFstScan(unsigned int totalSamples, unsigned int samplesPer2DScan, float scan2DStartAngle, float scan2DAngleStep);
+    void generatePointCloudSW(float startStepperAngle, int sign);
+    bool generatePointCloudHW(float startStepperAngle, int sign);
 
    public:
     Lidar() = default;
     Lidar(const Config &lidarConf);
     ~Lidar();
 
-    void init(const Config &lidarConf);
+    bool init(const Config &lidarConf);
     void deinit();
 
-    sensor_msgs::msg::PointCloud2 scanOnce();
+    sensor_msgs::msg::PointCloud2 scanOnce(bool &err);
 };

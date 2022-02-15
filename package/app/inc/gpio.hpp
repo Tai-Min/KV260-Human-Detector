@@ -3,7 +3,7 @@
 #include <fstream>
 #include <memory>
 
-struct GPIOUnaccessibleException : public std::exception {
+class GPIOUnaccessibleException : public std::exception {
    private:
     const std::string path;
     const int gpioNum;
@@ -29,6 +29,7 @@ class GPIO {
 
    private:
     int gpioNum = -1;     //!< Pin of managed GPIO.
+    bool isOpen = false;
     std::string valPath;  //!< Path to <gpio>/value.
     std::fstream gpio;    //!< Stream to read / write GPIO.
 
@@ -53,16 +54,22 @@ class GPIO {
 
     /**
      * @brief Open GPIO.
-     *
      * @param pin Pin of GPIO to open.
      * @param dir Direction of the GPIO.
+     * @return True if opened.
      */
-    void open(unsigned int pin, Direction dir);
+    bool open(unsigned int pin, Direction dir);
 
     /**
      * @brief Close GPIO.
      */
     void close();
+
+    /**
+     * @brief Check whether GPIO is open.
+     * @return True if GPIO can be accessed. 
+     */
+    bool good();
 
     /**
      * @brief Write value to the GPIO.

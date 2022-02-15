@@ -69,6 +69,10 @@
         "ranges": "cpp",
         "shared_mutex": "cpp",
         "stop_token": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "span": "cpp",
+        "*.tbl": "cpp",
+        "*.cp": "cpp",
+        "unordered_set": "cpp"
     }
 }

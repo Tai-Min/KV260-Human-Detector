@@ -38,13 +38,15 @@ class StepperController {
     ///@}
 
     int chipNum = -1;  //!< Number of gpiochip connected to AXI stepper controller.
+    bool isInit = false;
 
     GPIO gpio[gpioLength];  //!< GPIOs to control AXI stepper controller.
 
     /**
      * @brief Initialize GPIOs connected to AXI stepper controller.
+     * @return True if success.
      */
-    void initGPIO();
+    bool initGPIO();
 
     /**
      * @brief Deinitialize used GPIOs.
@@ -76,13 +78,20 @@ class StepperController {
     /**
      * @brief Initialize GPIOs connected to AXI stepper controller.
      * @param chipNum Number of gpiochip connected to AXI stepper controller.
+     * @return True if stepper controller initialized.
      */
-    void init(int chipNum);
+    bool init(int chipNum);
 
     /**
      * @brief Disconnect from AXI GPIOs.
      */
     void deinit();
+
+    /**
+     * @brief Check whether stepper controller is initialized.
+     * @return True if initialized.
+     */
+    bool good();
 
     /**
      * @brief Send BASE command to PL controller. Does not wait for BASE command to complete.
