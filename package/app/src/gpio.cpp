@@ -64,17 +64,22 @@ bool GPIO::good() {
     return isOpen;
 }
 
-void GPIO::write(bool val) {
-    if (!gpio)
-        throw GPIOUnaccessibleException(valPath, gpioNum);
+void GPIO::write(bool val, bool &err) {
+    err = false;
+    if (!gpio) {
+        err = true;
+    }
 
     gpio << val;
     gpio.flush();
 }
 
-bool GPIO::read() {
-    if (!gpio)
-        throw GPIOUnaccessibleException(valPath, gpioNum);
+bool GPIO::read(bool &err) {
+    err = false;
+    if (!gpio) {
+        err = true;
+        return false;
+    }
 
     gpio.seekg(std::ios_base::beg);
     bool res;

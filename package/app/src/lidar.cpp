@@ -34,34 +34,47 @@ LaserScan Lidar::scan2D(bool &err) {
         err = true;
 }
 
-void Lidar::homeAndChangeDir() {
+bool Lidar::homeAndChangeDir() {
     std::chrono::milliseconds timespanHome(5);
 
-    if (conf.retreatAfterScan) {
-        if (currDirection == StepperController::ENDSTOP1)
-            currDirection = StepperController::ENDSTOP2;
+    if (!conf.homeClosestEndstop) {
+        if (conf.stepper.currDirection == StepperController::ENDSTOP1)
+            conf.stepper.currDirection = StepperController::ENDSTOP2;
         else
-            currDirection = StepperController::ENDSTOP1;
+            conf.stepper.currDirection = StepperController::ENDSTOP1;
+    }
+    bool err;
+    stepper.home(conf.stepper.currDirection, err);
+    if (err) return false;
+
+    std::this_thread::sleep_for(timespanHome);
+    while (stepper.busy(err)) {
+        std::this_thread::sleep_for(timespanHome);
+        if (err) return false;
     }
 
-    stepper.home(currDirection);
-    std::this_thread::sleep_for(timespanHome);
-    while (stepper.busy())
-        std::this_thread::sleep_for(timespanHome);
-
-    if (currDirection == StepperController::ENDSTOP1)
-        currDirection = StepperController::ENDSTOP2;
+    if (conf.stepper.currDirection == StepperController::ENDSTOP1)
+        conf.stepper.currDirection = StepperController::ENDSTOP2;
     else
-        currDirection = StepperController::ENDSTOP1;
+        conf.stepper.currDirection = StepperController::ENDSTOP1;
+
+    return true;
 }
 
-void Lidar::moveNextPos() {
+bool Lidar::moveNextPos() {
     std::chrono::milliseconds timespanMove(2);
 
-    stepper.move(currDirection, conf.stepper.stepsBetween2DScans);
+    bool err;
+    stepper.move(conf.stepper.currDirection, conf.stepper.stepsPer2DScan, err);
+    if (err) return false;
+
     std::this_thread::sleep_for(timespanMove);
-    while (stepper.busy())
+    while (stepper.busy(err)) {
+        if (err) return false;
         std::this_thread::sleep_for(timespanMove);
+    }
+
+    return true;
 }
 
 void Lidar::initVariables() {
@@ -70,36 +83,35 @@ void Lidar::initVariables() {
     conf.stepper.endstop2Angle *= M_PI / 180.0;
 
     // Additional variables based on user's config.
-    numStepperMoves = conf.stepper.stepsPer3DScan / conf.stepper.stepsBetween2DScans;
-    num2DScans = numStepperMoves + 1;
-    angIncPer3DScan = std::fabs(conf.stepper.endstop1Angle) + std::fabs(conf.stepper.endstop2Angle);
-    angIncBet2DScans = angIncPer3DScan / numStepperMoves;
+    conf.stepper.movesPerScan = conf.stepper.stepsPer3DScan / conf.stepper.stepsPer2DScan;
+    conf.lidar2d.scansPer3DScan = conf.stepper.movesPerScan + 1;
+    float angIncPer3DScan = std::fabs(conf.stepper.endstop1Angle) + std::fabs(conf.stepper.endstop2Angle);
+    conf.stepper.angIncPer2DScan = angIncPer3DScan / conf.stepper.movesPerScan;
 
     // We know number of scans so resize vectors accordingly.
-    scans.resize(num2DScans);
+    scans2d.resize(conf.lidar2d.scansPer3DScan);
 }
 
 void Lidar::initScanMsg() {
-    scanMsg = sensor_msgs::msg::PointCloud2();
-    scanMsg.header.frame_id = conf.frame;
-    scanMsg.height = 1;  // It's vector of unordered points so height = 1.
-    scanMsg.fields.resize(3);
-    scanMsg.fields[0].name = "x";
-    scanMsg.fields[0].offset = 0;
-    scanMsg.fields[0].datatype = sensor_msgs::msg::PointField::FLOAT32;
-    scanMsg.fields[0].count = 1;
-    scanMsg.fields[1].name = "y";
-    scanMsg.fields[1].offset = sizeof(float);
-    scanMsg.fields[1].datatype = sensor_msgs::msg::PointField::FLOAT32;
-    scanMsg.fields[1].count = 1;
-    scanMsg.fields[2].name = "z";
-    scanMsg.fields[2].offset = sizeof(float) * 2;
-    scanMsg.fields[2].datatype = sensor_msgs::msg::PointField::FLOAT32;
-    scanMsg.fields[2].count = 1;
+    cloudMsg.header.frame_id = conf.frameId;
+    cloudMsg.height = 1;  // It's vector of unordered points so height = 1.
+    cloudMsg.fields.resize(3);
+    cloudMsg.fields[0].name = "x";
+    cloudMsg.fields[0].offset = 0;
+    cloudMsg.fields[0].datatype = sensor_msgs::msg::PointField::FLOAT32;
+    cloudMsg.fields[0].count = 1;
+    cloudMsg.fields[1].name = "y";
+    cloudMsg.fields[1].offset = sizeof(float);
+    cloudMsg.fields[1].datatype = sensor_msgs::msg::PointField::FLOAT32;
+    cloudMsg.fields[1].count = 1;
+    cloudMsg.fields[2].name = "z";
+    cloudMsg.fields[2].offset = sizeof(float) * 2;
+    cloudMsg.fields[2].datatype = sensor_msgs::msg::PointField::FLOAT32;
+    cloudMsg.fields[2].count = 1;
 
-    scanMsg.is_bigendian = false;  // KV260 is little endian.
-    scanMsg.point_step = scanMsg.fields.size() * sizeof(float);
-    scanMsg.is_dense = true;  // No invalid points.
+    cloudMsg.is_bigendian = false;  // KV260 is little endian.
+    cloudMsg.point_step = cloudMsg.fields.size() * sizeof(float);
+    cloudMsg.is_dense = true;  // No invalid points.
 }
 
 bool Lidar::initLidar2D() {
@@ -121,25 +133,25 @@ bool Lidar::initLidar2D() {
         deinit();
         return false;
     }
-    isLidar2DOpen = true;
+    conf.lidar2d.isLidar2DOpen = true;
 
     if (!lidar2d.turnOn()) {
         deinit();
         return false;
     }
-    isLidar2DRunning = true;
+    conf.lidar2d.isLidar2DRunning = true;
     return true;
 }
 
 bool Lidar::allocFstScan(unsigned int totalSamples, unsigned int samplesPer2DScan, float scan2DStartAngle, float scan2DAngleStep) {
-    scanMsg.data.resize(totalSamples * scanMsg.point_step);
-    scanMsg.width = totalSamples;
-    scanMsg.row_step = scanMsg.point_step * scanMsg.width;
+    cloudMsg.data.resize(totalSamples * cloudMsg.point_step);
+    cloudMsg.width = totalSamples;
+    cloudMsg.row_step = cloudMsg.point_step * cloudMsg.width;
 
-    if (conf.kernel.useKernel && !kernel.setPersistentArgs(num2DScans, samplesPer2DScan, scan2DStartAngle, scan2DAngleStep, conf.lidar2d.heightFromCenter))
+    if (conf.kernel.useKernel && !kernel.setPersistentArgs(conf.lidar2d.scansPer3DScan, samplesPer2DScan, scan2DStartAngle, scan2DAngleStep, conf.lidar2d.offset))
         return false;
 
-    if (conf.kernel.useKernel && !kernel.allocateBuffers(totalSamples, scanMsg.data.size()))
+    if (conf.kernel.useKernel && !kernel.allocateBuffers(totalSamples, cloudMsg.data.size()))
         return false;
 
     return true;
@@ -158,11 +170,11 @@ void Lidar::generatePointCloudSW(float startStepperAngle, int sign) {
     // Process every obtained lidar scan.
     float currStepperAngle = startStepperAngle;
     unsigned int pointOffset = 0;
-    for (auto scan : scans) {
+    for (auto scan : scans2d) {
         //  Get rotation and shift params.
         float rotationOffsetY = -currStepperAngle;
-        float transformOffsetX = std::sin(std::abs(rotationOffsetY)) * conf.lidar2d.heightFromCenter;
-        float transformOffsetZ = std::sqrt(std::pow(conf.lidar2d.heightFromCenter, 2) - std::pow(transformOffsetX, 2));
+        float transformOffsetX = std::sin(std::abs(rotationOffsetY)) * conf.lidar2d.offset;
+        float transformOffsetZ = std::sqrt(std::pow(conf.lidar2d.offset, 2) - std::pow(transformOffsetX, 2));
 
         // Convert each sample of current scan to point cloud.
         float currScanAngle = scan.config.min_angle;
@@ -178,15 +190,15 @@ void Lidar::generatePointCloudSW(float startStepperAngle, int sign) {
 
             // Save results in PointCloud2 blob.
             for (unsigned int byte = 0; byte < sizeof(float); byte++) {
-                scanMsg.data[pointOffset + scanMsg.fields[0].offset + byte] = x.buf[byte];
-                scanMsg.data[pointOffset + scanMsg.fields[1].offset + byte] = y.buf[byte];
-                scanMsg.data[pointOffset + scanMsg.fields[2].offset + byte] = z.buf[byte];
+                cloudMsg.data[pointOffset + cloudMsg.fields[0].offset + byte] = x.buf[byte];
+                cloudMsg.data[pointOffset + cloudMsg.fields[1].offset + byte] = y.buf[byte];
+                cloudMsg.data[pointOffset + cloudMsg.fields[2].offset + byte] = z.buf[byte];
             }
 
             currScanAngle += scan.config.ang_increment;
-            pointOffset += scanMsg.point_step;
+            pointOffset += cloudMsg.point_step;
         }
-        currStepperAngle += sign * angIncBet2DScans;
+        currStepperAngle += sign * conf.stepper.angIncPer2DScan;
     }
 
     auto t2 = high_resolution_clock::now();
@@ -197,8 +209,10 @@ void Lidar::generatePointCloudSW(float startStepperAngle, int sign) {
 bool Lidar::generatePointCloudHW(float startStepperAngle, int sign) {
     auto t1 = high_resolution_clock::now();
 
-    kernel.run(startStepperAngle, sign * angIncBet2DScans);
-    kernel.getOutBuf(scanMsg.data);
+    if (!kernel.runCloudGen(startStepperAngle, sign * conf.stepper.angIncPer2DScan))
+        return false;
+
+    kernel.getCloudBuf(cloudMsg.data);
 
     auto t2 = high_resolution_clock::now();
     duration<double, std::milli> ms_double = t2 - t1;
@@ -222,6 +236,7 @@ bool Lidar::init(const Config &lidarConf) {
     if (!initLidar2D())
         return false;
 
+    allGood = true;
     return true;
 }
 
@@ -229,14 +244,19 @@ void Lidar::deinit() {
     kernel.deinit();
     stepper.deinit();
 
-    if (isLidar2DRunning)
+    if (conf.lidar2d.isLidar2DRunning)
         lidar2d.turnOff();
 
-    if (isLidar2DOpen)
+    if (conf.lidar2d.isLidar2DOpen)
         lidar2d.disconnecting();
 
-    isLidar2DRunning = false;
-    isLidar2DOpen = false;
+    conf.lidar2d.isLidar2DRunning = false;
+    conf.lidar2d.isLidar2DOpen = false;
+    allGood = false;
+}
+
+bool Lidar::good() {
+    return allGood;
 }
 
 sensor_msgs::msg::PointCloud2 Lidar::scanOnce(bool &err) {
@@ -244,48 +264,61 @@ sensor_msgs::msg::PointCloud2 Lidar::scanOnce(bool &err) {
 
     err = false;
 
-    stepper.forceEnable(true);
+    stepper.forceEnable(true, err);
+    if (err)
+        return cloudMsg;
 
-    homeAndChangeDir();
+    if (!homeAndChangeDir()) {
+        err = true;
+        return cloudMsg;
+    }
 
-    float startStepperAngle = currDirection == StepperController::ENDSTOP1 ? conf.stepper.endstop1Angle : conf.stepper.endstop2Angle;
-    int sign = currDirection == StepperController::ENDSTOP1 ? 1 : -1;
+    float startStepperAngle = conf.stepper.currDirection == StepperController::ENDSTOP1 ? conf.stepper.endstop1Angle : conf.stepper.endstop2Angle;
+    int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
 
     unsigned int totalSamples = 0;
     unsigned int rangesOffset = 0;
-    for (unsigned int scan = 0; scan < num2DScans; scan++) {
-        scans[scan] = scan2D(err);
+    for (unsigned int scan = 0; scan < conf.lidar2d.scansPer3DScan; scan++) {
+        scans2d[scan] = scan2D(err);
         if (err)
-            return scanMsg;
+            return cloudMsg;
 
         if (!fstScan && conf.kernel.useKernel) {
-            kernel.setRangesChunk(scans[scan].ranges, rangesOffset);
-            rangesOffset += scans[scan].ranges.size();
+            kernel.setRangesChunk(scans2d[scan].ranges, rangesOffset);
+            rangesOffset += scans2d[scan].ranges.size();
         }
 
-        totalSamples += scans[scan].ranges.size();
+        totalSamples += scans2d[scan].ranges.size();
 
-        moveNextPos();
+        if (!moveNextPos()) {
+            err = true;
+            return cloudMsg;
+        }
     }
 
     if (fstScan) {
-        err = !allocFstScan(totalSamples, scans[0].ranges.size(), scans[0].config.min_angle, scans[0].config.ang_increment);
+        err = !allocFstScan(totalSamples, scans2d[0].ranges.size(), scans2d[0].config.min_angle, scans2d[0].config.ang_increment);
         if (err)
-            return scanMsg;
+            return cloudMsg;
 
         fstScan = false;
-    } else {
-        if (conf.kernel.useKernel)
-            generatePointCloudHW(startStepperAngle, sign);
-        else
-            generatePointCloudSW(startStepperAngle, sign);
     }
 
-    stepper.forceEnable(false);
+    if (conf.kernel.useKernel) {
+        if (!generatePointCloudHW(startStepperAngle, sign)) {
+            err = true;
+            return cloudMsg;
+        }
+    } else
+        generatePointCloudSW(startStepperAngle, sign);
+
+    stepper.forceEnable(false, err);
+    if (err)
+        return cloudMsg;
 
     auto t2 = high_resolution_clock::now();
     duration<double, std::milli> ms_double = t2 - t1;
     std::cout << "Scan time: " << ms_double.count() << "ms." << std::endl;
 
-    return scanMsg;
+    return cloudMsg;
 }

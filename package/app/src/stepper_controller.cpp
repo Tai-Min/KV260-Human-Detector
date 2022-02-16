@@ -25,10 +25,10 @@ void StepperController::deinitGPIO() {
     chipNum = -1;
 }
 
-void StepperController::latchCmd() {
-    gpio[latchOffset].write(0);
-    gpio[latchOffset].write(1);
-    gpio[latchOffset].write(0);
+void StepperController::latchCmd(bool &err) {
+    gpio[latchOffset].write(0, err);
+    gpio[latchOffset].write(1, err);
+    gpio[latchOffset].write(0, err);
 }
 
 bool StepperController::init(int chipNum) {
@@ -48,7 +48,8 @@ void StepperController::deinit() {
     if (chipNum < 0)
         return;
 
-    forceEnable(false);
+    bool err;
+    forceEnable(false, err);
     deinitGPIO();
     isInit = false;
 }
@@ -57,41 +58,51 @@ bool StepperController::good() {
     return isInit;
 }
 
-void StepperController::home(Endstop dir) {
-    gpio[cmdOffset].write(0);
-    gpio[cmdOffset - 1].write(1);
-    gpio[dirOffset].write(dir);
-    latchCmd();
+void StepperController::home(Endstop dir, bool &err) {
+    gpio[cmdOffset].write(0, err);
+    if (err) return;
+    gpio[cmdOffset - 1].write(1, err);
+    if (err) return;
+    gpio[dirOffset].write(dir, err);
+    if (err) return;
+    latchCmd(err);
 }
 
-void StepperController::move(Endstop dir, uint8_t steps) {
-    gpio[cmdOffset].write(1);
-    gpio[cmdOffset - 1].write(0);
-    gpio[dirOffset].write(dir);
+void StepperController::move(Endstop dir, uint8_t steps, bool &err) {
+    gpio[cmdOffset].write(1, err);
+    if (err) return;
+    gpio[cmdOffset - 1].write(0, err);
+    if (err) return;
+    gpio[dirOffset].write(dir, err);
+    if (err) return;
 
-    for (unsigned int i = 0; i < paramLength; i++)
-        gpio[LSBParamOffset + i].write(steps & (1 << i));
+    for (unsigned int i = 0; i < paramLength; i++) {
+        gpio[LSBParamOffset + i].write(steps & (1 << i), err);
+        if (err) return;
+    }
 
-    latchCmd();
+    latchCmd(err);
 }
 
-void StepperController::forceEnable(bool val) {
-    gpio[forceEnaOffset].write(val);
+void StepperController::forceEnable(bool val, bool &err) {
+    gpio[forceEnaOffset].write(val, err);
 }
 
-void StepperController::stop() {
-    gpio[cmdOffset].write(0);
-    gpio[cmdOffset - 1].write(0);
-    latchCmd();
+void StepperController::stop(bool &err) {
+    gpio[cmdOffset].write(0, err);
+    if (err) return;
+    gpio[cmdOffset - 1].write(0, err);
+    if (err) return;
+    latchCmd(err);
 }
 
-bool StepperController::busy() {
-    return gpio[busyOffset].read();
+bool StepperController::busy(bool &err) {
+    return gpio[busyOffset].read(err);
 }
 
-bool StepperController::checkEndstop(Endstop endstop) {
+bool StepperController::checkEndstop(Endstop endstop, bool &err) {
     if (endstop == Endstop::ENDSTOP1)
-        return !gpio[stop1Offset].read();
+        return !gpio[stop1Offset].read(err);
     else
-        return !gpio[stop2Offset].read();
+        return !gpio[stop2Offset].read(err);
 }

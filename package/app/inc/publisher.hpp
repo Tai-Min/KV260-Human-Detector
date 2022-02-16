@@ -3,14 +3,21 @@
 #include "../inc/lidar.hpp"
 #include "rclcpp/rclcpp.hpp"
 
-class MinimalPublisher : public rclcpp::Node {
+class PointCloudPublisher : public rclcpp::Node {
    private:
-    rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr publisher_;
-    Lidar lidar;
+    rclcpp::TimerBase::SharedPtr timer;                                          //!< Calls timerCallback every some time.
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr cloudPublisher;  //!< Publishes raw 3D cloud.
+    Lidar lidar;                                                                 //!< LIDAR hardware.
 
+    /**
+     * @brief Called every specified time, performs one 3D scan per call.
+     */
     void timerCallback();
 
    public:
-    MinimalPublisher(const Lidar::Config &conf);
+    /**
+     * @brief Construct a new Point Cloud Publisher object.
+     * @param conf LIDAR's config.
+     */
+    PointCloudPublisher(const Lidar::Config &conf);
 };

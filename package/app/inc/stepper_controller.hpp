@@ -37,8 +37,8 @@ class StepperController {
     static const unsigned int inputLength = gpioLength - outputLength;  // 3 inputs.
     ///@}
 
-    int chipNum = -1;  //!< Number of gpiochip connected to AXI stepper controller.
-    bool isInit = false;
+    int chipNum = -1;     //!< Number of gpiochip connected to AXI stepper controller.
+    bool isInit = false;  //!< Whether controller is ready to be used.
 
     GPIO gpio[gpioLength];  //!< GPIOs to control AXI stepper controller.
 
@@ -55,8 +55,9 @@ class StepperController {
 
     /**
      * @brief Send latch signal to AXI stepper controller.
+     * @param err Set to true if operation fails.
      */
-    void latchCmd();
+    void latchCmd(bool &err);
 
     StepperController(const StepperController&);
     StepperController& operator=(const StepperController&);
@@ -96,37 +97,43 @@ class StepperController {
     /**
      * @brief Send BASE command to PL controller. Does not wait for BASE command to complete.
      * @param dir Endstop to move towards to.
+     * @param err Set to true if operation fails.
      */
-    void home(Endstop dir);
+    void home(Endstop dir, bool &err);
 
     /**
      * @brief Send MOV command to PL controller. Does not wait for MOV command to complete.
      * @param dir Endstop to move towards to.
      * @param steps Number of steps to perform.
+     * @param err Set to true if operation fails.
      */
-    void move(Endstop dir, uint8_t steps);
+    void move(Endstop dir, uint8_t steps, bool &err);
 
     /**
      * @brief Force ENA pin to power on the motor even when there is no command being performed. Might heat up the motor if forced for too long!
      * @param val True - force enable, false - disabled when idle.
+     * @param err Set to true if operation fails.
      */
-    void forceEnable(bool val);
+    void forceEnable(bool val, bool &err);
 
     /**
      * @brief Send NOP command to PL controller. Stops currently latched command.
+     * @param err Set to true if operation fails.
      */
-    void stop();
+    void stop(bool &err);
 
     /**
      * @brief Check whether AXI stepper controller is performing BASE or MOV.
+     * @param err Set to true if operation fails.
      * @return True if AXI controller is performing BASE or MOV.
      */
-    bool busy();
+    bool busy(bool &err);
 
     /**
      * @brief Read state of selected endstop.
      * @param endstop Endstop to check.
+     * @param err Set to true if operation fails.
      * @return True if selected endstop pressed.
      */
-    bool checkEndstop(Endstop endstop);
+    bool checkEndstop(Endstop endstop, bool &err);
 };

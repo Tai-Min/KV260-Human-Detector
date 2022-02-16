@@ -82,9 +82,9 @@ void KernelLidarProc::deinit() {
         rangesSize = -1;
     }
 
-    if (outSize > 0) {
-        queue.enqueueUnmapMemObject(outBuf, outPtr);
-        outSize = -1;
+    if (cloudSize > 0) {
+        queue.enqueueUnmapMemObject(outBuf, cloudPtr);
+        cloudSize = -1;
     }
 
     queue.finish();
@@ -116,16 +116,16 @@ bool KernelLidarProc::setPersistentArgs(unsigned int numScans, unsigned int sing
     return true;
 }
 
-bool KernelLidarProc::allocateBuffers(int rangesSize, int outSize) {
+bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize) {
     this->rangesSize = rangesSize;
-    this->outSize = outSize;
+    this->cloudSize = cloudSize;
 
     cl_int err;
     rangesBuf = cl::Buffer(context, CL_MEM_READ_ONLY | CL_MEM_ALLOC_HOST_PTR, rangesSize * sizeof(float), nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
-    outBuf = cl::Buffer(context, CL_MEM_WRITE_ONLY | CL_MEM_ALLOC_HOST_PTR, outSize, nullptr, &err);
+    outBuf = cl::Buffer(context, CL_MEM_WRITE_ONLY | CL_MEM_ALLOC_HOST_PTR, cloudSize, nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
@@ -133,7 +133,7 @@ bool KernelLidarProc::allocateBuffers(int rangesSize, int outSize) {
     if (err != CL_SUCCESS)
         return false;
 
-    outPtr = (uint8_t*)queue.enqueueMapBuffer(outBuf, CL_TRUE, CL_MAP_READ, 0, outSize, nullptr, nullptr, &err);
+    cloudPtr = (uint8_t*)queue.enqueueMapBuffer(outBuf, CL_TRUE, CL_MAP_READ, 0, cloudSize, nullptr, nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
@@ -152,7 +152,7 @@ void KernelLidarProc::setRangesChunk(const std::vector<float>& ranges, unsigned 
     std::copy(ranges.begin(), ranges.end(), rangesPtr + offset);
 }
 
-bool KernelLidarProc::run(float stepperStartAngle, float stepperAngleInc) {
+bool KernelLidarProc::runCloudGen(float stepperStartAngle, float stepperAngleInc) {
     cl_int err;
 
     err = kernel.setArg(stepperStartAngleParamOffset, stepperStartAngle);
@@ -167,12 +167,10 @@ bool KernelLidarProc::run(float stepperStartAngle, float stepperAngleInc) {
     queue.enqueueTask(kernel);
     queue.enqueueMigrateMemObjects({outBuf}, CL_MIGRATE_MEM_OBJECT_HOST);
 
-    //queue.finish();
-
     return true;
 }
 
-void KernelLidarProc::getOutBuf(std::vector<uint8_t>& buf) {
-    buf.resize(outSize);
-    std::copy(outPtr, outPtr + outSize, buf.data());
+void KernelLidarProc::getCloudBuf(std::vector<uint8_t>& buf) {
+    buf.resize(cloudSize);
+    std::copy(cloudPtr, cloudPtr + cloudSize, buf.data());
 }
