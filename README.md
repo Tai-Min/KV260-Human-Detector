@@ -10,9 +10,26 @@ This repository contains all files and instructions required to recreate the pro
 
 # Recreating the project
 ## 3D printing
+Print listed below parts:
+
+and assembly them using 15mm length 3mm diameter screws and nuts like in the image below:
+
+TODO: image
 
 ## PCB shield
 
+Use included in \<REPO>/pmod_shield Gerber files to order the shield using some PCB manufacturing service, or use indluded PDF to [etch it by yourself](https://www.instructables.com/How-to-Etch-a-PCB/).
+
+* A4988 stepper motor driver
+* 2x 2 pin JST PCB female connectors
+* 1x 4 pin JST PCB female connector or 4 pin vertical goldpin header instead whatever fits your stepper motor better)
+* 2x 2x6 pin horizontal goldpin header
+* 1x 5.08mm terminal block
+
+Solder the parts as in the picture below (ignore crossed parts):
+
+TODO: image
+ 
 ## Building the software
 Project created and tested using Ubuntu-20.04.
 
@@ -20,7 +37,7 @@ This repo's root directory is from now onwards called \<REPO>
 
 ### Prerequisites
 
-This instruction assumes that Vitis software (Vivado, Vitis, PetaLinux) run on version 2021.1 and is correctly sourced in ".bashrc". It also assumes that PetaLinux has installed all [required packages](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug1144-petalinux-tools-reference-guide.pdf).
+This instruction assumes that Vitis software (Vivado, Vitis, Vitis-AI, PetaLinux) runs on version 2021.1 and is correctly sourced in ".bashrc". It also assumes that PetaLinux has installed all [required packages](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_1/ug1144-petalinux-tools-reference-guide.pdf).
 
 For SD flashing [balenaEtcher](https://www.balena.io/etcher/) will be used.
 
@@ -48,7 +65,7 @@ This script will:
 
 3. Flash \<REPO>/linux/images/linux/petalinux-sdimage.wic into SD card (i.e using balenaEtcher)
 
-4. Verify whether everything is working and set new petalinux password (called \<DEVPWD> onwards):
+4. Verify whether everything is working via Putty and set new petalinux's password (called \<DEVPWD> onwards):
 ```
 sudo putty /dev/ttyUSBn -serial -sercfg 115200,8,n,1,N
 ```
