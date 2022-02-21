@@ -103,5 +103,7 @@ ssh petalinux@<DEVIP>
 
 2. Run:
 ```
-./vadd vadd_container.xclbin
+sudo su
+source ./setup.sh
+./smart_lidar
 ```
