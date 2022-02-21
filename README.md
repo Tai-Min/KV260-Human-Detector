@@ -96,10 +96,12 @@ chmod +x ./build_app.sh && ./build_app.sh -u petalinux@<DEVIP> -p <DEVPWD>
 This method will ask for petalinux's password once.
 
 ### Run the application
-1. SSH into KV260:
+1. a) SSH into KV260:
 ```
 ssh petalinux@<DEVIP>
 ```
+
+1. b) Use Putty terminal from previous steps.
 
 2. Run:
 ```
@@ -107,3 +109,6 @@ sudo su
 source ./setup.sh
 ./smart_lidar
 ```
+* Sudo is required to use xmutil and access /lib folder.
+* source.sh will setup FPGA bitstream and source ROS2 into our environment
+* smart_lidar will start the built application.
