@@ -9,26 +9,35 @@ For more information about the project itself see [Human position estimator for 
 This repository contains all files and instructions required to recreate the project from scratch, including code, hardware design files, PCB design and 3D printable parts. 
 
 # Recreating the project
-## 3D printing
-Print listed below parts:
-
-and assembly them using 15mm length 3mm diameter screws and nuts like in the image below:
-
-TODO: image
-
 ## PCB shield
 
 Use included in \<REPO>/pmod_shield Gerber files to order the shield using some PCB manufacturing service, or use indluded PDF to [etch it by yourself](https://www.instructables.com/How-to-Etch-a-PCB/).
 
-* A4988 stepper motor driver
-* 2x 2 pin JST PCB female connectors
-* 1x 4 pin JST PCB female connector or 4 pin vertical goldpin header instead whatever fits your stepper motor better)
-* 2x 2x6 pin horizontal goldpin header
+* 1x A4988 stepper motor driver,
+* 2x 2 pin female JST PCB connectors,
+* 1x 4 pin female JST PCB connector or 4x1 male vertical goldpin connector, whatever fits your stepper motor better,
+* 1x 2x6 pin male horizontal goldpin connector,
+* 2x 8x1 female goldpin connector,
 * 1x 5.08mm terminal block
 
 Solder the parts as in the picture below (ignore crossed parts):
 
 TODO: image
+ 
+## Attaching hardware
+Print listed below parts:
+TODO parts
+
+1) Screw 3D printed parts using M3 15mm screws,
+2) Attach 608 bearings into bearing holes of TODO(PART NAME),
+3) Slide TODO sizemm threaded rod through cradle into TODO(stepper shaft connector),
+4) 
+5) Using M3 15mm screws and corresponding nuts, screw NEMA17 stepper motor, Creality endstops, YDlidar X4 and it's board UART as shown below:
+
+6) Slide KV260 into the frame,
+7) Connect LIDAR through it's UART board to one of KV260's USB ports, 
+8) Connect PMod shield to KV260 and then connect stepper motor and endstops to the shield.
+9) Connect KV260 to PC and to local network using Ethernet connector.
  
 ## Building the software
 Project created and tested using Ubuntu-20.04.
@@ -112,3 +121,6 @@ source ./setup.sh
 * Sudo is required to use xmutil and access /lib folder.
 * source.sh will setup FPGA bitstream and source ROS2 into our environment
 * smart_lidar will start the built application.
+
+### Troubleshoting
+If PetaLinux does not build due to error in Vitis-AI meta package, try to remove "dnndk" package from \<REPO>/linux/components/yocto/layers/meta-petalinux/recipes-core/packagegroups/packagegroup-petalinux-vitisai.bb
