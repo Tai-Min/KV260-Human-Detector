@@ -20,24 +20,22 @@ Lidar::~Lidar() {
 
 LaserScan Lidar::scan2D(bool &err) {
     err = false;
-    bool hardError;
     LaserScan scan;
 
     int tries = 3;
     while (tries) {
-        if (lidar2d.doProcessSimple(scan, hardError))
+        if (lidar2d.doProcessSimple(scan, err))
             return scan;
         tries--;
     }
-
-    if (tries == 0 || hardError)
-        err = true;
+    err = true;
+    return scan;
 }
 
 bool Lidar::homeAndChangeDir() {
     std::chrono::milliseconds timespanHome(5);
 
-    if (!conf.homeClosestEndstop) {
+    if (!conf.stepper.homeClosestEndstop) {
         if (conf.stepper.currDirection == StepperController::ENDSTOP1)
             conf.stepper.currDirection = StepperController::ENDSTOP2;
         else
@@ -79,20 +77,19 @@ bool Lidar::moveNextPos() {
 
 void Lidar::initVariables() {
     // We'll use radians from now.
-    conf.stepper.endstop1Angle *= M_PI / 180.0;
-    conf.stepper.endstop2Angle *= M_PI / 180.0;
+    conf.stepper.endstopAngle *= M_PI / 180.0;
 
     // Additional variables based on user's config.
-    conf.stepper.movesPerScan = conf.stepper.stepsPer3DScan / conf.stepper.stepsPer2DScan;
-    conf.lidar2d.scansPer3DScan = conf.stepper.movesPerScan + 1;
-    float angIncPer3DScan = std::fabs(conf.stepper.endstop1Angle) + std::fabs(conf.stepper.endstop2Angle);
-    conf.stepper.angIncPer2DScan = angIncPer3DScan / conf.stepper.movesPerScan;
+    conf.stepper.movesPer3DScan = conf.stepper.stepsPer3DScan / conf.stepper.stepsPer2DScan;
+    conf.lidar2d.scansPer3DScan = conf.stepper.movesPer3DScan + 1;
+    float angIncPer3DScan = 2 * std::fabs(conf.stepper.endstopAngle);
+    conf.stepper.angIncPer2DScan = angIncPer3DScan / conf.stepper.movesPer3DScan;
 
     // We know number of scans so resize vectors accordingly.
     scans2d.resize(conf.lidar2d.scansPer3DScan);
 }
 
-void Lidar::initScanMsg() {
+void Lidar::initScanMsgs() {
     cloudMsg.header.frame_id = conf.frameId;
     cloudMsg.height = 1;  // It's vector of unordered points so height = 1.
     cloudMsg.fields.resize(3);
@@ -112,6 +109,9 @@ void Lidar::initScanMsg() {
     cloudMsg.is_bigendian = false;  // KV260 is little endian.
     cloudMsg.point_step = cloudMsg.fields.size() * sizeof(float);
     cloudMsg.is_dense = true;  // No invalid points.
+
+    panoramicScanMsg.layout.dim.resize(2);
+    panoramicScanMsg.layout.data_offset = 0;
 }
 
 bool Lidar::initLidar2D() {
@@ -148,6 +148,17 @@ bool Lidar::allocFstScan(unsigned int totalSamples, unsigned int samplesPer2DSca
     cloudMsg.width = totalSamples;
     cloudMsg.row_step = cloudMsg.point_step * cloudMsg.width;
 
+    int imgWidth = samplesPer2DScan;
+    int imgHeight = std::round(2 * conf.stepper.endstopAngle * 180.0 / M_PI);
+
+    panoramicScanMsg.layout.dim[0].label = "height";
+    panoramicScanMsg.layout.dim[0].size = imgHeight;
+    panoramicScanMsg.layout.dim[0].stride = imgWidth * imgHeight;
+    panoramicScanMsg.layout.dim[1].label = "width";
+    panoramicScanMsg.layout.dim[1].size = imgWidth;
+    panoramicScanMsg.layout.dim[1].stride = imgWidth;
+    panoramicScanMsg.data = std::vector<float>(imgWidth * imgHeight, 0);
+
     if (conf.kernel.useKernel && !kernel.setPersistentArgs(conf.lidar2d.scansPer3DScan, samplesPer2DScan, scan2DStartAngle, scan2DAngleStep, conf.lidar2d.offset))
         return false;
 
@@ -157,13 +168,16 @@ bool Lidar::allocFstScan(unsigned int totalSamples, unsigned int samplesPer2DSca
     return true;
 }
 
-void Lidar::generatePointCloudSW(float startStepperAngle, int sign) {
+void Lidar::generatePointCloudSW() {
     union FloatData {
         float f;
         char buf[sizeof(float)];
     };
 
     auto t1 = high_resolution_clock::now();
+
+    float startStepperAngle = conf.stepper.currDirection == StepperController::ENDSTOP1 ? -conf.stepper.endstopAngle : conf.stepper.endstopAngle;
+    int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
 
     FloatData x, y, z;
 
@@ -206,8 +220,11 @@ void Lidar::generatePointCloudSW(float startStepperAngle, int sign) {
     std::cout << "Point cloud generation soft impl exec time: " << ms_double.count() << "ms." << std::endl;
 }
 
-bool Lidar::generatePointCloudHW(float startStepperAngle, int sign) {
+bool Lidar::generatePointCloudHW() {
     auto t1 = high_resolution_clock::now();
+
+    float startStepperAngle = conf.stepper.currDirection == StepperController::ENDSTOP1 ? -conf.stepper.endstopAngle : conf.stepper.endstopAngle;
+    int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
 
     if (!kernel.runCloudGen(startStepperAngle, sign * conf.stepper.angIncPer2DScan))
         return false;
@@ -220,12 +237,44 @@ bool Lidar::generatePointCloudHW(float startStepperAngle, int sign) {
     return true;
 }
 
+void Lidar::generatePanoramicImageSW() {
+    auto t1 = high_resolution_clock::now();
+
+    float startStepperAngle = conf.stepper.currDirection == StepperController::ENDSTOP1 ? -conf.stepper.endstopAngle : conf.stepper.endstopAngle;
+    int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
+    int imgWidth = panoramicScanMsg.layout.dim[1].stride;
+    int imgHeight = std::round(2 * conf.stepper.endstopAngle * 180 / M_PI);
+    float currStepperAngle = startStepperAngle;
+
+    for (unsigned int scan = 0; scan < scans2d.size(); scan++) {
+        float scan2DCurrAngle = scans2d[scan].config.min_angle;
+        float scan2DAngleInc = scans2d[scan].config.ang_increment;
+
+        for (unsigned int x = 0; x < scans2d[scan].ranges.size(); x++) {
+            int y = imgHeight - std::round(currStepperAngle * 180.0 / M_PI * std::sin(scan2DCurrAngle) + std::fabs(conf.stepper.endstopAngle) * 180.0 / M_PI);
+            
+            // Overflow might happen.
+            if(y >= imgHeight)
+                continue;
+
+            panoramicScanMsg.data[imgWidth * y + x] = scans2d[scan].ranges[x] / conf.lidar2d.maxRange;  // Normalize the scan.
+            scan2DCurrAngle += scan2DAngleInc;
+        }
+
+        currStepperAngle += sign * conf.stepper.angIncPer2DScan;
+    }
+
+    auto t2 = high_resolution_clock::now();
+    duration<double, std::milli> ms_double = t2 - t1;
+    std::cout << "Point panorama generation soft impl exec time: " << ms_double.count() << "ms." << std::endl;
+}
+
 bool Lidar::init(const Config &lidarConf) {
     conf = lidarConf;
 
     initVariables();
 
-    initScanMsg();
+    initScanMsgs();
 
     if (conf.kernel.useKernel && !kernel.init(conf.kernel.xclbin))
         return false;
@@ -273,13 +322,11 @@ sensor_msgs::msg::PointCloud2 Lidar::scanOnce(bool &err) {
         return cloudMsg;
     }
 
-    float startStepperAngle = conf.stepper.currDirection == StepperController::ENDSTOP1 ? conf.stepper.endstop1Angle : conf.stepper.endstop2Angle;
-    int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
-
     unsigned int totalSamples = 0;
     unsigned int rangesOffset = 0;
     for (unsigned int scan = 0; scan < conf.lidar2d.scansPer3DScan; scan++) {
         scans2d[scan] = scan2D(err);
+
         if (err)
             return cloudMsg;
 
@@ -305,12 +352,12 @@ sensor_msgs::msg::PointCloud2 Lidar::scanOnce(bool &err) {
     }
 
     if (conf.kernel.useKernel) {
-        if (!generatePointCloudHW(startStepperAngle, sign)) {
+        if (!generatePointCloudHW()) {
             err = true;
             return cloudMsg;
         }
     } else
-        generatePointCloudSW(startStepperAngle, sign);
+        generatePointCloudSW();
 
     stepper.forceEnable(false, err);
     if (err)
@@ -320,5 +367,18 @@ sensor_msgs::msg::PointCloud2 Lidar::scanOnce(bool &err) {
     duration<double, std::milli> ms_double = t2 - t1;
     std::cout << "Scan time: " << ms_double.count() << "ms." << std::endl;
 
+    return cloudMsg;
+}
+
+sensor_msgs::msg::PointCloud2 Lidar::scanOnce(std_msgs::msg::Float32MultiArray &panorama, bool &err) {
+    err = false;
+    scanOnce(err);
+
+    if (err)
+        return cloudMsg;
+
+    generatePanoramicImageSW();
+
+    panorama = panoramicScanMsg;
     return cloudMsg;
 }

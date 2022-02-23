@@ -267,4 +267,5 @@ CONFIG_USER_LAYER_0="${PROOT}/project-spec/meta-ros/meta-ros-backports-hardknott
 CONFIG_USER_LAYER_1="${PROOT}/project-spec/meta-ros/meta-ros-common"
 CONFIG_USER_LAYER_2="${PROOT}/project-spec/meta-ros/meta-ros2"
 CONFIG_USER_LAYER_3="${PROOT}/project-spec/meta-ros/meta-ros2-foxy"
-CONFIG_USER_LAYER_4=""
+CONFIG_USER_LAYER_4="${PROOT}/project-spec/meta-vitis-ai"
+CONFIG_USER_LAYER_5=""

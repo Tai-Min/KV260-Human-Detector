@@ -113,7 +113,6 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "krnl" ${buildTy
 then
    info "Building kernels..."
 
-   #v++ --compile --config $projDir/package/app/kernels/vadd/kernel.cfg -o $projDir/package/app/build/krnl_vadd.xo $projDir/package/app/kernels/vadd/krnl_vadd.cpp
    v++ --compile --config $projDir/package/app/kernels/lidar_proc/kernel.cfg -o $projDir/package/app/build/krnl_lidar_proc.xo $projDir/package/app/kernels/lidar_proc/krnl_lidar_proc.cpp
 
 

@@ -6,3 +6,4 @@ CONFIG_peekpoke
 CONFIG_packagegroup-petalinux-som
 CONFIG_packagegroup-core-full-cmdline
 CONFIG_packagegroup-petalinux-jupyter
+CONFIG_packagegroup-petalinux-vitisai

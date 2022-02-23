@@ -9,3 +9,7 @@
 [submodule "package/app/thirdparty/ydlidar"]
 	path = package/app/thirdparty/ydlidar
 	url = https://github.com/YDLIDAR/sdk
+[submodule "linux/project-spec/meta-vitis-ai"]
+	path = linux/project-spec/meta-vitis-ai
+	url = https://github.com/Xilinx/meta-vitis-ai.git
+	branch = rel-v2021.1

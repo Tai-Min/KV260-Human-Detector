@@ -8,3 +8,5 @@ final/
 .Xil/
 *.log
 *.jou
+app/network/images/
+app/network/dataset/

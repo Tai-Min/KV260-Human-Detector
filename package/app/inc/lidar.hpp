@@ -3,6 +3,7 @@
 #include "CYdLidar.h"
 #include "krnl_lidar_proc.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
+#include "std_msgs/msg/float32_multi_array.hpp"
 #include "stepper_controller.hpp"
 
 class Lidar {
@@ -16,13 +17,13 @@ class Lidar {
         unsigned int chipNum = 492;        //!< Number of gpiochip attached to AXI stepper controller.
         unsigned int stepsPer3DScan = 50;  //!< Number of steps per one full scan.
         unsigned int stepsPer2DScan = 5;   //!< Number of steps between two successive 2D scans.
-        float endstop1Angle = -45;         //!< Angle of the first endstop in degrees (after user's setup this will be converted to radians for use inside this class).
-        float endstop2Angle = 45;          //!< Angle of the second endstop in degrees (after user's setup this will be converted to radians for use inside this class).
+        float endstopAngle = 45;           //!< Angle of the endstops in degrees (after user's setup this will be converted to radians for use inside this class). MUST be positive.
+        bool homeClosestEndstop = true;    //!< Whether to home stepper to closest endstop (true) or always home to ENDSTOP1 (false).
 
        private:
-        unsigned int movesPerScan;                                               //!< Number of MOV commands per one full scan.
+        unsigned int movesPer3DScan;                                             //!< Number of MOV commands per one full scan.
         float angIncPer2DScan;                                                   //!< Angular increment between two successive 2D scans in radians.
-        StepperController::Endstop currDirection = StepperController::ENDSTOP2;  //!< Current direction of the stepper motor.
+        StepperController::Endstop currDirection = StepperController::ENDSTOP1;  //!< Current direction of the stepper motor.
     };
 
     /**
@@ -35,8 +36,8 @@ class Lidar {
         unsigned int baudrate = 128000;     //!< Baudrate.
         float minAngle = -180;              //!< Min angle in degrees.
         float maxAngle = 180;               //!< Max angle in degrees.
-        float minRange = 0.1;               //!< Min range in meters.
-        float maxRange = 10;                //!< Max range in meters.
+        float minRange = -10;               //!< Min range in meters.
+        float maxRange = 12;                //!< Max range in meters.
         float offset = 0.055;               //!< Offset from center of the cradle (from threaded rod) in meters.
 
        private:
@@ -52,11 +53,10 @@ class Lidar {
 
    public:
     struct Config {
-        bool homeClosestEndstop = true;  //!< Whether to home stepper to closest endstop (true) or always home to ENDSTOP1 (false).
-        std::string frameId = "map";     //!< Frame ID form ROS messages.
-        StepperConf stepper;             //!< Config for stepper motor.
-        Lidar2DConf lidar2d;             //!< Config for 2D LIDAR.
-        KernelConf kernel;               //!< Config for hardware kernel functions.
+        std::string frameId = "map";  //!< Frame ID form ROS messages.
+        StepperConf stepper;          //!< Config for stepper motor.
+        Lidar2DConf lidar2d;          //!< Config for 2D LIDAR.
+        KernelConf kernel;            //!< Config for hardware kernel functions.
     };
 
    private:
@@ -69,8 +69,9 @@ class Lidar {
     CYdLidar lidar2d;           //!< 2D LIDAR.
     KernelLidarProc kernel;     //!< Kernel wrapper.
 
-    std::vector<LaserScan> scans2d;          //!< Contains list of all scans performed during one full scan.
-    sensor_msgs::msg::PointCloud2 cloudMsg;  //!< Point cloud message for ROS2.
+    std::vector<LaserScan> scans2d;                     //!< Contains list of all scans performed during one full scan.
+    sensor_msgs::msg::PointCloud2 cloudMsg;             //!< Point cloud message for ROS2.
+    std_msgs::msg::Float32MultiArray panoramicScanMsg;  //!< Message that contains 3D scan in form panoramic picture.
 
     /**
      * @brief Perform single 2D scan.
@@ -97,9 +98,9 @@ class Lidar {
     void initVariables();
 
     /**
-     * @brief Initialize cloudMsg with persistent data.
+     * @brief Initialize ROS messages with persistent data.
      */
-    void initScanMsg();
+    void initScanMsgs();
 
     /**
      * @brief Initialize 2D LIDAR.
@@ -122,7 +123,7 @@ class Lidar {
      * @param startStepperAngle Start angle of the stepper of recently obtained full scan.
      * @param sign Whether the angle increases (1) or decreases (-1).
      */
-    void generatePointCloudSW(float startStepperAngle, int sign);
+    void generatePointCloudSW();
 
     /**
      * @brief Generate point cloud based on recently obtained full scan. Uses hardware kernel.
@@ -130,7 +131,9 @@ class Lidar {
      * @param sign Whether the angle increases (1) or decreases (-1).
      * @return True if success, fail if kernel failed for some reason.
      */
-    bool generatePointCloudHW(float startStepperAngle, int sign);
+    bool generatePointCloudHW();
+
+    void generatePanoramicImageSW();
 
    public:
     /**
@@ -173,4 +176,12 @@ class Lidar {
      * @return Generated point cloud, undefined if err = true.
      */
     sensor_msgs::msg::PointCloud2 scanOnce(bool &err);
+
+    /**
+     * @brief Perform one full scan and also generate panoramic from of it.
+     * @param panorama Output panoramic image.
+     * @param err Set to true if scan failed.
+     * @return Generated point cloud, undefined if err = true.
+     */
+    sensor_msgs::msg::PointCloud2 scanOnce(std_msgs::msg::Float32MultiArray &panorama, bool &err);
 };

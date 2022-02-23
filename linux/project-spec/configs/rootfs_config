@@ -4181,6 +4181,7 @@ CONFIG_package-feed-archs=""
 CONFIG_packagegroup-core-full-cmdline=y
 CONFIG_packagegroup-petalinux-jupyter=y
 CONFIG_packagegroup-petalinux-som=y
+CONFIG_packagegroup-petalinux-vitisai=y
 
 #
 # PetaLinux RootFS Settings
