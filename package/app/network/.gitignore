@@ -3,3 +3,4 @@ dataset_raw/
 __pycache__/
 quantized/*.png
 quantized/quantization_results/*
+!quantized/final
