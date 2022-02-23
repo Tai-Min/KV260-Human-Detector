@@ -4,3 +4,4 @@ __pycache__/
 quantized/*.png
 quantized/quantization_results/*
 !quantized/final
+tf_ckpts/*
