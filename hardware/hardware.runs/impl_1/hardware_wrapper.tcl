@@ -133,6 +133,8 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/mateusz/KV260/hardware/hardware.cache/wt [current_project]
   set_property parent.project_path /home/mateusz/KV260/hardware/hardware.xpr [current_project]
+  set_property ip_repo_paths /home/mateusz/Vitis-AI/dsa/DPU-TRD [current_project]
+  update_ip_catalog
   set_property ip_output_repo /home/mateusz/KV260/hardware/hardware.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]

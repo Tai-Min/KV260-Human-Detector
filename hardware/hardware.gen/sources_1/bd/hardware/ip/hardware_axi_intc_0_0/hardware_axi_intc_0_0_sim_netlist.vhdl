@@ -1,8 +1,8 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Sun Feb  6 11:29:05 2022
--- Host        : PC running 64-bit Ubuntu 20.04.3 LTS
+-- Date        : Wed Feb 23 22:09:54 2022
+-- Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : hardware_axi_intc_0_0
@@ -829,8 +829,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity hardware_axi_intc_0_0_intc_core is
   port (
-    s_axi_aresetn_0 : out STD_LOGIC;
     ivr : out STD_LOGIC;
+    s_axi_aresetn_0 : out STD_LOGIC;
     ipr : out STD_LOGIC_VECTOR ( 0 to 0 );
     p_0_in : out STD_LOGIC;
     isr : out STD_LOGIC;
@@ -856,7 +856,7 @@ entity hardware_axi_intc_0_0_intc_core is
 end hardware_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of hardware_axi_intc_0_0_intc_core is
-  signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
+  signal \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IPR_GEN.ipr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1_n_0\ : STD_LOGIC;
   signal \IVR_GEN.ivr[0]_i_1_n_0\ : STD_LOGIC;
@@ -868,7 +868,6 @@ architecture STRUCTURE of hardware_axi_intc_0_0_intc_core is
   signal cie : STD_LOGIC;
   signal hw_intr : STD_LOGIC;
   signal \^ier\ : STD_LOGIC;
-  signal intr_d1 : STD_LOGIC;
   signal intr_ff : STD_LOGIC_VECTOR ( 0 to 1 );
   attribute async_reg : string;
   attribute async_reg of intr_ff : signal is "true";
@@ -924,31 +923,22 @@ begin
       Q => intr_ff(1),
       R => '0'
     );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT3
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"F4"
+      INIT => X"E"
     )
         port map (
-      I0 => intr_d1,
-      I1 => intr_ff(1),
-      I2 => hw_intr,
-      O => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\
+      I0 => intr_ff(1),
+      I1 => hw_intr,
+      O => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\
     );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\,
+      D => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\,
       Q => hw_intr,
       R => \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar[0]_i_1_n_0\
-    );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr_ff(1),
-      Q => intr_d1,
-      R => \^s_axi_aresetn_0\
     );
 \IPR_GEN.ipr[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2082,7 +2072,7 @@ entity hardware_axi_intc_0_0_axi_intc is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of hardware_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of hardware_axi_intc_0_0_axi_intc : entity is -1;
+  attribute C_KIND_OF_INTR of hardware_axi_intc_0_0_axi_intc : entity is -4;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of hardware_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;
@@ -2119,7 +2109,7 @@ architecture STRUCTURE of hardware_axi_intc_0_0_axi_intc is
   signal AXI_LITE_IPIF_I_n_15 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_16 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_6 : STD_LOGIC;
-  signal INTC_CORE_I_n_0 : STD_LOGIC;
+  signal INTC_CORE_I_n_1 : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/p_16_in\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in\ : STD_LOGIC;
@@ -2243,7 +2233,7 @@ AXI_LITE_IPIF_I: entity work.hardware_axi_intc_0_0_axi_lite_ipif
       p_0_in => p_0_in,
       p_16_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_16_in\,
       p_18_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in\,
-      rst_reg => INTC_CORE_I_n_0,
+      rst_reg => INTC_CORE_I_n_1,
       s_axi_aclk => s_axi_aclk,
       s_axi_araddr(6 downto 0) => s_axi_araddr(8 downto 2),
       s_axi_aresetn => s_axi_aresetn,
@@ -2290,7 +2280,7 @@ INTC_CORE_I: entity work.hardware_axi_intc_0_0_intc_core
       p_18_in => \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in\,
       s_axi_aclk => s_axi_aclk,
       s_axi_aresetn => s_axi_aresetn,
-      s_axi_aresetn_0 => INTC_CORE_I_n_0,
+      s_axi_aresetn_0 => INTC_CORE_I_n_1,
       s_axi_wdata(0) => s_axi_wdata(0),
       sie => sie
     );
@@ -2300,7 +2290,7 @@ ip2bus_rdack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic19_out,
       Q => ip2bus_rdack_int_d1,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_rdack_reg: unisim.vcomponents.FDRE
      port map (
@@ -2308,7 +2298,7 @@ ip2bus_rdack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_rdack_prev2,
       Q => ip2bus_rdack,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
      port map (
@@ -2316,7 +2306,7 @@ ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic,
       Q => ip2bus_wrack_int_d1,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 ip2bus_wrack_reg: unisim.vcomponents.FDRE
      port map (
@@ -2324,7 +2314,7 @@ ip2bus_wrack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_wrack_prev2,
       Q => ip2bus_wrack,
-      R => INTC_CORE_I_n_0
+      R => INTC_CORE_I_n_1
     );
 end STRUCTURE;
 library IEEE;
@@ -2410,7 +2400,7 @@ architecture STRUCTURE of hardware_axi_intc_0_0 is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of U0 : label is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of U0 : label is -1;
+  attribute C_KIND_OF_INTR of U0 : label is -4;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of U0 : label is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;

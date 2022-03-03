@@ -157,7 +157,7 @@ class UNet(keras.Model):
 
         # First upsampling.
         self.up1 = layers.UpSampling2D(size=1)
-        self.zero_padding_1 = layers.ZeroPadding2D(padding=((3, 3), (3, 3)))
+        self.zero_padding_1 = layers.ZeroPadding2D(padding=(3, 3))
         self.concat1 = layers.Concatenate(axis=-1)
 
         N = kernel_size**2 * init_filters * 16

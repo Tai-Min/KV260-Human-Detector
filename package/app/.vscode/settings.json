@@ -74,6 +74,7 @@
         "*.tbl": "cpp",
         "*.cp": "cpp",
         "unordered_set": "cpp",
-        "*.def": "cpp"
+        "*.def": "cpp",
+        "any": "cpp"
     }
 }

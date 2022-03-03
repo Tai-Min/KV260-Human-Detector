@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CYdLidar.h"
+#include "detector.hpp"
 #include "krnl_lidar_proc.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
@@ -51,12 +52,17 @@ class Lidar {
         std::string xclbin;     //!< Path to .xclbin file with kernels defined.
     };
 
+    struct DetectorConf {
+        std::string model;  //!< Path to .xmodel file with detector network.
+    };
+
    public:
     struct Config {
         std::string frameId = "map";  //!< Frame ID form ROS messages.
         StepperConf stepper;          //!< Config for stepper motor.
         Lidar2DConf lidar2d;          //!< Config for 2D LIDAR.
         KernelConf kernel;            //!< Config for hardware kernel functions.
+        DetectorConf detector;        //!< Config for detector neural network.
     };
 
    private:
@@ -68,6 +74,7 @@ class Lidar {
     StepperController stepper;  //!< Stepper controller.
     CYdLidar lidar2d;           //!< 2D LIDAR.
     KernelLidarProc kernel;     //!< Kernel wrapper.
+    Detector detector;          //!< Human detector network wrapper.
 
     std::vector<LaserScan> scans2d;                     //!< Contains list of all scans performed during one full scan.
     sensor_msgs::msg::PointCloud2 cloudMsg;             //!< Point cloud message for ROS2.
@@ -109,31 +116,35 @@ class Lidar {
     bool initLidar2D();
 
     /**
-     * @brief Allocate variables that require knowledge that can be obtained only after first full scan.
+     * @brief Allocate variables and buffers that require knowledge that can be obtained only after first full scan.
      * @param totalSamples Sum of samples from every 2D scan.
      * @param samplesPer2DScan Number of samples per one 2D scan.
      * @param scan2DStartAngle Start angle of the 2D scan.
      * @param scan2DAngleStep Step angle of the 2D scan.
      * @return True if allocation successful, false otherwise.
      */
-    bool allocFstScan(unsigned int totalSamples, unsigned int samplesPer2DScan, float scan2DStartAngle, float scan2DAngleStep);
+    bool lateInit(unsigned int totalSamples, unsigned int samplesPer2DScan, float scan2DStartAngle, float scan2DAngleStep);
 
     /**
      * @brief Generate point cloud based on recently obtained full scan. Uses CPU.
-     * @param startStepperAngle Start angle of the stepper of recently obtained full scan.
-     * @param sign Whether the angle increases (1) or decreases (-1).
      */
     void generatePointCloudSW();
 
     /**
      * @brief Generate point cloud based on recently obtained full scan. Uses hardware kernel.
-     * @param startStepperAngle Start angle of the stepper of recently obtained full scan.
-     * @param sign Whether the angle increases (1) or decreases (-1).
      * @return True if success, fail if kernel failed for some reason.
      */
     bool generatePointCloudHW();
 
+    /**
+     * @brief Generate panoramic image based on recently obtained full scan. Uses CPU.
+     */
     void generatePanoramicImageSW();
+
+    /**
+     * @brief Generate panoramic image based on recently obtained full scan. Uses hardware kernel.
+     */
+    bool generatePanoramicImageHW();
 
    public:
     /**
@@ -172,16 +183,19 @@ class Lidar {
 
     /**
      * @brief Perform one full scan.
-     * @param err Set to true if scan failed.
-     * @return Generated point cloud, undefined if err = true.
+     * @return True on success.
      */
-    sensor_msgs::msg::PointCloud2 scanOnce(bool &err);
+    bool scanOnce();
 
     /**
-     * @brief Perform one full scan and also generate panoramic from of it.
-     * @param panorama Output panoramic image.
-     * @param err Set to true if scan failed.
-     * @return Generated point cloud, undefined if err = true.
+     * @brief Get content of scanOnce() as cloud point.
+     * @return The message.
      */
-    sensor_msgs::msg::PointCloud2 scanOnce(std_msgs::msg::Float32MultiArray &panorama, bool &err);
+    sensor_msgs::msg::PointCloud2 getPointCloudMsg(bool &err);
+
+    /**
+     * @brief Get content of scanOnce() as projected image.
+     * @return The message.
+     */
+    std_msgs::msg::Float32MultiArray getPanoramicImageMsg(bool &err);
 };

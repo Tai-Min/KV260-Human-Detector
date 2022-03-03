@@ -61,7 +61,7 @@
 
 
 #ifdef XILINX_SIMULATOR
-hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -90,7 +90,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "199998000");
-    S_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -107,11 +107,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
-    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
@@ -121,11 +121,10 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,16,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
-    mp_S_AXI_transactor->AWID(s_axi_awid);
     mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -145,11 +144,9 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->WLAST(s_axi_wlast);
     mp_S_AXI_transactor->WVALID(s_axi_wvalid);
     mp_S_AXI_transactor->WREADY(s_axi_wready);
-    mp_S_AXI_transactor->BID(s_axi_bid);
     mp_S_AXI_transactor->BRESP(s_axi_bresp);
     mp_S_AXI_transactor->BVALID(s_axi_bvalid);
     mp_S_AXI_transactor->BREADY(s_axi_bready);
-    mp_S_AXI_transactor->ARID(s_axi_arid);
     mp_S_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -164,7 +161,6 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->ARQOS(s_axi_arqos);
     mp_S_AXI_transactor->ARVALID(s_axi_arvalid);
     mp_S_AXI_transactor->ARREADY(s_axi_arready);
-    mp_S_AXI_transactor->RID(s_axi_rid);
     mp_S_AXI_transactor->RDATA(s_axi_rdata);
     mp_S_AXI_transactor->RRESP(s_axi_rresp);
     mp_S_AXI_transactor->RLAST(s_axi_rlast);
@@ -209,11 +205,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
-    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("HAS_SIZE", "0");
@@ -223,7 +219,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,16,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -266,7 +262,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -295,7 +291,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "199998000");
-    S_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -312,11 +308,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
-    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
@@ -326,11 +322,10 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,16,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
-    mp_S_AXI_transactor->AWID(s_axi_awid);
     mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -350,11 +345,9 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->WLAST(s_axi_wlast);
     mp_S_AXI_transactor->WVALID(s_axi_wvalid);
     mp_S_AXI_transactor->WREADY(s_axi_wready);
-    mp_S_AXI_transactor->BID(s_axi_bid);
     mp_S_AXI_transactor->BRESP(s_axi_bresp);
     mp_S_AXI_transactor->BVALID(s_axi_bvalid);
     mp_S_AXI_transactor->BREADY(s_axi_bready);
-    mp_S_AXI_transactor->ARID(s_axi_arid);
     mp_S_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -369,7 +362,6 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->ARQOS(s_axi_arqos);
     mp_S_AXI_transactor->ARVALID(s_axi_arvalid);
     mp_S_AXI_transactor->ARREADY(s_axi_arready);
-    mp_S_AXI_transactor->RID(s_axi_rid);
     mp_S_AXI_transactor->RDATA(s_axi_rdata);
     mp_S_AXI_transactor->RRESP(s_axi_rresp);
     mp_S_AXI_transactor->RLAST(s_axi_rlast);
@@ -414,11 +406,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
-    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("HAS_SIZE", "0");
@@ -428,7 +420,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,16,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -471,7 +463,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm), aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
 
   // initialize pins
@@ -500,7 +492,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "199998000");
-    S_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -517,11 +509,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
-    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
@@ -531,11 +523,10 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,16,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
 
     // S_AXI' transactor ports
 
-    mp_S_AXI_transactor->AWID(s_axi_awid);
     mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
     mp_S_AXI_transactor->AWLEN(s_axi_awlen);
     mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -555,11 +546,9 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->WLAST(s_axi_wlast);
     mp_S_AXI_transactor->WVALID(s_axi_wvalid);
     mp_S_AXI_transactor->WREADY(s_axi_wready);
-    mp_S_AXI_transactor->BID(s_axi_bid);
     mp_S_AXI_transactor->BRESP(s_axi_bresp);
     mp_S_AXI_transactor->BVALID(s_axi_bvalid);
     mp_S_AXI_transactor->BREADY(s_axi_bready);
-    mp_S_AXI_transactor->ARID(s_axi_arid);
     mp_S_AXI_transactor->ARADDR(s_axi_araddr);
     mp_S_AXI_transactor->ARLEN(s_axi_arlen);
     mp_S_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -574,7 +563,6 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     mp_S_AXI_transactor->ARQOS(s_axi_arqos);
     mp_S_AXI_transactor->ARVALID(s_axi_arvalid);
     mp_S_AXI_transactor->ARREADY(s_axi_arready);
-    mp_S_AXI_transactor->RID(s_axi_rid);
     mp_S_AXI_transactor->RDATA(s_axi_rdata);
     mp_S_AXI_transactor->RRESP(s_axi_rresp);
     mp_S_AXI_transactor->RLAST(s_axi_rlast);
@@ -619,11 +607,11 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
-    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("HAS_SIZE", "0");
@@ -633,7 +621,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,16,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
 
     // M_AXI' transactor ports
 
@@ -676,7 +664,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -694,7 +682,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "199998000");
-    S_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -711,11 +699,11 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
-    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
@@ -725,8 +713,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,16,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
-  mp_S_AXI_transactor->AWID(s_axi_awid);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -746,11 +733,9 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
   mp_S_AXI_transactor->WLAST(s_axi_wlast);
   mp_S_AXI_transactor->WVALID(s_axi_wvalid);
   mp_S_AXI_transactor->WREADY(s_axi_wready);
-  mp_S_AXI_transactor->BID(s_axi_bid);
   mp_S_AXI_transactor->BRESP(s_axi_bresp);
   mp_S_AXI_transactor->BVALID(s_axi_bvalid);
   mp_S_AXI_transactor->BREADY(s_axi_bready);
-  mp_S_AXI_transactor->ARID(s_axi_arid);
   mp_S_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S_AXI_transactor->ARLEN(s_axi_arlen);
   mp_S_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -765,7 +750,6 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
   mp_S_AXI_transactor->ARQOS(s_axi_arqos);
   mp_S_AXI_transactor->ARVALID(s_axi_arvalid);
   mp_S_AXI_transactor->ARREADY(s_axi_arready);
-  mp_S_AXI_transactor->RID(s_axi_rid);
   mp_S_AXI_transactor->RDATA(s_axi_rdata);
   mp_S_AXI_transactor->RRESP(s_axi_rresp);
   mp_S_AXI_transactor->RLAST(s_axi_rlast);
@@ -794,11 +778,11 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
-    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("HAS_SIZE", "0");
@@ -808,7 +792,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,16,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
   mp_M_AXI_transactor->AWADDR(m_axi_awaddr);
   mp_M_AXI_transactor->AWPROT(m_axi_awprot);
   mp_M_AXI_transactor->AWVALID(m_axi_awvalid);
@@ -881,7 +865,7 @@ void hardware_auto_pc_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awid("s_axi_awid"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bid("s_axi_bid"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_arid("s_axi_arid"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rid("s_axi_rid"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
+hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hardware_auto_pc_0_sc(nm),  aclk("aclk"), aresetn("aresetn"), s_axi_awaddr("s_axi_awaddr"), s_axi_awlen("s_axi_awlen"), s_axi_awsize("s_axi_awsize"), s_axi_awburst("s_axi_awburst"), s_axi_awlock("s_axi_awlock"), s_axi_awcache("s_axi_awcache"), s_axi_awprot("s_axi_awprot"), s_axi_awregion("s_axi_awregion"), s_axi_awqos("s_axi_awqos"), s_axi_awvalid("s_axi_awvalid"), s_axi_awready("s_axi_awready"), s_axi_wdata("s_axi_wdata"), s_axi_wstrb("s_axi_wstrb"), s_axi_wlast("s_axi_wlast"), s_axi_wvalid("s_axi_wvalid"), s_axi_wready("s_axi_wready"), s_axi_bresp("s_axi_bresp"), s_axi_bvalid("s_axi_bvalid"), s_axi_bready("s_axi_bready"), s_axi_araddr("s_axi_araddr"), s_axi_arlen("s_axi_arlen"), s_axi_arsize("s_axi_arsize"), s_axi_arburst("s_axi_arburst"), s_axi_arlock("s_axi_arlock"), s_axi_arcache("s_axi_arcache"), s_axi_arprot("s_axi_arprot"), s_axi_arregion("s_axi_arregion"), s_axi_arqos("s_axi_arqos"), s_axi_arvalid("s_axi_arvalid"), s_axi_arready("s_axi_arready"), s_axi_rdata("s_axi_rdata"), s_axi_rresp("s_axi_rresp"), s_axi_rlast("s_axi_rlast"), s_axi_rvalid("s_axi_rvalid"), s_axi_rready("s_axi_rready"), m_axi_awaddr("m_axi_awaddr"), m_axi_awprot("m_axi_awprot"), m_axi_awvalid("m_axi_awvalid"), m_axi_awready("m_axi_awready"), m_axi_wdata("m_axi_wdata"), m_axi_wstrb("m_axi_wstrb"), m_axi_wvalid("m_axi_wvalid"), m_axi_wready("m_axi_wready"), m_axi_bresp("m_axi_bresp"), m_axi_bvalid("m_axi_bvalid"), m_axi_bready("m_axi_bready"), m_axi_araddr("m_axi_araddr"), m_axi_arprot("m_axi_arprot"), m_axi_arvalid("m_axi_arvalid"), m_axi_arready("m_axi_arready"), m_axi_rdata("m_axi_rdata"), m_axi_rresp("m_axi_rresp"), m_axi_rvalid("m_axi_rvalid"), m_axi_rready("m_axi_rready")
 {
   // initialize pins
   mp_impl->aclk(aclk);
@@ -899,7 +883,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     xsc::common_cpp::properties S_AXI_transactor_param_props;
     S_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
     S_AXI_transactor_param_props.addLong("FREQ_HZ", "199998000");
-    S_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
+    S_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
     S_AXI_transactor_param_props.addLong("ARUSER_WIDTH", "0");
@@ -916,11 +900,11 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     S_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     S_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     S_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    S_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     S_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
-    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    S_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    S_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     S_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     S_AXI_transactor_param_props.addLong("HAS_SIZE", "1");
@@ -930,8 +914,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     S_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,16,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
-  mp_S_AXI_transactor->AWID(s_axi_awid);
+    mp_S_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<32,40,1,1,1,1,1,1>("S_AXI_transactor", S_AXI_transactor_param_props);
   mp_S_AXI_transactor->AWADDR(s_axi_awaddr);
   mp_S_AXI_transactor->AWLEN(s_axi_awlen);
   mp_S_AXI_transactor->AWSIZE(s_axi_awsize);
@@ -951,11 +934,9 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
   mp_S_AXI_transactor->WLAST(s_axi_wlast);
   mp_S_AXI_transactor->WVALID(s_axi_wvalid);
   mp_S_AXI_transactor->WREADY(s_axi_wready);
-  mp_S_AXI_transactor->BID(s_axi_bid);
   mp_S_AXI_transactor->BRESP(s_axi_bresp);
   mp_S_AXI_transactor->BVALID(s_axi_bvalid);
   mp_S_AXI_transactor->BREADY(s_axi_bready);
-  mp_S_AXI_transactor->ARID(s_axi_arid);
   mp_S_AXI_transactor->ARADDR(s_axi_araddr);
   mp_S_AXI_transactor->ARLEN(s_axi_arlen);
   mp_S_AXI_transactor->ARSIZE(s_axi_arsize);
@@ -970,7 +951,6 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
   mp_S_AXI_transactor->ARQOS(s_axi_arqos);
   mp_S_AXI_transactor->ARVALID(s_axi_arvalid);
   mp_S_AXI_transactor->ARREADY(s_axi_arready);
-  mp_S_AXI_transactor->RID(s_axi_rid);
   mp_S_AXI_transactor->RDATA(s_axi_rdata);
   mp_S_AXI_transactor->RRESP(s_axi_rresp);
   mp_S_AXI_transactor->RLAST(s_axi_rlast);
@@ -999,11 +979,11 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     M_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
-    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "4");
-    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
+    M_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
     M_AXI_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
     M_AXI_transactor_param_props.addLong("HAS_SIZE", "0");
@@ -1013,7 +993,7 @@ hardware_auto_pc_0::hardware_auto_pc_0(const sc_core::sc_module_name& nm) : hard
     M_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_transactor_param_props.addString("CLK_DOMAIN", "hardware_clk_wiz_0_0_clk_out1");
 
-    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,16,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
+    mp_M_AXI_transactor = new xtlm::xaximm_xtlm2pin_t<32,40,1,1,1,1,1,1>("M_AXI_transactor", M_AXI_transactor_param_props);
   mp_M_AXI_transactor->AWADDR(m_axi_awaddr);
   mp_M_AXI_transactor->AWPROT(m_axi_awprot);
   mp_M_AXI_transactor->AWVALID(m_axi_awvalid);

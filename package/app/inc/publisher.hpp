@@ -10,8 +10,6 @@ class PointCloudPublisher : public rclcpp::Node {
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr panoramaPublisher;
     Lidar lidar;                                                                 //!< LIDAR hardware.
 
-    bool generatePanorama = false;
-
     /**
      * @brief Called every specified time, performs one 3D scan per call.
      */
@@ -22,5 +20,5 @@ class PointCloudPublisher : public rclcpp::Node {
      * @brief Construct a new Point Cloud Publisher object.
      * @param conf LIDAR's config.
      */
-    PointCloudPublisher(const Lidar::Config &conf, bool generatePanorama);
+    PointCloudPublisher(const Lidar::Config &conf);
 };

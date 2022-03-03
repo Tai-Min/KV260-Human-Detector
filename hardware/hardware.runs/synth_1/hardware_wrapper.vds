@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Feb  9 21:49:28 2022
-# Process ID: 825257
+# Start of session at: Sat Feb 26 17:51:16 2022
+# Process ID: 238856
 # Current directory: /home/mateusz/KV260/hardware/hardware.runs/synth_1
 # Command line: vivado -log hardware_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hardware_wrapper.tcl
 # Log file: /home/mateusz/KV260/hardware/hardware.runs/synth_1/hardware_wrapper.vds
@@ -11,8 +11,9 @@
 #-----------------------------------------------------------
 source hardware_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mateusz/Vitis-AI/dsa/DPU-TRD'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2708.969 ; gain = 264.129 ; free physical = 11047 ; free virtual = 13636
 Command: synth_design -top hardware_wrapper -part xck26-sfvc784-2LV-c
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
@@ -20,130 +21,151 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 825350
+INFO: [Synth 8-7075] Helper process launched with PID 239037
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2761.637 ; gain = 0.000 ; free physical = 481 ; free virtual = 9913
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2742.105 ; gain = 33.137 ; free physical = 9006 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'hardware_wrapper' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/hdl/hardware_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:56188]
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/tools/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:56188]
 INFO: [Synth 8-6157] synthesizing module 'hardware' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:13]
-INFO: [Synth 8-6157] synthesizing module 'hardware_axi_gpio_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_gpio_0_0' (2#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hardware_axi_iic_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_iic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_iic_0_0' (3#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_iic_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'hardware_axi_iic_0_0' is unconnected for instance 'axi_iic' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:229]
-WARNING: [Synth 8-7071] port 'gpo' of module 'hardware_axi_iic_0_0' is unconnected for instance 'axi_iic' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:229]
-WARNING: [Synth 8-7023] instance 'axi_iic' of module 'hardware_axi_iic_0_0' has 27 connections declared, but only 25 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:229]
-INFO: [Synth 8-6157] synthesizing module 'hardware_axi_intc_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_intc_0_0' (4#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hardware_axi_interconnect_0_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:574]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LUCK8K' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2264]
-INFO: [Synth 8-6157] synthesizing module 'hardware_auto_pc_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_pc_0' (5#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LUCK8K' (6#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2264]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_interconnect_0_0' (7#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:574]
-INFO: [Synth 8-6157] synthesizing module 'hardware_axi_interconnect_1_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:884]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_HBMIUU' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1590]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_HBMIUU' (8#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1590]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1M1ZY8N' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1722]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1M1ZY8N' (9#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1722]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_GKMCFP' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1854]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_GKMCFP' (10#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1854]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1N2NUZ8' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1986]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1N2NUZ8' (11#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1986]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1JAVVLG' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2118]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1JAVVLG' (12#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2118]
-INFO: [Synth 8-6157] synthesizing module 'hardware_xbar_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_xbar_0' (13#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'hardware_xbar_0' is unconnected for instance 'xbar' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1549]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'hardware_xbar_0' is unconnected for instance 'xbar' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1549]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'hardware_xbar_0' has 40 connections declared, but only 38 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1549]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_interconnect_1_0' (14#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:884]
-INFO: [Synth 8-6157] synthesizing module 'hardware_clk_wiz_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_clk_wiz_0_0' (15#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hardware_axi_gpio_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_gpio_0_0' (1#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_axi_intc_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_intc_0_0' (2#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_axi_interconnect_0_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1150]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LUCK8K' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4628]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LUCK8K' (3#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4628]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_interconnect_0_0' (4#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1150]
+INFO: [Synth 8-6157] synthesizing module 'hardware_axi_interconnect_1_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1570]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_HBMIUU' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3106]
+INFO: [Synth 8-6157] synthesizing module 'hardware_auto_pc_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_pc_0' (5#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'hardware_auto_pc_0' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3329]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'hardware_auto_pc_0' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3329]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'hardware_auto_pc_0' has 56 connections declared, but only 54 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3329]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_HBMIUU' (6#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3106]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1M1ZY8N' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3386]
+INFO: [Synth 8-6157] synthesizing module 'hardware_auto_cc_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_cc_0' (7#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1M1ZY8N' (8#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3386]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_GKMCFP' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3782]
+INFO: [Synth 8-6157] synthesizing module 'hardware_auto_pc_1' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_pc_1' (9#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'hardware_auto_pc_1' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4005]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'hardware_auto_pc_1' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4005]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'hardware_auto_pc_1' has 56 connections declared, but only 54 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4005]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_GKMCFP' (10#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:3782]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1N2NUZ8' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4062]
+INFO: [Synth 8-6157] synthesizing module 'hardware_auto_pc_2' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_pc_2' (11#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_pc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'hardware_auto_pc_2' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4285]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'hardware_auto_pc_2' is unconnected for instance 'auto_pc' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4285]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'hardware_auto_pc_2' has 56 connections declared, but only 54 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4285]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1N2NUZ8' (12#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4062]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1JAVVLG' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4342]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1JAVVLG' (13#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4342]
+INFO: [Synth 8-6157] synthesizing module 'hardware_xbar_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_xbar_0' (14#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axi_aruser' does not match port width (64) of module 'hardware_xbar_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2658]
+WARNING: [Synth 8-689] width (32) of port connection 'm_axi_awuser' does not match port width (64) of module 'hardware_xbar_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2670]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_interconnect_1_0' (15#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:1570]
+INFO: [Synth 8-6157] synthesizing module 'hardware_axi_interconnect_2_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2726]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1YIPWJ8' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4914]
+INFO: [Synth 8-6157] synthesizing module 'hardware_auto_us_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_auto_us_0' (16#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_auto_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'hardware_auto_us_0' is unconnected for instance 'auto_us' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:5209]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'hardware_auto_us_0' is unconnected for instance 'auto_us' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:5209]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'hardware_auto_us_0' has 76 connections declared, but only 74 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:5209]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1YIPWJ8' (17#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:4914]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_axi_interconnect_2_1' (18#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:2726]
+INFO: [Synth 8-6157] synthesizing module 'hardware_clk_wiz_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_clk_wiz_0_0' (19#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_clk_wiz_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'hardware_xlslice_0_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlslice_0_0/synth/hardware_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (16#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_xlslice_0_0' (17#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlslice_0_0/synth/hardware_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'hardware_divider_0_1' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_divider_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_divider_0_1' (18#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_divider_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hardware_divider_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_divider_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_divider_0_0' (19#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_divider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (20#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_xlslice_0_0' (21#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlslice_0_0/synth/hardware_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hardware_divider_0_1' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_divider_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_divider_0_1' (22#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_divider_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_divider_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_divider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_divider_0_0' (23#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_divider_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_dpuczdx8g_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_dpuczdx8g_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_dpuczdx8g_0_0' (24#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_dpuczdx8g_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 'dpu0_m_axi_instr_awuser' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 'dpu0_m_axi_instr_wid' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 'dpu0_m_axi_instr_aruser' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 'dpu0_m_axi_data0_wid' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7071] port 'dpu0_m_axi_data1_wid' of module 'hardware_dpuczdx8g_0_0' is unconnected for instance 'dpuczdx8g_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
+WARNING: [Synth 8-7023] instance 'dpuczdx8g_0' of module 'hardware_dpuczdx8g_0_0' has 169 connections declared, but only 162 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:742]
 INFO: [Synth 8-6157] synthesizing module 'hardware_cmd_bits_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_1/synth/hardware_cmd_bits_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (19#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_cmd_bits_1' (20#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_1/synth/hardware_cmd_bits_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (24#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_cmd_bits_1' (25#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_1/synth/hardware_cmd_bits_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'hardware_cmd_bits_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_0/synth/hardware_cmd_bits_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (20#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_cmd_bits_0' (21#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_0/synth/hardware_cmd_bits_0.v:57]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_0_0' (22#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'hardware_proc_sys_reset_0_0' has 10 connections declared, but only 5 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:464]
-INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_1_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_1_0' (23#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:470]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:470]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:470]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:470]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_2' of module 'hardware_proc_sys_reset_1_0' has 10 connections declared, but only 6 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:470]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_1_1' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_1_1' (24#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_proc_sys_reset_1_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_3' of module 'hardware_proc_sys_reset_1_1' has 10 connections declared, but only 5 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:477]
-INFO: [Synth 8-6157] synthesizing module 'hardware_pwm_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_pwm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_pwm_0_0' (25#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_pwm_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hardware_stepper_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_stepper_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_stepper_0_0' (26#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_stepper_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'hardware_system_management_wiz_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_system_management_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_system_management_wiz_0_0' (27#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_system_management_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-WARNING: [Synth 8-7071] port 'channel_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-WARNING: [Synth 8-7071] port 'busy_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-WARNING: [Synth 8-7071] port 'eoc_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-WARNING: [Synth 8-7071] port 'alarm_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-WARNING: [Synth 8-7023] instance 'system_management_wiz' of module 'hardware_system_management_wiz_0_0' has 26 connections declared, but only 21 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:499]
-INFO: [Synth 8-6157] synthesizing module 'hardware_temp2pwm_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_temp2pwm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_temp2pwm_0_0' (28#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_temp2pwm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (25#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_cmd_bits_0' (26#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_cmd_bits_0/synth/hardware_cmd_bits_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_0_0' (27#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:911]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:911]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:911]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_1' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:911]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_1' of module 'hardware_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:911]
+INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_1_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_1_0' (28#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:918]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:918]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:918]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_1_0' is unconnected for instance 'proc_sys_reset_2' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:918]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_2' of module 'hardware_proc_sys_reset_1_0' has 10 connections declared, but only 6 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:918]
+INFO: [Synth 8-6157] synthesizing module 'hardware_proc_sys_reset_1_1' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_proc_sys_reset_1_1' (29#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_proc_sys_reset_1_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:925]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:925]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:925]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'hardware_proc_sys_reset_1_1' is unconnected for instance 'proc_sys_reset_3' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:925]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_3' of module 'hardware_proc_sys_reset_1_1' has 10 connections declared, but only 6 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:925]
+INFO: [Synth 8-6157] synthesizing module 'hardware_pwm_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_pwm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_pwm_0_0' (30#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_pwm_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_stepper_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_stepper_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_stepper_0_0' (31#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_stepper_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'hardware_system_management_wiz_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_system_management_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_system_management_wiz_0_0' (32#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_system_management_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'channel_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:948]
+WARNING: [Synth 8-7071] port 'busy_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:948]
+WARNING: [Synth 8-7071] port 'eoc_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:948]
+WARNING: [Synth 8-7071] port 'alarm_out' of module 'hardware_system_management_wiz_0_0' is unconnected for instance 'system_management_wiz' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:948]
+WARNING: [Synth 8-7023] instance 'system_management_wiz' of module 'hardware_system_management_wiz_0_0' has 26 connections declared, but only 22 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:948]
+INFO: [Synth 8-6157] synthesizing module 'hardware_temp2pwm_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_temp2pwm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_temp2pwm_0_0' (33#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_temp2pwm_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'hardware_xlconcat_0_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlconcat_0_0/synth/hardware_xlconcat_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (29#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_xlconcat_0_0' (30#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlconcat_0_0/synth/hardware_xlconcat_0_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'hardware_zynq_ultra_ps_e_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_zynq_ultra_ps_e_0_0' (31#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-825257-PC/realtime/hardware_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:530]
-WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:530]
-WARNING: [Synth 8-7071] port 'pl_clk1' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:530]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps' of module 'hardware_zynq_ultra_ps_e_0_0' has 44 connections declared, but only 41 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:530]
-INFO: [Synth 8-6155] done synthesizing module 'hardware' (32#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'hardware_wrapper' (33#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/hdl/hardware_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (34#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_xlconcat_0_0' (35#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlconcat_0_0/synth/hardware_xlconcat_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'hardware_xlconcat_3_0' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlconcat_3_0/synth/hardware_xlconcat_3_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_xlconcat_3_0' (36#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xlconcat_3_0/synth/hardware_xlconcat_3_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'hardware_zynq_ultra_ps_e_0_0' [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_zynq_ultra_ps_e_0_0' (37#1) [/home/mateusz/KV260/hardware/hardware.runs/synth_1/.Xil/Vivado-238856-PC/realtime/hardware_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp6_bid' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:985]
+WARNING: [Synth 8-7071] port 'saxigp6_rid' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:985]
+WARNING: [Synth 8-7071] port 'pl_clk1' of module 'hardware_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps' [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:985]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps' of module 'hardware_zynq_ultra_ps_e_0_0' has 165 connections declared, but only 162 given [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:985]
+INFO: [Synth 8-6155] done synthesizing module 'hardware' (38#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/synth/hardware.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'hardware_wrapper' (39#1) [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/hdl/hardware_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2778.227 ; gain = 16.590 ; free physical = 1356 ; free virtual = 10795
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2791.012 ; gain = 82.043 ; free physical = 9879 ; free virtual = 12610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2797.039 ; gain = 35.402 ; free physical = 1352 ; free virtual = 10791
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2808.824 ; gain = 99.855 ; free physical = 9874 ; free virtual = 12605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2797.039 ; gain = 35.402 ; free physical = 1352 ; free virtual = 10791
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2808.824 ; gain = 99.855 ; free physical = 9874 ; free virtual = 12605
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2809.914 ; gain = 0.000 ; free physical = 1348 ; free virtual = 10787
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2808.824 ; gain = 0.000 ; free physical = 9867 ; free virtual = 12598
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -160,12 +182,16 @@ Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardwar
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_1_1/hardware_proc_sys_reset_1_1/hardware_proc_sys_reset_1_1_in_context.xdc] for cell 'hardware_i/proc_sys_reset_3'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0/hardware_axi_intc_0_0_in_context.xdc] for cell 'hardware_i/axi_intc'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0/hardware_axi_intc_0_0_in_context.xdc] for cell 'hardware_i/axi_intc'
-Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_0/s00_couplers/auto_pc'
-Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xbar_0/hardware_xbar_0/hardware_xbar_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/xbar'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xbar_0/hardware_xbar_0/hardware_xbar_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/xbar'
-Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0/hardware_axi_iic_0_0_in_context.xdc] for cell 'hardware_i/axi_iic'
-Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0/hardware_axi_iic_0_0_in_context.xdc] for cell 'hardware_i/axi_iic'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m00_couplers/auto_pc'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m00_couplers/auto_pc'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0/hardware_auto_cc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m01_couplers/auto_cc'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0/hardware_auto_cc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m01_couplers/auto_cc'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_1/hardware_auto_pc_1/hardware_auto_pc_2_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m02_couplers/auto_pc'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_1/hardware_auto_pc_1/hardware_auto_pc_2_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m02_couplers/auto_pc'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_2/hardware_auto_pc_2/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m03_couplers/auto_pc'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_2/hardware_auto_pc_2/hardware_auto_pc_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_1/m03_couplers/auto_pc'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0_in_context.xdc] for cell 'hardware_i/system_management_wiz'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0_in_context.xdc] for cell 'hardware_i/system_management_wiz'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_temp2pwm_0_0/hardware_temp2pwm_0_0/hardware_temp2pwm_0_0_in_context.xdc] for cell 'hardware_i/temp2pwm'
@@ -180,6 +206,10 @@ Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardwar
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_divider_0_1/hardware_divider_0_1/hardware_divider_0_1_in_context.xdc] for cell 'hardware_i/div_stepper'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_stepper_0_0/hardware_stepper_0_0/hardware_stepper_0_0_in_context.xdc] for cell 'hardware_i/stepper_ctrl'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_stepper_0_0/hardware_stepper_0_0/hardware_stepper_0_0_in_context.xdc] for cell 'hardware_i/stepper_ctrl'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0_in_context.xdc] for cell 'hardware_i/dpuczdx8g_0'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0_in_context.xdc] for cell 'hardware_i/dpuczdx8g_0'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_us_0/hardware_auto_us_0/hardware_auto_us_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_2/s00_couplers/auto_us'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_us_0/hardware_auto_us_0/hardware_auto_us_0_in_context.xdc] for cell 'hardware_i/axi_interconnect_2/s00_couplers/auto_us'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/imports/new/system.xdc]
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/imports/new/system.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/imports/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hardware_wrapper_propImpl.xdc].
@@ -188,16 +218,15 @@ Parsing XDC File [/home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2897.680 ; gain = 0.000 ; free physical = 1255 ; free virtual = 10707
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2876.496 ; gain = 0.000 ; free physical = 9797 ; free virtual = 12530
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2897.680 ; gain = 0.000 ; free physical = 1255 ; free virtual = 10707
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2876.496 ; gain = 0.000 ; free physical = 9797 ; free virtual = 12530
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hardware_i/axi_gpio' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hardware_i/system_management_wiz' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2900.648 ; gain = 139.012 ; free physical = 1334 ; free virtual = 10786
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2876.496 ; gain = 167.527 ; free physical = 9877 ; free virtual = 12610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -205,7 +234,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2900.648 ; gain = 139.012 ; free physical = 1334 ; free virtual = 10786
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2876.496 ; gain = 167.527 ; free physical = 9877 ; free virtual = 12610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -217,11 +246,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/proc_sys_reset_1. (con
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/proc_sys_reset_2. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/proc_sys_reset_3. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_intc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1/m01_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1/m02_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1/m03_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_iic. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/system_management_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/temp2pwm. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/divider_pwm. (constraint file  auto generated constraint).
@@ -233,11 +264,15 @@ Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/ena_bit. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/div_stepper. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/stepper_ctrl. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/dpuczdx8g_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/xlconcat_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_2/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for hardware_i/axi_interconnect_2. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2900.648 ; gain = 139.012 ; free physical = 1337 ; free virtual = 10790
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2876.496 ; gain = 167.527 ; free physical = 9877 ; free virtual = 12610
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2900.648 ; gain = 139.012 ; free physical = 1336 ; free virtual = 10789
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2876.496 ; gain = 167.527 ; free physical = 9879 ; free virtual = 12613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -259,25 +294,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 2900.648 ; gain = 139.012 ; free physical = 1323 ; free virtual = 10783
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2876.496 ; gain = 167.527 ; free physical = 9865 ; free virtual = 12604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3305.250 ; gain = 543.613 ; free physical = 721 ; free virtual = 10213
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3320.027 ; gain = 611.059 ; free physical = 9289 ; free virtual = 12029
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3306.250 ; gain = 544.613 ; free physical = 720 ; free virtual = 10212
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3321.027 ; gain = 612.059 ; free physical = 9288 ; free virtual = 12028
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3325.281 ; gain = 563.645 ; free physical = 719 ; free virtual = 10212
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 3341.066 ; gain = 632.098 ; free physical = 9286 ; free virtual = 12025
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -295,37 +330,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -335,69 +370,73 @@ Report BlackBoxes:
 +------+-----------------------------------+----------+
 |      |BlackBox name                      |Instances |
 +------+-----------------------------------+----------+
-|1     |hardware_auto_pc_0                 |         1|
-|2     |hardware_xbar_0                    |         1|
-|3     |hardware_axi_gpio_0_0              |         1|
-|4     |hardware_axi_iic_0_0               |         1|
-|5     |hardware_axi_intc_0_0              |         1|
-|6     |hardware_clk_wiz_0_0               |         1|
-|7     |hardware_divider_0_1               |         1|
-|8     |hardware_divider_0_0               |         1|
-|9     |hardware_proc_sys_reset_0_0        |         1|
-|10    |hardware_proc_sys_reset_1_0        |         1|
-|11    |hardware_proc_sys_reset_1_1        |         1|
-|12    |hardware_pwm_0_0                   |         1|
-|13    |hardware_stepper_0_0               |         1|
-|14    |hardware_system_management_wiz_0_0 |         1|
-|15    |hardware_temp2pwm_0_0              |         1|
-|16    |hardware_zynq_ultra_ps_e_0_0       |         1|
+|1     |hardware_xbar_0                    |         1|
+|2     |hardware_auto_pc_0                 |         1|
+|3     |hardware_auto_cc_0                 |         1|
+|4     |hardware_auto_pc_1                 |         1|
+|5     |hardware_auto_pc_2                 |         1|
+|6     |hardware_auto_us_0                 |         1|
+|7     |hardware_axi_gpio_0_0              |         1|
+|8     |hardware_axi_intc_0_0              |         1|
+|9     |hardware_clk_wiz_0_0               |         1|
+|10    |hardware_divider_0_1               |         1|
+|11    |hardware_divider_0_0               |         1|
+|12    |hardware_dpuczdx8g_0_0             |         1|
+|13    |hardware_proc_sys_reset_0_0        |         1|
+|14    |hardware_proc_sys_reset_1_0        |         1|
+|15    |hardware_proc_sys_reset_1_1        |         1|
+|16    |hardware_pwm_0_0                   |         1|
+|17    |hardware_stepper_0_0               |         1|
+|18    |hardware_system_management_wiz_0_0 |         1|
+|19    |hardware_temp2pwm_0_0              |         1|
+|20    |hardware_zynq_ultra_ps_e_0_0       |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
 +------+---------------------------------+------+
 |      |Cell                             |Count |
 +------+---------------------------------+------+
-|1     |hardware_auto_pc                 |     1|
-|2     |hardware_axi_gpio_0              |     1|
-|3     |hardware_axi_iic_0               |     1|
-|4     |hardware_axi_intc_0              |     1|
-|5     |hardware_clk_wiz_0               |     1|
-|6     |hardware_divider_0               |     2|
-|8     |hardware_proc_sys_reset_0        |     1|
-|9     |hardware_proc_sys_reset_1        |     2|
-|11    |hardware_pwm_0                   |     1|
-|12    |hardware_stepper_0               |     1|
-|13    |hardware_system_management_wiz_0 |     1|
-|14    |hardware_temp2pwm_0              |     1|
-|15    |hardware_xbar                    |     1|
-|16    |hardware_zynq_ultra_ps_e_0       |     1|
-|17    |IBUF                             |     2|
-|18    |IOBUF                            |     2|
-|19    |OBUF                             |     4|
+|1     |hardware_auto_cc                 |     1|
+|2     |hardware_auto_pc                 |     3|
+|5     |hardware_auto_us                 |     1|
+|6     |hardware_axi_gpio_0              |     1|
+|7     |hardware_axi_intc_0              |     1|
+|8     |hardware_clk_wiz_0               |     1|
+|9     |hardware_divider_0               |     2|
+|11    |hardware_dpuczdx8g_0             |     1|
+|12    |hardware_proc_sys_reset_0        |     1|
+|13    |hardware_proc_sys_reset_1        |     2|
+|15    |hardware_pwm_0                   |     1|
+|16    |hardware_stepper_0               |     1|
+|17    |hardware_system_management_wiz_0 |     1|
+|18    |hardware_temp2pwm_0              |     1|
+|19    |hardware_xbar                    |     1|
+|20    |hardware_zynq_ultra_ps_e_0       |     1|
+|21    |IBUF                             |     2|
+|22    |OBUF                             |     4|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.219 ; gain = 569.582 ; free physical = 722 ; free virtual = 10215
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.004 ; gain = 638.035 ; free physical = 9286 ; free virtual = 12026
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 3331.219 ; gain = 465.973 ; free physical = 763 ; free virtual = 10256
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 3331.227 ; gain = 569.582 ; free physical = 763 ; free virtual = 10256
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3347.004 ; gain = 570.363 ; free physical = 9326 ; free virtual = 12065
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 3347.012 ; gain = 638.035 ; free physical = 9326 ; free virtual = 12065
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3334.188 ; gain = 0.000 ; free physical = 755 ; free virtual = 10249
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3352.941 ; gain = 0.000 ; free physical = 9413 ; free virtual = 12152
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3366.906 ; gain = 0.000 ; free physical = 777 ; free virtual = 10274
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3381.660 ; gain = 0.000 ; free physical = 9343 ; free virtual = 12082
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
+  A total of 2 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
 
-Synth Design complete, checksum: 73b61419
+Synth Design complete, checksum: a965c3cf
 INFO: [Common 17-83] Releasing license: Synthesis
-91 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3366.906 ; gain = 605.270 ; free physical = 918 ; free virtual = 10415
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3381.660 ; gain = 672.691 ; free physical = 9482 ; free virtual = 12222
 INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/synth_1/hardware_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hardware_wrapper_utilization_synth.rpt -pb hardware_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Feb  9 21:50:00 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 26 17:52:25 2022...

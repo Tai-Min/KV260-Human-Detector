@@ -86,6 +86,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kv260:part0:1.1 [current_project]
 set_property board_connections {som240_1_connector xilinx.com:som240:som240_1_connector:1.0} [current_project]
+set_property ip_repo_paths /home/mateusz/Vitis-AI/dsa/DPU-TRD [current_project]
+update_ip_catalog
 set_property ip_output_repo /home/mateusz/KV260/hardware/hardware.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

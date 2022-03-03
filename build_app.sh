@@ -113,7 +113,11 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "krnl" ${buildTy
 then
    info "Building kernels..."
 
-   v++ --compile --config $projDir/package/app/kernels/lidar_proc/kernel.cfg -o $projDir/package/app/build/krnl_lidar_proc.xo $projDir/package/app/kernels/lidar_proc/krnl_lidar_proc.cpp
+   v++ --compile --config $projDir/package/app/kernels/ranges_to_cloud/kernel.cfg -o $projDir/package/app/build/krnl_ranges_to_cloud.xo $projDir/package/app/kernels/ranges_to_cloud/krnl_ranges_to_cloud.cpp
+
+   failHandler
+
+   v++ --compile --config $projDir/package/app/kernels/ranges_to_projection/kernel.cfg -o $projDir/package/app/build/krnl_ranges_to_projection.xo $projDir/package/app/kernels/ranges_to_projection/krnl_ranges_to_projection.cpp
 
 
    failHandler
@@ -124,7 +128,7 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "link" ${buildTy
 then
    info "Building hardware container..."
 
-   v++ --link  --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_lidar_proc.xo
+   v++ --link  --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_ranges_to_cloud.xo $projDir/package/app/build/krnl_ranges_to_projection.xo
 
    failHandler
 fi
@@ -137,18 +141,16 @@ then
    
    sysroot="$projDir/package/sdk/sysroots/cortexa72-cortexa53-xilinx-linux"
 
-   flags="-std=c++14 -O2 -Wall -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
+   flags="-std=c++17 -O2 -Wall -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
 
    include="-I$projDir/package/app/thirdparty/ydlidar/include "
 
    libPaths="-L$sysroot/usr/lib/ -L$sysroot/lib/"
-   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt -ltracetools -lrcl -lrclcpp  -lrcutils -lrcpputils -lrcl_yaml_param_parser -lyaml -lrosidl_typesupport_c -lrosidl_typesupport_cpp -lrosidl_runtime_c -lrcl_logging_spdlog -lspdlog -lrmw_implementation -lrmw -lstd_msgs__rosidl_typesupport_cpp -lsensor_msgs__rosidl_typesupport_cpp" 
+   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt -ltracetools -lrcl -lrclcpp -lxir -lrcutils -lrcpputils -lrcl_yaml_param_parser -lyaml -lrosidl_typesupport_c -lrosidl_typesupport_cpp -lrosidl_runtime_c -lrcl_logging_spdlog -lspdlog -lrmw_implementation -lrmw -lstd_msgs__rosidl_typesupport_cpp -lsensor_msgs__rosidl_typesupport_cpp" 
 
    files="$projDir/package/app/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.c $projDir/package/app/thirdparty/ydlidar/src/impl/unix/*.cpp"
 
    aarch64-linux-gnu-g++ $flags $include $libPaths $libs --sysroot=$sysroot -o "$projDir/package/app/final/$appName" $files
-
-
 
    failHandler
 fi
@@ -184,15 +186,21 @@ then
 
    failHandler
 
+   info "Copying network model..."
+
+   (cd "$projDir/package/app/network/quantized/final" && cp unet.xmodel meta.json "$projDir/package/app/final")
+
+   failHandler
+
 fi
 
 if [[ $uploadTarget != "" ]]
 then
    if [[ $petalinuxPass != "" ]]
    then
-      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    else
-      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh $uploadTarget:/home/petalinux && ssh -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    fi   
 fi
 

@@ -6,41 +6,37 @@
 
 using namespace std::chrono_literals;
 
-PointCloudPublisher::PointCloudPublisher(const Lidar::Config& conf, bool generatePanorama) : Node("point_cloud_publisher") {
+PointCloudPublisher::PointCloudPublisher(const Lidar::Config& conf) : Node("point_cloud_publisher") {
     if (!lidar.init(conf)) {
         return;
     }
 
-    this->generatePanorama = generatePanorama;
-
     cloudPublisher = this->create_publisher<sensor_msgs::msg::PointCloud2>("cloud", 10);
 
-    if (generatePanorama)
-        panoramaPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("panorama", 10);
+    panoramaPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("panorama", 10);
 
     timer = this->create_wall_timer(5ms, std::bind(&PointCloudPublisher::timerCallback, this));
 }
 
 void PointCloudPublisher::timerCallback() {
-    bool err;
-    sensor_msgs::msg::PointCloud2 msg;
-    std_msgs::msg::Float32MultiArray panorama;
-
-    if (generatePanorama) {
-        msg = lidar.scanOnce(panorama, err);
-        if (err) {
-        }
-
-        panoramaPublisher->publish(panorama);
+    bool err = !lidar.scanOnce();
+    if (err) {
+        std::cout << "Failed to scan!" << std::endl;
+        return;
     }
 
-    else {
-        msg = lidar.scanOnce(err);
-        if (err) {
-        }
-    }
-
+    sensor_msgs::msg::PointCloud2 msg = lidar.getPointCloudMsg(err);
     msg.header.stamp = this->get_clock()->now();
+    if (err) {
+        std::cout << "Failed to get point cloud!" << std::endl;
+        return;
+    } else
+        cloudPublisher->publish(msg);
 
-    cloudPublisher->publish(msg);
+    std_msgs::msg::Float32MultiArray panorama = lidar.getPanoramicImageMsg(err);
+    if (err) {
+        std::cout << "Failed to get panoramic image!" << std::endl;
+        return;
+    } else
+        panoramaPublisher->publish(panorama);
 }

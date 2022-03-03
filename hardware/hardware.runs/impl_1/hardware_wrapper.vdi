@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Feb  9 21:50:05 2022
-# Process ID: 825524
+# Start of session at: Sat Feb 26 17:52:30 2022
+# Process ID: 239158
 # Current directory: /home/mateusz/KV260/hardware/hardware.runs/impl_1
 # Command line: vivado -log hardware_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hardware_wrapper.tcl -notrace
 # Log file: /home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper.vdi
@@ -11,18 +11,18 @@
 #-----------------------------------------------------------
 source hardware_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mateusz/Vitis-AI/dsa/DPU-TRD'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
 Command: link_design -top hardware_wrapper -part xck26-sfvc784-2LV-c
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_gpio_0_0/hardware_axi_gpio_0_0.dcp' for cell 'hardware_i/axi_gpio'
-INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0.dcp' for cell 'hardware_i/axi_iic'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0.dcp' for cell 'hardware_i/axi_intc'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_clk_wiz_0_0/hardware_clk_wiz_0_0.dcp' for cell 'hardware_i/clk_wiz'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_divider_0_1/hardware_divider_0_1.dcp' for cell 'hardware_i/div_stepper'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_divider_0_0/hardware_divider_0_0.dcp' for cell 'hardware_i/divider_pwm'
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0.dcp' for cell 'hardware_i/dpuczdx8g_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_0_0/hardware_proc_sys_reset_0_0.dcp' for cell 'hardware_i/proc_sys_reset_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_1_0/hardware_proc_sys_reset_1_0.dcp' for cell 'hardware_i/proc_sys_reset_2'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_1_1/hardware_proc_sys_reset_1_1.dcp' for cell 'hardware_i/proc_sys_reset_3'
@@ -31,10 +31,14 @@ INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/ha
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0.dcp' for cell 'hardware_i/system_management_wiz'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_temp2pwm_0_0/hardware_temp2pwm_0_0.dcp' for cell 'hardware_i/temp2pwm'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0.dcp' for cell 'hardware_i/zynq_ultra_ps'
-INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0.dcp' for cell 'hardware_i/axi_interconnect_0/s00_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xbar_0/hardware_xbar_0.dcp' for cell 'hardware_i/axi_interconnect_1/xbar'
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2766.645 ; gain = 0.000 ; free physical = 1604 ; free virtual = 11096
-INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_0/hardware_auto_pc_0.dcp' for cell 'hardware_i/axi_interconnect_1/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0.dcp' for cell 'hardware_i/axi_interconnect_1/m01_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_1/hardware_auto_pc_1.dcp' for cell 'hardware_i/axi_interconnect_1/m02_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_pc_2/hardware_auto_pc_2.dcp' for cell 'hardware_i/axi_interconnect_1/m03_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_us_0/hardware_auto_us_0.dcp' for cell 'hardware_i/axi_interconnect_2/s00_couplers/auto_us'
+Netlist sorting complete. Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2757.641 ; gain = 0.000 ; free physical = 10033 ; free virtual = 12773
+INFO: [Netlist 29-17] Analyzing 1359 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -63,8 +67,6 @@ Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardwar
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_1_1/hardware_proc_sys_reset_1_1.xdc] for cell 'hardware_i/proc_sys_reset_3/U0'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0.xdc] for cell 'hardware_i/axi_intc/U0'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0.xdc] for cell 'hardware_i/axi_intc/U0'
-Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0_board.xdc] for cell 'hardware_i/axi_iic/U0'
-Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_iic_0_0/hardware_axi_iic_0_0_board.xdc] for cell 'hardware_i/axi_iic/U0'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0_board.xdc] for cell 'hardware_i/system_management_wiz/inst'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0_board.xdc] for cell 'hardware_i/system_management_wiz/inst'
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_system_management_wiz_0_0/hardware_system_management_wiz_0_0.xdc] for cell 'hardware_i/system_management_wiz/inst'
@@ -77,17 +79,35 @@ Parsing XDC File [/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/imports/n
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.srcs/constrs_1/imports/new/system.xdc]
 Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_clocks.xdc] for cell 'hardware_i/axi_intc/U0'
 Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_clocks.xdc] for cell 'hardware_i/axi_intc/U0'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc] for cell 'hardware_i/axi_interconnect_1/m01_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc:11]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc:14]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc:18]
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_cc_0/hardware_auto_cc_0_clocks.xdc] for cell 'hardware_i/axi_interconnect_1/m01_couplers/auto_cc/inst'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0_impl.xdc] for cell 'hardware_i/dpuczdx8g_0/inst'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0_impl.xdc] for cell 'hardware_i/dpuczdx8g_0/inst'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0.xdc] for cell 'hardware_i/dpuczdx8g_0/inst'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0.xdc] for cell 'hardware_i/dpuczdx8g_0/inst'
+Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_us_0/hardware_auto_us_0_clocks.xdc] for cell 'hardware_i/axi_interconnect_2/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [/home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_auto_us_0/hardware_auto_us_0_clocks.xdc] for cell 'hardware_i/axi_interconnect_2/s00_couplers/auto_us/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 930 ; free virtual = 10416
+INFO: [Project 1-1687] 2 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 9109 ; free virtual = 11891
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5 instances were transformed.
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  A total of 351 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 158 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
-  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 96 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 4 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 73 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
 
-28 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 3669.797 ; gain = 903.152 ; free physical = 930 ; free virtual = 10416
+link_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:31 . Memory (MB): peak = 4094.590 ; gain = 1336.949 ; free physical = 9104 ; free virtual = 11886
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
@@ -98,58 +118,58 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.66 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 922 ; free virtual = 10408
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 9079 ; free virtual = 11863
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: dd187ad7
+Ending Cache Timing Information Task | Checksum: 1c4d3450f
 
-Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 919 ; free virtual = 10405
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8949 ; free virtual = 11736
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 14 inverter(s) to 248 load pin(s).
+INFO: [Opt 31-138] Pushed 92 inverter(s) to 3550 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 12dfa1f9a
+Phase 1 Retarget | Checksum: e7bcbf27
 
-Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
-INFO: [Opt 31-389] Phase Retarget created 51 cells and removed 358 cells
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8883 ; free virtual = 11673
+INFO: [Opt 31-389] Phase Retarget created 181 cells and removed 603 cells
 INFO: [Opt 31-1021] In phase Retarget, 152 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: ee1db624
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 9 load pin(s).
+Phase 2 Constant propagation | Checksum: f013fea8
 
-Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.20 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
-INFO: [Opt 31-389] Phase Constant propagation created 2 cells and removed 4 cells
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8884 ; free virtual = 11674
+INFO: [Opt 31-389] Phase Constant propagation created 81 cells and removed 1299 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 150 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: f3777405
+Phase 3 Sweep | Checksum: 12906da15
 
-Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.33 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 252 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8886 ; free virtual = 11676
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1292 cells
 INFO: [Opt 31-1021] In phase Sweep, 152 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
-Phase 4 BUFG optimization | Checksum: f3777405
+Phase 4 BUFG optimization | Checksum: 12906da15
 
-Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8884 ; free virtual = 11675
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: f3777405
+Phase 5 Shift Register Optimization | Checksum: 188dfb8ef
 
-Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
-INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8884 ; free virtual = 11676
+INFO: [Opt 31-389] Phase Shift Register Optimization created 2 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: f3777405
+Phase 6 Post Processing Netlist | Checksum: 188dfb8ef
 
-Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.42 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8880 ; free virtual = 11673
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 150 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -159,11 +179,11 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              51  |             358  |                                            152  |
-|  Constant propagation         |               2  |               4  |                                            150  |
-|  Sweep                        |               0  |             252  |                                            152  |
+|  Retarget                     |             181  |             603  |                                            152  |
+|  Constant propagation         |              81  |            1299  |                                            150  |
+|  Sweep                        |               0  |            1292  |                                            152  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               2  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                            150  |
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -171,45 +191,62 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
-Ending Logic Optimization Task | Checksum: 19b5e4049
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8878 ; free virtual = 11674
+Ending Logic Optimization Task | Checksum: f2642b0a
 
-Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:00.46 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 758 ; free virtual = 10244
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 4094.590 ; gain = 0.000 ; free physical = 8878 ; free virtual = 11674
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 19b5e4049
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 757 ; free virtual = 10244
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 102 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 60 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 69 Total Ports: 204
+Ending PowerOpt Patch Enables Task | Checksum: 21144d072
+
+Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.62 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8748 ; free virtual = 11562
+Ending Power Optimization Task | Checksum: 21144d072
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:13 . Memory (MB): peak = 4626.504 ; gain = 531.914 ; free physical = 8823 ; free virtual = 11638
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 19b5e4049
+Ending Final Cleanup Task | Checksum: 21144d072
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 757 ; free virtual = 10244
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8823 ; free virtual = 11638
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 757 ; free virtual = 10244
-Ending Netlist Obfuscation Task | Checksum: 19b5e4049
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8824 ; free virtual = 11639
+Ending Netlist Obfuscation Task | Checksum: 1907a830f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 757 ; free virtual = 10244
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8824 ; free virtual = 11639
 INFO: [Common 17-83] Releasing license: Implementation
-50 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+60 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:24 . Memory (MB): peak = 4626.504 ; gain = 531.914 ; free physical = 8824 ; free virtual = 11639
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3669.797 ; gain = 0.000 ; free physical = 747 ; free virtual = 10237
+Write XDEF Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8696 ; free virtual = 11517
 INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 4626.504 ; gain = 0.000 ; free physical = 8655 ; free virtual = 11499
 INFO: [runtcl-4] Executing : report_drc -file hardware_wrapper_drc_opted.rpt -pb hardware_wrapper_drc_opted.pb -rpx hardware_wrapper_drc_opted.rpx
 Command: report_drc -file hardware_wrapper_drc_opted.rpt -pb hardware_wrapper_drc_opted.pb -rpx hardware_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 869.719 ; free physical = 286 ; free virtual = 9764
+report_drc: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 4950.664 ; gain = 324.160 ; free physical = 8065 ; free virtual = 11061
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
@@ -227,29 +264,29 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9748
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1591713ea
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 8068 ; free virtual = 11068
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11bc1e8d4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9748
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9748
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 8068 ; free virtual = 11068
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 8068 ; free virtual = 11068
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 10372343d
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: bd07dbe1
 
-Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.65 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 290 ; free virtual = 9772
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 8108 ; free virtual = 11116
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1e5e096ca
+Phase 1.3 Build Placer Netlist Model | Checksum: f37af401
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 265 ; free virtual = 9748
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7954 ; free virtual = 10964
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1e5e096ca
+Phase 1.4 Constrain Clocks/Macros | Checksum: f37af401
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 265 ; free virtual = 9748
-Phase 1 Placer Initialization | Checksum: 1e5e096ca
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7953 ; free virtual = 10963
+Phase 1 Placer Initialization | Checksum: f37af401
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 265 ; free virtual = 9748
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7948 ; free virtual = 10958
 
 Phase 2 Global Placement
 
@@ -258,59 +295,71 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1bd892dda
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1508fcd37
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 260 ; free virtual = 9744
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:20 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7930 ; free virtual = 10942
 
 Phase 2.1.1.2 PBP: Clock Region Placement
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 12690d517
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1a94e063a
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 257 ; free virtual = 9743
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:21 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7915 ; free virtual = 10929
 
-Phase 2.1.1.3 PBP: Compute Congestion
-Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 12690d517
+Phase 2.1.1.3 PBP: Discrete Incremental
+Phase 2.1.1.3 PBP: Discrete Incremental | Checksum: 19dc874f6
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 253 ; free virtual = 9740
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:21 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7915 ; free virtual = 10929
 
-Phase 2.1.1.4 PBP: UpdateTiming
-Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1cfa41e3d
+Phase 2.1.1.4 PBP: Compute Congestion
+Phase 2.1.1.4 PBP: Compute Congestion | Checksum: 19dc874f6
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9758
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:22 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7908 ; free virtual = 10921
 
-Phase 2.1.1.5 PBP: Add part constraints
-Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1cfa41e3d
+Phase 2.1.1.5 PBP: Macro Placement
+Phase 2.1.1.5 PBP: Macro Placement | Checksum: 1b7f137a6
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9758
-Phase 2.1.1 Partition Driven Placement | Checksum: 1cfa41e3d
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:22 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7907 ; free virtual = 10920
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 271 ; free virtual = 9758
-Phase 2.1 Floorplanning | Checksum: 1cfa41e3d
+Phase 2.1.1.6 PBP: UpdateTiming
+Phase 2.1.1.6 PBP: UpdateTiming | Checksum: 1c94fa92f
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 272 ; free virtual = 9759
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7892 ; free virtual = 10905
+
+Phase 2.1.1.7 PBP: Add part constraints
+Phase 2.1.1.7 PBP: Add part constraints | Checksum: 1c94fa92f
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7892 ; free virtual = 10905
+Phase 2.1.1 Partition Driven Placement | Checksum: 1c94fa92f
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7904 ; free virtual = 10918
+Phase 2.1 Floorplanning | Checksum: 1c890b20b
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7904 ; free virtual = 10918
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1cfa41e3d
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1c890b20b
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 272 ; free virtual = 9759
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:23 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7904 ; free virtual = 10918
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1cfa41e3d
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1c890b20b
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 272 ; free virtual = 9759
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:24 . Memory (MB): peak = 4950.664 ; gain = 0.000 ; free physical = 7904 ; free virtual = 10918
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 8 LUTNM shape to break, 243 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 5, two critical 3, total 8, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 119 nets or LUTs. Breaked 8 LUTs, combined 111 existing LUTs and moved 0 existing LUT
-INFO: [Physopt 32-1030] Pass 1. Identified 1 candidate driver set for equivalent driver rewiring.
-INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 5 instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 5 existing cells
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 257 ; free virtual = 9746
-INFO: [Physopt 32-65] No nets found for high-fanout optimization.
-INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1035] Found 6 LUTNM shape to break, 649 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 3, two critical 3, total 6, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 296 nets or LUTs. Breaked 6 LUTs, combined 290 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 83 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 6 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 6 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4953.676 ; gain = 0.000 ; free physical = 7888 ; free virtual = 10910
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/s_969b7a19. Replicated 12 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 12 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 12 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 4953.676 ; gain = 0.000 ; free physical = 7886 ; free virtual = 10909
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
@@ -323,7 +372,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 253 ; free virtual = 9742
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4953.676 ; gain = 0.000 ; free physical = 7890 ; free virtual = 10912
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -332,79 +381,79 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            8  |            111  |                   119  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            6  |            290  |                   296  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Equivalent Driver Rewiring                       |            0  |              0  |                     1  |           0  |           1  |  00:00:00  |
-|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |           12  |              0  |                     1  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            8  |            111  |                   120  |           0  |          10  |  00:00:00  |
+|  Total                                            |           18  |            290  |                   298  |           0  |          10  |  00:00:01  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.1 Physical Synthesis In Placer | Checksum: 2e91fa50
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 1af85d4d8
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 251 ; free virtual = 9741
-Phase 2.4 Global Placement Core | Checksum: 103b1b541
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:49 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7884 ; free virtual = 10907
+Phase 2.4 Global Placement Core | Checksum: 17c551916
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 255 ; free virtual = 9745
-Phase 2 Global Placement | Checksum: 103b1b541
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7878 ; free virtual = 10901
+Phase 2 Global Placement | Checksum: 17c551916
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 256 ; free virtual = 9746
+Time (s): cpu = 00:01:50 ; elapsed = 00:00:50 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7903 ; free virtual = 10926
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 28300fc2
+Phase 3.1 Commit Multi Column Macros | Checksum: 1ca117d8b
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 257 ; free virtual = 9748
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:52 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7900 ; free virtual = 10922
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1276f4ac8
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 141573c99
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 256 ; free virtual = 9746
+Time (s): cpu = 00:01:56 ; elapsed = 00:00:54 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7898 ; free virtual = 10921
 
 Phase 3.3 Small Shape DP
 
 Phase 3.3.1 Small Shape Clustering
-Phase 3.3.1 Small Shape Clustering | Checksum: 19138ac41
+Phase 3.3.1 Small Shape Clustering | Checksum: 141fec85b
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 206 ; free virtual = 9702
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:58 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7854 ; free virtual = 10877
 
 Phase 3.3.2 Flow Legalize Slice Clusters
-Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 101791d83
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 13ab04ebf
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 195 ; free virtual = 9691
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:58 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7858 ; free virtual = 10881
 
 Phase 3.3.3 Slice Area Swap
-Phase 3.3.3 Slice Area Swap | Checksum: 19d126c79
+Phase 3.3.3 Slice Area Swap | Checksum: 109cdd49e
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 162 ; free virtual = 9657
-Phase 3.3 Small Shape DP | Checksum: 117044b8d
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:00 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7835 ; free virtual = 10859
+Phase 3.3 Small Shape DP | Checksum: f638f278
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 428 ; free virtual = 9620
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:02 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7851 ; free virtual = 10875
 
 Phase 3.4 Re-assign LUT pins
-Phase 3.4 Re-assign LUT pins | Checksum: 13ad63fad
+Phase 3.4 Re-assign LUT pins | Checksum: 156e033e2
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 415 ; free virtual = 9607
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:04 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7852 ; free virtual = 10875
 
 Phase 3.5 Pipeline Register Optimization
-Phase 3.5 Pipeline Register Optimization | Checksum: 1a847f939
+Phase 3.5 Pipeline Register Optimization | Checksum: 22a401ac3
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 413 ; free virtual = 9605
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:05 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7852 ; free virtual = 10875
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: ccfc6cb3
+Phase 3.6 Fast Optimization | Checksum: 2350bd8e0
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 357 ; free virtual = 9554
-Phase 3 Detail Placement | Checksum: ccfc6cb3
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:09 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7823 ; free virtual = 10847
+Phase 3 Detail Placement | Checksum: 2350bd8e0
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 357 ; free virtual = 9553
+Time (s): cpu = 00:02:36 ; elapsed = 00:01:10 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7822 ; free virtual = 10846
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -412,7 +461,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1ac81bb30
+Post Placement Optimization Initialization | Checksum: 1298428f0
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -420,34 +469,34 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.814 | TNS=-32.812 |
-Phase 1 Physical Synthesis Initialization | Checksum: 216fcc468
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.803 | TNS=-42.429 |
+Phase 1 Physical Synthesis Initialization | Checksum: c8a2dc6f
 
-Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 338 ; free virtual = 9536
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.62 . Memory (MB): peak = 4953.676 ; gain = 0.000 ; free physical = 7788 ; free virtual = 10812
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 2366cdf03
+Ending Physical Synthesis Task | Checksum: 19cd978ed
 
-Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 338 ; free virtual = 9535
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1ac81bb30
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.70 . Memory (MB): peak = 4953.676 ; gain = 0.000 ; free physical = 7789 ; free virtual = 10813
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1298428f0
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 335 ; free virtual = 9533
+Time (s): cpu = 00:03:06 ; elapsed = 00:01:18 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7791 ; free virtual = 10814
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.611. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 178e0bf30
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.668. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1199f8751
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 233 ; free virtual = 9438
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7790 ; free virtual = 10814
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 233 ; free virtual = 9438
-Phase 4.1 Post Commit Optimization | Checksum: 178e0bf30
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7791 ; free virtual = 10815
+Phase 4.1 Post Commit Optimization | Checksum: 1199f8751
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 233 ; free virtual = 9438
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 239 ; free virtual = 9439
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:24 . Memory (MB): peak = 4953.676 ; gain = 3.012 ; free physical = 7791 ; free virtual = 10815
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7790 ; free virtual = 10814
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 25cb6d800
+Phase 4.2 Post Placement Cleanup | Checksum: 1f8ed4732
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
+Time (s): cpu = 00:03:21 ; elapsed = 00:01:28 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7791 ; free virtual = 10815
 
 Phase 4.3 Placer Reporting
 
@@ -457,75 +506,78 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Long Congestion   | Short Congestion  |
 | Direction | Region Size       | Region Size       | Region Size       |
 |___________|___________________|___________________|___________________|
-|      North|                1x1|                1x1|                1x1|
+|      North|                1x1|                2x2|                2x2|
 |___________|___________________|___________________|___________________|
-|      South|                1x1|                1x1|                1x1|
+|      South|                1x1|                2x2|                2x2|
 |___________|___________________|___________________|___________________|
-|       East|                1x1|                1x1|                2x2|
+|       East|                2x2|                1x1|                4x4|
 |___________|___________________|___________________|___________________|
-|       West|                1x1|                1x1|                1x1|
+|       West|                2x2|                1x1|                8x8|
 |___________|___________________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 25cb6d800
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1f8ed4732
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
-Phase 4.3 Placer Reporting | Checksum: 25cb6d800
+Time (s): cpu = 00:03:21 ; elapsed = 00:01:29 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7791 ; free virtual = 10815
+Phase 4.3 Placer Reporting | Checksum: 1f8ed4732
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
+Time (s): cpu = 00:03:21 ; elapsed = 00:01:29 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7791 ; free virtual = 10815
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7791 ; free virtual = 10815
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1cb042289
+Time (s): cpu = 00:03:21 ; elapsed = 00:01:29 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7791 ; free virtual = 10815
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2a9d8fa76
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
-Ending Placer Task | Checksum: 15fdcc5c3
+Time (s): cpu = 00:03:22 ; elapsed = 00:01:29 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7788 ; free virtual = 10812
+Ending Placer Task | Checksum: 29b5d0d0f
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9441
+Time (s): cpu = 00:03:22 ; elapsed = 00:01:29 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7790 ; free virtual = 10814
 INFO: [Common 17-83] Releasing license: Implementation
-93 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+104 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 278 ; free virtual = 9478
+place_design: Time (s): cpu = 00:03:25 ; elapsed = 00:01:31 . Memory (MB): peak = 4994.723 ; gain = 44.059 ; free physical = 7905 ; free virtual = 10929
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 265 ; free virtual = 9474
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7732 ; free virtual = 10897
 INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7859 ; free virtual = 10915
 INFO: [runtcl-4] Executing : report_io -file hardware_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 265 ; free virtual = 9468
+report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.16 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7850 ; free virtual = 10906
 INFO: [runtcl-4] Executing : report_utilization -file hardware_wrapper_utilization_placed.rpt -pb hardware_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file hardware_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 275 ; free virtual = 9478
+report_control_sets: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7865 ; free virtual = 10921
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 0.86s |  WALL: 0.23s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 268 ; free virtual = 9471
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 22.48s |  WALL: 5.01s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7824 ; free virtual = 10881
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.586 | TNS=-30.347 |
-Phase 1 Physical Synthesis Initialization | Checksum: 26ea57ef6
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.661 | TNS=-40.872 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1c9340245
 
-Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.42 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9445
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.586 | TNS=-30.347 |
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7745 ; free virtual = 10802
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.661 | TNS=-40.872 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 26ea57ef6
+Phase 2 DSP Register Optimization | Checksum: 1c9340245
 
-Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.45 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 241 ; free virtual = 9445
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7741 ; free virtual = 10798
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.586 | TNS=-30.347 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.661 | TNS=-40.872 |
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[6]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[2].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[2]
+INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[2]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_n_3. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
@@ -534,20 +586,9 @@ INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_c
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry__0_n_15. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_2_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.545 | TNS=-29.855 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_i_3_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_10. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_7_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_3_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__248_carry_i_3
-INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.516 | TNS=-29.507 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.613 | TNS=-40.296 |
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_14. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__248_carry_i_1
@@ -555,85 +596,72 @@ INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_c
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__2_n_8. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_10_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry_i_2
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_4_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_4
+INFO: [Physopt 32-710] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_12_n_0. Critical path length was reduced through logic transformation on cell hardware_i/divider_pwm/inst/counter0__171_carry__0_i_12_comp.
+INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.569 | TNS=-39.768 |
+INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.562 | TNS=-39.684 |
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19
+INFO: [Physopt 32-710] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_12_n_0. Critical path length was reduced through logic transformation on cell hardware_i/divider_pwm/inst/counter0__171_carry__0_i_12_comp_1.
+INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.479 | TNS=-38.688 |
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19
+INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__1_n_12. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_15_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7
-INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.496 | TNS=-28.778 |
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[8].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[8]
-INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter[8] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_11_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.489 | TNS=-28.750 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_14_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6
-INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_21_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_21
-INFO: [Physopt 32-710] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6_n_0. Critical path length was reduced through logic transformation on cell hardware_i/divider_pwm/inst/counter0__171_carry__0_i_6_comp.
-INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_21_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.457 | TNS=-28.622 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2
-INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_17_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_17
-INFO: [Physopt 32-710] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2_n_0. Critical path length was reduced through logic transformation on cell hardware_i/divider_pwm/inst/counter0__171_carry__0_i_2_comp.
-INFO: [Physopt 32-735] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_17_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.448 | TNS=-28.586 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_14_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[9]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[8].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[8]
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[2].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[2]
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[2]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_n_3. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_14. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__248_carry_i_1
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__2_n_8. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_10_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry_i_2
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_10. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_14_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[9]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.448 | TNS=-28.586 |
-Phase 3 Critical Path Optimization | Checksum: 26ea57ef6
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__1_n_12. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.479 | TNS=-38.688 |
+Phase 3 Critical Path Optimization | Checksum: 1c9340245
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 233 ; free virtual = 9437
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7752 ; free virtual = 10810
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.448 | TNS=-28.586 |
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[8].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[8]
-INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter[8] was not replicated.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.479 | TNS=-38.688 |
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[2].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[2]
+INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter[2] was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[2]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_n_3. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_14. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__248_carry_i_1
@@ -641,46 +669,48 @@ INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_c
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__2_n_8. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_10_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry_i_2
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_10. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_14_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[9]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[8].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[8]
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19
+INFO: [Physopt 32-572] Net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__1_n_12. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter[2].  Did not re-place instance hardware_i/divider_pwm/inst/counter_reg[2]
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter[2]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_n_3. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__0_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_n_9. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__351_carry__0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__306_carry__1_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry__0_n_15. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__282_carry_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry__0_n_14. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_5_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__248_carry_i_1
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__248_carry_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__2_n_8. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_10_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry_i_2
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_n_10. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_14_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[9]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.448 | TNS=-28.586 |
-Phase 4 Critical Path Optimization | Checksum: 26ea57ef6
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__171_carry__0_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__1_n_12. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0.  Did not re-place instance hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter0__0_carry__0_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/counter1[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net hardware_i/divider_pwm/inst/p_0_in[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.479 | TNS=-38.688 |
+Phase 4 Critical Path Optimization | Checksum: 1c9340245
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 240 ; free virtual = 9444
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 240 ; free virtual = 9444
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 239 ; free virtual = 9443
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-1.448 | TNS=-28.586 |
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7750 ; free virtual = 10808
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7753 ; free virtual = 10811
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7753 ; free virtual = 10810
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-2.479 | TNS=-38.688 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -690,25 +720,27 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.138  |          1.761  |            0  |              0  |                     6  |           0  |           2  |  00:00:03  |
-|  Total          |          0.138  |          1.761  |            0  |              0  |                     6  |           0  |           3  |  00:00:03  |
+|  Critical Path  |          0.182  |          2.184  |            0  |              0  |                     4  |           0  |           2  |  00:00:04  |
+|  Total          |          0.182  |          2.184  |            0  |              0  |                     4  |           0  |           3  |  00:00:05  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 239 ; free virtual = 9443
-Ending Physical Synthesis Task | Checksum: 26cc6109f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7754 ; free virtual = 10812
+Ending Physical Synthesis Task | Checksum: 33e3dace6
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 239 ; free virtual = 9443
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7753 ; free virtual = 10811
 INFO: [Common 17-83] Releasing license: Implementation
-250 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+241 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:15 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7826 ; free virtual = 10884
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.12 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 249 ; free virtual = 9462
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4994.723 ; gain = 0.000 ; free physical = 7647 ; free virtual = 10843
 INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 5002.992 ; gain = 8.270 ; free physical = 7783 ; free virtual = 10872
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
@@ -723,184 +755,209 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: a33937a1 ConstDB: 0 ShapeSum: 2410d693 RouteDB: e3d618d0
+Checksum: PlaceDB: f3933f61 ConstDB: 0 ShapeSum: 7f657ce8 RouteDB: df4dbfe1
 
 Phase 1 Build RT Design
-Nodegraph reading from file.  Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.50 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 374 ; free virtual = 9345
-Phase 1 Build RT Design | Checksum: 1487168e5
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.64 . Memory (MB): peak = 5010.996 ; gain = 0.000 ; free physical = 7622 ; free virtual = 10716
+Phase 1 Build RT Design | Checksum: 89ed7011
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 530 ; free virtual = 9330
-Post Restoration Checksum: NetGraph: 5c34fb34 NumContArr: 2f098aaf Constraints: f3eb0522 Timing: 0
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:06 . Memory (MB): peak = 5010.996 ; gain = 0.000 ; free physical = 7633 ; free virtual = 10727
+Post Restoration Checksum: NetGraph: f2687d89 NumContArr: ebfc3e8e Constraints: b155892f Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 17f298b05
+Phase 2.1 Fix Topology Constraints | Checksum: 28fba4546
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 480 ; free virtual = 9281
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 5010.996 ; gain = 0.000 ; free physical = 7572 ; free virtual = 10667
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 17f298b05
+Phase 2.2 Pre Route Cleanup | Checksum: 28fba4546
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 480 ; free virtual = 9281
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 5010.996 ; gain = 0.000 ; free physical = 7572 ; free virtual = 10667
 
 Phase 2.3 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.3 Global Clock Net Routing | Checksum: 11bd56b0a
+Phase 2.3 Global Clock Net Routing | Checksum: 16f4e9c5b
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 472 ; free virtual = 9273
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:07 . Memory (MB): peak = 5071.570 ; gain = 60.574 ; free physical = 7554 ; free virtual = 10650
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 25277a706
+Phase 2.4 Update Timing | Checksum: 2409f6262
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 475 ; free virtual = 9276
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.342 | TNS=-25.444| WHS=-0.007 | THS=-0.007 |
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:11 . Memory (MB): peak = 5071.570 ; gain = 60.574 ; free physical = 7528 ; free virtual = 10624
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.325 | TNS=-34.123| WHS=-1.037 | THS=-1186.850|
 
-Phase 2 Router Initialization | Checksum: 1fea1a363
+Phase 2 Router Initialization | Checksum: 2764a475c
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 473 ; free virtual = 9274
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:18 . Memory (MB): peak = 5136.555 ; gain = 125.559 ; free physical = 7503 ; free virtual = 10599
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.000823145 %
-  Global Horizontal Routing Utilization  = 0.00169914 %
+  Global Vertical Routing Utilization    = 0.00192067 %
+  Global Horizontal Routing Utilization  = 0.000613578 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 3435
+  Number of Failed Nets               = 64521
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 2806
-  Number of Partially Routed Nets     = 629
+  Number of Unrouted Nets             = 56882
+  Number of Partially Routed Nets     = 7639
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1fea1a363
+Phase 3.1 Global Routing | Checksum: 2764a475c
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 473 ; free virtual = 9275
-Phase 3 Initial Routing | Checksum: 1b80e16a9
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:18 . Memory (MB): peak = 5136.555 ; gain = 125.559 ; free physical = 7500 ; free virtual = 10596
+Phase 3 Initial Routing | Checksum: 2502f2794
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 453 ; free virtual = 9254
+Time (s): cpu = 00:02:41 ; elapsed = 00:00:34 . Memory (MB): peak = 5451.555 ; gain = 440.559 ; free physical = 7414 ; free virtual = 10510
+
+INFO: [Route 35-449] Initial Estimated Congestion
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+|           |___________________|___________________|___________________|
+| Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
+|___________|________|__________|________|__________|________|__________|
+|      NORTH|     4x4|      0.29|     2x2|      0.27|     4x4|      1.21|
+|___________|________|__________|________|__________|________|__________|
+|      SOUTH|     4x4|      0.31|     2x2|      0.24|     8x8|      1.23|
+|___________|________|__________|________|__________|________|__________|
+|       EAST|     8x8|      1.47|     4x4|      0.81|   16x16|      3.04|
+|___________|________|__________|________|__________|________|__________|
+|       WEST|   16x16|      1.10|     2x2|      0.36|   16x16|      2.81|
+|___________|________|__________|________|__________|________|__________|
+Congestion Report
+GLOBAL Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+WEST
+	INT_X24Y147->INT_X31Y162 (CLEM_X24Y147->CLEL_R_X31Y162)
+	INT_X24Y152->INT_X31Y159 (CLEM_X24Y152->CLEL_R_X31Y159)
+	INT_X24Y151->INT_X31Y158 (CLEM_X24Y151->CLEL_R_X31Y158)
+	INT_X24Y150->INT_X31Y157 (CLEM_X24Y150->CLEL_R_X31Y157)
+	INT_X24Y149->INT_X31Y156 (CLEM_X24Y149->CLEL_R_X31Y156)
+SHORT Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+EAST
+	INT_X16Y144->INT_X39Y167 (CMT_L_X16Y120->CLEL_R_X39Y167)
+	INT_X16Y144->INT_X31Y159 (CMT_L_X16Y120->CLEL_R_X31Y159)
+	INT_X16Y143->INT_X31Y158 (CMT_L_X16Y120->CLEL_R_X31Y158)
+	INT_X16Y154->INT_X31Y169 (XIPHY_BYTE_L_X16Y150->CLEL_R_X31Y169)
+	INT_X16Y153->INT_X31Y168 (RCLK_HPIO_L_X15Y149->CLEL_R_X31Y168)
+WEST
+	INT_X16Y143->INT_X31Y166 (CMT_L_X16Y120->CLEL_R_X31Y166)
+	INT_X16Y144->INT_X31Y159 (CMT_L_X16Y120->CLEL_R_X31Y159)
+	INT_X16Y155->INT_X31Y170 (XIPHY_BYTE_L_X16Y150->CLEL_R_X31Y170)
+	INT_X16Y154->INT_X31Y169 (XIPHY_BYTE_L_X16Y150->CLEL_R_X31Y169)
+	INT_X16Y153->INT_X31Y168 (RCLK_HPIO_L_X15Y149->CLEL_R_X31Y168)
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 764
- Number of Nodes with overlaps = 94
- Number of Nodes with overlaps = 28
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.843 | TNS=-41.120| WHS=-0.008 | THS=-0.008 |
 
-Phase 4.1 Global Iteration 0 | Checksum: 12c1f55e2
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 21e52791a
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 448 ; free virtual = 9250
+Time (s): cpu = 00:02:51 ; elapsed = 00:00:37 . Memory (MB): peak = 5451.555 ; gain = 440.559 ; free physical = 7420 ; free virtual = 10516
+WARNING: [Route 35-447] Congestion is preventing the router from routing all nets. The router will prioritize the successful completion of routing all nets over timing optimizations.
+Phase 4.1 Global Iteration 0 | Checksum: 1d4a7ba47
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:00:41 . Memory (MB): peak = 5451.555 ; gain = 440.559 ; free physical = 7412 ; free virtual = 10509
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 117
- Number of Nodes with overlaps = 17
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 12544
+ Number of Nodes with overlaps = 1198
+ Number of Nodes with overlaps = 239
+ Number of Nodes with overlaps = 72
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.750 | TNS=-49.091| WHS=-0.042 | THS=-1.417 |
+
+Phase 4.2 Global Iteration 1 | Checksum: 24d9ed5b4
+
+Time (s): cpu = 00:06:17 ; elapsed = 00:01:30 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7221 ; free virtual = 10318
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 214
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.798 | TNS=-48.870| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 1096a335a
+
+Time (s): cpu = 00:06:31 ; elapsed = 00:01:41 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7242 ; free virtual = 10339
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 181
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.767 | TNS=-38.531| WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 22754ff2a
-
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 447 ; free virtual = 9249
-
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 149
- Number of Nodes with overlaps = 20
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.665 | TNS=-38.227| WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 1ae291712
-
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 447 ; free virtual = 9248
-
-Phase 4.4 Global Iteration 3
- Number of Nodes with overlaps = 125
- Number of Nodes with overlaps = 32
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.575 | TNS=-37.757| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.830 | TNS=-49.498| WHS=N/A    | THS=N/A    |
 
-Phase 4.4 Global Iteration 3 | Checksum: 20da83988
+Phase 4.4 Global Iteration 3 | Checksum: 207eb7b11
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 450 ; free virtual = 9251
+Time (s): cpu = 00:06:44 ; elapsed = 00:01:52 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7244 ; free virtual = 10341
+Phase 4 Rip-up And Reroute | Checksum: 207eb7b11
 
-Phase 4.5 Global Iteration 4
- Number of Nodes with overlaps = 132
- Number of Nodes with overlaps = 16
- Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.712 | TNS=-38.643| WHS=N/A    | THS=N/A    |
-
-Phase 4.5 Global Iteration 4 | Checksum: 26120f8cd
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 449 ; free virtual = 9251
-Phase 4 Rip-up And Reroute | Checksum: 26120f8cd
-
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 449 ; free virtual = 9251
+Time (s): cpu = 00:06:44 ; elapsed = 00:01:52 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7244 ; free virtual = 10341
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 2c51550a6
+Phase 5.1.1 Update Timing | Checksum: 2dec01873
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 453 ; free virtual = 9255
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.575 | TNS=-37.757| WHS=0.013  | THS=0.000  |
+Time (s): cpu = 00:06:56 ; elapsed = 00:01:56 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7250 ; free virtual = 10347
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.798 | TNS=-48.870| WHS=0.010  | THS=0.000  |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 368e5316c
+Phase 5.1 Delay CleanUp | Checksum: 1d1f92e56
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 439 ; free virtual = 9241
+Time (s): cpu = 00:06:58 ; elapsed = 00:01:56 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 368e5316c
+Phase 5.2 Clock Skew Optimization | Checksum: 1d1f92e56
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 439 ; free virtual = 9241
-Phase 5 Delay and Skew Optimization | Checksum: 368e5316c
+Time (s): cpu = 00:06:58 ; elapsed = 00:01:56 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
+Phase 5 Delay and Skew Optimization | Checksum: 1d1f92e56
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 439 ; free virtual = 9241
+Time (s): cpu = 00:06:58 ; elapsed = 00:01:56 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 2bd9be212
+Phase 6.1.1 Update Timing | Checksum: 1c66f209f
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 437 ; free virtual = 9239
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.575 | TNS=-33.388| WHS=0.013  | THS=0.000  |
+Time (s): cpu = 00:07:08 ; elapsed = 00:01:59 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.798 | TNS=-46.907| WHS=0.010  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 2bd9be212
+Phase 6.1 Hold Fix Iter | Checksum: 196ae9794
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 437 ; free virtual = 9239
-Phase 6 Post Hold Fix | Checksum: 2bd9be212
+Time (s): cpu = 00:07:08 ; elapsed = 00:01:59 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
+Phase 6 Post Hold Fix | Checksum: 196ae9794
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 437 ; free virtual = 9239
+Time (s): cpu = 00:07:08 ; elapsed = 00:01:59 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7237 ; free virtual = 10334
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.233979 %
-  Global Horizontal Routing Utilization  = 0.334353 %
+  Global Vertical Routing Utilization    = 8.81719 %
+  Global Horizontal Routing Utilization  = 10.9884 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -911,10 +968,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 30.5164%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 24.1706%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 25%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 28.8462%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 67.1362%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 68.2464%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 77.8846%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -936,75 +993,77 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 3285951ac
+Phase 7 Route finalize | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 436 ; free virtual = 9238
+Time (s): cpu = 00:07:09 ; elapsed = 00:02:00 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7234 ; free virtual = 10332
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 3285951ac
+Phase 8 Verifying routed nets | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 434 ; free virtual = 9236
+Time (s): cpu = 00:07:09 ; elapsed = 00:02:00 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7232 ; free virtual = 10329
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 3285951ac
+Phase 9 Depositing Routes | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 433 ; free virtual = 9235
+Time (s): cpu = 00:07:12 ; elapsed = 00:02:02 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7236 ; free virtual = 10333
 
 Phase 10 Resolve XTalk
-Phase 10 Resolve XTalk | Checksum: 3285951ac
+Phase 10 Resolve XTalk | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 435 ; free virtual = 9236
+Time (s): cpu = 00:07:12 ; elapsed = 00:02:02 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7238 ; free virtual = 10335
 
 Phase 11 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.575 | TNS=-33.388| WHS=0.013  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.798 | TNS=-46.907| WHS=0.010  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 11 Post Router Timing | Checksum: 3285951ac
+Phase 11 Post Router Timing | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 434 ; free virtual = 9236
+Time (s): cpu = 00:07:18 ; elapsed = 00:02:03 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7239 ; free virtual = 10336
 Time taken to check if laguna hold fix is required (in secs): 0
 
 Phase 12 Physical Synthesis in Router
 
 Phase 12.1 Physical Synthesis Initialization
-INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.474 | TNS=-31.500 | WHS=0.013 | THS=0.000 |
-Phase 12.1 Physical Synthesis Initialization | Checksum: 3285951ac
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-2.714 | TNS=-45.610 | WHS=0.010 | THS=0.000 |
+Phase 12.1 Physical Synthesis Initialization | Checksum: 1f7e6af63
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 422 ; free virtual = 9222
+Time (s): cpu = 00:07:44 ; elapsed = 00:02:09 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7204 ; free virtual = 10301
 WARNING: [Physopt 32-745] Physical Optimization has determined that the magnitude of the negative slack is too large and it is highly unlikely that slack will be improved. Post-Route Physical Optimization is most effective when WNS is above -0.5ns
 
 Phase 12.2 Critical Path Optimization
-INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.474 | TNS=-31.500 | WHS=0.013 | THS=0.000 |
-INFO: [Physopt 32-952] Improved path group WNS = -1.474. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[4].
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-2.714 | TNS=-45.610 | WHS=0.010 | THS=0.000 |
+INFO: [Physopt 32-952] Improved path group WNS = -2.710. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[6].
+INFO: [Physopt 32-952] Improved path group WNS = -2.660. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[10].
 INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[8].
-INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[5].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter[6].
 INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_out2_hardware_clk_wiz_0_0. Processed net: hardware_i/divider_pwm/inst/counter0__351_carry__0_n_3.
-INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.474 | TNS=-32.045 | WHS=0.013 | THS=0.000 |
-Phase 12.2 Critical Path Optimization | Checksum: 3205c336c
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-2.660 | TNS=-45.585 | WHS=0.010 | THS=0.000 |
+Phase 12.2 Critical Path Optimization | Checksum: 1986316a2
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 421 ; free virtual = 9221
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 421 ; free virtual = 9221
-INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-1.474 | TNS=-32.045 | WHS=0.013 | THS=0.000 |
-Phase 12 Physical Synthesis in Router | Checksum: 3205c336c
+Time (s): cpu = 00:07:52 ; elapsed = 00:02:10 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7198 ; free virtual = 10295
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5483.570 ; gain = 0.000 ; free physical = 7198 ; free virtual = 10295
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-2.660 | TNS=-45.585 | WHS=0.010 | THS=0.000 |
+Phase 12 Physical Synthesis in Router | Checksum: 1986316a2
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 423 ; free virtual = 9223
+Time (s): cpu = 00:07:53 ; elapsed = 00:02:11 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7198 ; free virtual = 10295
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 506 ; free virtual = 9306
+Time (s): cpu = 00:07:53 ; elapsed = 00:02:11 . Memory (MB): peak = 5483.570 ; gain = 472.574 ; free physical = 7371 ; free virtual = 10468
 INFO: [Common 17-83] Releasing license: Implementation
-279 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+270 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 506 ; free virtual = 9306
+route_design: Time (s): cpu = 00:08:06 ; elapsed = 00:02:15 . Memory (MB): peak = 5483.570 ; gain = 480.578 ; free physical = 7371 ; free virtual = 10469
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4539.516 ; gain = 0.000 ; free physical = 491 ; free virtual = 9301
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 5483.570 ; gain = 0.000 ; free physical = 7155 ; free virtual = 10417
 INFO: [Common 17-1381] The checkpoint '/home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 5483.570 ; gain = 0.000 ; free physical = 7295 ; free virtual = 10431
 INFO: [runtcl-4] Executing : report_drc -file hardware_wrapper_drc_routed.rpt -pb hardware_wrapper_drc_routed.pb -rpx hardware_wrapper_drc_routed.rpx
 Command: report_drc -file hardware_wrapper_drc_routed.rpt -pb hardware_wrapper_drc_routed.pb -rpx hardware_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -1017,14 +1076,18 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
 INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/mateusz/KV260/hardware/hardware.runs/impl_1/hardware_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:32 ; elapsed = 00:00:06 . Memory (MB): peak = 5491.570 ; gain = 0.000 ; free physical = 7280 ; free virtual = 10416
 INFO: [runtcl-4] Executing : report_power -file hardware_wrapper_power_routed.rpt -pb hardware_wrapper_power_summary_routed.pb -rpx hardware_wrapper_power_routed.rpx
 Command: report_power -file hardware_wrapper_power_routed.rpt -pb hardware_wrapper_power_summary_routed.pb -rpx hardware_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-291 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+282 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 5515.582 ; gain = 24.012 ; free physical = 7190 ; free virtual = 10342
 INFO: [runtcl-4] Executing : report_route_status -file hardware_wrapper_route_status.rpt -pb hardware_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file hardware_wrapper_timing_summary_routed.rpt -pb hardware_wrapper_timing_summary_routed.pb -rpx hardware_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LV, Temperature grade: C, Delay Type: min_max.
@@ -1043,10 +1106,113 @@ Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 WARNING: [DRC DPIP-2] Input pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 input hardware_i/temp2pwm/inst/pwm_on5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_11f1f7fc/u_d8fbea9d/u_0a24e7a0/u_dsp/g_537424c2.u_dsp48e2 output hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_11f1f7fc/u_d8fbea9d/u_0a24e7a0/u_dsp/g_537424c2.u_dsp48e2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 output hardware_i/temp2pwm/inst/pwm_on5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_082734fc/u_8ae57611/s_ee7921c5_reg multiplier stage hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_082734fc/u_8ae57611/s_ee7921c5_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP hardware_i/temp2pwm/inst/pwm_on5 multiplier stage hardware_i/temp2pwm/inst/pwm_on5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/g_e965d1b7[0].g_1bab7b70[0].g_97350441.u_8cd5f033/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/g_e965d1b7[1].g_1bab7b70[0].g_97350441.u_8cd5f033/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/g_e965d1b7[2].g_1bab7b70[0].g_97350441.u_8cd5f033/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/g_e965d1b7[3].g_1bab7b70[0].g_97350441.u_8cd5f033/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/g_e965d1b7[4].g_1bab7b70[0].g_97350441.u_8cd5f033/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[0].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[1].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[2].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[3].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[0].g_2fad7a3e[4].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[0].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[1].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[2].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[3].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[3].g_4da1bc06[4].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[4].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[4].g_4da1bc06[0].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[4].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[4].g_4da1bc06[1].u_ba2d1c29/g_82761c2d[1].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+WARNING: [DRC REQP-1731] DSP_Abus_preadd_amult_sel_A_sign_bit_restriction: hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/g_306cb058[1].g_2fad7a3e[4].g_4da1bc06[2].u_ba2d1c29/g_82761c2d[0].g_bfd7a743.u_318caada/u_dsp/g_537424c2.u_dsp48e2: When using the PreAdder and AMULTSEL is set to 'AD' and PREADDINSEL is set to 'A', the A operand should be restricted to 26 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [Common 17-14] Message 'DRC REQP-1731' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [DRC RTSTAT-10] No routable loads: 150 net(s) have no routable loads. The problem bus(es) and/or net(s) are hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_master_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_master_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave0_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave0_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave1_reg2[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/daddr_C_slave1_reg[7:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_master_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_master_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave0_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave0_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave1_reg2[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/di_C_slave1_reg[15:0], hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_master_reg, hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_master_reg2, hardware_i/system_management_wiz/inst/AXI_SYSMON_CORE_I/dwe_C_slave0_reg... and (the first 15 of 18 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 4 Warnings
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 111 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -1058,9 +1224,9 @@ Creating bitstream...
 Writing bitstream ./hardware_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [#UNDEF] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/mateusz/KV260/hardware/hardware.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Feb  9 21:51:34 2022. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/mateusz/KV260/hardware/hardware.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Feb 26 17:59:21 2022. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-13 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+14 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 4580.047 ; gain = 40.531 ; free physical = 428 ; free virtual = 9243
-INFO: [Common 17-206] Exiting Vivado at Wed Feb  9 21:51:34 2022...
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 5515.582 ; gain = 0.000 ; free physical = 7095 ; free virtual = 10262
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 26 17:59:21 2022...

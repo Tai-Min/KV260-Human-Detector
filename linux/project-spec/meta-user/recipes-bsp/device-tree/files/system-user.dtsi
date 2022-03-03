@@ -112,3 +112,16 @@
 	/* dma-coherent; */
         /* snps,enable-hibernation; */
 };
+
+&amba { 
+    	dpu {    
+		compatible = "xilinx,dpu";
+		base-addr = <0x81000000>;
+		dpucore {
+				compatible = "xilinx,dpucore";
+				interrupt-parent = <0x04>;
+				interrupts = <0x0 104 0x1>;
+				core-num = <0x1>;
+		};
+        };
+};

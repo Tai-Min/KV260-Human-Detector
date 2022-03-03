@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Sun Feb  6 11:29:05 2022
-| Host         : PC running 64-bit Ubuntu 20.04.3 LTS
+| Date         : Wed Feb 23 22:09:54 2022
+| Host         : PC running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_utilization -file hardware_axi_intc_0_0_utilization_synth.rpt -pb hardware_axi_intc_0_0_utilization_synth.pb
 | Design       : hardware_axi_intc_0_0
 | Device       : xck26sfvc784-2LV
@@ -34,8 +34,8 @@ Table of Contents
 | CLB LUTs*               |   69 |     0 |          0 |    117120 |  0.06 |
 |   LUT as Logic          |   69 |     0 |          0 |    117120 |  0.06 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
-| CLB Registers           |   67 |     0 |          0 |    234240 |  0.03 |
-|   Register as Flip Flop |   67 |     0 |          0 |    234240 |  0.03 |
+| CLB Registers           |   66 |     0 |          0 |    234240 |  0.03 |
+|   Register as Flip Flop |   66 |     0 |          0 |    234240 |  0.03 |
 |   Register as Latch     |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |    0 |     0 |          0 |     14640 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     58560 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 65    |          Yes |       Reset |            - |
+| 64    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -155,10 +155,10 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   65 |            Register |
-| LUT3     |   31 |                 CLB |
+| FDRE     |   64 |            Register |
+| LUT3     |   30 |                 CLB |
 | LUT6     |   22 |                 CLB |
-| LUT2     |   13 |                 CLB |
+| LUT2     |   14 |                 CLB |
 | LUT4     |   12 |                 CLB |
 | LUT5     |    9 |                 CLB |
 | LUT1     |    2 |                 CLB |

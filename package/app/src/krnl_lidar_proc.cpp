@@ -69,7 +69,11 @@ bool KernelLidarProc::init(const std::string& xclbin) {
     if (err != CL_SUCCESS)
         return false;
 
-    kernel = cl::Kernel(program, "krnl_lidar_proc", &err);
+    rangesToCloud = cl::Kernel(program, "krnl_ranges_to_cloud", &err);
+    if (err != CL_SUCCESS)
+        return false;
+
+    rangesToProjection = cl::Kernel(program, "krnl_ranges_to_projection", &err);
     if (err != CL_SUCCESS)
         return false;
 
@@ -83,49 +87,25 @@ void KernelLidarProc::deinit() {
     }
 
     if (cloudSize > 0) {
-        queue.enqueueUnmapMemObject(outBuf, cloudPtr);
+        queue.enqueueUnmapMemObject(cloudBuf, cloudPtr);
         cloudSize = -1;
+    }
+
+    if (projectionSize > 0) {
+        queue.enqueueUnmapMemObject(projectionBuf, projectionPtr);
+        projectionSize = -1;
     }
 
     queue.finish();
 }
 
-bool KernelLidarProc::setPersistentArgs(unsigned int numScans, unsigned int singleScanRangesCnt, float scanStartAngle, float scanAngleInc, float centerOffset) {
-    cl_int err;
-
-    err = kernel.setArg(rangesSizeParamOffset, singleScanRangesCnt);
-    if (err != CL_SUCCESS)
-        return false;
-
-    err = kernel.setArg(numScansParamOffset, numScans);
-    if (err != CL_SUCCESS)
-        return false;
-
-    err = kernel.setArg(scanStartAngleParamOffset, scanStartAngle);
-    if (err != CL_SUCCESS)
-        return false;
-
-    err = kernel.setArg(scanAngleIncParamOffset, scanAngleInc);
-    if (err != CL_SUCCESS)
-        return false;
-
-    err = kernel.setArg(lidarHeightOffsetParamOffset, centerOffset);
-    if (err != CL_SUCCESS)
-        return false;
-
-    return true;
-}
-
-bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize) {
+bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize, int projectionSize) {
     this->rangesSize = rangesSize;
     this->cloudSize = cloudSize;
+    this->projectionSize = projectionSize;
 
     cl_int err;
     rangesBuf = cl::Buffer(context, CL_MEM_READ_ONLY | CL_MEM_ALLOC_HOST_PTR, rangesSize * sizeof(float), nullptr, &err);
-    if (err != CL_SUCCESS)
-        return false;
-
-    outBuf = cl::Buffer(context, CL_MEM_WRITE_ONLY | CL_MEM_ALLOC_HOST_PTR, cloudSize, nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
@@ -133,15 +113,99 @@ bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize) {
     if (err != CL_SUCCESS)
         return false;
 
-    cloudPtr = (uint8_t*)queue.enqueueMapBuffer(outBuf, CL_TRUE, CL_MAP_READ, 0, cloudSize, nullptr, nullptr, &err);
+    cloudBuf = cl::Buffer(context, CL_MEM_WRITE_ONLY | CL_MEM_ALLOC_HOST_PTR, cloudSize, nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
-    err = kernel.setArg(rangesParamOffset, rangesBuf);
+    cloudPtr = (uint8_t*)queue.enqueueMapBuffer(cloudBuf, CL_TRUE, CL_MAP_READ, 0, cloudSize, nullptr, nullptr, &err);
     if (err != CL_SUCCESS)
         return false;
 
-    err = kernel.setArg(outBufParamOffset, outBuf);
+    projectionBuf = cl::Buffer(context, CL_MEM_WRITE_ONLY | CL_MEM_ALLOC_HOST_PTR, projectionSize * sizeof(float), nullptr, &err);
+    if (err != CL_SUCCESS)
+        return false;
+
+    projectionPtr = (float*)queue.enqueueMapBuffer(projectionBuf, CL_TRUE, CL_MAP_READ, 0, projectionSize * sizeof(float), nullptr, nullptr, &err);
+    if (err != CL_SUCCESS)
+        return false;
+
+    return true;
+}
+
+bool KernelLidarProc::setArgsCloudGen(unsigned int numScans, unsigned int singleScanRangesCnt, float scanStartAngle, float scanAngleInc, float centerOffset) {
+    cl_int err;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.rangesBuf, rangesBuf);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.single2DScanSize, singleScanRangesCnt);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.num2DScans, numScans);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.scan2DStartAngle, scanStartAngle);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.scan2DAngleInc, scanAngleInc);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.centerOffset, centerOffset);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.cloudBuf, cloudBuf);
+    if (err != CL_SUCCESS)
+        return false;
+
+    return true;
+}
+
+bool KernelLidarProc::setArgsProjectionGen(unsigned int single2DScanSize, unsigned int num2DScans, float scan2DStartAngle, float scan2DAngleInc, float scan2DMaxRange, float stepperEndstopAngle, unsigned int imgWidth, unsigned int imgHeight) {
+    cl_int err;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.rangesBuf, rangesBuf);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.single2DScanSize, single2DScanSize);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.num2DScans, num2DScans);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.scan2DStartAngle, scan2DStartAngle);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.scan2DAngleInc, scan2DAngleInc);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.scan2DMaxRange, scan2DMaxRange);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.stepperEndstopAngle, stepperEndstopAngle);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.imgBuf, projectionBuf);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.imgWidth, imgWidth);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.imgHeight, imgHeight);
     if (err != CL_SUCCESS)
         return false;
 
@@ -155,22 +219,43 @@ void KernelLidarProc::setRangesChunk(const std::vector<float>& ranges, unsigned 
 bool KernelLidarProc::runCloudGen(float stepperStartAngle, float stepperAngleInc) {
     cl_int err;
 
-    err = kernel.setArg(stepperStartAngleParamOffset, stepperStartAngle);
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.stepperStartAngle, stepperStartAngle);
     if (err != CL_SUCCESS)
         return false;
 
-    err = kernel.setArg(stepperAngleIntParamOffset, stepperAngleInc);
+    err = rangesToCloud.setArg(rangesToCloudParamOffsets.stepperAngleInc, stepperAngleInc);
     if (err != CL_SUCCESS)
         return false;
 
     queue.enqueueMigrateMemObjects({rangesBuf}, 0);
-    queue.enqueueTask(kernel);
-    queue.enqueueMigrateMemObjects({outBuf}, CL_MIGRATE_MEM_OBJECT_HOST);
+    queue.enqueueTask(rangesToCloud);
+    queue.enqueueMigrateMemObjects({cloudBuf}, CL_MIGRATE_MEM_OBJECT_HOST);
+
+    return true;
+}
+
+bool KernelLidarProc::runProjectionGen(float stepperStartAngle, float stepperAngleInc) {
+    cl_int err;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.stepperStartAngle, stepperStartAngle);
+    if (err != CL_SUCCESS)
+        return false;
+
+    err = rangesToProjection.setArg(rangesToProjectionParamOffsets.stepperAngleInc, stepperAngleInc);
+    if (err != CL_SUCCESS)
+        return false;
+
+    queue.enqueueMigrateMemObjects({rangesBuf}, 0);
+    queue.enqueueTask(rangesToProjection);
+    queue.enqueueMigrateMemObjects({projectionBuf}, CL_MIGRATE_MEM_OBJECT_HOST);
 
     return true;
 }
 
 void KernelLidarProc::getCloudBuf(std::vector<uint8_t>& buf) {
-    buf.resize(cloudSize);
     std::copy(cloudPtr, cloudPtr + cloudSize, buf.data());
+}
+
+void KernelLidarProc::getProjectionBuff(std::vector<float>& buf) {
+    std::copy(projectionPtr, projectionPtr + projectionSize, buf.data());
 }

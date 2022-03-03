@@ -1,8 +1,8 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-// Date        : Sun Feb  6 11:29:05 2022
-// Host        : PC running 64-bit Ubuntu 20.04.3 LTS
+// Date        : Wed Feb 23 22:09:54 2022
+// Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_axi_intc_0_0/hardware_axi_intc_0_0_sim_netlist.v
 // Design      : hardware_axi_intc_0_0
@@ -109,7 +109,7 @@ module hardware_axi_intc_0_0
   (* C_IRQ_IS_LEVEL = "1" *) 
   (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) 
   (* C_KIND_OF_EDGE = "-1" *) 
-  (* C_KIND_OF_INTR = "-1" *) 
+  (* C_KIND_OF_INTR = "-4" *) 
   (* C_KIND_OF_LVL = "-1" *) 
   (* C_MB_CLK_NOT_CONNECTED = "1" *) 
   (* C_NUM_INTR_INPUTS = "1" *) 
@@ -841,7 +841,7 @@ endmodule
 (* C_HAS_ILR = "0" *) (* C_HAS_IPR = "1" *) (* C_HAS_IVR = "1" *) 
 (* C_HAS_SIE = "1" *) (* C_INSTANCE = "hardware_axi_intc_0_0" *) (* C_IRQ_ACTIVE = "1'b1" *) 
 (* C_IRQ_IS_LEVEL = "1" *) (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) (* C_KIND_OF_EDGE = "-1" *) 
-(* C_KIND_OF_INTR = "-1" *) (* C_KIND_OF_LVL = "-1" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
+(* C_KIND_OF_INTR = "-4" *) (* C_KIND_OF_LVL = "-1" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
 (* C_NUM_INTR_INPUTS = "1" *) (* C_NUM_SW_INTR = "0" *) (* C_NUM_SYNC_FF = "2" *) 
 (* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "axi_intc" *) 
 (* hdl = "VHDL" *) (* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) 
@@ -909,7 +909,7 @@ module hardware_axi_intc_0_0_axi_intc
   wire AXI_LITE_IPIF_I_n_15;
   wire AXI_LITE_IPIF_I_n_16;
   wire AXI_LITE_IPIF_I_n_6;
-  wire INTC_CORE_I_n_0;
+  wire INTC_CORE_I_n_1;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_16_in ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/p_18_in ;
@@ -1042,7 +1042,7 @@ module hardware_axi_intc_0_0_axi_intc
         .p_0_in(p_0_in),
         .p_16_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_16_in ),
         .p_18_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_18_in ),
-        .rst_reg(INTC_CORE_I_n_0),
+        .rst_reg(INTC_CORE_I_n_1),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr[8:2]),
         .s_axi_aresetn(s_axi_aresetn),
@@ -1084,7 +1084,7 @@ module hardware_axi_intc_0_0_axi_intc
         .p_18_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_18_in ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
-        .s_axi_aresetn_0(INTC_CORE_I_n_0),
+        .s_axi_aresetn_0(INTC_CORE_I_n_1),
         .s_axi_wdata(s_axi_wdata[0]),
         .sie(sie));
   FDRE ip2bus_rdack_int_d1_reg
@@ -1092,25 +1092,25 @@ module hardware_axi_intc_0_0_axi_intc
         .CE(1'b1),
         .D(Or128_vec2stdlogic19_out),
         .Q(ip2bus_rdack_int_d1),
-        .R(INTC_CORE_I_n_0));
+        .R(INTC_CORE_I_n_1));
   FDRE ip2bus_rdack_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(ip2bus_rdack_prev2),
         .Q(ip2bus_rdack),
-        .R(INTC_CORE_I_n_0));
+        .R(INTC_CORE_I_n_1));
   FDRE ip2bus_wrack_int_d1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(Or128_vec2stdlogic),
         .Q(ip2bus_wrack_int_d1),
-        .R(INTC_CORE_I_n_0));
+        .R(INTC_CORE_I_n_1));
   FDRE ip2bus_wrack_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(ip2bus_wrack_prev2),
         .Q(ip2bus_wrack),
-        .R(INTC_CORE_I_n_0));
+        .R(INTC_CORE_I_n_1));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
@@ -1292,8 +1292,8 @@ endmodule
 
 (* ORIG_REF_NAME = "intc_core" *) 
 module hardware_axi_intc_0_0_intc_core
-   (s_axi_aresetn_0,
-    ivr,
+   (ivr,
+    s_axi_aresetn_0,
     ipr,
     p_0_in,
     isr,
@@ -1313,8 +1313,8 @@ module hardware_axi_intc_0_0_intc_core
     p_18_in,
     intr,
     p_16_in);
-  output s_axi_aresetn_0;
   output ivr;
+  output s_axi_aresetn_0;
   output [0:0]ipr;
   output p_0_in;
   output isr;
@@ -1337,7 +1337,7 @@ module hardware_axi_intc_0_0_intc_core
 
   wire Bus_RNW_reg;
   wire \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]_0 ;
-  wire \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0 ;
+  wire \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0 ;
   wire \IPR_GEN.ipr[0]_i_1_n_0 ;
   wire \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1_n_0 ;
   wire \IVR_GEN.ivr[0]_i_1_n_0 ;
@@ -1352,7 +1352,6 @@ module hardware_axi_intc_0_0_intc_core
   wire iar;
   wire ier;
   wire [0:0]intr;
-  wire intr_d1;
   (* async_reg = "true" *) wire [0:1]intr_ff;
   wire [0:0]ipr;
   wire irq;
@@ -1396,25 +1395,18 @@ module hardware_axi_intc_0_0_intc_core
         .D(intr_ff[0]),
         .Q(intr_ff[1]),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hF4)) 
-    \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1 
-       (.I0(intr_d1),
-        .I1(intr_ff[1]),
-        .I2(hw_intr),
-        .O(\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0 ));
-  FDRE \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr_reg[0] 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1 
+       (.I0(intr_ff[1]),
+        .I1(hw_intr),
+        .O(\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0 ));
+  FDRE \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0 ),
+        .D(\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0 ),
         .Q(hw_intr),
         .R(\REG_GEN[0].IAR_NORMAL_MODE_GEN.iar[0]_i_1_n_0 ));
-  FDRE \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1_reg 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(intr_ff[1]),
-        .Q(intr_d1),
-        .R(s_axi_aresetn_0));
   LUT2 #(
     .INIT(4'h8)) 
     \IPR_GEN.ipr[0]_i_1 
