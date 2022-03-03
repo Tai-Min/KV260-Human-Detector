@@ -5,3 +5,4 @@ quantized/
 quantized/quantization_results/
 !quantized/final
 tf_ckpts/
+*.h5
