@@ -6,3 +6,4 @@ device_tree/
 .ipcache/
 hardware/*.xsa
 hardware/hardware.cache
+package/embed_platform/hw/hardware.xsa
