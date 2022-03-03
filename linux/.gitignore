@@ -10,3 +10,4 @@ pre-built/linux/
 *.log
 /components/plnx_workspace
 /components/yocto
+project-spec/hw-description/system.xsa
