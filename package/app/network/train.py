@@ -44,6 +44,9 @@ if path:
 else:
     print("Initializing training from scratch.")
 
+# Convert to functional model.
+net = net.model((90, 666, 1))
+net.summary()
 
 @tf.function
 def train_step(inputs, labels, weights):

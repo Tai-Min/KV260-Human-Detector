@@ -4,3 +4,5 @@
 *.str
 device_tree/
 .ipcache/
+hardware/*.xsa
+hardware/hardware.cache
