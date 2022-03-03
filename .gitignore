@@ -7,3 +7,4 @@ device_tree/
 hardware/*.xsa
 hardware/hardware.cache
 package/embed_platform/hw/hardware.xsa
+package/embed_platform/tempdsa/hardware.xsa
