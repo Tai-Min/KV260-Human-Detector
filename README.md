@@ -11,34 +11,51 @@ This repository contains all files and instructions required to recreate the pro
 # Recreating the project
 ## PCB shield
 
-Use included in \<REPO>/pmod_shield Gerber files to order the shield using some PCB manufacturing service, or use indluded PDF to [etch it by yourself](https://www.instructables.com/How-to-Etch-a-PCB/).
+Use included in \<REPO>/pmod_shield/grbl Gerber files to order the shield using some PCB manufacturing service, or use included \<REPO>/pmod_shield/pcb.pdf to [etch it by yourself](https://www.instructables.com/How-to-Etch-a-PCB/).
 
+For the parts you will need:
 * 1x A4988 stepper motor driver,
 * 2x 2 pin female JST PCB connectors,
 * 1x 4 pin female JST PCB connector or 4x1 male vertical goldpin connector, whatever fits your stepper motor better,
 * 1x 2x6 pin male horizontal goldpin connector,
-* 2x 8x1 female goldpin connector,
-* 1x 5.08mm terminal block
+* 2x 8x1 female vertical goldpin connectors,
+* 1x 5.08mm screw terminal block
 
 Solder the parts as in the picture below (ignore crossed parts):
 
-TODO: image
+![Pmod shield](https://github.com/Tai-Min/KV260-Human-Detector/blob/master/media/pmod.jpg "Pmod shield")
  
 ## Attaching hardware
-Print listed below parts:
-TODO parts
+Print listed below parts (from \<REPO>/stl):
+* 1x bottom_panel
+* 1x bottom_panel_stopper
+* 2x bottom_panel_feets
+* 2x lidar_frame
+* 1x motor_frame
+* 2x top_panel
+* 1x cradle
+* lidar_board_holder
+* 1x nema_connector
 
 1) Screw 3D printed parts using M3 15mm screws,
-2) Attach 608 bearings into bearing holes of TODO(PART NAME),
-3) Slide TODO sizemm threaded rod through cradle into TODO(stepper shaft connector),
-4) 
-5) Using M3 15mm screws and corresponding nuts, screw NEMA17 stepper motor, Creality endstops, YDlidar X4 and it's board UART as shown below:
-
+2) Insert 608 bearings into bearing holes of lidar_frames,
+3) Slide 190mm threaded rod through bearings and cradle (with M8 nuts inserted) into nema_connector,
+5) Using M3 15mm screws and corresponding nuts, screw NEMA17 stepper motor, Creality endstops and YDlidar X4 
 6) Slide KV260 into the frame,
 7) Connect LIDAR through it's UART board to one of KV260's USB ports, 
 8) Connect PMod shield to KV260 and then connect stepper motor and endstops to the shield.
 9) Connect KV260 to PC and to local network using Ethernet connector.
- 
+
+Use these images for reference:
+
+![Assembly](https://github.com/Tai-Min/KV260-Human-Detector/blob/master/media/assembly_1.jpg "Assembly")
+
+![Assembly](https://github.com/Tai-Min/KV260-Human-Detector/blob/master/media/assembly_2.jpg "Assembly")
+
+![Assembly](https://github.com/Tai-Min/KV260-Human-Detector/blob/master/media/assembly_3.jpg "Assembly")
+
+![Connections](https://github.com/Tai-Min/KV260-Human-Detector/blob/master/media/schematic.jpg "Connections")
+
 ## Building the software
 Project created and tested using Ubuntu-20.04.
 
@@ -120,7 +137,7 @@ source ./setup.sh
 ```
 * Sudo is required to use xmutil and access /lib folder.
 * source.sh will setup FPGA bitstream and source ROS2 into our environment
-* smart_lidar will start the built application.
+* smart_lidar will start the application.
 
 ### Troubleshoting
 If PetaLinux does not build due to error in Vitis-AI meta package, try to remove "dnndk" package from \<REPO>/linux/components/yocto/layers/meta-petalinux/recipes-core/packagegroups/packagegroup-petalinux-vitisai.bb
