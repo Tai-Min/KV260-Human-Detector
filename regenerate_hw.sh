@@ -183,7 +183,7 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "plat" ${buildTy
 then
    info "Updating platform..."
 
-   xsct "$projDir/scripts/update_platform.tcl" "$projDir"
+   cp $projDir/hardware/hardware.xsa $projDir/package/embed_platform/hw/hardware.xsa && cp $projDir/hardware/hardware.xsa $projDir/package/embed_platform/tempdsa/hardware.xsa && xsct "$projDir/scripts/update_platform.tcl" "$projDir"
 
    failHandler
 fi

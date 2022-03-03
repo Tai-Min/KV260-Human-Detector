@@ -13,17 +13,17 @@
   <File Type="PLACE-DCP" Name="hardware_wrapper_placed.dcp"/>
   <File Type="OPT-DCP" Name="hardware_wrapper_opt.dcp"/>
   <File Type="ROUTE-BUS-SKEW" Name="hardware_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="hardware_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="hardware_wrapper_timing_summary_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="hardware_wrapper.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="hardware_wrapper.sysdef"/>
   <File Type="BITSTR-MMI" Name="hardware_wrapper.mmi"/>
   <File Type="BITSTR-BMM" Name="hardware_wrapper_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="hardware_wrapper_clock_utilization_routed.rpt"/>
   <File Type="BITSTR-NKY" Name="hardware_wrapper.nky"/>
   <File Type="BITSTR-RBT" Name="hardware_wrapper.rbt"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="hardware_wrapper_bus_skew_routed.rpx"/>
   <File Type="REPORTS-TCL" Name="hardware_wrapper_reports.tcl"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hardware_wrapper_timing_summary_routed.rpx"/>
   <File Type="RBD_FILE" Name="hardware_wrapper.rbd"/>
   <File Type="BITSTR-MSK" Name="hardware_wrapper.msk"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="hardware_wrapper_bus_skew_routed.pb"/>
@@ -147,19 +147,19 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_temp2pwm_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_pwm_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_stepper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_dpuczdx8g_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_system_management_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="hardware_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_temp2pwm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_divider_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_pwm_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_proc_sys_reset_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_stepper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hardware_zynq_ultra_ps_e_0_0"/>
 </GenRun>
