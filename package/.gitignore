@@ -1,7 +1,7 @@
 sdk/
 build/
 embed_platform/logs
-./app/final/
+app/final/
 .analytics
 .metadata/
 .ipcache/

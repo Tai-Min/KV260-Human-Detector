@@ -1,0 +1,12 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "unet.xmodel",
+    "kernel": [
+        "subgraph_quant_batch_normalization_7",
+        "subgraph_quant_batch_normalization_6",
+        "subgraph_quant_concatenate_3",
+        "subgraph_quant_batch_normalization_5",
+        "subgraph_quant_batch_normalization"
+    ],
+    "target": "DPUCZDX8G_ISA0_B800_01000020A2012201"
+}
