@@ -3,6 +3,6 @@ dataset_raw/
 __pycache__/
 quantized/
 quantized/quantization_results/
-!quantized/final
+!quantized/final/*
 tf_ckpts/
 *.h5

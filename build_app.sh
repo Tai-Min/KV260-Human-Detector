@@ -198,9 +198,9 @@ if [[ $uploadTarget != "" ]]
 then
    if [[ $petalinuxPass != "" ]]
    then
-      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel meta.json $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    else
-      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel meta.json $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    fi   
 fi
 

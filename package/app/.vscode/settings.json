@@ -76,5 +76,6 @@
         "unordered_set": "cpp",
         "*.def": "cpp",
         "any": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": false
 }

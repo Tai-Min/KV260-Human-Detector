@@ -76,7 +76,7 @@ for _ in range(epochs):
 
         # Save checkpoint and show some results.
         ckpt.step.assign_add(1)
-        if int(ckpt.step) % 1 == 0:
+        if int(ckpt.step) % 100 == 0:
             path = manager.save()
             print("Checkpoint saved: %s." % path)
 

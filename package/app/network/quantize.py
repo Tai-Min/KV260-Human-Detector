@@ -5,6 +5,7 @@ from tensorflow_model_optimization.quantization.keras import vitis_quantize
 from display import write_quantization_progress
 import os
 import shutil
+import sys
 
 ###
 # Run in Vitis-AI container!
@@ -41,6 +42,8 @@ dataset = tf.data.Dataset.from_generator(
 quantizer = vitis_quantize.VitisQuantizer(net)
 quantized_net = quantizer.quantize_model(calib_dataset=dataset)
 quantized_net.save('./quantized/inference_model.h5')
+
+sys.exit(0)
 
 # Verify the model somehow.
 img_dir = "./quantized/quantizaton_results"
