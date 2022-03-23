@@ -1,14 +1,28 @@
 #pragma once
-
 #include <vart/runner.hpp>
 #include <xir/graph/graph.hpp>
-
 class Detector {
    private:
-    std::vector<const xir::Subgraph*> dpuSubgraphs;
-    std::vector<std::unique_ptr<vart::Runner>> runner;
+    std::unique_ptr<xir::Graph> graph;
+    std::unique_ptr<vart::Runner> runner;
 
-    std::vector<const xir::Subgraph*> getDPUSubgraph(const std::unique_ptr<xir::Graph> &fullGraph);
+    bool allGood = false;
+    bool fstScan = true;
+
+    int inputHeight;
+    int inputWidth;
+    float inputScaler;
+
+    int outputHeight;
+    int outputWidth;
+    int outputScaler;
+
+    std::vector<int8_t> inputData;
+    std::vector<int8_t> outputData;
+
+    void fillInputData(const std::vector<float> &img, int imgWidth, int imgHeight);
+
+    std::vector<float> convertOutputData(int imgWidth, int imgHeight);
 
    public:
     Detector() = default;
@@ -22,4 +36,6 @@ class Detector {
     void deinit();
 
     bool good();
+
+    std::vector<float> run(const std::vector<float> &img, int imgWidth, int imgHeight);
 };

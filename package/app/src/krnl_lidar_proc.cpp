@@ -1,6 +1,7 @@
 #include "../inc/krnl_lidar_proc.hpp"
 
 #include <fstream>
+#include <iostream>
 
 KernelLidarProc::KernelLidarProc(const std::string& xclbin) {
     if (!init(xclbin))
@@ -17,6 +18,7 @@ bool KernelLidarProc::findDevice() {
     cl::Platform::get(&platforms);
     for (auto platform : platforms) {
         std::string platformName = platform.getInfo<CL_PLATFORM_NAME>();
+        std::cout << platformName << std::endl;
         if (platformName == "Xilinx") {
             devices.clear();
             platform.getDevices(CL_DEVICE_TYPE_ACCELERATOR, &devices);
@@ -49,6 +51,7 @@ bool KernelLidarProc::loadBinary(const std::string& xclbin) {
 }
 
 bool KernelLidarProc::init(const std::string& xclbin) {
+    //return true;
     cl_int err;
 
     if (!findDevice())
@@ -81,6 +84,7 @@ bool KernelLidarProc::init(const std::string& xclbin) {
 }
 
 void KernelLidarProc::deinit() {
+    //return;
     if (rangesSize > 0) {
         queue.enqueueUnmapMemObject(rangesBuf, rangesPtr);
         rangesSize = -1;
@@ -100,6 +104,7 @@ void KernelLidarProc::deinit() {
 }
 
 bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize, int projectionSize) {
+    //return true;
     this->rangesSize = rangesSize;
     this->cloudSize = cloudSize;
     this->projectionSize = projectionSize;
@@ -133,6 +138,7 @@ bool KernelLidarProc::allocateBuffers(int rangesSize, int cloudSize, int project
 }
 
 bool KernelLidarProc::setArgsCloudGen(unsigned int numScans, unsigned int singleScanRangesCnt, float scanStartAngle, float scanAngleInc, float centerOffset) {
+    //return true;
     cl_int err;
 
     err = rangesToCloud.setArg(rangesToCloudParamOffsets.rangesBuf, rangesBuf);
@@ -167,6 +173,7 @@ bool KernelLidarProc::setArgsCloudGen(unsigned int numScans, unsigned int single
 }
 
 bool KernelLidarProc::setArgsProjectionGen(unsigned int single2DScanSize, unsigned int num2DScans, float scan2DStartAngle, float scan2DAngleInc, float scan2DMaxRange, float stepperEndstopAngle, unsigned int imgWidth, unsigned int imgHeight) {
+    //return true;
     cl_int err;
 
     err = rangesToProjection.setArg(rangesToProjectionParamOffsets.rangesBuf, rangesBuf);
@@ -213,10 +220,12 @@ bool KernelLidarProc::setArgsProjectionGen(unsigned int single2DScanSize, unsign
 }
 
 void KernelLidarProc::setRangesChunk(const std::vector<float>& ranges, unsigned int offset) {
+    //return;
     std::copy(ranges.begin(), ranges.end(), rangesPtr + offset);
 }
 
 bool KernelLidarProc::runCloudGen(float stepperStartAngle, float stepperAngleInc) {
+    //return true;
     cl_int err;
 
     err = rangesToCloud.setArg(rangesToCloudParamOffsets.stepperStartAngle, stepperStartAngle);
@@ -235,6 +244,7 @@ bool KernelLidarProc::runCloudGen(float stepperStartAngle, float stepperAngleInc
 }
 
 bool KernelLidarProc::runProjectionGen(float stepperStartAngle, float stepperAngleInc) {
+    //return true;
     cl_int err;
 
     err = rangesToProjection.setArg(rangesToProjectionParamOffsets.stepperStartAngle, stepperStartAngle);
@@ -253,9 +263,11 @@ bool KernelLidarProc::runProjectionGen(float stepperStartAngle, float stepperAng
 }
 
 void KernelLidarProc::getCloudBuf(std::vector<uint8_t>& buf) {
+    //return;
     std::copy(cloudPtr, cloudPtr + cloudSize, buf.data());
 }
 
 void KernelLidarProc::getProjectionBuff(std::vector<float>& buf) {
+    //return;
     std::copy(projectionPtr, projectionPtr + projectionSize, buf.data());
 }

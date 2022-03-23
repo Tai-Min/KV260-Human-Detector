@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Wed Feb 23 22:24:11 2022
+| Date         : Fri Mar 18 15:52:42 2022
 | Host         : PC running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_utilization -file hardware_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb hardware_zynq_ultra_ps_e_0_0_utilization_synth.pb
 | Design       : hardware_zynq_ultra_ps_e_0_0
@@ -104,11 +104,11 @@ Table of Contents
 +----------------------+------+-------+------------+-----------+-------+
 |       Site Type      | Used | Fixed | Prohibited | Available | Util% |
 +----------------------+------+-------+------------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    2 |     0 |          0 |       352 |  0.57 |
+| GLOBAL CLOCK BUFFERs |    1 |     0 |          0 |       352 |  0.28 |
 |   BUFGCE             |    0 |     0 |          0 |       112 |  0.00 |
 |   BUFGCE_DIV         |    0 |     0 |          0 |        16 |  0.00 |
 |   BUFG_GT            |    0 |     0 |          0 |        96 |  0.00 |
-|   BUFG_PS            |    2 |     0 |          0 |        96 |  2.08 |
+|   BUFG_PS            |    1 |     0 |          0 |        96 |  1.04 |
 |   BUFGCTRL*          |    0 |     0 |          0 |        32 |  0.00 |
 | PLL                  |    0 |     0 |          0 |         8 |  0.00 |
 | MMCM                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -156,8 +156,8 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | LUT1     |  264 |                 CLB |
-| BUFG_PS  |    2 |               Clock |
 | PS8      |    1 |            Advanced |
+| BUFG_PS  |    1 |               Clock |
 +----------+------+---------------------+
 
 

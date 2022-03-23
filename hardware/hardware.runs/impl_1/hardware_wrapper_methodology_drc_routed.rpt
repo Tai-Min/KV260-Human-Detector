@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Sat Feb 26 17:58:48 2022
+| Date         : Tue Mar 22 19:53:47 2022
 | Host         : PC running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_methodology -file hardware_wrapper_methodology_drc_routed.rpt -pb hardware_wrapper_methodology_drc_routed.pb -rpx hardware_wrapper_methodology_drc_routed.rpx
 | Design       : hardware_wrapper
@@ -23,33 +23,34 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 77
-+-----------+------------------+-------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                       | Violations |
-+-----------+------------------+-------------------------------------------------------------------+------------+
-| TIMING-2  | Critical Warning | Invalid primary clock source pin                                  | 1          |
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree                | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                       | 43         |
-| TIMING-54 | Critical Warning | Scoped false path or clock group constraint between clocks        | 2          |
-| DPIR-2    | Warning          | Asynchronous driver check                                         | 10         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                      | 1          |
-| TIMING-9  | Warning          | Unknown CDC Logic                                                 | 1          |
-| TIMING-16 | Warning          | Large setup violation                                             | 13         |
-| TIMING-46 | Warning          | Multicycle path with tied CE pins                                 | 2          |
-| TIMING-47 | Warning          | False path or asynchronous clock group between synchronous clocks | 2          |
-| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC                        | 1          |
-+-----------+------------------+-------------------------------------------------------------------+------------+
+             Violations found: 71
++-----------+------------------+------------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                                | Violations |
++-----------+------------------+------------------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree         | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                | 43         |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                  | 2          |
+| TIMING-54 | Critical Warning | Scoped false path or clock group constraint between clocks | 2          |
+| DPIR-2    | Warning          | Asynchronous driver check                                  | 10         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                               | 1          |
+| TIMING-9  | Warning          | Unknown CDC Logic                                          | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                              | 3          |
+| TIMING-46 | Warning          | Multicycle path with tied CE pins                          | 2          |
+| CLKC-26   | Advisory         | MMCME4 with BUF_IN drives sequential IO with CLKOUT0       | 1          |
+| CLKC-30   | Advisory         | MMCME4 not driven by IO has BUFG in feedback loop          | 2          |
+| CLKC-56   | Advisory         | MMCME4 with global clock driver has no LOC                 | 2          |
++-----------+------------------+------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-2#1 Critical Warning
-Invalid primary clock source pin  
-A primary clock hardware_i/clk_wiz/inst/clk_in1 is created on an inappropriate pin hardware_i/clk_wiz/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
-Related violations: <none>
-
 TIMING-4#1 Critical Warning
 Invalid primary clock redefinition on a clock tree  
-Invalid clock redefinition on a clock tree. The primary clock hardware_i/clk_wiz/inst/clk_in1 is defined downstream of clock clk_pl_0 and overrides its insertion delay and/or waveform definition
+Invalid clock redefinition on a clock tree. The primary clock hardware_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_pl_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock hardware_i/clk_wiz_1/inst/clk_in1 is defined downstream of clock clk_pl_0 and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -267,14 +268,24 @@ Non-clocked sequential cell
 The clock pin hardware_i/temp2pwm/inst/pwm_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock hardware_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin hardware_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#2 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock hardware_i/clk_wiz_1/inst/clk_in1 is created on an inappropriate internal pin hardware_i/clk_wiz_1/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
 TIMING-54#1 Critical Warning
 Scoped false path or clock group constraint between clocks  
-A scoped False Path timing constraint is set between clocks clk_out1_hardware_clk_wiz_0_0 and clk_out2_hardware_clk_wiz_0_0 (see constraint position 15 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope. 
+A scoped False Path timing constraint is set between clocks dpu_hardware_clk_wiz_0_2 and global_hardware_clk_wiz_1_0_1 (see constraint position 15 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope. 
 Related violations: <none>
 
 TIMING-54#2 Critical Warning
 Scoped false path or clock group constraint between clocks  
-A scoped False Path timing constraint is set between clocks clk_out2_hardware_clk_wiz_0_0 and clk_out1_hardware_clk_wiz_0_0 (see constraint position 14 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope. 
+A scoped False Path timing constraint is set between clocks global_hardware_clk_wiz_1_0_1 and dpu_hardware_clk_wiz_0_2 (see constraint position 16 in the Timing Constraint window in Vivado IDE). It is not recommended to define such scoped constraints between clocks as the constraint impacts timing paths outside of the scope. 
 Related violations: <none>
 
 DPIR-2#1 Warning
@@ -352,94 +363,54 @@ Unknown CDC Logic
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
 Related violations: <none>
 
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -1.036 ns between hardware_i/div_stepper/inst/counter_reg[8]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/div_stepper/inst/counter_reg[19]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on stop1 relative to clock(s) hardware_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -2.493 ns between hardware_i/divider_pwm/inst/counter_reg[3]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[5]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on stop2 relative to clock(s) hardware_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -2.515 ns between hardware_i/divider_pwm/inst/counter_reg[3]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[4]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -2.545 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[13]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -2.567 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[12]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -2.585 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[11]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -2.586 ns between hardware_i/divider_pwm/inst/counter_reg[3]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[7]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -2.616 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[9]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -2.618 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[15]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -2.623 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[10]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#11 Warning
-Large setup violation  
-There is a large setup violation of -2.626 ns between hardware_i/divider_pwm/inst/counter_reg[3]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[6]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#12 Warning
-Large setup violation  
-There is a large setup violation of -2.653 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[14]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#13 Warning
-Large setup violation  
-There is a large setup violation of -2.660 ns between hardware_i/divider_pwm/inst/counter_reg[6]/C (clocked by clk_out2_hardware_clk_wiz_0_0) and hardware_i/divider_pwm/inst/counter_reg[8]/D (clocked by clk_out2_hardware_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on ena relative to clock(s) hardware_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-46#1 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/u_79b076cc/s_a6ff9657_reg/Q and hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_09bd46fc/u_9e6ea7a1/u_9ab8484f/u_549bd8e2/u_79b076cc/s_d5e73dc1_reg/D with a direct connection and the CE pins connected to VCC (see constraint position 11 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hardware_i/DPUCZDX8G_0/inst/g_8aa581ff.u_33f22aee/u_9dacd827/u_396da9c8/u_692652ac/u_db51cb91/u_c48af76d/u_e7f65ec9/s_c5f05557_reg/Q and hardware_i/DPUCZDX8G_0/inst/g_8aa581ff.u_33f22aee/u_9dacd827/u_396da9c8/u_692652ac/u_db51cb91/u_c48af76d/u_e7f65ec9/s_2572e6a0_reg/D with a direct connection and the CE pins connected to VCC (see constraint position 12 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
 TIMING-46#2 Warning
 Multicycle path with tied CE pins  
-One or more multicycle paths are defined between registers hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/u_3047897e/s_a6ff9657_reg/Q and hardware_i/dpuczdx8g_0/inst/g_69639a2a.u_e7514e2b/u_1a76dde4/u_6274c5fa/u_c7f3290b/u_85184a7f/u_3047897e/s_d5e73dc1_reg/D with a direct connection and the CE pins connected to VCC (see constraint position 11 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
+One or more multicycle paths are defined between registers hardware_i/DPUCZDX8G_0/inst/g_8aa581ff.u_33f22aee/u_9dacd827/u_531b179c/u_55dabb40/u_b2e34f77/u_dfc91371/s_c5f05557_reg/Q and hardware_i/DPUCZDX8G_0/inst/g_8aa581ff.u_33f22aee/u_9dacd827/u_531b179c/u_55dabb40/u_b2e34f77/u_dfc91371/s_2572e6a0_reg/D with a direct connection and the CE pins connected to VCC (see constraint position 14 in the Timing Constraint window in Vivado IDE).  This may result in an inaccurate path requirement.
 Related violations: <none>
 
-TIMING-47#1 Warning
-False path or asynchronous clock group between synchronous clocks  
-A False Path timing constraint is set between synchronous clocks clk_out1_hardware_clk_wiz_0_0 and clk_out2_hardware_clk_wiz_0_0 (see constraint position 15 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+CLKC-26#1 Advisory
+MMCME4 with BUF_IN drives sequential IO with CLKOUT0  
+The MMCME4 cell hardware_i/clk_wiz_1/inst/mmcme4_adv_inst has COMPENSATION value BUF_IN, but CLKOUT0 output drives sequential cells directly connected to ports. In order to achieve insertion delay and phase-alignment for the sequential cells directly connected to ports, a COMPENSATION of ZHOLD must be used. (The problem cell is stop2_IBUF_inst/IBUFCTRL_INST (in stop2_IBUF_inst macro).)
 Related violations: <none>
 
-TIMING-47#2 Warning
-False path or asynchronous clock group between synchronous clocks  
-A False Path timing constraint is set between synchronous clocks clk_out2_hardware_clk_wiz_0_0 and clk_out1_hardware_clk_wiz_0_0 (see constraint position 14 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via set_false_path or set_clock_groups may result in failure in hardware.
+CLKC-30#1 Advisory
+MMCME4 not driven by IO has BUFG in feedback loop  
+The MMCME4 cell hardware_i/clk_wiz_0/inst/mmcme4_adv_inst has a BUFGCE hardware_i/clk_wiz_0/inst/clkf_buf clock buffer in the feedback loop, but the clock input is not directly driven by an I/O to create a Zero Delay Buffer Clock (a common use for having a buffer in the feedback loop). If there is no specific need for this buffer in the feedback loop (e.g. no timing paths between CLKINx/CLKOUTx domains or low latency requirement), then it is suggested to remove that BUFG* from the feedback path. This will allow for a lower power solution and free the clock resource for other purposes.
+Related violations: <none>
+
+CLKC-30#2 Advisory
+MMCME4 not driven by IO has BUFG in feedback loop  
+The MMCME4 cell hardware_i/clk_wiz_1/inst/mmcme4_adv_inst has a BUFGCE hardware_i/clk_wiz_1/inst/clkf_buf clock buffer in the feedback loop, but the clock input is not directly driven by an I/O to create a Zero Delay Buffer Clock (a common use for having a buffer in the feedback loop). If there is no specific need for this buffer in the feedback loop (e.g. no timing paths between CLKINx/CLKOUTx domains or low latency requirement), then it is suggested to remove that BUFG* from the feedback path. This will allow for a lower power solution and free the clock resource for other purposes.
 Related violations: <none>
 
 CLKC-56#1 Advisory
 MMCME4 with global clock driver has no LOC  
-The MMCME4_ADV cell hardware_i/clk_wiz/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) hardware_i/zynq_ultra_ps/inst/buffer_pl_clk_0.PL_CLK_0_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+The MMCME4_ADV cell hardware_i/clk_wiz_0/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) hardware_i/zynq_ultra_ps/inst/buffer_pl_clk_0.PL_CLK_0_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+CLKC-56#2 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell hardware_i/clk_wiz_1/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) hardware_i/zynq_ultra_ps/inst/buffer_pl_clk_0.PL_CLK_0_BUFG and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
 Related violations: <none>
 
 

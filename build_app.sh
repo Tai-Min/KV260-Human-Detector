@@ -54,7 +54,7 @@ getInvalidBuildType() {
    local e
    for e
    do
-      if [[ $e != "all" ]] && [[ $e != "krnl" ]] && [[ $e != "link" ]] && [[ $e != "app" ]] && [[ $e != "pkg" ]] && [[ $e != "none" ]]
+      if [[ $e != "all" ]] && [[ $e != "krnl" ]] && [[ $e != "link" ]] && [[ $e != "app" ]] && [[ $e != "app_dummy" ]] && [[ $e != "pkg" ]] && [[ $e != "none" ]]
       then
          echo $e
          return 1
@@ -134,7 +134,7 @@ then
 fi
 
 # Build the application.
-if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "app" ${buildType[@]}) = 1 ]]
+if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "app" ${buildType[@]}) = 1 ]] || [[ $(contains "app_dummy" ${buildType[@]}) = 1 ]] 
 then
    echo $vitisDir
    info "Building application..."
@@ -143,10 +143,10 @@ then
 
    flags="-std=c++17 -O2 -Wall -DVITIS_PLATFORM=embed_platform -D__USE_XOPEN2K8"
 
-   include="-I$projDir/package/app/thirdparty/ydlidar/include "
+   include="-I$projDir/package/app/thirdparty/ydlidar/include"
 
    libPaths="-L$sysroot/usr/lib/ -L$sysroot/lib/"
-   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt -ltracetools -lrcl -lrclcpp -lxir -lrcutils -lrcpputils -lrcl_yaml_param_parser -lyaml -lrosidl_typesupport_c -lrosidl_typesupport_cpp -lrosidl_runtime_c -lrcl_logging_spdlog -lspdlog -lrmw_implementation -lrmw -lstd_msgs__rosidl_typesupport_cpp -lsensor_msgs__rosidl_typesupport_cpp" 
+   libs="-lstdc++ -lxilinxopencl -lpthread -lrt -ldl -lcrypt -ltracetools -lrcl -lrclcpp -lxir -lvart-runner -lrcutils -lrcpputils -lrcl_yaml_param_parser -lyaml -lrosidl_typesupport_c -lrosidl_typesupport_cpp -lrosidl_runtime_c -lrcl_logging_spdlog -lspdlog -lrmw_implementation -lrmw -lstd_msgs__rosidl_typesupport_cpp -lsensor_msgs__rosidl_typesupport_cpp" 
 
    files="$projDir/package/app/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.cpp $projDir/package/app/thirdparty/ydlidar/src/*.c $projDir/package/app/thirdparty/ydlidar/src/impl/unix/*.cpp"
 
@@ -160,13 +160,13 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "pkg" ${buildTyp
 then
    info "Creating package..."
 
-   v++ --package --config "$projDir/package/app/package.cfg" -o "$projDir/package/app/final/${appName}_container.xclbin" "$projDir/package/app/build/${appName}_container.xclbin"
+   #v++ --package --config "$projDir/package/app/package.cfg" -o "$projDir/package/app/final/${appName}_container.xclbin" "$projDir/package/app/build/${appName}_container.xclbin"
 
    failHandler
 
    info "Removing build artifacts..."
 
-   (cd "$projDir/package/app/final" && rm -r *.package_summary)
+   #(cd "$projDir/package/app/final" && rm -r *.package_summary)
 
    failHandler
 
@@ -188,7 +188,7 @@ then
 
    info "Copying network model..."
 
-   (cd "$projDir/package/app/network/quantized/final" && cp unet.xmodel meta.json "$projDir/package/app/final")
+   (cd "$projDir/package/app/network/quantized/final" && cp unet.xmodel "$projDir/package/app/final")
 
    failHandler
 
@@ -198,9 +198,9 @@ if [[ $uploadTarget != "" ]]
 then
    if [[ $petalinuxPass != "" ]]
    then
-      (cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel meta.json $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=40% /" && cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    else
-      (cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel meta.json $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=40% /" && cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh  $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    fi   
 fi
 

@@ -200,8 +200,8 @@ module hardware_zynq_ultra_ps_e_0_0 (
   input bit [2 : 0] saxigp6_awprot,
   input bit_as_bool saxigp6_awvalid,
   output bit_as_bool saxigp6_awready,
-  input bit [127 : 0] saxigp6_wdata,
-  input bit [15 : 0] saxigp6_wstrb,
+  input bit [31 : 0] saxigp6_wdata,
+  input bit [3 : 0] saxigp6_wstrb,
   input bit_as_bool saxigp6_wlast,
   input bit_as_bool saxigp6_wvalid,
   output bit_as_bool saxigp6_wready,
@@ -220,7 +220,7 @@ module hardware_zynq_ultra_ps_e_0_0 (
   input bit_as_bool saxigp6_arvalid,
   output bit_as_bool saxigp6_arready,
   output bit [5 : 0] saxigp6_rid,
-  output bit [127 : 0] saxigp6_rdata,
+  output bit [31 : 0] saxigp6_rdata,
   output bit [1 : 0] saxigp6_rresp,
   output bit_as_bool saxigp6_rlast,
   output bit_as_bool saxigp6_rvalid,
@@ -228,17 +228,15 @@ module hardware_zynq_ultra_ps_e_0_0 (
   input bit [3 : 0] saxigp6_awqos,
   input bit [3 : 0] saxigp6_arqos,
   input bit [2 : 0] pl_ps_irq0,
-  input bit [0 : 0] pl_ps_irq1,
   output bit_as_bool pl_resetn0,
-  output bit_as_bool pl_clk0,
-  output bit_as_bool pl_clk1
+  output bit_as_bool pl_clk0
 );
 endmodule
 `endif
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid,saxigp1_awaddr,saxigp1_awlen,saxigp1_awsize,saxigp1_awburst,saxigp1_awlock,saxigp1_awcache,saxigp1_awprot,saxigp1_awvalid,saxigp1_awready,saxigp1_wdata,saxigp1_wstrb,saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid,saxigp1_bresp,saxigp1_bvalid,saxigp1_bready,saxigp1_arid,saxigp1_araddr,saxigp1_arlen,saxigp1_arsize,saxigp1_arburst,saxigp1_arlock,saxigp1_arcache,saxigp1_arprot,saxigp1_arvalid,saxigp1_arready,saxigp1_rid,saxigp1_rdata,saxigp1_rresp,saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos,saxigp1_arqos,saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid,saxigp6_awaddr,saxigp6_awlen,saxigp6_awsize,saxigp6_awburst,saxigp6_awlock,saxigp6_awcache,saxigp6_awprot,saxigp6_awvalid,saxigp6_awready,saxigp6_wdata,saxigp6_wstrb,saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid,saxigp6_bresp,saxigp6_bvalid,saxigp6_bready,saxigp6_arid,saxigp6_araddr,saxigp6_arlen,saxigp6_arsize,saxigp6_arburst,saxigp6_arlock,saxigp6_arcache,saxigp6_arprot,saxigp6_arvalid,saxigp6_arready,saxigp6_rid,saxigp6_rdata,saxigp6_rresp,saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos,saxigp6_arqos,pl_ps_irq0,pl_ps_irq1,pl_resetn0,pl_clk0,pl_clk1)
+module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid,saxigp1_awaddr,saxigp1_awlen,saxigp1_awsize,saxigp1_awburst,saxigp1_awlock,saxigp1_awcache,saxigp1_awprot,saxigp1_awvalid,saxigp1_awready,saxigp1_wdata,saxigp1_wstrb,saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid,saxigp1_bresp,saxigp1_bvalid,saxigp1_bready,saxigp1_arid,saxigp1_araddr,saxigp1_arlen,saxigp1_arsize,saxigp1_arburst,saxigp1_arlock,saxigp1_arcache,saxigp1_arprot,saxigp1_arvalid,saxigp1_arready,saxigp1_rid,saxigp1_rdata,saxigp1_rresp,saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos,saxigp1_arqos,saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid,saxigp6_awaddr,saxigp6_awlen,saxigp6_awsize,saxigp6_awburst,saxigp6_awlock,saxigp6_awcache,saxigp6_awprot,saxigp6_awvalid,saxigp6_awready,saxigp6_wdata,saxigp6_wstrb,saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid,saxigp6_bresp,saxigp6_bvalid,saxigp6_bready,saxigp6_arid,saxigp6_araddr,saxigp6_arlen,saxigp6_arsize,saxigp6_arburst,saxigp6_arlock,saxigp6_arcache,saxigp6_arprot,saxigp6_arvalid,saxigp6_arready,saxigp6_rid,saxigp6_rdata,saxigp6_rresp,saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos,saxigp6_arqos,pl_ps_irq0,pl_resetn0,pl_clk0)
 (* integer foreign = "SystemC";
 *);
   input bit maxihpm0_lpd_aclk;
@@ -374,8 +372,8 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit [2 : 0] saxigp6_awprot;
   input bit saxigp6_awvalid;
   output wire saxigp6_awready;
-  input bit [127 : 0] saxigp6_wdata;
-  input bit [15 : 0] saxigp6_wstrb;
+  input bit [31 : 0] saxigp6_wdata;
+  input bit [3 : 0] saxigp6_wstrb;
   input bit saxigp6_wlast;
   input bit saxigp6_wvalid;
   output wire saxigp6_wready;
@@ -394,7 +392,7 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit saxigp6_arvalid;
   output wire saxigp6_arready;
   output wire [5 : 0] saxigp6_rid;
-  output wire [127 : 0] saxigp6_rdata;
+  output wire [31 : 0] saxigp6_rdata;
   output wire [1 : 0] saxigp6_rresp;
   output wire saxigp6_rlast;
   output wire saxigp6_rvalid;
@@ -402,16 +400,14 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit [3 : 0] saxigp6_awqos;
   input bit [3 : 0] saxigp6_arqos;
   input bit [2 : 0] pl_ps_irq0;
-  input bit [0 : 0] pl_ps_irq1;
   output wire pl_resetn0;
   output wire pl_clk0;
-  output wire pl_clk1;
 endmodule
 `endif
 
 `ifdef RIVIERA
 (* SC_MODULE_EXPORT *)
-module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid,saxigp1_awaddr,saxigp1_awlen,saxigp1_awsize,saxigp1_awburst,saxigp1_awlock,saxigp1_awcache,saxigp1_awprot,saxigp1_awvalid,saxigp1_awready,saxigp1_wdata,saxigp1_wstrb,saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid,saxigp1_bresp,saxigp1_bvalid,saxigp1_bready,saxigp1_arid,saxigp1_araddr,saxigp1_arlen,saxigp1_arsize,saxigp1_arburst,saxigp1_arlock,saxigp1_arcache,saxigp1_arprot,saxigp1_arvalid,saxigp1_arready,saxigp1_rid,saxigp1_rdata,saxigp1_rresp,saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos,saxigp1_arqos,saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid,saxigp6_awaddr,saxigp6_awlen,saxigp6_awsize,saxigp6_awburst,saxigp6_awlock,saxigp6_awcache,saxigp6_awprot,saxigp6_awvalid,saxigp6_awready,saxigp6_wdata,saxigp6_wstrb,saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid,saxigp6_bresp,saxigp6_bvalid,saxigp6_bready,saxigp6_arid,saxigp6_araddr,saxigp6_arlen,saxigp6_arsize,saxigp6_arburst,saxigp6_arlock,saxigp6_arcache,saxigp6_arprot,saxigp6_arvalid,saxigp6_arready,saxigp6_rid,saxigp6_rdata,saxigp6_rresp,saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos,saxigp6_arqos,pl_ps_irq0,pl_ps_irq1,pl_resetn0,pl_clk0,pl_clk1)
+module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid,saxigp1_awaddr,saxigp1_awlen,saxigp1_awsize,saxigp1_awburst,saxigp1_awlock,saxigp1_awcache,saxigp1_awprot,saxigp1_awvalid,saxigp1_awready,saxigp1_wdata,saxigp1_wstrb,saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid,saxigp1_bresp,saxigp1_bvalid,saxigp1_bready,saxigp1_arid,saxigp1_araddr,saxigp1_arlen,saxigp1_arsize,saxigp1_arburst,saxigp1_arlock,saxigp1_arcache,saxigp1_arprot,saxigp1_arvalid,saxigp1_arready,saxigp1_rid,saxigp1_rdata,saxigp1_rresp,saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos,saxigp1_arqos,saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid,saxigp6_awaddr,saxigp6_awlen,saxigp6_awsize,saxigp6_awburst,saxigp6_awlock,saxigp6_awcache,saxigp6_awprot,saxigp6_awvalid,saxigp6_awready,saxigp6_wdata,saxigp6_wstrb,saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid,saxigp6_bresp,saxigp6_bvalid,saxigp6_bready,saxigp6_arid,saxigp6_araddr,saxigp6_arlen,saxigp6_arsize,saxigp6_arburst,saxigp6_arlock,saxigp6_arcache,saxigp6_arprot,saxigp6_arvalid,saxigp6_arready,saxigp6_rid,saxigp6_rdata,saxigp6_rresp,saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos,saxigp6_arqos,pl_ps_irq0,pl_resetn0,pl_clk0)
   input bit maxihpm0_lpd_aclk;
   output wire [15 : 0] maxigp2_awid;
   output wire [39 : 0] maxigp2_awaddr;
@@ -545,8 +541,8 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit [2 : 0] saxigp6_awprot;
   input bit saxigp6_awvalid;
   output wire saxigp6_awready;
-  input bit [127 : 0] saxigp6_wdata;
-  input bit [15 : 0] saxigp6_wstrb;
+  input bit [31 : 0] saxigp6_wdata;
+  input bit [3 : 0] saxigp6_wstrb;
   input bit saxigp6_wlast;
   input bit saxigp6_wvalid;
   output wire saxigp6_wready;
@@ -565,7 +561,7 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit saxigp6_arvalid;
   output wire saxigp6_arready;
   output wire [5 : 0] saxigp6_rid;
-  output wire [127 : 0] saxigp6_rdata;
+  output wire [31 : 0] saxigp6_rdata;
   output wire [1 : 0] saxigp6_rresp;
   output wire saxigp6_rlast;
   output wire saxigp6_rvalid;
@@ -573,9 +569,7 @@ module hardware_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   input bit [3 : 0] saxigp6_awqos;
   input bit [3 : 0] saxigp6_arqos;
   input bit [2 : 0] pl_ps_irq0;
-  input bit [0 : 0] pl_ps_irq1;
   output wire pl_resetn0;
   output wire pl_clk0;
-  output wire pl_clk1;
 endmodule
 `endif

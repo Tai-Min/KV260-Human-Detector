@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Wed Feb 23 22:24:12 2022
+-- Date        : Fri Mar 18 15:52:42 2022
 -- Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
@@ -429,8 +429,8 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
     saxigp6_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     saxigp6_awvalid : in STD_LOGIC;
     saxigp6_awready : out STD_LOGIC;
-    saxigp6_wdata : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    saxigp6_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     saxigp6_wlast : in STD_LOGIC;
     saxigp6_wvalid : in STD_LOGIC;
     saxigp6_wready : out STD_LOGIC;
@@ -449,7 +449,7 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
     saxigp6_arvalid : in STD_LOGIC;
     saxigp6_arready : out STD_LOGIC;
     saxigp6_rid : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    saxigp6_rdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    saxigp6_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     saxigp6_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     saxigp6_rlast : out STD_LOGIC;
     saxigp6_rvalid : out STD_LOGIC;
@@ -1539,7 +1539,7 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
   attribute C_PL_CLK0_BUF : string;
   attribute C_PL_CLK0_BUF of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "TRUE";
   attribute C_PL_CLK1_BUF : string;
-  attribute C_PL_CLK1_BUF of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "TRUE";
+  attribute C_PL_CLK1_BUF of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "FALSE";
   attribute C_PL_CLK2_BUF : string;
   attribute C_PL_CLK2_BUF of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "FALSE";
   attribute C_PL_CLK3_BUF : string;
@@ -1557,7 +1557,7 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
   attribute C_SAXIGP5_DATA_WIDTH : integer;
   attribute C_SAXIGP5_DATA_WIDTH of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is 128;
   attribute C_SAXIGP6_DATA_WIDTH : integer;
-  attribute C_SAXIGP6_DATA_WIDTH of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is 128;
+  attribute C_SAXIGP6_DATA_WIDTH of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is 32;
   attribute C_SD0_INTERNAL_BUS_WIDTH : integer;
   attribute C_SD0_INTERNAL_BUS_WIDTH of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is 8;
   attribute C_SD1_INTERNAL_BUS_WIDTH : integer;
@@ -1819,9 +1819,9 @@ entity hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
  " DDR4_DQ62, , , INOUT, PS_DDR_DQ62_504, DDR4, , , ,PS_DDR4_DQ_OUT34|PS_DDR4_DQ_IN40, RTT_40, 34" & LF &
  " DDR4_DQ63, , , INOUT, PS_DDR_DQ63_504, DDR4, , , ,PS_DDR4_DQ_OUT34|PS_DDR4_DQ_IN40, RTT_40, 34";
   attribute PSS_JITTER : string;
-  attribute PSS_JITTER of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "<PSS_EXTERNAL_CLOCKS><EXTERNAL_CLOCK name={PLCLK[0]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/><EXTERNAL_CLOCK name={PLCLK[1]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/></PSS_EXTERNAL_CLOCKS>";
+  attribute PSS_JITTER of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "<PSS_EXTERNAL_CLOCKS><EXTERNAL_CLOCK name={PLCLK[0]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/></PSS_EXTERNAL_CLOCKS>";
   attribute PSS_POWER : string;
-  attribute PSS_POWER of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "<BLOCKTYPE name={PS8}> <PS8><FPD><PROCESSSORS><PROCESSOR name={Cortex A-53} numCores={4} L2Cache={Enable} clockFreq={1333.333008} load={0.5}/><PROCESSOR name={GPU Mali-400 MP} numCores={2} clockFreq={499.994995} load={0.5} /></PROCESSSORS><PLLS><PLL domain={APU} vco={2666.640} /><PLL domain={DDR} vco={2133.312} /><PLL domain={Video} vco={2999.970} /></PLLS><MEMORY memType={DDR4} dataWidth={8} clockFreq={1066.656} readRate={0.5} writeRate={0.5} cmdAddressActivity={0.5} /><SERDES><GT name={PCIe} standard={} lanes={} usageRate={0.5} /><GT name={SATA} standard={} lanes={} usageRate={0.5} /><GT name={Display Port} standard={SVGA-60 (800x600)} lanes={2} usageRate={0.5} />clockFreq={60} /><GT name={USB3} standard={USB3.0} lanes={1}usageRate={0.5} /><GT name={SGMII} standard={SGMII} lanes={0} usageRate={0.5} /></SERDES><AFI master={0} slave={2} clockFreq={199.998} usageRate={0.5} /><FPINTERCONNECT clockFreq={533.328003} Bandwidth={Low} /></FPD><LPD><PROCESSSORS><PROCESSOR name={Cortex R-5} usage={Enable} TCM={Enable} OCM={Enable} clockFreq={533.328003} load={0.5}/></PROCESSSORS><PLLS><PLL domain={IO} vco={2999.970} /><PLL domain={RPLL} vco={2133.312} /></PLLS><CSUPMU><Unit name={CSU} usageRate={0.5} clockFreq={180} /><Unit name={PMU} usageRate={0.5} clockFreq={180} /></CSUPMU><GPIO><Bank ioBank={VCC_PSIO0} number={14} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO1} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={0} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO><IOINTERFACES> <IO name={QSPI} io_standard={} ioBank={VCC_PSIO0} clockFreq={124.998749} inputs={0} outputs={2} inouts={4} usageRate={0.5}/><IO name={NAND 3.1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={USB0} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.997498} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={USB1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth3} io_standard={} ioBank={VCC_PSIO2} clockFreq={124.998749} inputs={6} outputs={6} inouts={0} usageRate={0.5}/><IO name={GPIO 0} io_standard={} ioBank={VCC_PSIO0} clockFreq={1} inputs={0} outputs={0} inouts={14} usageRate={0.5}/><IO name={GPIO 1} io_standard={} ioBank={VCC_PSIO1} clockFreq={1} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={GPIO 2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GPIO 3} io_standard={} ioBank={VCC_PSIO3} clockFreq={1} inputs={} outputs={} inouts={16} usageRate={0.5}/><IO name={UART0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={UART1} io_standard={} ioBank={VCC_PSIO1} clockFreq={99.999001} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={I2C0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={I2C1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999001} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={SPI0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SPI1} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.498123} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={CAN0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={CAN1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD1} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.498123} inputs={1} outputs={2} inouts={9} usageRate={0.5}/><IO name={Trace} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={TTC0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC2} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC3} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={PJTAG} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={DPAUX} io_standard={} ioBank={VCC_PSIO1} clockFreq={} inputs={2} outputs={2} inouts={0} usageRate={0.5}/><IO name={WDT0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={WDT1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/></IOINTERFACES><AFI master={1} slave={1} clockFreq={104.999} usageRate={0.5} /><LPINTERCONNECT clockFreq={499.994995} Bandwidth={High} /></LPD></PS8></BLOCKTYPE>/>";
+  attribute PSS_POWER of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e : entity is "<BLOCKTYPE name={PS8}> <PS8><FPD><PROCESSSORS><PROCESSOR name={Cortex A-53} numCores={4} L2Cache={Enable} clockFreq={1333.333008} load={0.5}/><PROCESSOR name={GPU Mali-400 MP} numCores={2} clockFreq={499.994995} load={0.5} /></PROCESSSORS><PLLS><PLL domain={APU} vco={2666.640} /><PLL domain={DDR} vco={2133.312} /><PLL domain={Video} vco={2999.970} /></PLLS><MEMORY memType={DDR4} dataWidth={8} clockFreq={1066.656} readRate={0.5} writeRate={0.5} cmdAddressActivity={0.5} /><SERDES><GT name={PCIe} standard={} lanes={} usageRate={0.5} /><GT name={SATA} standard={} lanes={} usageRate={0.5} /><GT name={Display Port} standard={SVGA-60 (800x600)} lanes={2} usageRate={0.5} />clockFreq={60} /><GT name={USB3} standard={USB3.0} lanes={1}usageRate={0.5} /><GT name={SGMII} standard={SGMII} lanes={0} usageRate={0.5} /></SERDES><AFI master={0} slave={2} clockFreq={324.997} usageRate={0.5} /><FPINTERCONNECT clockFreq={533.328003} Bandwidth={Low} /></FPD><LPD><PROCESSSORS><PROCESSOR name={Cortex R-5} usage={Enable} TCM={Enable} OCM={Enable} clockFreq={533.328003} load={0.5}/></PROCESSSORS><PLLS><PLL domain={IO} vco={2999.970} /><PLL domain={RPLL} vco={2133.312} /></PLLS><CSUPMU><Unit name={CSU} usageRate={0.5} clockFreq={180} /><Unit name={PMU} usageRate={0.5} clockFreq={180} /></CSUPMU><GPIO><Bank ioBank={VCC_PSIO0} number={14} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO1} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={0} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO><IOINTERFACES> <IO name={QSPI} io_standard={} ioBank={VCC_PSIO0} clockFreq={124.998749} inputs={0} outputs={2} inouts={4} usageRate={0.5}/><IO name={NAND 3.1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={USB0} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.997498} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={USB1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth3} io_standard={} ioBank={VCC_PSIO2} clockFreq={124.998749} inputs={6} outputs={6} inouts={0} usageRate={0.5}/><IO name={GPIO 0} io_standard={} ioBank={VCC_PSIO0} clockFreq={1} inputs={0} outputs={0} inouts={14} usageRate={0.5}/><IO name={GPIO 1} io_standard={} ioBank={VCC_PSIO1} clockFreq={1} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={GPIO 2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GPIO 3} io_standard={} ioBank={VCC_PSIO3} clockFreq={1} inputs={} outputs={} inouts={16} usageRate={0.5}/><IO name={UART0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={UART1} io_standard={} ioBank={VCC_PSIO1} clockFreq={99.999001} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={I2C0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={I2C1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999001} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={SPI0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SPI1} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.498123} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={CAN0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={CAN1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD1} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.498123} inputs={1} outputs={2} inouts={9} usageRate={0.5}/><IO name={Trace} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={TTC0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC2} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC3} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={PJTAG} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={DPAUX} io_standard={} ioBank={VCC_PSIO1} clockFreq={} inputs={2} outputs={2} inouts={0} usageRate={0.5}/><IO name={WDT0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={WDT1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/></IOINTERFACES><AFI master={1} slave={1} clockFreq={55.000} usageRate={0.5} /><LPINTERCONNECT clockFreq={499.994995} Bandwidth={High} /></LPD></PS8></BLOCKTYPE>/>";
 end hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e;
 
 architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e is
@@ -3086,6 +3086,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zy
   signal PS8_i_n_263 : STD_LOGIC;
   signal PS8_i_n_2633 : STD_LOGIC;
   signal PS8_i_n_2634 : STD_LOGIC;
+  signal PS8_i_n_2635 : STD_LOGIC;
   signal PS8_i_n_2637 : STD_LOGIC;
   signal PS8_i_n_2638 : STD_LOGIC;
   signal PS8_i_n_2639 : STD_LOGIC;
@@ -4576,7 +4577,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zy
   signal emio_sdio0_dataena_i : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal emio_sdio1_cmdena_i : STD_LOGIC;
   signal emio_sdio1_dataena_i : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal pl_clk_unbuffered : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal pl_clk_unbuffered : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \trace_ctl_pipe[0]\ : STD_LOGIC;
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of \trace_ctl_pipe[0]\ : signal is "true";
@@ -4677,12 +4678,12 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zy
   signal NLW_PS8_i_PSS_ALTO_CORE_PAD_DRAMDQSN_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal NLW_PS8_i_PSS_ALTO_CORE_PAD_DRAMODT_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_PS8_i_PSS_ALTO_CORE_PAD_MIO_UNCONNECTED : STD_LOGIC_VECTOR ( 77 downto 0 );
+  signal NLW_PS8_i_SAXIGP6RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 127 downto 32 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of PS8_i : label is "PRIMITIVE";
   attribute DONT_TOUCH : boolean;
   attribute DONT_TOUCH of PS8_i : label is std.standard.true;
   attribute BOX_TYPE of \buffer_pl_clk_0.PL_CLK_0_BUFG\ : label is "PRIMITIVE";
-  attribute BOX_TYPE of \buffer_pl_clk_1.PL_CLK_1_BUFG\ : label is "PRIMITIVE";
 begin
   adma2pl_cack(7) <= \<const0>\;
   adma2pl_cack(6) <= \<const0>\;
@@ -6743,6 +6744,7 @@ begin
   o_dbg_l3_txdetrx_lpback <= \<const0>\;
   o_dbg_l3_txelecidle <= \<const0>\;
   osc_rtc_clk <= \<const0>\;
+  pl_clk1 <= \<const0>\;
   pl_clk2 <= \<const0>\;
   pl_clk3 <= \<const0>\;
   pl_resetn1 <= \<const0>\;
@@ -10017,7 +10019,8 @@ PS8_i: unisim.vcomponents.PS8
       PLACPINACT => '0',
       PLCLK(3) => PS8_i_n_2633,
       PLCLK(2) => PS8_i_n_2634,
-      PLCLK(1 downto 0) => pl_clk_unbuffered(1 downto 0),
+      PLCLK(1) => PS8_i_n_2635,
+      PLCLK(0) => pl_clk_unbuffered(0),
       PLFPGASTOP(3 downto 0) => B"0000",
       PLLAUXREFCLKFPD(2 downto 0) => B"000",
       PLLAUXREFCLKLPD(1 downto 0) => B"00",
@@ -10027,8 +10030,7 @@ PS8_i: unisim.vcomponents.PS8
       PLPSEVENTI => '0',
       PLPSIRQ0(7 downto 3) => B"00000",
       PLPSIRQ0(2 downto 0) => pl_ps_irq0(2 downto 0),
-      PLPSIRQ1(7 downto 1) => B"0000000",
-      PLPSIRQ1(0) => pl_ps_irq1(0),
+      PLPSIRQ1(7 downto 0) => B"00000000",
       PLPSTRACECLK => '0',
       PLPSTRIGACK(3 downto 0) => B"0000",
       PLPSTRIGGER(3 downto 0) => B"0000",
@@ -11741,7 +11743,8 @@ PS8_i: unisim.vcomponents.PS8
       SAXIGP6RCOUNT(2) => PS8_i_n_3435,
       SAXIGP6RCOUNT(1) => PS8_i_n_3436,
       SAXIGP6RCOUNT(0) => PS8_i_n_3437,
-      SAXIGP6RDATA(127 downto 0) => saxigp6_rdata(127 downto 0),
+      SAXIGP6RDATA(127 downto 32) => NLW_PS8_i_SAXIGP6RDATA_UNCONNECTED(127 downto 32),
+      SAXIGP6RDATA(31 downto 0) => saxigp6_rdata(31 downto 0),
       SAXIGP6RID(5 downto 0) => saxigp6_rid(5 downto 0),
       SAXIGP6RLAST => saxigp6_rlast,
       SAXIGP6RREADY => saxigp6_rready,
@@ -11760,10 +11763,12 @@ PS8_i: unisim.vcomponents.PS8
       SAXIGP6WCOUNT(2) => PS8_i_n_3443,
       SAXIGP6WCOUNT(1) => PS8_i_n_3444,
       SAXIGP6WCOUNT(0) => PS8_i_n_3445,
-      SAXIGP6WDATA(127 downto 0) => saxigp6_wdata(127 downto 0),
+      SAXIGP6WDATA(127 downto 32) => B"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      SAXIGP6WDATA(31 downto 0) => saxigp6_wdata(31 downto 0),
       SAXIGP6WLAST => saxigp6_wlast,
       SAXIGP6WREADY => saxigp6_wready,
-      SAXIGP6WSTRB(15 downto 0) => saxigp6_wstrb(15 downto 0),
+      SAXIGP6WSTRB(15 downto 4) => B"000000000000",
+      SAXIGP6WSTRB(3 downto 0) => saxigp6_wstrb(3 downto 0),
       SAXIGP6WVALID => saxigp6_wvalid,
       STMEVENT(59 downto 0) => B"000000000000000000000000000000000000000000000000000000000000"
     );
@@ -11775,15 +11780,6 @@ PS8_i: unisim.vcomponents.PS8
         port map (
       I => pl_clk_unbuffered(0),
       O => pl_clk0
-    );
-\buffer_pl_clk_1.PL_CLK_1_BUFG\: unisim.vcomponents.BUFG_PS
-    generic map(
-      SIM_DEVICE => "ULTRASCALE_PLUS",
-      STARTUP_SYNC => "FALSE"
-    )
-        port map (
-      I => pl_clk_unbuffered(1),
-      O => pl_clk1
     );
 i_0: unisim.vcomponents.LUT1
     generic map(
@@ -14037,8 +14033,8 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     saxigp6_awvalid : in STD_LOGIC;
     saxigp6_awready : out STD_LOGIC;
-    saxigp6_wdata : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    saxigp6_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     saxigp6_wlast : in STD_LOGIC;
     saxigp6_wvalid : in STD_LOGIC;
     saxigp6_wready : out STD_LOGIC;
@@ -14057,7 +14053,7 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_arvalid : in STD_LOGIC;
     saxigp6_arready : out STD_LOGIC;
     saxigp6_rid : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    saxigp6_rdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    saxigp6_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     saxigp6_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     saxigp6_rlast : out STD_LOGIC;
     saxigp6_rvalid : out STD_LOGIC;
@@ -14065,10 +14061,8 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     saxigp6_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pl_ps_irq0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pl_ps_irq1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     pl_resetn0 : out STD_LOGIC;
-    pl_clk0 : out STD_LOGIC;
-    pl_clk1 : out STD_LOGIC
+    pl_clk0 : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of hardware_zynq_ultra_ps_e_0_0 : entity is true;
@@ -14400,6 +14394,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   signal NLW_inst_o_dbg_l3_txdetrx_lpback_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_o_dbg_l3_txelecidle_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_osc_rtc_clk_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_pl_clk1_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_pl_clk2_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_pl_clk3_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_pl_resetn1_UNCONNECTED : STD_LOGIC;
@@ -14819,7 +14814,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute C_PL_CLK0_BUF : string;
   attribute C_PL_CLK0_BUF of inst : label is "TRUE";
   attribute C_PL_CLK1_BUF : string;
-  attribute C_PL_CLK1_BUF of inst : label is "TRUE";
+  attribute C_PL_CLK1_BUF of inst : label is "FALSE";
   attribute C_PL_CLK2_BUF : string;
   attribute C_PL_CLK2_BUF of inst : label is "FALSE";
   attribute C_PL_CLK3_BUF : string;
@@ -14837,7 +14832,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute C_SAXIGP5_DATA_WIDTH : integer;
   attribute C_SAXIGP5_DATA_WIDTH of inst : label is 128;
   attribute C_SAXIGP6_DATA_WIDTH : integer;
-  attribute C_SAXIGP6_DATA_WIDTH of inst : label is 128;
+  attribute C_SAXIGP6_DATA_WIDTH of inst : label is 32;
   attribute C_SD0_INTERNAL_BUS_WIDTH : integer;
   attribute C_SD0_INTERNAL_BUS_WIDTH of inst : label is 8;
   attribute C_SD1_INTERNAL_BUS_WIDTH : integer;
@@ -15097,9 +15092,9 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
  " DDR4_DQ62, , , INOUT, PS_DDR_DQ62_504, DDR4, , , ,PS_DDR4_DQ_OUT34|PS_DDR4_DQ_IN40, RTT_40, 34" & LF &
  " DDR4_DQ63, , , INOUT, PS_DDR_DQ63_504, DDR4, , , ,PS_DDR4_DQ_OUT34|PS_DDR4_DQ_IN40, RTT_40, 34";
   attribute PSS_JITTER : string;
-  attribute PSS_JITTER of inst : label is "<PSS_EXTERNAL_CLOCKS><EXTERNAL_CLOCK name={PLCLK[0]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/><EXTERNAL_CLOCK name={PLCLK[1]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/></PSS_EXTERNAL_CLOCKS>";
+  attribute PSS_JITTER of inst : label is "<PSS_EXTERNAL_CLOCKS><EXTERNAL_CLOCK name={PLCLK[0]} clock_external_divide={15} vco_name={IOPLL} vco_freq={2999.970} vco_internal_divide={2}/></PSS_EXTERNAL_CLOCKS>";
   attribute PSS_POWER : string;
-  attribute PSS_POWER of inst : label is "<BLOCKTYPE name={PS8}> <PS8><FPD><PROCESSSORS><PROCESSOR name={Cortex A-53} numCores={4} L2Cache={Enable} clockFreq={1333.333008} load={0.5}/><PROCESSOR name={GPU Mali-400 MP} numCores={2} clockFreq={499.994995} load={0.5} /></PROCESSSORS><PLLS><PLL domain={APU} vco={2666.640} /><PLL domain={DDR} vco={2133.312} /><PLL domain={Video} vco={2999.970} /></PLLS><MEMORY memType={DDR4} dataWidth={8} clockFreq={1066.656} readRate={0.5} writeRate={0.5} cmdAddressActivity={0.5} /><SERDES><GT name={PCIe} standard={} lanes={} usageRate={0.5} /><GT name={SATA} standard={} lanes={} usageRate={0.5} /><GT name={Display Port} standard={SVGA-60 (800x600)} lanes={2} usageRate={0.5} />clockFreq={60} /><GT name={USB3} standard={USB3.0} lanes={1}usageRate={0.5} /><GT name={SGMII} standard={SGMII} lanes={0} usageRate={0.5} /></SERDES><AFI master={0} slave={2} clockFreq={199.998} usageRate={0.5} /><FPINTERCONNECT clockFreq={533.328003} Bandwidth={Low} /></FPD><LPD><PROCESSSORS><PROCESSOR name={Cortex R-5} usage={Enable} TCM={Enable} OCM={Enable} clockFreq={533.328003} load={0.5}/></PROCESSSORS><PLLS><PLL domain={IO} vco={2999.970} /><PLL domain={RPLL} vco={2133.312} /></PLLS><CSUPMU><Unit name={CSU} usageRate={0.5} clockFreq={180} /><Unit name={PMU} usageRate={0.5} clockFreq={180} /></CSUPMU><GPIO><Bank ioBank={VCC_PSIO0} number={14} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO1} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={0} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO><IOINTERFACES> <IO name={QSPI} io_standard={} ioBank={VCC_PSIO0} clockFreq={124.998749} inputs={0} outputs={2} inouts={4} usageRate={0.5}/><IO name={NAND 3.1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={USB0} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.997498} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={USB1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth3} io_standard={} ioBank={VCC_PSIO2} clockFreq={124.998749} inputs={6} outputs={6} inouts={0} usageRate={0.5}/><IO name={GPIO 0} io_standard={} ioBank={VCC_PSIO0} clockFreq={1} inputs={0} outputs={0} inouts={14} usageRate={0.5}/><IO name={GPIO 1} io_standard={} ioBank={VCC_PSIO1} clockFreq={1} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={GPIO 2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GPIO 3} io_standard={} ioBank={VCC_PSIO3} clockFreq={1} inputs={} outputs={} inouts={16} usageRate={0.5}/><IO name={UART0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={UART1} io_standard={} ioBank={VCC_PSIO1} clockFreq={99.999001} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={I2C0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={I2C1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999001} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={SPI0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SPI1} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.498123} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={CAN0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={CAN1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD1} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.498123} inputs={1} outputs={2} inouts={9} usageRate={0.5}/><IO name={Trace} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={TTC0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC2} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC3} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={PJTAG} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={DPAUX} io_standard={} ioBank={VCC_PSIO1} clockFreq={} inputs={2} outputs={2} inouts={0} usageRate={0.5}/><IO name={WDT0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={WDT1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/></IOINTERFACES><AFI master={1} slave={1} clockFreq={104.999} usageRate={0.5} /><LPINTERCONNECT clockFreq={499.994995} Bandwidth={High} /></LPD></PS8></BLOCKTYPE>/>";
+  attribute PSS_POWER of inst : label is "<BLOCKTYPE name={PS8}> <PS8><FPD><PROCESSSORS><PROCESSOR name={Cortex A-53} numCores={4} L2Cache={Enable} clockFreq={1333.333008} load={0.5}/><PROCESSOR name={GPU Mali-400 MP} numCores={2} clockFreq={499.994995} load={0.5} /></PROCESSSORS><PLLS><PLL domain={APU} vco={2666.640} /><PLL domain={DDR} vco={2133.312} /><PLL domain={Video} vco={2999.970} /></PLLS><MEMORY memType={DDR4} dataWidth={8} clockFreq={1066.656} readRate={0.5} writeRate={0.5} cmdAddressActivity={0.5} /><SERDES><GT name={PCIe} standard={} lanes={} usageRate={0.5} /><GT name={SATA} standard={} lanes={} usageRate={0.5} /><GT name={Display Port} standard={SVGA-60 (800x600)} lanes={2} usageRate={0.5} />clockFreq={60} /><GT name={USB3} standard={USB3.0} lanes={1}usageRate={0.5} /><GT name={SGMII} standard={SGMII} lanes={0} usageRate={0.5} /></SERDES><AFI master={0} slave={2} clockFreq={324.997} usageRate={0.5} /><FPINTERCONNECT clockFreq={533.328003} Bandwidth={Low} /></FPD><LPD><PROCESSSORS><PROCESSOR name={Cortex R-5} usage={Enable} TCM={Enable} OCM={Enable} clockFreq={533.328003} load={0.5}/></PROCESSSORS><PLLS><PLL domain={IO} vco={2999.970} /><PLL domain={RPLL} vco={2133.312} /></PLLS><CSUPMU><Unit name={CSU} usageRate={0.5} clockFreq={180} /><Unit name={PMU} usageRate={0.5} clockFreq={180} /></CSUPMU><GPIO><Bank ioBank={VCC_PSIO0} number={14} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO1} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={0} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO><IOINTERFACES> <IO name={QSPI} io_standard={} ioBank={VCC_PSIO0} clockFreq={124.998749} inputs={0} outputs={2} inouts={4} usageRate={0.5}/><IO name={NAND 3.1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={USB0} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.997498} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={USB1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth3} io_standard={} ioBank={VCC_PSIO2} clockFreq={124.998749} inputs={6} outputs={6} inouts={0} usageRate={0.5}/><IO name={GPIO 0} io_standard={} ioBank={VCC_PSIO0} clockFreq={1} inputs={0} outputs={0} inouts={14} usageRate={0.5}/><IO name={GPIO 1} io_standard={} ioBank={VCC_PSIO1} clockFreq={1} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={GPIO 2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GPIO 3} io_standard={} ioBank={VCC_PSIO3} clockFreq={1} inputs={} outputs={} inouts={16} usageRate={0.5}/><IO name={UART0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={UART1} io_standard={} ioBank={VCC_PSIO1} clockFreq={99.999001} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={I2C0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={I2C1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999001} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={SPI0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SPI1} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.498123} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={CAN0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={CAN1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD1} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.498123} inputs={1} outputs={2} inouts={9} usageRate={0.5}/><IO name={Trace} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={TTC0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC2} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC3} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={PJTAG} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={DPAUX} io_standard={} ioBank={VCC_PSIO1} clockFreq={} inputs={2} outputs={2} inouts={0} usageRate={0.5}/><IO name={WDT0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={WDT1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/></IOINTERFACES><AFI master={1} slave={1} clockFreq={55.000} usageRate={0.5} /><LPINTERCONNECT clockFreq={499.994995} Bandwidth={High} /></LPD></PS8></BLOCKTYPE>/>";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of maxigp2_arlock : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARLOCK";
   attribute X_INTERFACE_INFO of maxigp2_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARREADY";
@@ -15117,15 +15112,13 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of maxigp2_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD WVALID";
   attribute X_INTERFACE_INFO of maxihpm0_lpd_aclk : signal is "xilinx.com:signal:clock:1.0 M_AXI_HPM0_LPD_ACLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of maxihpm0_lpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM0_LPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM0_LPD, FREQ_HZ 199998000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxihpm0_lpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM0_LPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM0_LPD, FREQ_HZ 99999000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pl_clk0 : signal is "xilinx.com:signal:clock:1.0 PL_CLK0 CLK";
   attribute X_INTERFACE_PARAMETER of pl_clk0 : signal is "XIL_INTERFACENAME PL_CLK0, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
-  attribute X_INTERFACE_INFO of pl_clk1 : signal is "xilinx.com:signal:clock:1.0 PL_CLK1 CLK";
-  attribute X_INTERFACE_PARAMETER of pl_clk1 : signal is "XIL_INTERFACENAME PL_CLK1, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_zynq_ultra_ps_e_0_0_pl_clk1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pl_resetn0 : signal is "xilinx.com:signal:reset:1.0 PL_RESETN0 RST";
   attribute X_INTERFACE_PARAMETER of pl_resetn0 : signal is "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxi_lpd_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_LPD_ACLK CLK";
-  attribute X_INTERFACE_PARAMETER of saxi_lpd_aclk : signal is "XIL_INTERFACENAME S_AXI_LPD_ACLK, ASSOCIATED_BUSIF S_AXI_LPD, FREQ_HZ 199998000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxi_lpd_aclk : signal is "XIL_INTERFACENAME S_AXI_LPD_ACLK, ASSOCIATED_BUSIF S_AXI_LPD, FREQ_HZ 324996750, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp0_arlock : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARLOCK";
   attribute X_INTERFACE_INFO of saxigp0_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARREADY";
   attribute X_INTERFACE_INFO of saxigp0_aruser : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARUSER";
@@ -15175,9 +15168,9 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of saxigp6_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD WREADY";
   attribute X_INTERFACE_INFO of saxigp6_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD WVALID";
   attribute X_INTERFACE_INFO of saxihpc0_fpd_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_HPC0_FPD_ACLK CLK";
-  attribute X_INTERFACE_PARAMETER of saxihpc0_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HPC0_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HPC0_FPD, FREQ_HZ 199998000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxihpc0_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HPC0_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HPC0_FPD, FREQ_HZ 324996750, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxihpc1_fpd_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_HPC1_FPD_ACLK CLK";
-  attribute X_INTERFACE_PARAMETER of saxihpc1_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HPC1_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HPC1_FPD, FREQ_HZ 199998000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxihpc1_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HPC1_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HPC1_FPD, FREQ_HZ 324996750, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp2_araddr : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARADDR";
   attribute X_INTERFACE_INFO of maxigp2_arburst : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARBURST";
   attribute X_INTERFACE_INFO of maxigp2_arcache : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARCACHE";
@@ -15185,7 +15178,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of maxigp2_arlen : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARLEN";
   attribute X_INTERFACE_INFO of maxigp2_arprot : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARPROT";
   attribute X_INTERFACE_INFO of maxigp2_arqos : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARQOS";
-  attribute X_INTERFACE_PARAMETER of maxigp2_arqos : signal is "XIL_INTERFACENAME M_AXI_HPM0_LPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 199998000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxigp2_arqos : signal is "XIL_INTERFACENAME M_AXI_HPM0_LPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 99999000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp2_arsize : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARSIZE";
   attribute X_INTERFACE_INFO of maxigp2_aruser : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD ARUSER";
   attribute X_INTERFACE_INFO of maxigp2_awaddr : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD AWADDR";
@@ -15206,8 +15199,6 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of maxigp2_wstrb : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_LPD WSTRB";
   attribute X_INTERFACE_INFO of pl_ps_irq0 : signal is "xilinx.com:signal:interrupt:1.0 PL_PS_IRQ0 INTERRUPT";
   attribute X_INTERFACE_PARAMETER of pl_ps_irq0 : signal is "XIL_INTERFACENAME PL_PS_IRQ0, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH, PortWidth 3";
-  attribute X_INTERFACE_INFO of pl_ps_irq1 : signal is "xilinx.com:signal:interrupt:1.0 PL_PS_IRQ1 INTERRUPT";
-  attribute X_INTERFACE_PARAMETER of pl_ps_irq1 : signal is "XIL_INTERFACENAME PL_PS_IRQ1, SENSITIVITY LEVEL_HIGH, PortWidth 1";
   attribute X_INTERFACE_INFO of saxigp0_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARADDR";
   attribute X_INTERFACE_INFO of saxigp0_arburst : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARBURST";
   attribute X_INTERFACE_INFO of saxigp0_arcache : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARCACHE";
@@ -15215,7 +15206,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of saxigp0_arlen : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARLEN";
   attribute X_INTERFACE_INFO of saxigp0_arprot : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARPROT";
   attribute X_INTERFACE_INFO of saxigp0_arqos : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARQOS";
-  attribute X_INTERFACE_PARAMETER of saxigp0_arqos : signal is "XIL_INTERFACENAME S_AXI_HPC0_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 199998000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxigp0_arqos : signal is "XIL_INTERFACENAME S_AXI_HPC0_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 324996750, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp0_arsize : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD ARSIZE";
   attribute X_INTERFACE_INFO of saxigp0_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD AWADDR";
   attribute X_INTERFACE_INFO of saxigp0_awburst : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC0_FPD AWBURST";
@@ -15239,7 +15230,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of saxigp1_arlen : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD ARLEN";
   attribute X_INTERFACE_INFO of saxigp1_arprot : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD ARPROT";
   attribute X_INTERFACE_INFO of saxigp1_arqos : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD ARQOS";
-  attribute X_INTERFACE_PARAMETER of saxigp1_arqos : signal is "XIL_INTERFACENAME S_AXI_HPC1_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 199998000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxigp1_arqos : signal is "XIL_INTERFACENAME S_AXI_HPC1_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 324996750, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp1_arsize : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD ARSIZE";
   attribute X_INTERFACE_INFO of saxigp1_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD AWADDR";
   attribute X_INTERFACE_INFO of saxigp1_awburst : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HPC1_FPD AWBURST";
@@ -15263,7 +15254,7 @@ architecture STRUCTURE of hardware_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of saxigp6_arlen : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD ARLEN";
   attribute X_INTERFACE_INFO of saxigp6_arprot : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD ARPROT";
   attribute X_INTERFACE_INFO of saxigp6_arqos : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD ARQOS";
-  attribute X_INTERFACE_PARAMETER of saxigp6_arqos : signal is "XIL_INTERFACENAME S_AXI_LPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 199998000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxigp6_arqos : signal is "XIL_INTERFACENAME S_AXI_LPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 324996750, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp6_arsize : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD ARSIZE";
   attribute X_INTERFACE_INFO of saxigp6_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD AWADDR";
   attribute X_INTERFACE_INFO of saxigp6_awburst : signal is "xilinx.com:interface:aximm:1.0 S_AXI_LPD AWBURST";
@@ -16088,7 +16079,7 @@ inst: entity work.hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra
       pl2adma_tack(7 downto 0) => B"00000000",
       pl_acpinact => '0',
       pl_clk0 => pl_clk0,
-      pl_clk1 => pl_clk1,
+      pl_clk1 => NLW_inst_pl_clk1_UNCONNECTED,
       pl_clk2 => NLW_inst_pl_clk2_UNCONNECTED,
       pl_clk3 => NLW_inst_pl_clk3_UNCONNECTED,
       pl_clock_stop(3 downto 0) => B"0000",
@@ -16117,7 +16108,7 @@ inst: entity work.hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra
       pl_ps_apugic_irq(3 downto 0) => B"0000",
       pl_ps_eventi => '0',
       pl_ps_irq0(2 downto 0) => pl_ps_irq0(2 downto 0),
-      pl_ps_irq1(0) => pl_ps_irq1(0),
+      pl_ps_irq1(0) => '0',
       pl_ps_trace_clk => '0',
       pl_ps_trigack_0 => '0',
       pl_ps_trigack_1 => '0',
@@ -16645,7 +16636,7 @@ inst: entity work.hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra
       saxigp6_bvalid => saxigp6_bvalid,
       saxigp6_racount(3 downto 0) => NLW_inst_saxigp6_racount_UNCONNECTED(3 downto 0),
       saxigp6_rcount(7 downto 0) => NLW_inst_saxigp6_rcount_UNCONNECTED(7 downto 0),
-      saxigp6_rdata(127 downto 0) => saxigp6_rdata(127 downto 0),
+      saxigp6_rdata(31 downto 0) => saxigp6_rdata(31 downto 0),
       saxigp6_rid(5 downto 0) => saxigp6_rid(5 downto 0),
       saxigp6_rlast => saxigp6_rlast,
       saxigp6_rready => saxigp6_rready,
@@ -16653,10 +16644,10 @@ inst: entity work.hardware_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_3_5_zynq_ultra
       saxigp6_rvalid => saxigp6_rvalid,
       saxigp6_wacount(3 downto 0) => NLW_inst_saxigp6_wacount_UNCONNECTED(3 downto 0),
       saxigp6_wcount(7 downto 0) => NLW_inst_saxigp6_wcount_UNCONNECTED(7 downto 0),
-      saxigp6_wdata(127 downto 0) => saxigp6_wdata(127 downto 0),
+      saxigp6_wdata(31 downto 0) => saxigp6_wdata(31 downto 0),
       saxigp6_wlast => saxigp6_wlast,
       saxigp6_wready => saxigp6_wready,
-      saxigp6_wstrb(15 downto 0) => saxigp6_wstrb(15 downto 0),
+      saxigp6_wstrb(3 downto 0) => saxigp6_wstrb(3 downto 0),
       saxigp6_wvalid => saxigp6_wvalid,
       saxihp0_fpd_aclk => '0',
       saxihp0_fpd_rclk => '0',

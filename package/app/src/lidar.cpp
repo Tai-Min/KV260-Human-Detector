@@ -112,6 +112,9 @@ void Lidar::initScanMsgs() {
 
     panoramicScanMsg.layout.dim.resize(2);
     panoramicScanMsg.layout.data_offset = 0;
+
+    panoramicInferenceScanMsg.layout.dim.resize(2);
+    panoramicInferenceScanMsg.layout.data_offset = 0;
 }
 
 bool Lidar::initLidar2D() {
@@ -158,6 +161,14 @@ bool Lidar::lateInit(unsigned int totalSamples, unsigned int samplesPer2DScan, f
     panoramicScanMsg.layout.dim[1].size = imgWidth;
     panoramicScanMsg.layout.dim[1].stride = imgWidth;
     panoramicScanMsg.data.resize(imgWidth * imgHeight);
+
+    panoramicInferenceScanMsg.layout.dim[0].label = "height";
+    panoramicInferenceScanMsg.layout.dim[0].size = imgHeight;
+    panoramicInferenceScanMsg.layout.dim[0].stride = imgWidth * imgHeight;
+    panoramicInferenceScanMsg.layout.dim[1].label = "width";
+    panoramicInferenceScanMsg.layout.dim[1].size = imgWidth;
+    panoramicInferenceScanMsg.layout.dim[1].stride = imgWidth;
+    panoramicInferenceScanMsg.data.resize(imgWidth * imgHeight);
 
     if (conf.kernel.useKernel && !kernel.allocateBuffers(totalSamples, cloudMsg.data.size(), panoramicScanMsg.data.size()))
         return false;
@@ -247,7 +258,7 @@ void Lidar::generatePanoramicImageSW() {
     int sign = conf.stepper.currDirection == StepperController::ENDSTOP1 ? 1 : -1;
     int imgWidth = panoramicScanMsg.layout.dim[1].size;
     int imgHeight = panoramicScanMsg.layout.dim[0].size;
-    
+
     float currStepperAngle = startStepperAngle;
 
     for (unsigned int scan = 0; scan < scans2d.size(); scan++) {
@@ -291,6 +302,20 @@ bool Lidar::generatePanoramicImageHW() {
     return true;
 }
 
+bool Lidar::generatePanoramicInferenceImageHW() {
+    auto t1 = high_resolution_clock::now();
+
+    panoramicInferenceScanMsg.data = detector.run(panoramicScanMsg.data,
+                                                  panoramicScanMsg.layout.dim[1].size,
+                                                  panoramicScanMsg.layout.dim[0].size);
+
+    auto t2 = high_resolution_clock::now();
+    duration<double, std::milli> ms_double = t2 - t1;
+    std::cout << "Neural inference exec time: " << ms_double.count() << "ms." << std::endl;
+
+    return true;
+}
+
 bool Lidar::init(const Config &lidarConf) {
     conf = lidarConf;
 
@@ -298,10 +323,10 @@ bool Lidar::init(const Config &lidarConf) {
 
     initScanMsgs();
 
-    if (conf.kernel.useKernel && !kernel.init(conf.kernel.xclbin))
+    if (!detector.init(conf.detector.model))
         return false;
 
-    if (!detector.init(conf.detector.model))
+    if (conf.kernel.useKernel && !kernel.init(conf.kernel.xclbin))
         return false;
 
     if (!stepper.init(conf.stepper.chipNum))
@@ -401,4 +426,10 @@ std_msgs::msg::Float32MultiArray Lidar::getPanoramicImageMsg(bool &err) {
     } else
         generatePanoramicImageSW();
     return panoramicScanMsg;
+}
+
+std_msgs::msg::Float32MultiArray Lidar::getPanoramicInferenceImageMsg(bool &err) {
+    if (!generatePanoramicInferenceImageHW())
+        err = true;
+    return panoramicInferenceScanMsg;
 }

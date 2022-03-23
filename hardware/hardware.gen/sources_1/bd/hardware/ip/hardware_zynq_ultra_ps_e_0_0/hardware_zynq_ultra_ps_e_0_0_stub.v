@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-// Date        : Wed Feb 23 22:24:12 2022
+// Date        : Fri Mar 18 15:52:42 2022
 // Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_stub.v
@@ -44,9 +44,8 @@ module hardware_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   saxigp6_bready, saxigp6_arid, saxigp6_araddr, saxigp6_arlen, saxigp6_arsize, 
   saxigp6_arburst, saxigp6_arlock, saxigp6_arcache, saxigp6_arprot, saxigp6_arvalid, 
   saxigp6_arready, saxigp6_rid, saxigp6_rdata, saxigp6_rresp, saxigp6_rlast, saxigp6_rvalid, 
-  saxigp6_rready, saxigp6_awqos, saxigp6_arqos, pl_ps_irq0, pl_ps_irq1, pl_resetn0, pl_clk0, 
-  pl_clk1)
-/* synthesis syn_black_box black_box_pad_pin="maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid[5:0],saxigp0_awaddr[48:0],saxigp0_awlen[7:0],saxigp0_awsize[2:0],saxigp0_awburst[1:0],saxigp0_awlock,saxigp0_awcache[3:0],saxigp0_awprot[2:0],saxigp0_awvalid,saxigp0_awready,saxigp0_wdata[127:0],saxigp0_wstrb[15:0],saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid[5:0],saxigp0_bresp[1:0],saxigp0_bvalid,saxigp0_bready,saxigp0_arid[5:0],saxigp0_araddr[48:0],saxigp0_arlen[7:0],saxigp0_arsize[2:0],saxigp0_arburst[1:0],saxigp0_arlock,saxigp0_arcache[3:0],saxigp0_arprot[2:0],saxigp0_arvalid,saxigp0_arready,saxigp0_rid[5:0],saxigp0_rdata[127:0],saxigp0_rresp[1:0],saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos[3:0],saxigp0_arqos[3:0],saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid[5:0],saxigp1_awaddr[48:0],saxigp1_awlen[7:0],saxigp1_awsize[2:0],saxigp1_awburst[1:0],saxigp1_awlock,saxigp1_awcache[3:0],saxigp1_awprot[2:0],saxigp1_awvalid,saxigp1_awready,saxigp1_wdata[127:0],saxigp1_wstrb[15:0],saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid[5:0],saxigp1_bresp[1:0],saxigp1_bvalid,saxigp1_bready,saxigp1_arid[5:0],saxigp1_araddr[48:0],saxigp1_arlen[7:0],saxigp1_arsize[2:0],saxigp1_arburst[1:0],saxigp1_arlock,saxigp1_arcache[3:0],saxigp1_arprot[2:0],saxigp1_arvalid,saxigp1_arready,saxigp1_rid[5:0],saxigp1_rdata[127:0],saxigp1_rresp[1:0],saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos[3:0],saxigp1_arqos[3:0],saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid[5:0],saxigp6_awaddr[48:0],saxigp6_awlen[7:0],saxigp6_awsize[2:0],saxigp6_awburst[1:0],saxigp6_awlock,saxigp6_awcache[3:0],saxigp6_awprot[2:0],saxigp6_awvalid,saxigp6_awready,saxigp6_wdata[127:0],saxigp6_wstrb[15:0],saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid[5:0],saxigp6_bresp[1:0],saxigp6_bvalid,saxigp6_bready,saxigp6_arid[5:0],saxigp6_araddr[48:0],saxigp6_arlen[7:0],saxigp6_arsize[2:0],saxigp6_arburst[1:0],saxigp6_arlock,saxigp6_arcache[3:0],saxigp6_arprot[2:0],saxigp6_arvalid,saxigp6_arready,saxigp6_rid[5:0],saxigp6_rdata[127:0],saxigp6_rresp[1:0],saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos[3:0],saxigp6_arqos[3:0],pl_ps_irq0[2:0],pl_ps_irq1[0:0],pl_resetn0,pl_clk0,pl_clk1" */;
+  saxigp6_rready, saxigp6_awqos, saxigp6_arqos, pl_ps_irq0, pl_resetn0, pl_clk0)
+/* synthesis syn_black_box black_box_pad_pin="maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid[5:0],saxigp0_awaddr[48:0],saxigp0_awlen[7:0],saxigp0_awsize[2:0],saxigp0_awburst[1:0],saxigp0_awlock,saxigp0_awcache[3:0],saxigp0_awprot[2:0],saxigp0_awvalid,saxigp0_awready,saxigp0_wdata[127:0],saxigp0_wstrb[15:0],saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid[5:0],saxigp0_bresp[1:0],saxigp0_bvalid,saxigp0_bready,saxigp0_arid[5:0],saxigp0_araddr[48:0],saxigp0_arlen[7:0],saxigp0_arsize[2:0],saxigp0_arburst[1:0],saxigp0_arlock,saxigp0_arcache[3:0],saxigp0_arprot[2:0],saxigp0_arvalid,saxigp0_arready,saxigp0_rid[5:0],saxigp0_rdata[127:0],saxigp0_rresp[1:0],saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos[3:0],saxigp0_arqos[3:0],saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid[5:0],saxigp1_awaddr[48:0],saxigp1_awlen[7:0],saxigp1_awsize[2:0],saxigp1_awburst[1:0],saxigp1_awlock,saxigp1_awcache[3:0],saxigp1_awprot[2:0],saxigp1_awvalid,saxigp1_awready,saxigp1_wdata[127:0],saxigp1_wstrb[15:0],saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid[5:0],saxigp1_bresp[1:0],saxigp1_bvalid,saxigp1_bready,saxigp1_arid[5:0],saxigp1_araddr[48:0],saxigp1_arlen[7:0],saxigp1_arsize[2:0],saxigp1_arburst[1:0],saxigp1_arlock,saxigp1_arcache[3:0],saxigp1_arprot[2:0],saxigp1_arvalid,saxigp1_arready,saxigp1_rid[5:0],saxigp1_rdata[127:0],saxigp1_rresp[1:0],saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos[3:0],saxigp1_arqos[3:0],saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid[5:0],saxigp6_awaddr[48:0],saxigp6_awlen[7:0],saxigp6_awsize[2:0],saxigp6_awburst[1:0],saxigp6_awlock,saxigp6_awcache[3:0],saxigp6_awprot[2:0],saxigp6_awvalid,saxigp6_awready,saxigp6_wdata[31:0],saxigp6_wstrb[3:0],saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid[5:0],saxigp6_bresp[1:0],saxigp6_bvalid,saxigp6_bready,saxigp6_arid[5:0],saxigp6_araddr[48:0],saxigp6_arlen[7:0],saxigp6_arsize[2:0],saxigp6_arburst[1:0],saxigp6_arlock,saxigp6_arcache[3:0],saxigp6_arprot[2:0],saxigp6_arvalid,saxigp6_arready,saxigp6_rid[5:0],saxigp6_rdata[31:0],saxigp6_rresp[1:0],saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos[3:0],saxigp6_arqos[3:0],pl_ps_irq0[2:0],pl_resetn0,pl_clk0" */;
   input maxihpm0_lpd_aclk;
   output [15:0]maxigp2_awid;
   output [39:0]maxigp2_awaddr;
@@ -180,8 +179,8 @@ module hardware_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   input [2:0]saxigp6_awprot;
   input saxigp6_awvalid;
   output saxigp6_awready;
-  input [127:0]saxigp6_wdata;
-  input [15:0]saxigp6_wstrb;
+  input [31:0]saxigp6_wdata;
+  input [3:0]saxigp6_wstrb;
   input saxigp6_wlast;
   input saxigp6_wvalid;
   output saxigp6_wready;
@@ -200,7 +199,7 @@ module hardware_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   input saxigp6_arvalid;
   output saxigp6_arready;
   output [5:0]saxigp6_rid;
-  output [127:0]saxigp6_rdata;
+  output [31:0]saxigp6_rdata;
   output [1:0]saxigp6_rresp;
   output saxigp6_rlast;
   output saxigp6_rvalid;
@@ -208,8 +207,6 @@ module hardware_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid,
   input [3:0]saxigp6_awqos;
   input [3:0]saxigp6_arqos;
   input [2:0]pl_ps_irq0;
-  input [0:0]pl_ps_irq1;
   output pl_resetn0;
   output pl_clk0;
-  output pl_clk1;
 endmodule

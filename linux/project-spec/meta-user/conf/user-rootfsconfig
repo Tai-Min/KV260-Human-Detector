@@ -7,3 +7,8 @@ CONFIG_packagegroup-petalinux-som
 CONFIG_packagegroup-core-full-cmdline
 CONFIG_packagegroup-petalinux-jupyter
 CONFIG_packagegroup-petalinux-vitisai
+CONFIG_dpu
+CONFIG_temp
+CONFIG_dpucma
+CONFIG_dpcma
+CONFIG_dpcma

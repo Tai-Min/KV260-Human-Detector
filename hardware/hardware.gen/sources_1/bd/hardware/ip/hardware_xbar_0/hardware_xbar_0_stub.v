@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-// Date        : Sat Feb 26 17:48:19 2022
+// Date        : Tue Mar 22 19:40:54 2022
 // Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_xbar_0/hardware_xbar_0_stub.v

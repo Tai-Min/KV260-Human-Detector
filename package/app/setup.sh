@@ -1,3 +1,6 @@
+cd /home/petalinux
+mv vart.conf /etc/vart.conf
+
 # Needed to refresh xmutil as it doesn't register kernels passed via scp.
 cd /lib/firmware/xilinx
 mv smart_lidar tmp

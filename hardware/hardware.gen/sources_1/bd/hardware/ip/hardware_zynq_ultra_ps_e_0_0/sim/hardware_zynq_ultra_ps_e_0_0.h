@@ -213,8 +213,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp6_awprot;
   sc_core::sc_in< bool > saxigp6_awvalid;
   sc_core::sc_out< bool > saxigp6_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp6_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp6_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<32> > saxigp6_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_wstrb;
   sc_core::sc_in< bool > saxigp6_wlast;
   sc_core::sc_in< bool > saxigp6_wvalid;
   sc_core::sc_out< bool > saxigp6_wready;
@@ -233,7 +233,7 @@ public:
   sc_core::sc_in< bool > saxigp6_arvalid;
   sc_core::sc_out< bool > saxigp6_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp6_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp6_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<32> > saxigp6_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp6_rresp;
   sc_core::sc_out< bool > saxigp6_rlast;
   sc_core::sc_out< bool > saxigp6_rvalid;
@@ -241,10 +241,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_awqos;
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_arqos;
   sc_core::sc_in< sc_dt::sc_bv<3> > pl_ps_irq0;
-  sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq1;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -269,7 +267,7 @@ private:
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp1_awuser_converter;
   sc_signal< sc_bv<1> > m_saxigp1_awuser_converter_signal;
   sc_signal< bool > m_S_AXI_HPC1_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<32,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp6_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_awuser_converter;
@@ -425,8 +423,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp6_awprot;
   sc_core::sc_in< bool > saxigp6_awvalid;
   sc_core::sc_out< bool > saxigp6_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp6_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp6_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<32> > saxigp6_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_wstrb;
   sc_core::sc_in< bool > saxigp6_wlast;
   sc_core::sc_in< bool > saxigp6_wvalid;
   sc_core::sc_out< bool > saxigp6_wready;
@@ -445,7 +443,7 @@ public:
   sc_core::sc_in< bool > saxigp6_arvalid;
   sc_core::sc_out< bool > saxigp6_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp6_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp6_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<32> > saxigp6_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp6_rresp;
   sc_core::sc_out< bool > saxigp6_rlast;
   sc_core::sc_out< bool > saxigp6_rvalid;
@@ -453,10 +451,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_awqos;
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_arqos;
   sc_core::sc_in< sc_dt::sc_bv<3> > pl_ps_irq0;
-  sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq1;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -481,7 +477,7 @@ private:
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp1_awuser_converter;
   sc_signal< sc_bv<1> > m_saxigp1_awuser_converter_signal;
   sc_signal< bool > m_S_AXI_HPC1_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<32,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp6_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_awuser_converter;
@@ -637,8 +633,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp6_awprot;
   sc_core::sc_in< bool > saxigp6_awvalid;
   sc_core::sc_out< bool > saxigp6_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp6_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp6_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<32> > saxigp6_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_wstrb;
   sc_core::sc_in< bool > saxigp6_wlast;
   sc_core::sc_in< bool > saxigp6_wvalid;
   sc_core::sc_out< bool > saxigp6_wready;
@@ -657,7 +653,7 @@ public:
   sc_core::sc_in< bool > saxigp6_arvalid;
   sc_core::sc_out< bool > saxigp6_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp6_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp6_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<32> > saxigp6_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp6_rresp;
   sc_core::sc_out< bool > saxigp6_rlast;
   sc_core::sc_out< bool > saxigp6_rvalid;
@@ -665,10 +661,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_awqos;
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_arqos;
   sc_core::sc_in< sc_dt::sc_bv<3> > pl_ps_irq0;
-  sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq1;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -693,7 +687,7 @@ private:
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp1_awuser_converter;
   sc_signal< sc_bv<1> > m_saxigp1_awuser_converter_signal;
   sc_signal< bool > m_S_AXI_HPC1_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<32,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp6_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_awuser_converter;
@@ -853,8 +847,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp6_awprot;
   sc_core::sc_in< bool > saxigp6_awvalid;
   sc_core::sc_out< bool > saxigp6_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp6_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp6_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<32> > saxigp6_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_wstrb;
   sc_core::sc_in< bool > saxigp6_wlast;
   sc_core::sc_in< bool > saxigp6_wvalid;
   sc_core::sc_out< bool > saxigp6_wready;
@@ -873,7 +867,7 @@ public:
   sc_core::sc_in< bool > saxigp6_arvalid;
   sc_core::sc_out< bool > saxigp6_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp6_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp6_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<32> > saxigp6_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp6_rresp;
   sc_core::sc_out< bool > saxigp6_rlast;
   sc_core::sc_out< bool > saxigp6_rvalid;
@@ -881,10 +875,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_awqos;
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_arqos;
   sc_core::sc_in< sc_dt::sc_bv<3> > pl_ps_irq0;
-  sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq1;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -909,7 +901,7 @@ private:
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp1_awuser_converter;
   sc_signal< sc_bv<1> > m_saxigp1_awuser_converter_signal;
   sc_signal< bool > m_S_AXI_HPC1_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<32,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp6_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_awuser_converter;
@@ -1081,8 +1073,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp6_awprot;
   sc_core::sc_in< bool > saxigp6_awvalid;
   sc_core::sc_out< bool > saxigp6_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp6_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp6_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<32> > saxigp6_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_wstrb;
   sc_core::sc_in< bool > saxigp6_wlast;
   sc_core::sc_in< bool > saxigp6_wvalid;
   sc_core::sc_out< bool > saxigp6_wready;
@@ -1101,7 +1093,7 @@ public:
   sc_core::sc_in< bool > saxigp6_arvalid;
   sc_core::sc_out< bool > saxigp6_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp6_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp6_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<32> > saxigp6_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp6_rresp;
   sc_core::sc_out< bool > saxigp6_rlast;
   sc_core::sc_out< bool > saxigp6_rvalid;
@@ -1109,10 +1101,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_awqos;
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp6_arqos;
   sc_core::sc_in< sc_dt::sc_bv<3> > pl_ps_irq0;
-  sc_core::sc_in< sc_dt::sc_bv<1> > pl_ps_irq1;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
-  sc_core::sc_out< bool > pl_clk1;
 
   // Dummy Signals for IP Ports
 
@@ -1137,7 +1127,7 @@ private:
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp1_awuser_converter;
   sc_signal< sc_bv<1> > m_saxigp1_awuser_converter_signal;
   sc_signal< bool > m_S_AXI_HPC1_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<32,49,6,1,1,1,1,1>* mp_S_AXI_LPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp6_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp6_awuser_converter;

@@ -15,6 +15,8 @@ PointCloudPublisher::PointCloudPublisher(const Lidar::Config& conf) : Node("poin
 
     panoramaPublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("panorama", 10);
 
+    panoramaInferencePublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("panorama_inference", 10);
+
     timer = this->create_wall_timer(5ms, std::bind(&PointCloudPublisher::timerCallback, this));
 }
 
@@ -39,4 +41,11 @@ void PointCloudPublisher::timerCallback() {
         return;
     } else
         panoramaPublisher->publish(panorama);
+
+    std_msgs::msg::Float32MultiArray panoramaInference = lidar.getPanoramicInferenceImageMsg(err);
+    if (err) {
+        std::cout << "Failed to get panoramic inference image!" << std::endl;
+        return;
+    } else
+        panoramaInferencePublisher->publish(panoramaInference);
 }

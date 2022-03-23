@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Sat Feb 26 17:52:25 2022
+| Date         : Tue Mar 22 19:48:28 2022
 | Host         : PC running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_utilization -file hardware_wrapper_utilization_synth.rpt -pb hardware_wrapper_utilization_synth.pb
 | Design       : hardware_wrapper
@@ -176,17 +176,16 @@ Table of Contents
 | hardware_proc_sys_reset_1_1        |    1 |
 | hardware_proc_sys_reset_1_0        |    1 |
 | hardware_proc_sys_reset_0_0        |    1 |
-| hardware_dpuczdx8g_0_0             |    1 |
 | hardware_divider_0_1               |    1 |
 | hardware_divider_0_0               |    1 |
-| hardware_clk_wiz_0_0               |    1 |
+| hardware_clk_wiz_1_0               |    1 |
+| hardware_clk_wiz_0_2               |    1 |
 | hardware_axi_intc_0_0              |    1 |
 | hardware_axi_gpio_0_0              |    1 |
-| hardware_auto_us_0                 |    1 |
 | hardware_auto_pc_2                 |    1 |
 | hardware_auto_pc_1                 |    1 |
 | hardware_auto_pc_0                 |    1 |
-| hardware_auto_cc_0                 |    1 |
+| hardware_DPUCZDX8G_0_1             |    1 |
 +------------------------------------+------+
 
 

@@ -4176,12 +4176,20 @@ CONFIG_package-feed-archs=""
 # CONFIG_peekpoke is not set
 
 #
+# modules 
+#
+CONFIG_dpcma=y
+CONFIG_dpu=y
+
+#
 # user packages 
 #
+# CONFIG_dpucma is not set
 CONFIG_packagegroup-core-full-cmdline=y
 CONFIG_packagegroup-petalinux-jupyter=y
 CONFIG_packagegroup-petalinux-som=y
 CONFIG_packagegroup-petalinux-vitisai=y
+# CONFIG_temp is not set
 
 #
 # PetaLinux RootFS Settings

@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Wed Feb 23 22:24:12 2022
+-- Date        : Fri Mar 18 15:52:42 2022
 -- Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0_stub.vhdl
@@ -147,8 +147,8 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     saxigp6_awvalid : in STD_LOGIC;
     saxigp6_awready : out STD_LOGIC;
-    saxigp6_wdata : in STD_LOGIC_VECTOR ( 127 downto 0 );
-    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    saxigp6_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    saxigp6_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     saxigp6_wlast : in STD_LOGIC;
     saxigp6_wvalid : in STD_LOGIC;
     saxigp6_wready : out STD_LOGIC;
@@ -167,7 +167,7 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_arvalid : in STD_LOGIC;
     saxigp6_arready : out STD_LOGIC;
     saxigp6_rid : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    saxigp6_rdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    saxigp6_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     saxigp6_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     saxigp6_rlast : out STD_LOGIC;
     saxigp6_rvalid : out STD_LOGIC;
@@ -175,10 +175,8 @@ entity hardware_zynq_ultra_ps_e_0_0 is
     saxigp6_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     saxigp6_arqos : in STD_LOGIC_VECTOR ( 3 downto 0 );
     pl_ps_irq0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pl_ps_irq1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     pl_resetn0 : out STD_LOGIC;
-    pl_clk0 : out STD_LOGIC;
-    pl_clk1 : out STD_LOGIC
+    pl_clk0 : out STD_LOGIC
   );
 
 end hardware_zynq_ultra_ps_e_0_0;
@@ -187,7 +185,7 @@ architecture stub of hardware_zynq_ultra_ps_e_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid[5:0],saxigp0_awaddr[48:0],saxigp0_awlen[7:0],saxigp0_awsize[2:0],saxigp0_awburst[1:0],saxigp0_awlock,saxigp0_awcache[3:0],saxigp0_awprot[2:0],saxigp0_awvalid,saxigp0_awready,saxigp0_wdata[127:0],saxigp0_wstrb[15:0],saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid[5:0],saxigp0_bresp[1:0],saxigp0_bvalid,saxigp0_bready,saxigp0_arid[5:0],saxigp0_araddr[48:0],saxigp0_arlen[7:0],saxigp0_arsize[2:0],saxigp0_arburst[1:0],saxigp0_arlock,saxigp0_arcache[3:0],saxigp0_arprot[2:0],saxigp0_arvalid,saxigp0_arready,saxigp0_rid[5:0],saxigp0_rdata[127:0],saxigp0_rresp[1:0],saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos[3:0],saxigp0_arqos[3:0],saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid[5:0],saxigp1_awaddr[48:0],saxigp1_awlen[7:0],saxigp1_awsize[2:0],saxigp1_awburst[1:0],saxigp1_awlock,saxigp1_awcache[3:0],saxigp1_awprot[2:0],saxigp1_awvalid,saxigp1_awready,saxigp1_wdata[127:0],saxigp1_wstrb[15:0],saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid[5:0],saxigp1_bresp[1:0],saxigp1_bvalid,saxigp1_bready,saxigp1_arid[5:0],saxigp1_araddr[48:0],saxigp1_arlen[7:0],saxigp1_arsize[2:0],saxigp1_arburst[1:0],saxigp1_arlock,saxigp1_arcache[3:0],saxigp1_arprot[2:0],saxigp1_arvalid,saxigp1_arready,saxigp1_rid[5:0],saxigp1_rdata[127:0],saxigp1_rresp[1:0],saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos[3:0],saxigp1_arqos[3:0],saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid[5:0],saxigp6_awaddr[48:0],saxigp6_awlen[7:0],saxigp6_awsize[2:0],saxigp6_awburst[1:0],saxigp6_awlock,saxigp6_awcache[3:0],saxigp6_awprot[2:0],saxigp6_awvalid,saxigp6_awready,saxigp6_wdata[127:0],saxigp6_wstrb[15:0],saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid[5:0],saxigp6_bresp[1:0],saxigp6_bvalid,saxigp6_bready,saxigp6_arid[5:0],saxigp6_araddr[48:0],saxigp6_arlen[7:0],saxigp6_arsize[2:0],saxigp6_arburst[1:0],saxigp6_arlock,saxigp6_arcache[3:0],saxigp6_arprot[2:0],saxigp6_arvalid,saxigp6_arready,saxigp6_rid[5:0],saxigp6_rdata[127:0],saxigp6_rresp[1:0],saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos[3:0],saxigp6_arqos[3:0],pl_ps_irq0[2:0],pl_ps_irq1[0:0],pl_resetn0,pl_clk0,pl_clk1";
+attribute black_box_pad_pin of stub : architecture is "maxihpm0_lpd_aclk,maxigp2_awid[15:0],maxigp2_awaddr[39:0],maxigp2_awlen[7:0],maxigp2_awsize[2:0],maxigp2_awburst[1:0],maxigp2_awlock,maxigp2_awcache[3:0],maxigp2_awprot[2:0],maxigp2_awvalid,maxigp2_awuser[15:0],maxigp2_awready,maxigp2_wdata[31:0],maxigp2_wstrb[3:0],maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid[15:0],maxigp2_bresp[1:0],maxigp2_bvalid,maxigp2_bready,maxigp2_arid[15:0],maxigp2_araddr[39:0],maxigp2_arlen[7:0],maxigp2_arsize[2:0],maxigp2_arburst[1:0],maxigp2_arlock,maxigp2_arcache[3:0],maxigp2_arprot[2:0],maxigp2_arvalid,maxigp2_aruser[15:0],maxigp2_arready,maxigp2_rid[15:0],maxigp2_rdata[31:0],maxigp2_rresp[1:0],maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos[3:0],maxigp2_arqos[3:0],saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid[5:0],saxigp0_awaddr[48:0],saxigp0_awlen[7:0],saxigp0_awsize[2:0],saxigp0_awburst[1:0],saxigp0_awlock,saxigp0_awcache[3:0],saxigp0_awprot[2:0],saxigp0_awvalid,saxigp0_awready,saxigp0_wdata[127:0],saxigp0_wstrb[15:0],saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid[5:0],saxigp0_bresp[1:0],saxigp0_bvalid,saxigp0_bready,saxigp0_arid[5:0],saxigp0_araddr[48:0],saxigp0_arlen[7:0],saxigp0_arsize[2:0],saxigp0_arburst[1:0],saxigp0_arlock,saxigp0_arcache[3:0],saxigp0_arprot[2:0],saxigp0_arvalid,saxigp0_arready,saxigp0_rid[5:0],saxigp0_rdata[127:0],saxigp0_rresp[1:0],saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos[3:0],saxigp0_arqos[3:0],saxihpc1_fpd_aclk,saxigp1_aruser,saxigp1_awuser,saxigp1_awid[5:0],saxigp1_awaddr[48:0],saxigp1_awlen[7:0],saxigp1_awsize[2:0],saxigp1_awburst[1:0],saxigp1_awlock,saxigp1_awcache[3:0],saxigp1_awprot[2:0],saxigp1_awvalid,saxigp1_awready,saxigp1_wdata[127:0],saxigp1_wstrb[15:0],saxigp1_wlast,saxigp1_wvalid,saxigp1_wready,saxigp1_bid[5:0],saxigp1_bresp[1:0],saxigp1_bvalid,saxigp1_bready,saxigp1_arid[5:0],saxigp1_araddr[48:0],saxigp1_arlen[7:0],saxigp1_arsize[2:0],saxigp1_arburst[1:0],saxigp1_arlock,saxigp1_arcache[3:0],saxigp1_arprot[2:0],saxigp1_arvalid,saxigp1_arready,saxigp1_rid[5:0],saxigp1_rdata[127:0],saxigp1_rresp[1:0],saxigp1_rlast,saxigp1_rvalid,saxigp1_rready,saxigp1_awqos[3:0],saxigp1_arqos[3:0],saxi_lpd_aclk,saxigp6_aruser,saxigp6_awuser,saxigp6_awid[5:0],saxigp6_awaddr[48:0],saxigp6_awlen[7:0],saxigp6_awsize[2:0],saxigp6_awburst[1:0],saxigp6_awlock,saxigp6_awcache[3:0],saxigp6_awprot[2:0],saxigp6_awvalid,saxigp6_awready,saxigp6_wdata[31:0],saxigp6_wstrb[3:0],saxigp6_wlast,saxigp6_wvalid,saxigp6_wready,saxigp6_bid[5:0],saxigp6_bresp[1:0],saxigp6_bvalid,saxigp6_bready,saxigp6_arid[5:0],saxigp6_araddr[48:0],saxigp6_arlen[7:0],saxigp6_arsize[2:0],saxigp6_arburst[1:0],saxigp6_arlock,saxigp6_arcache[3:0],saxigp6_arprot[2:0],saxigp6_arvalid,saxigp6_arready,saxigp6_rid[5:0],saxigp6_rdata[31:0],saxigp6_rresp[1:0],saxigp6_rlast,saxigp6_rvalid,saxigp6_rready,saxigp6_awqos[3:0],saxigp6_arqos[3:0],pl_ps_irq0[2:0],pl_resetn0,pl_clk0";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "zynq_ultra_ps_e_v3_3_5_zynq_ultra_ps_e,Vivado 2021.1";
 begin

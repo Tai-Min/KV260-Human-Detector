@@ -1,8 +1,8 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Sun Feb  6 11:26:30 2022
--- Host        : PC running 64-bit Ubuntu 20.04.3 LTS
+-- Date        : Fri Mar 18 02:59:17 2022
+-- Host        : PC running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/mateusz/KV260/hardware/hardware.gen/sources_1/bd/hardware/ip/hardware_proc_sys_reset_1_1/hardware_proc_sys_reset_1_1_sim_netlist.vhdl
 -- Design      : hardware_proc_sys_reset_1_1
@@ -246,8 +246,6 @@ architecture STRUCTURE of hardware_proc_sys_reset_1_1_upcnt_n is
   signal clear : STD_LOGIC;
   signal q_int0 : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \q_int[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \q_int[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \q_int[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \q_int[4]_i_1\ : label is "soft_lutpair0";
 begin
@@ -619,16 +617,8 @@ architecture STRUCTURE of hardware_proc_sys_reset_1_1_sequence_psr is
   signal seq_cnt : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal seq_cnt_en : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of Core_i_1 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \bsr_dec[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \bsr_dec[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of bsr_i_1 : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \core_dec[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \core_dec[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of from_sys_i_1 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of pr_i_1 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \bsr_dec[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \core_dec[0]_i_1\ : label is "soft_lutpair1";
 begin
   Bsr_out <= \^bsr_out\;
   MB_out <= \^mb_out\;
@@ -1096,7 +1086,7 @@ architecture STRUCTURE of hardware_proc_sys_reset_1_1 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 399996000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 649993500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN hardware_clk_wiz_0_1_dpu_s_axi, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";

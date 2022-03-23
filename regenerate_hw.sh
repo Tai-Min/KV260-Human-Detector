@@ -148,15 +148,16 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "plnx" ${buildTy
 then
    info "Processing hardware description file..."
 
-   (cd "$projDir/linux" && petalinux-config --get-hw-description="$projDir/hardware/" --silent)
+   #(cd "$projDir/linux" && petalinux-config --get-hw-description="$projDir/hardware/" --silent)
 
    failHandler
    
    info "Building PetaLinux image and sdk..."
 
    # These can fail due to task mismatch, which is not really an error for us.
-   (cd "$projDir/linux" && petalinux-build | grep "all succeeded" && petalinux-build --sdk | grep "all succeeded")
-
+   #(cd "$projDir/linux" && petalinux-build | grep "all succeeded" && petalinux-build --sdk | grep "all succeeded")
+   (cd "$projDir/linux" && petalinux-build | grep "all succeeded")
+   
    failHandler
 
    info "Generating SD image..."
@@ -173,7 +174,7 @@ then
 
    info "Populating SDK..."
 
-   (cd "$projDir/linux/images/linux" && ./sdk.sh -d "$projDir/package/sdk")
+   #(cd "$projDir/linux/images/linux" && ./sdk.sh -d "$projDir/package/sdk")
 
    failHandler
 fi

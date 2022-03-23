@@ -75,7 +75,10 @@
         "*.cp": "cpp",
         "unordered_set": "cpp",
         "*.def": "cpp",
-        "any": "cpp"
+        "any": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "*.ch": "cpp"
     },
     "cmake.configureOnOpen": false
 }

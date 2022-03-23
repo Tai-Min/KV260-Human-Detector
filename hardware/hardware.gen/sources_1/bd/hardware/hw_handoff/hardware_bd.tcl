@@ -174,6 +174,42 @@ proc create_root_design { parentCell } {
   set stop1 [ create_bd_port -dir I stop1 ]
   set stop2 [ create_bd_port -dir I stop2 ]
 
+  # Create instance: DPUCZDX8G_0, and set properties
+  set DPUCZDX8G_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:DPUCZDX8G:3.3 DPUCZDX8G_0 ]
+  set_property -dict [ list \
+   CONFIG.ARCH {512} \
+   CONFIG.ARCH_ICP {8} \
+   CONFIG.ARCH_IMG_BKGRP {3} \
+   CONFIG.ARCH_OCP {8} \
+   CONFIG.ARCH_PP {4} \
+   CONFIG.BANK_IMG_N {12} \
+   CONFIG.BANK_WGT_N {9} \
+   CONFIG.BBANK_IMG_N {12} \
+   CONFIG.BBANK_WGT_N {9} \
+   CONFIG.CONV_DSP_NUM {96} \
+   CONFIG.CONV_LEAKYRELU {0} \
+   CONFIG.CONV_RELU_ADDON {2} \
+   CONFIG.DNNDK_PRINT {Number of DPU Cores:1;Arch of DPU:B512;RAM Usage:High;Channel\
+Augmentation:Disabled;DepthWiseConv:Enabled;AveragePool:Disabled;ReLU Type:ReLU\
++ ReLU6;Number of SFM cores:0;S-AXI Clock Mode:Independent;dpu_2x Clock\
+Gating:Disabled;DSP48 Maximal Cascade Length:4;DSP48 Usage:High;Ultra-RAM Use\
+per DPU:0;Enable timestamp auto-update:Enabled;Target Version:1.4.1;AXI\
+Protocol:AXI4;S-AXI Data Width:32;M-AXI GP Data Width:32;M-AXI HP Data Width\
+(DPU):128;M-AXI HP Data Width (SFM):128;M-AXI ID Width:2;DSP Slice\
+Count:110;Ultra-RAM Count:0.0;Block-RAM Count:89.5}\
+   CONFIG.DWCV_DSP_NUM {12} \
+   CONFIG.DWCV_PARALLEL {2} \
+   CONFIG.LOAD_AUGM {0} \
+   CONFIG.POOL_AVERAGE {0} \
+   CONFIG.SUM_BRAM_N {89.5} \
+   CONFIG.SUM_DSP_NUM {110} \
+   CONFIG.TIME_DAY {14} \
+   CONFIG.TIME_HOUR {20} \
+   CONFIG.TIME_MONTH {3} \
+   CONFIG.TIME_QUARTER {0} \
+   CONFIG.TIME_YEAR {22} \
+ ] $DPUCZDX8G_0
+
   # Create instance: axi_gpio, and set properties
   set axi_gpio [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio ]
   set_property -dict [ list \
@@ -203,29 +239,68 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_MI {4} \
  ] $axi_interconnect_1
 
-  # Create instance: axi_interconnect_2, and set properties
-  set axi_interconnect_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_2 ]
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
- ] $axi_interconnect_2
-
-  # Create instance: clk_wiz, and set properties
-  set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
-  set_property -dict [ list \
-   CONFIG.CLKOUT2_JITTER {102.087} \
-   CONFIG.CLKOUT2_PHASE_ERROR {87.181} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} \
+   CONFIG.AUTO_PRIMITIVE {MMCM} \
+   CONFIG.CLKOUT1_DRIVES {Buffer} \
+   CONFIG.CLKOUT1_JITTER {88.518} \
+   CONFIG.CLKOUT1_MATCHED_ROUTING {true} \
+   CONFIG.CLKOUT1_PHASE_ERROR {82.898} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {325} \
+   CONFIG.CLKOUT1_USED {true} \
+   CONFIG.CLKOUT2_DRIVES {Buffer} \
+   CONFIG.CLKOUT2_JITTER {78.265} \
+   CONFIG.CLKOUT2_MATCHED_ROUTING {true} \
+   CONFIG.CLKOUT2_PHASE_ERROR {82.898} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {650} \
    CONFIG.CLKOUT2_USED {true} \
-   CONFIG.CLKOUT3_JITTER {90.075} \
-   CONFIG.CLKOUT3_PHASE_ERROR {87.181} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {400} \
-   CONFIG.CLKOUT3_USED {true} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {6} \
-   CONFIG.MMCM_CLKOUT2_DIVIDE {3} \
-   CONFIG.NUM_OUT_CLKS {3} \
+   CONFIG.CLKOUT3_DRIVES {Buffer} \
+   CONFIG.CLKOUT3_JITTER {78.265} \
+   CONFIG.CLKOUT3_PHASE_ERROR {82.898} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {650} \
+   CONFIG.CLKOUT3_USED {false} \
+   CONFIG.CLKOUT4_DRIVES {Buffer} \
+   CONFIG.CLKOUT5_DRIVES {Buffer} \
+   CONFIG.CLKOUT6_DRIVES {Buffer} \
+   CONFIG.CLKOUT7_DRIVES {Buffer} \
+   CONFIG.CLK_OUT1_PORT {dpu} \
+   CONFIG.CLK_OUT2_PORT {dpux2} \
+   CONFIG.CLK_OUT3_PORT {dpux2} \
+   CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+   CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {13.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {4.000} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {2} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+   CONFIG.MMCM_COMPENSATION {AUTO} \
+   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {true} \
+   CONFIG.PRIMITIVE {Auto} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
- ] $clk_wiz
+   CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+   CONFIG.USE_LOCKED {true} \
+   CONFIG.USE_PHASE_ALIGNMENT {true} \
+   CONFIG.USE_RESET {true} \
+ ] $clk_wiz_0
+
+  # Create instance: clk_wiz_1, and set properties
+  set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1 ]
+  set_property -dict [ list \
+   CONFIG.CLKOUT1_DRIVES {Buffer} \
+   CONFIG.CLKOUT2_DRIVES {Buffer} \
+   CONFIG.CLKOUT3_DRIVES {Buffer} \
+   CONFIG.CLKOUT4_DRIVES {Buffer} \
+   CONFIG.CLKOUT5_DRIVES {Buffer} \
+   CONFIG.CLKOUT6_DRIVES {Buffer} \
+   CONFIG.CLKOUT7_DRIVES {Buffer} \
+   CONFIG.CLK_OUT1_PORT {global} \
+   CONFIG.RESET_PORT {resetn} \
+   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+   CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+   CONFIG.USE_PHASE_ALIGNMENT {true} \
+ ] $clk_wiz_1
 
   # Create instance: cmd_bits, and set properties
   set cmd_bits [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 cmd_bits ]
@@ -260,44 +335,11 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: dpuczdx8g_0, and set properties
-  set dpuczdx8g_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dpuczdx8g:3.4 dpuczdx8g_0 ]
-  set_property -dict [ list \
-   CONFIG.ARCH {800} \
-   CONFIG.ARCH_ICP {10} \
-   CONFIG.ARCH_IMG_BKGRP {2} \
-   CONFIG.ARCH_OCP {10} \
-   CONFIG.ARCH_PP {4} \
-   CONFIG.BANK_IMG_N {8} \
-   CONFIG.BANK_WGT_N {11} \
-   CONFIG.BBANK_IMG_N {8} \
-   CONFIG.BBANK_WGT_N {11} \
-   CONFIG.CONV_DSP_NUM {140} \
-   CONFIG.CONV_LEAKYRELU {0} \
-   CONFIG.CONV_RELU_ADDON {2} \
-   CONFIG.DNNDK_PRINT {Number of DPU Cores:1;Arch of DPU:B800;RAM Usage:Low;Channel\
-Augmentation:Disabled;DepthWiseConv:Enabled;AveragePool:Disabled;ReLU Type:ReLU\
-+ ReLU6;Number of SFM cores:0;S-AXI Clock Mode:Independent;dpu_2x Clock\
-Gating:Disabled;DSP48 Maximal Cascade Length:4;DSP48 Usage:High;Ultra-RAM Use\
-per DPU:0;Enable timestamp auto-update:Enabled;Target Version:1.4.1;AXI\
-Protocol:AXI4;S-AXI Data Width:32;M-AXI GP Data Width:32;M-AXI HP Data Width\
-(DPU):128;M-AXI HP Data Width (SFM):128;M-AXI ID Width:2;DSP Slice\
-Count:157;Ultra-RAM Count:0.0;Block-RAM Count:91.5}\
-   CONFIG.DWCV_DSP_NUM {15} \
-   CONFIG.DWCV_ENA {1} \
-   CONFIG.DWCV_PARALLEL {2} \
-   CONFIG.DWCV_RELU6 {1} \
-   CONFIG.LOAD_AUGM {0} \
-   CONFIG.POOL_AVERAGE {0} \
-   CONFIG.SUM_BRAM_N {91.5} \
-   CONFIG.SUM_DSP_NUM {157} \
-   CONFIG.TIME_DAY {26} \
-   CONFIG.TIME_HOUR {17} \
-   CONFIG.TIME_MONTH {2} \
-   CONFIG.TIME_QUARTER {3} \
-   CONFIG.TIME_YEAR {22} \
-   CONFIG.VER_DPU_NUM {1} \
- ] $dpuczdx8g_0
+  # Create instance: dpu_reset, and set properties
+  set dpu_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 dpu_reset ]
+
+  # Create instance: dpux2_reset, and set properties
+  set dpux2_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 dpux2_reset ]
 
   # Create instance: ena_bit, and set properties
   set ena_bit [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 ena_bit ]
@@ -308,6 +350,9 @@ Count:157;Ultra-RAM Count:0.0;Block-RAM Count:91.5}\
    CONFIG.DOUT_WIDTH {1} \
  ] $ena_bit
 
+  # Create instance: global_reset, and set properties
+  set global_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 global_reset ]
+
   # Create instance: latch_bit, and set properties
   set latch_bit [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 latch_bit ]
   set_property -dict [ list \
@@ -316,15 +361,6 @@ Count:157;Ultra-RAM Count:0.0;Block-RAM Count:91.5}\
    CONFIG.DIN_WIDTH {13} \
    CONFIG.DOUT_WIDTH {1} \
  ] $latch_bit
-
-  # Create instance: proc_sys_reset_1, and set properties
-  set proc_sys_reset_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1 ]
-
-  # Create instance: proc_sys_reset_2, and set properties
-  set proc_sys_reset_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_2 ]
-
-  # Create instance: proc_sys_reset_3, and set properties
-  set proc_sys_reset_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_3 ]
 
   # Create instance: pwm, and set properties
   set block_name pwm
@@ -910,7 +946,7 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0 {15} \
    CONFIG.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR1 {1} \
    CONFIG.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ {100} \
-   CONFIG.PSU__CRL_APB__PL1_REF_CTRL__SRCSEL {IOPLL} \
+   CONFIG.PSU__CRL_APB__PL1_REF_CTRL__SRCSEL {RPLL} \
    CONFIG.PSU__CRL_APB__PL2_REF_CTRL__DIVISOR0 {4} \
    CONFIG.PSU__CRL_APB__PL2_REF_CTRL__DIVISOR1 {1} \
    CONFIG.PSU__CRL_APB__PL3_REF_CTRL__DIVISOR0 {4} \
@@ -1057,7 +1093,7 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__FPD_SLCR__WDT1__FREQMHZ {99.999001} \
    CONFIG.PSU__FPD_SLCR__WDT_CLK_SEL__SELECT {APB} \
    CONFIG.PSU__FPGA_PL0_ENABLE {1} \
-   CONFIG.PSU__FPGA_PL1_ENABLE {1} \
+   CONFIG.PSU__FPGA_PL1_ENABLE {0} \
    CONFIG.PSU__GEM3_COHERENCY {0} \
    CONFIG.PSU__GEM3_ROUTE_THROUGH_FPD {0} \
    CONFIG.PSU__GEM__TSU__ENABLE {0} \
@@ -1094,7 +1130,7 @@ MIO#GPIO0 MIO#I2C 1#I2C 1#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#PMU GPI 5#PMU GPO\
    CONFIG.PSU__MAXIGP2__DATA_WIDTH {32} \
    CONFIG.PSU__OVERRIDE__BASIC_CLOCK {0} \
    CONFIG.PSU__PL_CLK0_BUF {TRUE} \
-   CONFIG.PSU__PL_CLK1_BUF {TRUE} \
+   CONFIG.PSU__PL_CLK1_BUF {FALSE} \
    CONFIG.PSU__PMU_COHERENCY {0} \
    CONFIG.PSU__PMU__AIBACK__ENABLE {0} \
    CONFIG.PSU__PMU__EMIO_GPI__ENABLE {0} \
@@ -1141,7 +1177,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__SAXIGP3__DATA_WIDTH {128} \
    CONFIG.PSU__SAXIGP4__DATA_WIDTH {128} \
    CONFIG.PSU__SAXIGP5__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP6__DATA_WIDTH {128} \
+   CONFIG.PSU__SAXIGP6__DATA_WIDTH {32} \
    CONFIG.PSU__SD1_COHERENCY {0} \
    CONFIG.PSU__SD1_ROUTE_THROUGH_FPD {0} \
    CONFIG.PSU__SD1__DATA_TRANSFER_MODE {8Bit} \
@@ -1198,7 +1234,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
    CONFIG.PSU__USB__RESET__MODE {Boot Pin} \
    CONFIG.PSU__USB__RESET__POLARITY {Active Low} \
    CONFIG.PSU__USE__IRQ0 {1} \
-   CONFIG.PSU__USE__IRQ1 {1} \
+   CONFIG.PSU__USE__IRQ1 {0} \
    CONFIG.PSU__USE__M_AXI_GP0 {0} \
    CONFIG.PSU__USE__M_AXI_GP1 {0} \
    CONFIG.PSU__USE__M_AXI_GP2 {1} \
@@ -1212,34 +1248,34 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
  ] $zynq_ultra_ps
 
   # Create interface connections
+  connect_bd_intf_net -intf_net DPUCZDX8G_0_DPU0_M_AXI_DATA0 [get_bd_intf_pins DPUCZDX8G_0/DPU0_M_AXI_DATA0] [get_bd_intf_pins zynq_ultra_ps/S_AXI_HPC0_FPD]
+  connect_bd_intf_net -intf_net DPUCZDX8G_0_DPU0_M_AXI_DATA1 [get_bd_intf_pins DPUCZDX8G_0/DPU0_M_AXI_DATA1] [get_bd_intf_pins zynq_ultra_ps/S_AXI_HPC1_FPD]
+  connect_bd_intf_net -intf_net DPUCZDX8G_0_DPU0_M_AXI_INSTR [get_bd_intf_pins DPUCZDX8G_0/DPU0_M_AXI_INSTR] [get_bd_intf_pins zynq_ultra_ps/S_AXI_LPD]
   connect_bd_intf_net -intf_net Vp_Vn_0_1 [get_bd_intf_ports Vp_Vn_0] [get_bd_intf_pins system_management_wiz/Vp_Vn]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins axi_interconnect_1/S00_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_1_M00_AXI [get_bd_intf_pins axi_intc/s_axi] [get_bd_intf_pins axi_interconnect_1/M00_AXI]
-  connect_bd_intf_net -intf_net axi_interconnect_1_M01_AXI [get_bd_intf_pins axi_interconnect_1/M01_AXI] [get_bd_intf_pins dpuczdx8g_0/S_AXI]
+  connect_bd_intf_net -intf_net axi_interconnect_1_M01_AXI [get_bd_intf_pins DPUCZDX8G_0/S_AXI] [get_bd_intf_pins axi_interconnect_1/M01_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_1_M02_AXI [get_bd_intf_pins axi_interconnect_1/M02_AXI] [get_bd_intf_pins system_management_wiz/S_AXI_LITE]
   connect_bd_intf_net -intf_net axi_interconnect_1_M03_AXI [get_bd_intf_pins axi_gpio/S_AXI] [get_bd_intf_pins axi_interconnect_1/M03_AXI]
-  connect_bd_intf_net -intf_net axi_interconnect_2_M00_AXI [get_bd_intf_pins axi_interconnect_2/M00_AXI] [get_bd_intf_pins zynq_ultra_ps/S_AXI_LPD]
-  connect_bd_intf_net -intf_net dpuczdx8g_0_DPU0_M_AXI_DATA0 [get_bd_intf_pins dpuczdx8g_0/DPU0_M_AXI_DATA0] [get_bd_intf_pins zynq_ultra_ps/S_AXI_HPC0_FPD]
-  connect_bd_intf_net -intf_net dpuczdx8g_0_DPU0_M_AXI_DATA1 [get_bd_intf_pins dpuczdx8g_0/DPU0_M_AXI_DATA1] [get_bd_intf_pins zynq_ultra_ps/S_AXI_HPC1_FPD]
-  connect_bd_intf_net -intf_net dpuczdx8g_0_DPU0_M_AXI_INSTR [get_bd_intf_pins axi_interconnect_2/S00_AXI] [get_bd_intf_pins dpuczdx8g_0/DPU0_M_AXI_INSTR]
   connect_bd_intf_net -intf_net zynq_ultra_ps_M_AXI_HPM0_LPD [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins zynq_ultra_ps/M_AXI_HPM0_LPD]
 
   # Create port connections
+  connect_bd_net -net DPUCZDX8G_0_dpu_interrupt [get_bd_pins DPUCZDX8G_0/dpu_interrupt] [get_bd_pins xlconcat_3/In2]
   connect_bd_net -net axi_gpio_gpio_io_o [get_bd_pins axi_gpio/gpio_io_o] [get_bd_pins cmd_bits/Din] [get_bd_pins ena_bit/Din] [get_bd_pins latch_bit/Din]
   connect_bd_net -net axi_intc_irq [get_bd_pins axi_intc/irq] [get_bd_pins xlconcat_3/In0]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_interconnect_1/M01_ACLK] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins dpuczdx8g_0/s_axi_aclk] [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
-  connect_bd_net -net clk_wiz_clk_out2 [get_bd_pins axi_gpio/s_axi_aclk] [get_bd_pins axi_intc/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/M02_ACLK] [get_bd_pins axi_interconnect_1/M03_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins axi_interconnect_2/ACLK] [get_bd_pins axi_interconnect_2/M00_ACLK] [get_bd_pins axi_interconnect_2/S00_ACLK] [get_bd_pins clk_wiz/clk_out2] [get_bd_pins div_stepper/clk_in] [get_bd_pins divider_pwm/clk_in] [get_bd_pins dpuczdx8g_0/m_axi_dpu_aclk] [get_bd_pins proc_sys_reset_2/slowest_sync_clk] [get_bd_pins system_management_wiz/s_axi_aclk] [get_bd_pins zynq_ultra_ps/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps/saxi_lpd_aclk] [get_bd_pins zynq_ultra_ps/saxihpc0_fpd_aclk] [get_bd_pins zynq_ultra_ps/saxihpc1_fpd_aclk]
-  connect_bd_net -net clk_wiz_clk_out3 [get_bd_pins clk_wiz/clk_out3] [get_bd_pins dpuczdx8g_0/dpu_2x_clk] [get_bd_pins proc_sys_reset_3/slowest_sync_clk]
-  connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins proc_sys_reset_1/dcm_locked] [get_bd_pins proc_sys_reset_2/dcm_locked] [get_bd_pins proc_sys_reset_3/dcm_locked]
+  connect_bd_net -net clk_wiz_0_dpu [get_bd_pins DPUCZDX8G_0/m_axi_dpu_aclk] [get_bd_pins clk_wiz_0/dpu] [get_bd_pins dpu_reset/slowest_sync_clk] [get_bd_pins zynq_ultra_ps/saxi_lpd_aclk] [get_bd_pins zynq_ultra_ps/saxihpc0_fpd_aclk] [get_bd_pins zynq_ultra_ps/saxihpc1_fpd_aclk]
+  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins global_reset/dcm_locked]
+  connect_bd_net -net clk_wiz_clk_out2 [get_bd_pins DPUCZDX8G_0/s_axi_aclk] [get_bd_pins axi_gpio/s_axi_aclk] [get_bd_pins axi_intc/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/M01_ACLK] [get_bd_pins axi_interconnect_1/M02_ACLK] [get_bd_pins axi_interconnect_1/M03_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins clk_wiz_1/global] [get_bd_pins div_stepper/clk_in] [get_bd_pins divider_pwm/clk_in] [get_bd_pins global_reset/slowest_sync_clk] [get_bd_pins system_management_wiz/s_axi_aclk] [get_bd_pins zynq_ultra_ps/maxihpm0_lpd_aclk]
+  connect_bd_net -net clk_wiz_clk_out3 [get_bd_pins DPUCZDX8G_0/dpu_2x_clk] [get_bd_pins clk_wiz_0/dpux2] [get_bd_pins dpux2_reset/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins dpu_reset/dcm_locked] [get_bd_pins dpux2_reset/dcm_locked]
   connect_bd_net -net cmd_bits_Dout [get_bd_pins cmd_bits/Dout] [get_bd_pins stepper_ctrl/cmd]
   connect_bd_net -net div_stepper_clk_out [get_bd_pins div_stepper/clk_out] [get_bd_pins stepper_ctrl/clk]
   connect_bd_net -net divider_0_clk_out [get_bd_pins divider_pwm/clk_out] [get_bd_pins pwm/clk]
-  connect_bd_net -net dpuczdx8g_0_dpu0_interrupt [get_bd_pins dpuczdx8g_0/dpu0_interrupt] [get_bd_pins zynq_ultra_ps/pl_ps_irq1]
+  connect_bd_net -net dpu_reset_peripheral_aresetn [get_bd_pins DPUCZDX8G_0/m_axi_dpu_aresetn] [get_bd_pins dpu_reset/peripheral_aresetn]
   connect_bd_net -net ena_bit_Dout [get_bd_pins ena_bit/Dout] [get_bd_pins stepper_ctrl/force_ena]
   connect_bd_net -net latch_bit_Dout [get_bd_pins latch_bit/Dout] [get_bd_pins stepper_ctrl/latch]
-  connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins axi_interconnect_1/M01_ARESETN] [get_bd_pins dpuczdx8g_0/s_axi_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
-  connect_bd_net -net proc_sys_reset_2_peripheral_aresetn [get_bd_pins axi_gpio/s_axi_aresetn] [get_bd_pins axi_intc/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_1/ARESETN] [get_bd_pins axi_interconnect_1/M00_ARESETN] [get_bd_pins axi_interconnect_1/M02_ARESETN] [get_bd_pins axi_interconnect_1/M03_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN] [get_bd_pins axi_interconnect_2/ARESETN] [get_bd_pins axi_interconnect_2/M00_ARESETN] [get_bd_pins axi_interconnect_2/S00_ARESETN] [get_bd_pins div_stepper/rst] [get_bd_pins divider_pwm/rst] [get_bd_pins dpuczdx8g_0/m_axi_dpu_aresetn] [get_bd_pins proc_sys_reset_2/peripheral_aresetn] [get_bd_pins pwm/rst] [get_bd_pins system_management_wiz/s_axi_aresetn]
-  connect_bd_net -net proc_sys_reset_3_peripheral_aresetn [get_bd_pins dpuczdx8g_0/dpu_2x_resetn] [get_bd_pins proc_sys_reset_3/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_2_peripheral_aresetn [get_bd_pins DPUCZDX8G_0/s_axi_aresetn] [get_bd_pins axi_gpio/s_axi_aresetn] [get_bd_pins axi_intc/s_axi_aresetn] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_1/ARESETN] [get_bd_pins axi_interconnect_1/M00_ARESETN] [get_bd_pins axi_interconnect_1/M01_ARESETN] [get_bd_pins axi_interconnect_1/M02_ARESETN] [get_bd_pins axi_interconnect_1/M03_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN] [get_bd_pins div_stepper/rst] [get_bd_pins divider_pwm/rst] [get_bd_pins global_reset/peripheral_aresetn] [get_bd_pins pwm/rst] [get_bd_pins system_management_wiz/s_axi_aresetn]
+  connect_bd_net -net proc_sys_reset_3_peripheral_aresetn [get_bd_pins DPUCZDX8G_0/dpu_2x_resetn] [get_bd_pins dpux2_reset/peripheral_aresetn]
   connect_bd_net -net pwm_0_state [get_bd_ports fan] [get_bd_pins pwm/state]
   connect_bd_net -net stepper_ctrl_busy [get_bd_pins stepper_ctrl/busy] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net stepper_ctrl_dir [get_bd_ports dir] [get_bd_pins stepper_ctrl/dir]
@@ -1253,26 +1289,26 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   connect_bd_net -net temp2pwm_0_pwm [get_bd_pins pwm/fill] [get_bd_pins temp2pwm/pwm]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins axi_gpio/gpio2_io_i] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconcat_3_dout [get_bd_pins xlconcat_3/dout] [get_bd_pins zynq_ultra_ps/pl_ps_irq0]
-  connect_bd_net -net zynq_ultra_ps_pl_clk0 [get_bd_pins clk_wiz/clk_in1] [get_bd_pins zynq_ultra_ps/pl_clk0]
-  connect_bd_net -net zynq_ultra_ps_pl_resetn0 [get_bd_pins clk_wiz/resetn] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins proc_sys_reset_2/ext_reset_in] [get_bd_pins proc_sys_reset_3/ext_reset_in] [get_bd_pins zynq_ultra_ps/pl_resetn0]
+  connect_bd_net -net zynq_ultra_ps_pl_clk0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_1/clk_in1] [get_bd_pins zynq_ultra_ps/pl_clk0]
+  connect_bd_net -net zynq_ultra_ps_pl_resetn0 [get_bd_pins clk_wiz_0/resetn] [get_bd_pins clk_wiz_1/resetn] [get_bd_pins dpu_reset/ext_reset_in] [get_bd_pins dpux2_reset/ext_reset_in] [get_bd_pins global_reset/ext_reset_in] [get_bd_pins zynq_ultra_ps/pl_resetn0]
 
   # Create address segments
-  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_DDR_HIGH] -force
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_DDR_LOW] -force
-  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_LPS_OCM] -force
-  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_QSPI] -force
-  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_DDR_HIGH] -force
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_DDR_LOW] -force
-  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_LPS_OCM] -force
-  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_QSPI] -force
-  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_DDR_HIGH] -force
-  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_DDR_LOW] -force
-  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_LPS_OCM] -force
-  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces dpuczdx8g_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_QSPI] -force
+  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_DDR_HIGH] -force
+  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_DDR_LOW] -force
+  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_LPS_OCM] -force
+  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA0] [get_bd_addr_segs zynq_ultra_ps/SAXIGP0/HPC0_QSPI] -force
+  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_DDR_HIGH] -force
+  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_DDR_LOW] -force
+  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_LPS_OCM] -force
+  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_DATA1] [get_bd_addr_segs zynq_ultra_ps/SAXIGP1/HPC1_QSPI] -force
+  assign_bd_address -offset 0x000800000000 -range 0x000800000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_DDR_HIGH] -force
+  assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_DDR_LOW] -force
+  assign_bd_address -offset 0xFF000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_LPS_OCM] -force
+  assign_bd_address -offset 0xC0000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces DPUCZDX8G_0/DPU0_M_AXI_INSTR] [get_bd_addr_segs zynq_ultra_ps/SAXIGP6/LPD_QSPI] -force
+  assign_bd_address -offset 0x8F000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs DPUCZDX8G_0/S_AXI/reg0] -force
   assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs axi_gpio/S_AXI/Reg] -force
-  assign_bd_address -offset 0x80020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs axi_intc/S_AXI/Reg] -force
-  assign_bd_address -offset 0x81000000 -range 0x01000000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs dpuczdx8g_0/S_AXI/reg0] -force
-  assign_bd_address -offset 0x80030000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs system_management_wiz/S_AXI_LITE/Reg] -force
+  assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs axi_intc/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps/Data] [get_bd_addr_segs system_management_wiz/S_AXI_LITE/Reg] -force
 
 
   # Restore current instance
@@ -1281,7 +1317,8 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   # Create PFM attributes
   set_property PFM.IRQ {intr { id 0 range 32 }} [get_bd_cells /axi_intc]
   set_property PFM.AXI_PORT {M01_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M02_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M03_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M04_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M05_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M06_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M07_AXI {memport "M_AXI_GP" sptag "" memory "" is_range "false"}} [get_bd_cells /axi_interconnect_0]
-  set_property PFM.CLOCK {clk_out1 {id "0" is_default "false" proc_sys_reset "/proc_sys_reset_2" status "fixed" freq_hz "100000000"} clk_out2 {id "1" is_default "true" proc_sys_reset "/proc_sys_reset_3" status "fixed" freq_hz "200000000"} clk_out3 {id "2" is_default "false" proc_sys_reset "/proc_sys_reset_1" status "fixed" freq_hz "400000000"}} [get_bd_cells /clk_wiz]
+  set_property PFM.CLOCK {dpu {id "20" is_default "false" proc_sys_reset "/dpu_reset" status "fixed" freq_hz "324996750"} dpux2 {id "21" is_default "false" proc_sys_reset "/dpux2_reset" status "fixed" freq_hz "649993500"}} [get_bd_cells /clk_wiz_0]
+  set_property PFM.CLOCK {global {id "24" is_default "true" proc_sys_reset "/global_reset" status "fixed" freq_hz "99999000"}} [get_bd_cells /clk_wiz_1]
   set_property PFM.AXI_PORT {M_AXI_HPM0_FPD {memport "M_AXI_GP" sptag "" memory "" is_range "false"} M_AXI_HPM1_FPD {memport "M_AXI_GP" sptag "" memory "" is_range "false"} S_AXI_HPC0_FPD {memport "S_AXI_HP" sptag "HPC0" memory "" is_range "false"} S_AXI_HPC1_FPD {memport "S_AXI_HP" sptag "HPC1" memory "" is_range "false"} S_AXI_HP0_FPD {memport "S_AXI_HP" sptag "HP0" memory "" is_range "false"} S_AXI_HP1_FPD {memport "S_AXI_HP" sptag "HP1" memory "" is_range "false"} S_AXI_HP2_FPD {memport "S_AXI_HP" sptag "HP2" memory "" is_range "false"} S_AXI_HP3_FPD {memport "S_AXI_HP" sptag "HP3" memory "" is_range "false"}} [get_bd_cells /zynq_ultra_ps]
 
 

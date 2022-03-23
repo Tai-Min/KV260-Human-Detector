@@ -36,7 +36,7 @@ net.summary()
 
 # Quantization dataset.
 dataset = tf.data.Dataset.from_generator(
-    get_sample, output_types=(tf.float32, tf.float32, tf.float32)).batch(1).prefetch(tf.data.AUTOTUNE)
+    get_sample, output_types=(tf.float32, tf.float32, tf.float32)).batch(1)
 
 # Quantize model into int8 representation.
 quantizer = vitis_quantize.VitisQuantizer(net)

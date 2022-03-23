@@ -8,7 +8,8 @@ class PointCloudPublisher : public rclcpp::Node {
     rclcpp::TimerBase::SharedPtr timer;                                          //!< Calls timerCallback every some time.
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr cloudPublisher;  //!< Publishes raw 3D cloud.
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr panoramaPublisher;
-    Lidar lidar;                                                                 //!< LIDAR hardware.
+    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr panoramaInferencePublisher;
+    Lidar lidar;  //!< LIDAR hardware.
 
     /**
      * @brief Called every specified time, performs one 3D scan per call.

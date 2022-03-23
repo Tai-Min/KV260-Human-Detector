@@ -79,6 +79,7 @@ class Lidar {
     std::vector<LaserScan> scans2d;                     //!< Contains list of all scans performed during one full scan.
     sensor_msgs::msg::PointCloud2 cloudMsg;             //!< Point cloud message for ROS2.
     std_msgs::msg::Float32MultiArray panoramicScanMsg;  //!< Message that contains 3D scan in form panoramic picture.
+    std_msgs::msg::Float32MultiArray panoramicInferenceScanMsg;
 
     /**
      * @brief Perform single 2D scan.
@@ -146,6 +147,8 @@ class Lidar {
      */
     bool generatePanoramicImageHW();
 
+    bool generatePanoramicInferenceImageHW();
+
    public:
     /**
      * @brief Construct 3D LIDAR object without turning it on.
@@ -198,4 +201,6 @@ class Lidar {
      * @return The message.
      */
     std_msgs::msg::Float32MultiArray getPanoramicImageMsg(bool &err);
+
+    std_msgs::msg::Float32MultiArray getPanoramicInferenceImageMsg(bool &err);
 };

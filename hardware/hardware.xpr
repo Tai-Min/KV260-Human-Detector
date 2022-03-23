@@ -145,12 +145,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_clk_wiz_0_0/hardware_clk_wiz_0_0.xci">
-          <Proxy FileSetName="hardware_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_proc_sys_reset_0_0/hardware_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="hardware_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_proc_sys_reset_1_0/hardware_proc_sys_reset_1_0.xci">
           <Proxy FileSetName="hardware_proc_sys_reset_1_0"/>
         </CompFileExtendedInfo>
@@ -184,8 +178,14 @@
         <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_stepper_0_0/hardware_stepper_0_0.xci">
           <Proxy FileSetName="hardware_stepper_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_dpuczdx8g_0_0/hardware_dpuczdx8g_0_0.xci">
-          <Proxy FileSetName="hardware_dpuczdx8g_0_0"/>
+        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_DPUCZDX8G_0_1/hardware_DPUCZDX8G_0_1.xci">
+          <Proxy FileSetName="hardware_DPUCZDX8G_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_clk_wiz_0_2/hardware_clk_wiz_0_2.xci">
+          <Proxy FileSetName="hardware_clk_wiz_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_clk_wiz_1_0/hardware_clk_wiz_1_0.xci">
+          <Proxy FileSetName="hardware_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hardware.bd" FileRelPathName="ip/hardware_zynq_ultra_ps_e_0_0/hardware_zynq_ultra_ps_e_0_0.xci">
           <Proxy FileSetName="hardware_zynq_ultra_ps_e_0_0"/>
@@ -246,12 +246,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="hardware_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_clk_wiz_0_0" RelGenDir="$PGENDIR/hardware_clk_wiz_0_0">
-      <Config>
-        <Option Name="TopModule" Val="hardware_clk_wiz_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="hardware_proc_sys_reset_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_proc_sys_reset_1_0" RelGenDir="$PGENDIR/hardware_proc_sys_reset_1_0">
       <Config>
         <Option Name="TopModule" Val="hardware_proc_sys_reset_1_0"/>
@@ -273,12 +267,6 @@
     <FileSet Name="hardware_proc_sys_reset_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_proc_sys_reset_1_1" RelGenDir="$PGENDIR/hardware_proc_sys_reset_1_1">
       <Config>
         <Option Name="TopModule" Val="hardware_proc_sys_reset_1_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="hardware_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_proc_sys_reset_0_0" RelGenDir="$PGENDIR/hardware_proc_sys_reset_0_0">
-      <Config>
-        <Option Name="TopModule" Val="hardware_proc_sys_reset_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -318,15 +306,27 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="hardware_dpuczdx8g_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_dpuczdx8g_0_0" RelGenDir="$PGENDIR/hardware_dpuczdx8g_0_0">
-      <Config>
-        <Option Name="TopModule" Val="hardware_dpuczdx8g_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="hardware_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_xbar_0" RelGenDir="$PGENDIR/hardware_xbar_0">
       <Config>
         <Option Name="TopModule" Val="hardware_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hardware_DPUCZDX8G_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_DPUCZDX8G_0_1" RelGenDir="$PGENDIR/hardware_DPUCZDX8G_0_1">
+      <Config>
+        <Option Name="TopModule" Val="hardware_DPUCZDX8G_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hardware_clk_wiz_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_clk_wiz_0_2" RelGenDir="$PGENDIR/hardware_clk_wiz_0_2">
+      <Config>
+        <Option Name="TopModule" Val="hardware_clk_wiz_0_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="hardware_clk_wiz_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hardware_clk_wiz_1_0" RelGenDir="$PGENDIR/hardware_clk_wiz_1_0">
+      <Config>
+        <Option Name="TopModule" Val="hardware_clk_wiz_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -376,16 +376,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hardware_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_clk_wiz_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="hardware_proc_sys_reset_1_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_proc_sys_reset_1_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_proc_sys_reset_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_proc_sys_reset_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_proc_sys_reset_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
@@ -417,16 +407,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="hardware_proc_sys_reset_1_1_synth_1" Type="Ft3:Synth" SrcSet="hardware_proc_sys_reset_1_1" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_proc_sys_reset_1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_proc_sys_reset_1_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_proc_sys_reset_1_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="hardware_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_proc_sys_reset_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_proc_sys_reset_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_proc_sys_reset_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -496,7 +476,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hardware_dpuczdx8g_0_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_dpuczdx8g_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_dpuczdx8g_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_dpuczdx8g_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_dpuczdx8g_0_0_synth_1">
+    <Run Id="hardware_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_xbar_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_xbar_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -506,7 +486,27 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hardware_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_xbar_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_xbar_0_synth_1">
+    <Run Id="hardware_DPUCZDX8G_0_1_synth_1" Type="Ft3:Synth" SrcSet="hardware_DPUCZDX8G_0_1" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_DPUCZDX8G_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_DPUCZDX8G_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_DPUCZDX8G_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hardware_clk_wiz_0_2_synth_1" Type="Ft3:Synth" SrcSet="hardware_clk_wiz_0_2" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_clk_wiz_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_0_2_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hardware_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="hardware_clk_wiz_1_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hardware_clk_wiz_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -535,23 +535,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="hardware_system_management_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_system_management_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_system_management_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_system_management_wiz_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="hardware_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_clk_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -620,23 +603,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="hardware_proc_sys_reset_1_1_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_proc_sys_reset_1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_proc_sys_reset_1_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_proc_sys_reset_1_1_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="hardware_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_proc_sys_reset_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_proc_sys_reset_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_proc_sys_reset_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -755,7 +721,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hardware_dpuczdx8g_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_dpuczdx8g_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_dpuczdx8g_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_dpuczdx8g_0_0_impl_1">
+    <Run Id="hardware_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_xbar_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -772,7 +738,41 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="hardware_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_xbar_0_impl_1">
+    <Run Id="hardware_DPUCZDX8G_0_1_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_DPUCZDX8G_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_DPUCZDX8G_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_DPUCZDX8G_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hardware_clk_wiz_0_2_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_clk_wiz_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_0_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="hardware_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="hardware_clk_wiz_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hardware_clk_wiz_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/hardware_clk_wiz_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
