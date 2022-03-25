@@ -31,7 +31,7 @@ else:
     print("Initializing training from scratch.")
 
 # Convert to functional model.
-net = net.model((90, 666, 1))
+net = net.model((128, 512, 1))
 net.summary()
 
 # Quantization dataset.

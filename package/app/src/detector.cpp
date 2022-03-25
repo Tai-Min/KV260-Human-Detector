@@ -1,5 +1,5 @@
 #include "../inc/detector.hpp"
-
+#include <algorithm>
 #include <cmath>
 
 class CpuFlatTensorBuffer : public vart::TensorBuffer {
@@ -38,8 +38,8 @@ class CpuFlatTensorBuffer : public vart::TensorBuffer {
     void *data_;
 };
 
-Detector::Detector(const std::string &model) {
-    if (!init(model))
+Detector::Detector(const std::string &model, float minProbability) {
+    if (!init(model, minProbability))
         deinit();
 }
 
@@ -125,10 +125,22 @@ std::vector<float> Detector::convertOutputData(int imgWidth, int imgHeight) {
             bufCntr += -widthStart;
     }
 
+    float maxEl = *std::max_element(res.begin(), res.end());
+
+    for (float &v : res) {
+        if (maxEl > 0)
+            v = v / maxEl;
+
+        if (maxEl <= 0 || v < minProbability || v < 0)
+            v = 0;
+    }
+
     return res;
 }
 
-bool Detector::init(const std::string &model) {
+bool Detector::init(const std::string &model, float minProbability) {
+    this->minProbability = minProbability;
+
     graph = xir::Graph::deserialize(model);
     xir::Subgraph *root = graph->get_root_subgraph();
     std::vector<xir::Subgraph *> children = root->children_topological_sort();
@@ -176,15 +188,7 @@ bool Detector::good() {
     return allGood;
 }
 
-#include <chrono>
-using std::chrono::duration;
-using std::chrono::duration_cast;
-using std::chrono::high_resolution_clock;
-using std::chrono::milliseconds;
-
 std::vector<float> Detector::run(const std::vector<float> &img, int imgWidth, int imgHeight) {
-    auto t1 = high_resolution_clock::now();
-
     fillInputData(img, imgWidth, imgHeight);
 
     std::vector<std::unique_ptr<vart::TensorBuffer>> inputs, outputs;
@@ -195,8 +199,8 @@ std::vector<float> Detector::run(const std::vector<float> &img, int imgWidth, in
                                                                    xir::DataType{xir::DataType::XINT, 8});
 
     std::unique_ptr<xir::Tensor> outputTensor = xir::Tensor::create(runner->get_output_tensors()[0]->get_name(),
-                                                                   runner->get_output_tensors()[0]->get_shape(),
-                                                                   xir::DataType{xir::DataType::XINT, 8});
+                                                                    runner->get_output_tensors()[0]->get_shape(),
+                                                                    xir::DataType{xir::DataType::XINT, 8});
 
     inputs.push_back(std::make_unique<CpuFlatTensorBuffer>(inputData.data(), inputTensor.get()));
     inputsPtr.push_back(inputs[0].get());

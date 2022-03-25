@@ -53,7 +53,8 @@ class Lidar {
     };
 
     struct DetectorConf {
-        std::string model;  //!< Path to .xmodel file with detector network.
+        std::string model;           //!< Path to .xmodel file with detector network.
+        float minProbability = 0.6;  //!< Minimum probability that is required to consider segmented pixel as human (0 - 1).
     };
 
    public:
@@ -76,10 +77,13 @@ class Lidar {
     KernelLidarProc kernel;     //!< Kernel wrapper.
     Detector detector;          //!< Human detector network wrapper.
 
-    std::vector<LaserScan> scans2d;                     //!< Contains list of all scans performed during one full scan.
-    sensor_msgs::msg::PointCloud2 cloudMsg;             //!< Point cloud message for ROS2.
-    std_msgs::msg::Float32MultiArray panoramicScanMsg;  //!< Message that contains 3D scan in form panoramic picture.
-    std_msgs::msg::Float32MultiArray panoramicInferenceScanMsg;
+    std::vector<LaserScan> scans2d;                              //!< Contains list of all scans performed during one full scan.
+    sensor_msgs::msg::PointCloud2 cloudMsg;                      //!< Point cloud message for ROS2.
+    std_msgs::msg::Float32MultiArray panoramicScanMsg;           //!< Message that contains 3D scan in form panoramic picture (normalized to 0 - 1).
+    std_msgs::msg::Float32MultiArray panoramicInferenceScanMsg;  //!< Message that contains segmented panoramic picture (normalized to 0 - 1).
+    sensor_msgs::msg::PointCloud2 cloudInferenceMsg;             //!< Message that contains point cloud containing only scans segmented as humans.
+
+    void rangeToPointCloud(float range, float scan2DAngle, float tranOffX, float tranOffZ, float rotOffY, sensor_msgs::msg::PointCloud2 &msg, unsigned int pointOffset);
 
     /**
      * @brief Perform single 2D scan.
@@ -112,7 +116,7 @@ class Lidar {
 
     /**
      * @brief Initialize 2D LIDAR.
-     * @return True if success, false if fail.
+     * @return True on success.
      */
     bool initLidar2D();
 
@@ -125,6 +129,12 @@ class Lidar {
      * @return True if allocation successful, false otherwise.
      */
     bool lateInit(unsigned int totalSamples, unsigned int samplesPer2DScan, float scan2DStartAngle, float scan2DAngleStep);
+
+    /**
+     * @brief Generate simple 3D scan. Loads scan samples to scans2d variable and to kernel object.
+     * @return True on success.
+     */
+    bool generate3DScan();
 
     /**
      * @brief Generate point cloud based on recently obtained full scan. Uses CPU.
@@ -147,7 +157,18 @@ class Lidar {
      */
     bool generatePanoramicImageHW();
 
-    bool generatePanoramicInferenceImageHW();
+    /**
+     * @brief Run DPU inference engine on recently obtained panoramic image.
+     * @return True on success.
+     */
+    bool generateInferencePanoramicImageHW();
+
+    /**
+     * @brief Generate point cloud scan that contains only points where humans are considered to be. Uses CPU.
+     */
+    void generateInferencePointCloudSW();
+
+    bool generateInferencePointCloudHW();
 
    public:
     /**
@@ -185,7 +206,7 @@ class Lidar {
     bool good();
 
     /**
-     * @brief Perform one full scan.
+     * @brief Perform one full scan and generate all ROS2 messages.
      * @return True on success.
      */
     bool scanOnce();
@@ -194,13 +215,23 @@ class Lidar {
      * @brief Get content of scanOnce() as cloud point.
      * @return The message.
      */
-    sensor_msgs::msg::PointCloud2 getPointCloudMsg(bool &err);
+    sensor_msgs::msg::PointCloud2 getPointCloudMsg();
 
     /**
      * @brief Get content of scanOnce() as projected image.
      * @return The message.
      */
-    std_msgs::msg::Float32MultiArray getPanoramicImageMsg(bool &err);
+    std_msgs::msg::Float32MultiArray getPanoramicImageMsg();
 
-    std_msgs::msg::Float32MultiArray getPanoramicInferenceImageMsg(bool &err);
+    /**
+     * @brief Get content of scanOnce() as projected image that contains non zero valued pixels in places where humans are detected.
+     * @return The message.
+     */
+    std_msgs::msg::Float32MultiArray getPanoramicInferenceImageMsg();
+
+    /**
+     * @brief Get content of scanOnce() as point cloud that contains non zero valued points in places where humans are detected.
+     * @return The message.
+     */
+    sensor_msgs::msg::PointCloud2 getPointCloudInferenceMsg();
 };

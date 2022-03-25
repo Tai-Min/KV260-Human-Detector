@@ -9,6 +9,7 @@ class PointCloudPublisher : public rclcpp::Node {
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr cloudPublisher;  //!< Publishes raw 3D cloud.
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr panoramaPublisher;
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr panoramaInferencePublisher;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr cloudInferencePublisher;
     Lidar lidar;  //!< LIDAR hardware.
 
     /**

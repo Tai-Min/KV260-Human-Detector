@@ -14,7 +14,12 @@ extern "C" {
  * @param stepperStartAngle Start angle of full scan in radians.
  * @param stepperAngleInc Angle increment between two successive 2D scans.
  */
-void krnl_ranges_to_projection(const float* rangesBuf, unsigned int single2DScanSize, unsigned int num2DScans, float scan2DStartAngle, float scan2DAngleInc, float scan2DMaxRange, float stepperStartAngle, float stepperAngleInc, float stepperEndstopAngle, float* imgBuf, unsigned int imgWidth, unsigned int imgHeight) {
+void krnl_ranges_to_projection(const float* rangesBuf, unsigned int single2DScanSize,
+                               unsigned int num2DScans, float scan2DStartAngle,
+                               float scan2DAngleInc, float scan2DMaxRange,
+                               float stepperStartAngle, float stepperAngleInc,
+                               float stepperEndstopAngle, float* imgBuf,
+                               unsigned int imgWidth, unsigned int imgHeight) {
     for (unsigned int i = 0; i < imgWidth * imgHeight; i++)
         imgBuf[i] = 0;
 

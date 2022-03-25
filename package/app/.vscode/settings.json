@@ -78,7 +78,8 @@
         "any": "cpp",
         "hash_map": "cpp",
         "hash_set": "cpp",
-        "*.ch": "cpp"
+        "*.ch": "cpp",
+        "queue": "cpp"
     },
     "cmake.configureOnOpen": false
 }

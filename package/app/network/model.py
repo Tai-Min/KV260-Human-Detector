@@ -15,13 +15,14 @@ class UNet(keras.Model):
         kernel_size = 3
 
         # Convolution's padding.
-        padding_conv = "valid"
+        padding_conv = "same"
 
         # Pooling's padding.
         padding_pool = "valid"
 
         # Size of width / height of pooling operation.
-        pool_size = 3
+        pool_size = 2
+        pool_strides = 2
 
         # N describes standard deviation for weight initiaization
         # based on Gaussian distribution.
@@ -53,7 +54,7 @@ class UNet(keras.Model):
 
         # First pooling.
         self.pool1 = layers.MaxPool2D(
-            pool_size=pool_size, strides=2, padding=padding_pool)
+            pool_size=pool_size, strides=pool_strides, padding=padding_pool)
 
         N = kernel_size**2 * init_filters * 2
         self.conv_first_pool_1 = layers.Conv2D(
@@ -79,7 +80,7 @@ class UNet(keras.Model):
 
         # Second pooling.
         self.pool2 = layers.MaxPool2D(
-            pool_size=pool_size, strides=1, padding=padding_pool)
+            pool_size=pool_size, strides=pool_strides, padding=padding_pool)
 
         N = kernel_size**2 * init_filters * 2
         self.conv_second_pool_1 = layers.Conv2D(
@@ -105,7 +106,7 @@ class UNet(keras.Model):
 
         # Third pooling.
         self.pool3 = layers.MaxPool2D(
-            pool_size=pool_size, strides=1, padding=padding_pool)
+            pool_size=pool_size, strides=pool_strides, padding=padding_pool)
 
         N = kernel_size**2 * init_filters * 4
         self.conv_third_pool_1 = layers.Conv2D(
@@ -131,7 +132,7 @@ class UNet(keras.Model):
 
         # Fourth pooling.
         self.pool4 = layers.MaxPool2D(
-            pool_size=pool_size, strides=1, padding=padding_pool)
+            pool_size=pool_size, strides=pool_strides, padding=padding_pool)
 
         N = kernel_size**2 * init_filters * 8
         self.conv_fourth_pool_1 = layers.Conv2D(
@@ -156,8 +157,7 @@ class UNet(keras.Model):
         self.norm_fourth_pool = layers.BatchNormalization()
 
         # First upsampling.
-        self.up1 = layers.UpSampling2D(size=1)
-        self.zero_padding_1 = layers.ZeroPadding2D(padding=((3, 3), (3, 3)))
+        self.up1 = layers.UpSampling2D(size=2)
         self.concat1 = layers.Concatenate(axis=-1)
 
         N = kernel_size**2 * init_filters * 16
@@ -183,8 +183,7 @@ class UNet(keras.Model):
         self.norm_first_up = layers.BatchNormalization()
 
         # Second upsampling.
-        self.up2 = layers.UpSampling2D(size=1)
-        self.zero_padding_2 = layers.ZeroPadding2D(padding=((5, 5), (5, 5)))
+        self.up2 = layers.UpSampling2D(size=2)
         self.concat2 = layers.Concatenate(axis=-1)
 
         N = kernel_size**2 * init_filters * 8
@@ -210,8 +209,7 @@ class UNet(keras.Model):
         self.norm_second_up = layers.BatchNormalization()
 
         # Third upsampling.
-        self.up3 = layers.UpSampling2D(size=1)
-        self.zero_padding_3 = layers.ZeroPadding2D(padding=((5, 5), (5, 5)))
+        self.up3 = layers.UpSampling2D(size=2)
         self.concat3 = layers.Concatenate(axis=-1)
 
         N = kernel_size**2 * init_filters * 4
@@ -238,7 +236,6 @@ class UNet(keras.Model):
 
         # Fourth upsampling.
         self.up4 = layers.UpSampling2D(size=2)
-        self.zero_padding_4 = layers.ZeroPadding2D(padding=((9, 9), (9, 9)))
         self.concat4 = layers.Concatenate(axis=-1)
 
         N = kernel_size**2 * init_filters * 2
@@ -260,9 +257,6 @@ class UNet(keras.Model):
             kernel_initializer=keras.initializers.RandomNormal(
                 stddev=sqrt(2/N))
         )
-
-        self.zero_padding_final = layers.ZeroPadding2D(
-            padding=((4, 4), (4, 4)))
 
     #@tf.function(jit_compile=True)
     def downsample_no_pool(self, sample):
@@ -303,7 +297,7 @@ class UNet(keras.Model):
         res_fourth_pool = self.norm_fourth_pool(res_fourth_pool)
         return res_fourth_pool
 
-    #@tf.function(jit_compile=True)
+    #@tf.function
     def upsample1(self, res_first_up, res_third_pool):
         res_first_up = self.concat1([res_first_up, res_third_pool])
         res_first_up = self.conv_first_up_1(res_first_up)
@@ -311,7 +305,7 @@ class UNet(keras.Model):
         res_first_up = self.norm_first_up(res_first_up)
         return res_first_up
 
-    #@tf.function(jit_compile=True)
+    #@tf.function
     def upsample2(self, res_second_up, res_second_pool):
         res_second_up = self.concat2([res_second_up, res_second_pool])
         res_second_up = self.conv_second_up_1(res_second_up)
@@ -319,7 +313,7 @@ class UNet(keras.Model):
         res_second_up = self.norm_second_up(res_second_up)
         return res_second_up
 
-    #@tf.function(jit_compile=True)
+    #@tf.function
     def upsample3(self, res_third_up, res_first_pool):
         res_third_up = self.concat3([res_third_up, res_first_pool])
         res_third_up = self.conv_third_up_1(res_third_up)
@@ -327,7 +321,7 @@ class UNet(keras.Model):
         res_third_up = self.norm_third_up(res_third_up)
         return res_third_up
 
-    #@tf.function(jit_compile=True)
+    #@tf.function
     def upsample4(self, res_fourth_up, res_no_pool):
         res_fourth_up = self.concat4([res_fourth_up, res_no_pool])
         res_fourth_up = self.conv_fourth_up_1(res_fourth_up)
@@ -343,28 +337,21 @@ class UNet(keras.Model):
         res_second_pool = self.downsample_second_pool(res_first_pool)
         res_third_pool = self.downsample_third_pool(res_second_pool)
         res_fourth_pool = self.downsample_fourth_pool(res_third_pool)
-
+        
         # Upsample.
         res_first_up = self.up1(res_fourth_pool)
-        res_first_up = self.zero_padding_1(res_first_up)
         res_first_up = self.upsample1(res_first_up, res_third_pool)
-
+        
         res_second_up = self.up2(res_first_up)
-        res_second_up = self.zero_padding_2(res_second_up)
-        res_second_up = self.upsample2(
-            res_second_up, res_second_pool)
+        res_second_up = self.upsample2(res_second_up, res_second_pool)
 
         res_third_up = self.up3(res_second_up)
-        res_third_up = self.zero_padding_3(res_third_up)
         res_third_up = self.upsample3(res_third_up, res_first_pool)
 
         res_fourth_up = self.up4(res_third_up)
-        res_fourth_up = self.zero_padding_4(res_fourth_up)
         res_fourth_up = self.upsample4(res_fourth_up, res_no_pool)
 
-        result = self.zero_padding_final(res_fourth_up)
-
-        return result
+        return res_fourth_up
 
     def get_config(self):
         return {}

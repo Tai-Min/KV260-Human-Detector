@@ -17,6 +17,8 @@ PointCloudPublisher::PointCloudPublisher(const Lidar::Config& conf) : Node("poin
 
     panoramaInferencePublisher = this->create_publisher<std_msgs::msg::Float32MultiArray>("panorama_inference", 10);
 
+    cloudInferencePublisher = this->create_publisher<sensor_msgs::msg::PointCloud2>("cloud_inference", 10);
+
     timer = this->create_wall_timer(5ms, std::bind(&PointCloudPublisher::timerCallback, this));
 }
 
@@ -27,25 +29,17 @@ void PointCloudPublisher::timerCallback() {
         return;
     }
 
-    sensor_msgs::msg::PointCloud2 msg = lidar.getPointCloudMsg(err);
-    msg.header.stamp = this->get_clock()->now();
-    if (err) {
-        std::cout << "Failed to get point cloud!" << std::endl;
-        return;
-    } else
-        cloudPublisher->publish(msg);
+    sensor_msgs::msg::PointCloud2 cloud = lidar.getPointCloudMsg();
+    cloud.header.stamp = this->get_clock()->now();
+    cloudPublisher->publish(cloud);
 
-    std_msgs::msg::Float32MultiArray panorama = lidar.getPanoramicImageMsg(err);
-    if (err) {
-        std::cout << "Failed to get panoramic image!" << std::endl;
-        return;
-    } else
-        panoramaPublisher->publish(panorama);
+    /*std_msgs::msg::Float32MultiArray panorama = lidar.getPanoramicImageMsg();
+    panoramaPublisher->publish(panorama);
 
-    std_msgs::msg::Float32MultiArray panoramaInference = lidar.getPanoramicInferenceImageMsg(err);
-    if (err) {
-        std::cout << "Failed to get panoramic inference image!" << std::endl;
-        return;
-    } else
-        panoramaInferencePublisher->publish(panoramaInference);
+    std_msgs::msg::Float32MultiArray panoramaInference = lidar.getPanoramicInferenceImageMsg();
+    panoramaInferencePublisher->publish(panoramaInference);
+
+    sensor_msgs::msg::PointCloud2 cloudInference = lidar.getPointCloudInferenceMsg();
+    cloudInference.header.stamp = this->get_clock()->now();
+    cloudInferencePublisher->publish(cloudInference);*/
 }

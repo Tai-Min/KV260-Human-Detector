@@ -32,13 +32,13 @@ void krnl_ranges_to_cloud(const float* rangesBuf, unsigned int single2DScanSize,
         float transformOffsetZ = hls::sqrt(centerOffset * centerOffset - transformOffsetX * transformOffsetX);
 
         // Convert each sample of current scan to point cloud.
-        float currScanAngle = scan2DStartAngle;
+        float scan2DCurrAngle = scan2DStartAngle;
         for (int sample = 0; sample < single2DScanSize; sample++) {
             int currSample = scan * single2DScanSize + sample;
 
             // Convert sample from polar to cartesian in rotated lidar's frame.
-            x.f = rangesBuf[currSample] * hls::sin(currScanAngle);
-            y.f = -rangesBuf[currSample] * hls::cos(currScanAngle);
+            x.f = rangesBuf[currSample] * hls::sin(scan2DCurrAngle);
+            y.f = -rangesBuf[currSample] * hls::cos(scan2DCurrAngle);
 
             // Rotate and shift sample to main lidar's frame.
             float tx = x.f;
@@ -52,7 +52,7 @@ void krnl_ranges_to_cloud(const float* rangesBuf, unsigned int single2DScanSize,
                 cloudBuf[pointOffset + sizeof(float) * 2 + byte] = z.buf[byte];
             }
 
-            currScanAngle += scan2DAngleInc;
+            scan2DCurrAngle += scan2DAngleInc;
             pointOffset += 3 * sizeof(float);
         }
         currStepperAngle += stepperAngleInc;

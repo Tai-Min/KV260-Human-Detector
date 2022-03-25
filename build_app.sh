@@ -119,6 +119,9 @@ then
 
    v++ --compile --config $projDir/package/app/kernels/ranges_to_projection/kernel.cfg -o $projDir/package/app/build/krnl_ranges_to_projection.xo $projDir/package/app/kernels/ranges_to_projection/krnl_ranges_to_projection.cpp
 
+   failHandler
+
+   v++ --compile --config $projDir/package/app/kernels/projection_to_cloud/kernel.cfg -o $projDir/package/app/build/krnl_projection_to_cloud.xo $projDir/package/app/kernels/projection_to_cloud/krnl_projection_to_cloud.cpp
 
    failHandler
 fi
@@ -128,7 +131,7 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "link" ${buildTy
 then
    info "Building hardware container..."
 
-   v++ --link  --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_ranges_to_cloud.xo $projDir/package/app/build/krnl_ranges_to_projection.xo
+   v++ --link --config $projDir/package/app/link.cfg -o $projDir/package/app/build/${appName}_container.xclbin $projDir/package/app/build/krnl_ranges_to_cloud.xo $projDir/package/app/build/krnl_ranges_to_projection.xo $projDir/package/app/build/krnl_projection_to_cloud.xo
 
    failHandler
 fi
@@ -160,13 +163,13 @@ if [[ $(contains "all" ${buildType[@]}) = 1 ]] || [[ $(contains "pkg" ${buildTyp
 then
    info "Creating package..."
 
-   #v++ --package --config "$projDir/package/app/package.cfg" -o "$projDir/package/app/final/${appName}_container.xclbin" "$projDir/package/app/build/${appName}_container.xclbin"
+   v++ --package --config "$projDir/package/app/package.cfg" -o "$projDir/package/app/final/${appName}_container.xclbin" "$projDir/package/app/build/${appName}_container.xclbin"
 
    failHandler
 
    info "Removing build artifacts..."
 
-   #(cd "$projDir/package/app/final" && rm -r *.package_summary)
+   (cd "$projDir/package/app/final" && rm -r *.package_summary)
 
    failHandler
 
@@ -198,9 +201,9 @@ if [[ $uploadTarget != "" ]]
 then
    if [[ $petalinuxPass != "" ]]
    then
-      (sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=40% /" && cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=35% /" && cd "$projDir/package/app/final" && sshpass -p $petalinuxPass scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh unet.xmodel $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && sshpass -p $petalinuxPass ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    else
-      (ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=40% /" && cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh  $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
+      (ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mount -o remount,size=35% /" && cd "$projDir/package/app/final" && scp -o StrictHostKeyChecking=no $appName.dtbo $appName.bit.bin $appName shell.json ${appName}_container.xclbin $projDir/package/app/setup.sh  $projDir/package/app/vart.conf $uploadTarget:/home/petalinux && ssh -o StrictHostKeyChecking=no -t $uploadTarget "sudo mkdir -p /lib/firmware/xilinx/$appName && sudo mv $appName.dtbo $appName.bit.bin shell.json /lib/firmware/xilinx/$appName && chmod +x $appName")
    fi   
 fi
 

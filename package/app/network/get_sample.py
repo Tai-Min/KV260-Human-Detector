@@ -9,17 +9,24 @@ def get_sample():
     # @brief Load sample from path and augment it.
     # @return Tuple (sample, label, weight).
 
-    # Rolling samples let's us run training during long and boring dataset preprocessing.
+    # Wait for valid sample that is correctly labeled
+    # which means there is no segmentation painted on the corner.
     while(True):
-        sample_path = random.choice(glob.glob("./dataset/inputs/*.npy"))
-        sample_path = os.path.basename(sample_path)
-        sample_name = os.path.splitext(sample_path)[0]
-        if os.path.exists("./dataset/inputs/%s.npy" % sample_name) and os.path.exists("./dataset/labels/%s.npy" % sample_name) and os.path.exists("./dataset/weights/%s.npy" % sample_name):
-            break
 
-    sample = np.load("./dataset/inputs/%s.npy" % sample_name)
-    label = np.load("./dataset/labels/%s.npy" % sample_name)
-    weight = np.load("./dataset/weights/%s.npy" % sample_name)
+        # Rolling samples let's us run training during long and boring dataset preprocessing.
+        while(True):
+            sample_path = random.choice(glob.glob("./dataset/inputs/*.npy"))
+            sample_path = os.path.basename(sample_path)
+            sample_name = os.path.splitext(sample_path)[0]
+            if os.path.exists("./dataset/inputs/%s.npy" % sample_name) and os.path.exists("./dataset/labels/%s.npy" % sample_name) and os.path.exists("./dataset/weights/%s.npy" % sample_name):
+                break
+
+        sample = np.load("./dataset/inputs/%s.npy" % sample_name)
+        label = np.load("./dataset/labels/%s.npy" % sample_name)
+        weight = np.load("./dataset/weights/%s.npy" % sample_name)
+
+        if label[-1,-1,-1] == 0:
+            break
 
     # Vertical flip.
     op = bool(random.getrandbits(1))
@@ -58,5 +65,16 @@ def get_sample():
         else:
             sample[np.logical_and(label == 0, sample != 0)] -= val
             sample[sample < 0] = 0
+
+    # Trims and paddings are required to force image to 2^n size.
+    # So DPU will be able to process whole network w/o splitting layers.
+    sample = sample[:,77:589,:] # Trim width.
+    sample = np.pad(sample, ((19, 19), (0,0), (0,0)), constant_values=0) # Append height.
+
+    label = label[:,77:589,:] 
+    label = np.pad(label, ((19, 19), (0,0), (0,0)), constant_values=0)
+
+    weight = weight[:,77:589,:]
+    weight = np.pad(weight, ((19, 19), (0,0), (0,0)), constant_values=0)
 
     yield (sample, label, weight)

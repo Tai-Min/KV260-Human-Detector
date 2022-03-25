@@ -17,6 +17,8 @@ class Detector {
     int outputWidth;
     int outputScaler;
 
+    float minProbability = 0;
+
     std::vector<int8_t> inputData;
     std::vector<int8_t> outputData;
 
@@ -27,11 +29,11 @@ class Detector {
    public:
     Detector() = default;
 
-    Detector(const std::string &model);
+    Detector(const std::string &model, float minProbability);
 
     ~Detector();
 
-    bool init(const std::string &model);
+    bool init(const std::string &model, float minProbability);
 
     void deinit();
 
