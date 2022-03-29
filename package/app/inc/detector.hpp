@@ -14,7 +14,7 @@ class Detector {
 
     int outputHeight;  //!< Width of output from network.
     int outputWidth;   //!< Height of output from network.
-    int outputScaler;  //!< Scaler value from int8 to float.
+    float outputScaler;  //!< Scaler value from int8 to float.
 
     float minProbability = 0;  //!< Probability (0 - 1) above which, the pixel will be treated as human detection.
 

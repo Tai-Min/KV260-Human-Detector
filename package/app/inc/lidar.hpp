@@ -54,7 +54,7 @@ class Lidar {
 
     struct DetectorConf {
         std::string model;           //!< Path to .xmodel file with detector network.
-        float minProbability = 0.6;  //!< Minimum probability that is required to consider segmented pixel as human (0 - 1).
+        float minProbability = 0.8;  //!< Minimum probability that is required to consider segmented pixel as human (0 - 1).
     };
 
    public:

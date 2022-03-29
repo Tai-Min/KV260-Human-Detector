@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <numeric>
 
 class CpuFlatTensorBuffer : public vart::TensorBuffer {
    public:
@@ -59,6 +60,8 @@ void Detector::fillInputData(const std::vector<float> &img, int imgWidth, int im
 
     int bufCntr = 0;
 
+    float mean = std::accumulate(img.begin(), img.end(), 0) / (float)img.size();
+
     // If height of image is bigger than network input's height
     // then skip some rows from the start cutting height a bit.
     if (heightStart < 0)
@@ -73,7 +76,7 @@ void Detector::fillInputData(const std::vector<float> &img, int imgWidth, int im
 
         for (int x = 0; x < inputWidth; x++) {
             if (x >= widthStart && x < widthStop && y >= heightStart && y < heightStop) {
-                inputData[inputWidth * y + x] = (int8_t)((float)img[bufCntr++] * inputScaler);
+                inputData[inputWidth * y + x] = (img[bufCntr++] - mean) * inputScaler;
             } else {
                 inputData[inputWidth * y + x] = 0;
             }
@@ -115,7 +118,8 @@ std::vector<float> Detector::convertOutputData(int imgWidth, int imgHeight) {
 
         for (int x = 0; x < inputWidth; x++) {
             if (x >= widthStart && x < widthStop && y >= heightStart && y < heightStop) {
-                res[bufCntr++] = (float)inputData[inputWidth * y + x] * outputScaler;
+                float d = 128 - inputData[inputWidth * y + x];
+                res[bufCntr++] = d * outputScaler;
             }
         }
 
@@ -129,10 +133,13 @@ std::vector<float> Detector::convertOutputData(int imgWidth, int imgHeight) {
     float maxEl = *std::max_element(res.begin(), res.end());
 
     for (float &v : res) {
-        if (maxEl > 0)
-            v = v / maxEl;
+        //v = 1 - (v / maxEl);
+        v = v / maxEl;
 
-        if (maxEl <= 0 || v < minProbability || v < 0)
+        if(v >= 1)
+            v = 0;
+
+        if (v < minProbability || v < 0)
             v = 0;
     }
 
@@ -158,7 +165,7 @@ bool Detector::init(const std::string &model, float minProbability) {
                 auto shape = inTensor->get_shape();
                 inputHeight = shape[1];
                 inputWidth = shape[2];
-                inputScaler = std::exp2f(1.0f * (float)inTensor->get_attr<int>("fix_point"));
+                inputScaler = std::exp2f(inTensor->get_attr<int>("fix_point"));
                 inputData.resize(shape[0] * shape[1] * shape[2] * shape[3]);
 
                 std::cout << "Input: " << inTensor->to_string() << std::endl;
@@ -168,7 +175,7 @@ bool Detector::init(const std::string &model, float minProbability) {
                 auto shape = outTensor->get_shape();
                 outputHeight = shape[1];
                 outputWidth = shape[2];
-                outputScaler = std::exp2f(-1.0f * (float)outTensor->get_attr<int>("fix_point"));
+                outputScaler = std::exp2f(-outTensor->get_attr<int>("fix_point"));
                 outputData.resize(shape[0] * shape[1] * shape[2] * shape[3]);
 
                 std::cout << "Output: " << outTensor->to_string() << std::endl;
