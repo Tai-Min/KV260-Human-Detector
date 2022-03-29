@@ -1,4 +1,5 @@
 #include "../inc/detector.hpp"
+
 #include <algorithm>
 #include <cmath>
 

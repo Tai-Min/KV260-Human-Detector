@@ -33,7 +33,7 @@ void PointCloudPublisher::timerCallback() {
     cloud.header.stamp = this->get_clock()->now();
     cloudPublisher->publish(cloud);
 
-    /*std_msgs::msg::Float32MultiArray panorama = lidar.getPanoramicImageMsg();
+    std_msgs::msg::Float32MultiArray panorama = lidar.getPanoramicImageMsg();
     panoramaPublisher->publish(panorama);
 
     std_msgs::msg::Float32MultiArray panoramaInference = lidar.getPanoramicInferenceImageMsg();
@@ -41,5 +41,5 @@ void PointCloudPublisher::timerCallback() {
 
     sensor_msgs::msg::PointCloud2 cloudInference = lidar.getPointCloudInferenceMsg();
     cloudInference.header.stamp = this->get_clock()->now();
-    cloudInferencePublisher->publish(cloudInference);*/
+    cloudInferencePublisher->publish(cloudInference);
 }
