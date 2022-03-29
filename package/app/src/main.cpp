@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[]) {
     Lidar::Config conf;
-    conf.kernel.useKernel = true;
+    conf.kernel.useKernel = false;
     conf.kernel.xclbin = "smart_lidar_container.xclbin";
     
     conf.stepper.homeClosestEndstop = false;

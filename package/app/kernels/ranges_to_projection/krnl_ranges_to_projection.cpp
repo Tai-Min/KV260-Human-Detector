@@ -11,8 +11,13 @@ extern "C" {
  * @param num2DScans Total number of 2D scans.
  * @param scan2DStartAngle Start angle of one 2D scan in radians.
  * @param scan2DAngleInc Angle increment of one 2D scan in radians.
+ * @param scan2DMaxRange Max value in rangesBuf.
  * @param stepperStartAngle Start angle of full scan in radians.
  * @param stepperAngleInc Angle increment between two successive 2D scans.
+ * @param stepperEndstopAngle Absolute angle of endstop.
+ * @param imgBuf Output buffer for projection image.
+ * @param imgWidth Width of projection image.
+ * @param imgHeight Height of projection image.
  */
 void krnl_ranges_to_projection(const float* rangesBuf, unsigned int single2DScanSize,
                                unsigned int num2DScans, float scan2DStartAngle,

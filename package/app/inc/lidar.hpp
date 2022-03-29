@@ -83,6 +83,16 @@ class Lidar {
     std_msgs::msg::Float32MultiArray panoramicInferenceScanMsg;  //!< Message that contains segmented panoramic picture (normalized to 0 - 1).
     sensor_msgs::msg::PointCloud2 cloudInferenceMsg;             //!< Message that contains point cloud containing only scans segmented as humans.
 
+    /**
+     * @brief Translate single range (polar coordinates) into point cloud voxel.
+     * @param range Range to convert to.
+     * @param scan2DAngle Angle of measured range.
+     * @param tranOffX Translation X.
+     * @param tranOffZ Translation Z.
+     * @param rotOffY Rotation Y.
+     * @param msg Buffer to insert result to.
+     * @param pointOffset Offset from start of msg buffer after which insert the result.
+     */
     void rangeToPointCloud(float range, float scan2DAngle, float tranOffX, float tranOffZ, float rotOffY, sensor_msgs::msg::PointCloud2 &msg, unsigned int pointOffset);
 
     /**
@@ -168,6 +178,10 @@ class Lidar {
      */
     void generateInferencePointCloudSW();
 
+    /**
+     * @brief Generate point cloud scan that contains only points where humans are considered to be. Uses hardware kernel.
+     * @return True on success.
+     */
     bool generateInferencePointCloudHW();
 
    public:

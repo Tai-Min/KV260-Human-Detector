@@ -9,6 +9,22 @@ union FloatData {
 
 extern "C" {
 
+/**
+ * @brief Generate PointCloud2 data blob from panoramic network inference buffer.
+ * @param rangesBuf Buffer that contains all the range samples.
+ * @param single2DScanSize Size of single 2D scan in samples.
+ * @param num2DScans Total number of 2D scans.
+ * @param scan2DStartAngle Start angle of one 2D scan in radians.
+ * @param scan2DAngleInc Angle increment of one 2D scan in radians.
+ * @param stepperStartAngle Start angle of full scan in radians.
+ * @param stepperAngleInc Angle increment between two successive 2D scans.
+ * @param stepperEndstopAngle Absolute angle of the endstop.
+ * @param centerOffset 2D LIDAR's offset from center of the cradle (threaded rod).
+ * @param inferenceBuf Buffer containing segmentation data from U-Net. Same size as panoramic image.
+ * @param imgWidth Width of inference buffer.
+ * @param imgHeight Height of inference buffer.
+ * @param cloudBuf Output buffer containing PointCloud2 blob.
+ */
 void krnl_projection_to_cloud(const float* rangesBuf, unsigned int single2DScanSize,
                               unsigned int num2DScans, float scan2DStartAngle,
                               float scan2DAngleInc, float stepperStartAngle,

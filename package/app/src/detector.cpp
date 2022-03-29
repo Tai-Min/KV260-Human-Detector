@@ -181,8 +181,7 @@ bool Detector::init(const std::string &model, float minProbability) {
     return true;
 }
 
-void Detector::deinit() {
-}
+void Detector::deinit() {}
 
 bool Detector::good() {
     return allGood;
